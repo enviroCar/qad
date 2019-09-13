@@ -1,0 +1,9 @@
+
+
+kafka:
+  group:
+    id: qad
+  client:
+    id: qad
+  bootstrap:
+    servers: processing.envirocar.org:9092
