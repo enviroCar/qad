@@ -1,0 +1,3744 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "id": "5d7b7ece44ea853f9f67c4e9",
+    "sensor": {
+      "type": "car",
+      "properties": {
+        "engineDisplacement": 1587,
+        "model": "V40",
+        "id": "564b916be4b0a3a81b856f28",
+        "fuelType": "gasoline",
+        "constructionYear": 2003,
+        "manufacturer": "Volvo"
+      }
+    },
+    "length": 5.260871571324171
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.637166742042373, 51.9548307654036]
+      },
+      "properties": {
+        "id": "5d7b7ece44ea853f9f67c56f",
+        "time": "2019-09-08T15:34:50Z",
+        "phenomenons": {
+          "GPS HDOP": { "value": 0.8588059961795806, "unit": "precision" },
+          "Consumption": { "value": 2.1372588349238675, "unit": "l/h" },
+          "Intake Temperature": { "value": 52.00000029057264, "unit": "c" },
+          "GPS Bearing": { "value": 184.92652263037235, "unit": "deg" },
+          "GPS Altitude": { "value": 115.62218437052928, "unit": "m" },
+          "CO2": { "value": 5.0225582620710885, "unit": "kg/h" },
+          "Engine Load": { "value": 27.389439051083286, "unit": "%" },
+          "Speed": { "value": 33.0, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.5000000447034836, "unit": "precision" },
+          "GPS VDOP": { "value": 1.200000035762787, "unit": "precision" },
+          "Throttle Position": { "value": 14.255814015865326, "unit": "%" },
+          "GPS Speed": { "value": 34.17955153267303, "unit": "km/h" },
+          "Rpm": { "value": 1204.9567404389381, "unit": "u/min" },
+          "GPS Accuracy": { "value": 4.0, "unit": "%" },
+          "MAF": { "value": 6.501719480741315, "unit": "l/s" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.637044060884273, 51.95438153987614]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c5fd",
+        "time": "2019-09-08T15:34:55Z",
+        "phenomenons": {
+          "Speed": { "value": 31.0, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.4369414091110229, "unit": "precision" },
+          "GPS PDOP": { "value": 1.8, "unit": "precision" },
+          "GPS Altitude": { "value": 117.27097852738552, "unit": "m" },
+          "Throttle Position": { "value": 12.594441294670105, "unit": "%" },
+          "Rpm": { "value": 1496.9501845240593, "unit": "u/min" },
+          "MAF": { "value": 4.326864222341893, "unit": "l/s" },
+          "GPS HDOP": { "value": 1.0630585908889771, "unit": "precision" },
+          "Intake Temperature": { "value": 52.999998815357685, "unit": "c" },
+          "Engine Load": { "value": 19.834171293671716, "unit": "%" },
+          "GPS Speed": { "value": 31.855795353076246, "unit": "km/h" },
+          "GPS Accuracy": { "value": 5.307385206222534, "unit": "%" },
+          "CO2": { "value": 3.3424892773603996, "unit": "kg/h" },
+          "GPS Bearing": { "value": 187.19833556866433, "unit": "deg" },
+          "Consumption": { "value": 1.422335862706553, "unit": "l/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.636900005389942, 51.953986115388254]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c5fe",
+        "time": "2019-09-08T15:35:00Z",
+        "phenomenons": {
+          "Engine Load": { "value": 22.32157690232566, "unit": "%" },
+          "Speed": { "value": 29.999999329447746, "unit": "km/h" },
+          "CO2": { "value": 3.7056272562251173, "unit": "kg/h" },
+          "Rpm": { "value": 1457.7392055392265, "unit": "u/min" },
+          "GPS HDOP": { "value": 0.9676142424345017, "unit": "precision" },
+          "Throttle Position": { "value": 13.714286148548126, "unit": "%" },
+          "GPS Altitude": { "value": 117.98146565848194, "unit": "m" },
+          "MAF": { "value": 4.796947623705599, "unit": "l/s" },
+          "GPS PDOP": { "value": 1.4676142573356628, "unit": "precision" },
+          "GPS Bearing": { "value": 190.25845456646357, "unit": "deg" },
+          "Intake Temperature": { "value": 53.94021658599377, "unit": "c" },
+          "Consumption": { "value": 1.576862662223454, "unit": "l/h" },
+          "GPS Accuracy": { "value": 4.0000001192092896, "unit": "%" },
+          "GPS Speed": { "value": 30.946900461092355, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.1000000327825548, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.63678149202209, 51.95359992320064]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c5ff",
+        "time": "2019-09-08T15:35:05Z",
+        "phenomenons": {
+          "GPS Altitude": { "value": 118.45863471764332, "unit": "m" },
+          "GPS PDOP": { "value": 1.5586073964834215, "unit": "precision" },
+          "MAF": { "value": 2.849132200364423, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.300000038743019, "unit": "precision" },
+          "Consumption": { "value": 0.9365726997499815, "unit": "l/h" },
+          "Engine Load": { "value": 21.021568385946978, "unit": "%" },
+          "Speed": { "value": 28.809881396591663, "unit": "km/h" },
+          "CO2": { "value": 2.2009458444124563, "unit": "kg/h" },
+          "GPS Speed": { "value": 27.875400884657722, "unit": "km/h" },
+          "Intake Temperature": { "value": 54.00000120699406, "unit": "c" },
+          "GPS HDOP": { "value": 0.9000000268220902, "unit": "precision" },
+          "Rpm": { "value": 962.9619618952274, "unit": "u/min" },
+          "Throttle Position": { "value": 11.000000327825546, "unit": "%" },
+          "GPS Accuracy": { "value": 5.20080304145813, "unit": "%" },
+          "GPS Bearing": { "value": 198.5823519643086, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6367022690713515, 51.953335982520834]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c600",
+        "time": "2019-09-08T15:35:10Z",
+        "phenomenons": {
+          "Intake Temperature": { "value": 53.99999859184027, "unit": "c" },
+          "Rpm": { "value": 867.0877604782581, "unit": "u/min" },
+          "GPS Altitude": { "value": 119.48421182122736, "unit": "m" },
+          "GPS VDOP": { "value": 1.2999999612569808, "unit": "precision" },
+          "GPS PDOP": { "value": 1.5399004518985748, "unit": "precision" },
+          "Engine Load": { "value": 29.019606679093613, "unit": "%" },
+          "CO2": { "value": 2.8659635961031267, "unit": "kg/h" },
+          "GPS HDOP": { "value": 0.9399004697799683, "unit": "precision" },
+          "Speed": { "value": 8.089184165000916, "unit": "km/h" },
+          "MAF": { "value": 3.7100000381469727, "unit": "l/s" },
+          "GPS Speed": { "value": 11.323271967738492, "unit": "km/h" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "GPS Accuracy": { "value": 4.0, "unit": "%" },
+          "Consumption": { "value": 1.2195589770651603, "unit": "l/h" },
+          "GPS Bearing": { "value": 195.87771326044276, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.636697582265619, 51.95332366956344]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c601",
+        "time": "2019-09-08T15:35:15Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Accuracy": { "value": 6.000000178813934, "unit": "%" },
+          "Throttle Position": { "value": 10.999999836087227, "unit": "%" },
+          "GPS Bearing": { "value": 196.21713841608562, "unit": "deg" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "Engine Load": { "value": 25.72465107311382, "unit": "%" },
+          "GPS HDOP": { "value": 1.0, "unit": "precision" },
+          "GPS VDOP": { "value": 1.2641450762748718, "unit": "precision" },
+          "CO2": { "value": 2.8676668803458996, "unit": "kg/h" },
+          "Consumption": { "value": 1.2202837788705956, "unit": "l/h" },
+          "GPS PDOP": { "value": 1.6, "unit": "precision" },
+          "Intake Temperature": { "value": 53.000001184642315, "unit": "c" },
+          "GPS Altitude": { "value": 119.80100358642856, "unit": "m" },
+          "MAF": { "value": 3.7122049456392574, "unit": "l/s" },
+          "Rpm": { "value": 894.6615565419197, "unit": "u/min" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.636697354674302, 51.95332212123378]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c602",
+        "time": "2019-09-08T15:35:20Z",
+        "phenomenons": {
+          "GPS Altitude": { "value": 119.89042227830058, "unit": "m" },
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Accuracy": { "value": 6.0, "unit": "%" },
+          "GPS VDOP": { "value": 1.2325875848531722, "unit": "precision" },
+          "Intake Temperature": { "value": 53.00000157952309, "unit": "c" },
+          "Rpm": { "value": 770.0000229477882, "unit": "u/min" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.0000000298023224, "unit": "precision" },
+          "Engine Load": { "value": 20.7843138213251, "unit": "%" },
+          "Throttle Position": { "value": 11.000000327825546, "unit": "%" },
+          "GPS Bearing": { "value": 196.21713256835938, "unit": "deg" },
+          "Consumption": { "value": 0.7601188395495827, "unit": "l/h" },
+          "CO2": { "value": 1.7862792729415193, "unit": "kg/h" },
+          "GPS PDOP": { "value": 1.6000000476837157, "unit": "precision" },
+          "MAF": { "value": 2.3123448531464597, "unit": "l/s" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.636697354674302, 51.95332212123378]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c603",
+        "time": "2019-09-08T15:35:25Z",
+        "phenomenons": {
+          "Engine Load": { "value": 19.60784281468858, "unit": "%" },
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "Consumption": { "value": 0.7212997636196119, "unit": "l/h" },
+          "Throttle Position": { "value": 10.999999672174454, "unit": "%" },
+          "Rpm": { "value": 778.314502954483, "unit": "u/min" },
+          "MAF": { "value": 2.194253989244494, "unit": "l/s" },
+          "GPS Accuracy": { "value": 8.0, "unit": "%" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "Intake Temperature": { "value": 53.000000197440386, "unit": "c" },
+          "GPS PDOP": { "value": 1.5, "unit": "precision" },
+          "GPS VDOP": { "value": 1.2539215683937073, "unit": "precision" },
+          "CO2": { "value": 1.695054444506088, "unit": "kg/h" },
+          "GPS Bearing": { "value": 196.21713256835938, "unit": "deg" },
+          "GPS HDOP": { "value": 0.9460784316062927, "unit": "precision" },
+          "GPS Altitude": { "value": 120.00541068634612, "unit": "m" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.636697354674302, 51.95332212123378]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c605",
+        "time": "2019-09-08T15:35:30Z",
+        "phenomenons": {
+          "MAF": { "value": 2.690070416149183, "unit": "l/s" },
+          "CO2": { "value": 2.0780711062979584, "unit": "kg/h" },
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "Rpm": { "value": 719.2499892413616, "unit": "u/min" },
+          "Intake Temperature": { "value": 53.0, "unit": "c" },
+          "Consumption": { "value": 0.8842855771480673, "unit": "l/h" },
+          "GPS Accuracy": { "value": 8.0, "unit": "%" },
+          "GPS Altitude": { "value": 120.1463910419572, "unit": "m" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "Engine Load": { "value": 24.84495244372482, "unit": "%" },
+          "GPS PDOP": { "value": 1.5, "unit": "precision" },
+          "GPS VDOP": { "value": 1.2, "unit": "precision" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "GPS Bearing": { "value": 196.21713256835938, "unit": "deg" },
+          "GPS HDOP": { "value": 0.9, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.636697354674302, 51.95332212123378]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c606",
+        "time": "2019-09-08T15:35:35Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Accuracy": { "value": 6.0, "unit": "%" },
+          "Intake Temperature": { "value": 53.00000157952309, "unit": "c" },
+          "Rpm": { "value": 852.1136331707239, "unit": "u/min" },
+          "CO2": { "value": 4.180424473266661, "unit": "kg/h" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.5, "unit": "precision" },
+          "MAF": { "value": 5.411574304843953, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.2556565642356872, "unit": "precision" },
+          "Consumption": { "value": 1.7789040311773026, "unit": "l/h" },
+          "Throttle Position": { "value": 11.92900350689888, "unit": "%" },
+          "GPS Bearing": { "value": 196.21713256835938, "unit": "deg" },
+          "GPS HDOP": { "value": 0.9000000000000001, "unit": "precision" },
+          "Engine Load": { "value": 33.86617463639422, "unit": "%" },
+          "GPS Altitude": { "value": 120.58517133372231, "unit": "m" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6366726770783115, 51.95325511676537]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c607",
+        "time": "2019-09-08T15:35:40Z",
+        "phenomenons": {
+          "Engine Load": { "value": 63.13936988755339, "unit": "%" },
+          "GPS Accuracy": { "value": 6.000000178813934, "unit": "%" },
+          "Consumption": { "value": 2.4083584319726477, "unit": "l/h" },
+          "GPS Speed": { "value": 8.435774357691315, "unit": "km/h" },
+          "CO2": { "value": 5.659642315135722, "unit": "kg/h" },
+          "Rpm": { "value": 1053.7780290842056, "unit": "u/min" },
+          "Intake Temperature": { "value": 53.00000157952309, "unit": "c" },
+          "GPS HDOP": { "value": 1.0, "unit": "precision" },
+          "Throttle Position": { "value": 26.35869574546814, "unit": "%" },
+          "MAF": { "value": 7.326427046596791, "unit": "l/s" },
+          "GPS Bearing": { "value": 196.67487735445138, "unit": "deg" },
+          "GPS VDOP": { "value": 1.2480712175369262, "unit": "precision" },
+          "GPS PDOP": { "value": 1.6, "unit": "precision" },
+          "GPS Altitude": { "value": 121.7675018930205, "unit": "m" },
+          "Speed": { "value": 12.344222992658615, "unit": "km/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.636612142384687, 51.95308983914128]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c609",
+        "time": "2019-09-08T15:35:45Z",
+        "phenomenons": {
+          "Throttle Position": { "value": 32.89956331253052, "unit": "%" },
+          "Consumption": { "value": 3.6992800497415583, "unit": "l/h" },
+          "GPS Speed": { "value": 13.684264694634294, "unit": "km/h" },
+          "Rpm": { "value": 1509.1972318589687, "unit": "u/min" },
+          "Speed": { "value": 20.069976836442947, "unit": "km/h" },
+          "GPS Altitude": { "value": 124.72469251789477, "unit": "m" },
+          "GPS Accuracy": { "value": 9.684418201446533, "unit": "%" },
+          "GPS PDOP": { "value": 1.9, "unit": "precision" },
+          "Engine Load": { "value": 75.5772976261517, "unit": "%" },
+          "GPS Bearing": { "value": 197.99642628635593, "unit": "deg" },
+          "CO2": { "value": 8.693308116892663, "unit": "kg/h" },
+          "Intake Temperature": { "value": 52.52766752243042, "unit": "c" },
+          "MAF": { "value": 11.253518184651298, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.5, "unit": "precision" },
+          "GPS HDOP": { "value": 1.2, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.636394592563129, 51.952759848040934]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c60a",
+        "time": "2019-09-08T15:35:50Z",
+        "phenomenons": {
+          "Consumption": { "value": 5.505638894948665, "unit": "l/h" },
+          "GPS Accuracy": { "value": 6.0, "unit": "%" },
+          "GPS VDOP": { "value": 1.1, "unit": "precision" },
+          "Rpm": { "value": 1586.5264897942543, "unit": "u/min" },
+          "MAF": { "value": 16.748612321675083, "unit": "l/s" },
+          "GPS PDOP": { "value": 1.4, "unit": "precision" },
+          "GPS Altitude": { "value": 132.5789078020078, "unit": "m" },
+          "Engine Load": { "value": 75.57738735585144, "unit": "%" },
+          "Throttle Position": { "value": 32.0, "unit": "%" },
+          "Speed": { "value": 32.939461410045624, "unit": "km/h" },
+          "GPS Speed": { "value": 28.159174464656758, "unit": "km/h" },
+          "GPS HDOP": { "value": 0.8395280241966248, "unit": "precision" },
+          "Intake Temperature": { "value": 51.99999941885471, "unit": "c" },
+          "GPS Bearing": { "value": 194.8169451321719, "unit": "deg" },
+          "CO2": { "value": 12.938251403129362, "unit": "kg/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6361857500343, 51.952300816671425]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c60b",
+        "time": "2019-09-08T15:35:55Z",
+        "phenomenons": {
+          "Rpm": { "value": 1436.962063997984, "unit": "u/min" },
+          "GPS Accuracy": { "value": 6.000000178813934, "unit": "%" },
+          "GPS PDOP": { "value": 1.4599414765834808, "unit": "precision" },
+          "Speed": { "value": 37.825223714113235, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.1599414855241776, "unit": "precision" },
+          "GPS Speed": { "value": 36.647309134184525, "unit": "km/h" },
+          "Intake Temperature": { "value": 52.764423072338104, "unit": "c" },
+          "Engine Load": { "value": 60.215492653977094, "unit": "%" },
+          "Throttle Position": { "value": 23.654877364635468, "unit": "%" },
+          "GPS Bearing": { "value": 194.29016343554395, "unit": "deg" },
+          "GPS Altitude": { "value": 134.29523754672653, "unit": "m" },
+          "MAF": { "value": 11.941058228624428, "unit": "l/s" },
+          "CO2": { "value": 9.224430682021886, "unit": "kg/h" },
+          "Consumption": { "value": 3.9252896519242064, "unit": "l/h" },
+          "GPS HDOP": { "value": 0.8999999731779099, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.635996351831764, 51.95179179242236]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c60c",
+        "time": "2019-09-08T15:36:00Z",
+        "phenomenons": {
+          "Speed": { "value": 35.13769903033972, "unit": "km/h" },
+          "GPS Altitude": { "value": 134.37385474838808, "unit": "m" },
+          "Intake Temperature": { "value": 53.802869617938995, "unit": "c" },
+          "Engine Load": { "value": 15.538299953902879, "unit": "%" },
+          "CO2": { "value": 2.093642086626755, "unit": "kg/h" },
+          "Rpm": { "value": 1346.9674428105354, "unit": "u/min" },
+          "MAF": { "value": 2.710227105401053, "unit": "l/s" },
+          "GPS PDOP": { "value": 1.5, "unit": "precision" },
+          "GPS HDOP": { "value": 0.8722334027290345, "unit": "precision" },
+          "GPS VDOP": { "value": 1.2, "unit": "precision" },
+          "GPS Bearing": { "value": 182.383392061814, "unit": "deg" },
+          "Consumption": { "value": 0.8909115262241512, "unit": "l/h" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "GPS Accuracy": { "value": 3.3565133213996887, "unit": "%" },
+          "GPS Speed": { "value": 37.638989347101415, "unit": "km/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.636327298079694, 51.95133832510619]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c60d",
+        "time": "2019-09-08T15:36:05Z",
+        "phenomenons": {
+          "Rpm": { "value": 861.9803560376167, "unit": "u/min" },
+          "Consumption": { "value": 0.8633443390729888, "unit": "l/h" },
+          "GPS Altitude": { "value": 133.550316772206, "unit": "m" },
+          "CO2": { "value": 2.0288591968215237, "unit": "kg/h" },
+          "GPS Speed": { "value": 31.228722967554177, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.5, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.3340080976486206, "unit": "%" },
+          "MAF": { "value": 2.6263654248216213, "unit": "l/s" },
+          "Intake Temperature": { "value": 53.99999879300594, "unit": "c" },
+          "GPS VDOP": { "value": 1.2, "unit": "precision" },
+          "GPS Bearing": { "value": 144.39520998810258, "unit": "deg" },
+          "Throttle Position": { "value": 11.000000327825546, "unit": "%" },
+          "Engine Load": { "value": 21.463123151481682, "unit": "%" },
+          "Speed": { "value": 28.29382674396038, "unit": "km/h" },
+          "GPS HDOP": { "value": 0.9000000000000001, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.636555472879815, 51.951156280858356]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c60e",
+        "time": "2019-09-08T15:36:10Z",
+        "phenomenons": {
+          "GPS Altitude": { "value": 132.9878802606047, "unit": "m" },
+          "GPS HDOP": { "value": 0.9397948443889618, "unit": "precision" },
+          "GPS Bearing": { "value": 143.62199672997122, "unit": "deg" },
+          "Intake Temperature": { "value": 54.99999836087227, "unit": "c" },
+          "GPS Speed": { "value": 9.549171267631152, "unit": "km/h" },
+          "CO2": { "value": 2.0925487363334634, "unit": "kg/h" },
+          "Rpm": { "value": 896.7133758068085, "unit": "u/min" },
+          "Consumption": { "value": 0.8904462707801972, "unit": "l/h" },
+          "GPS PDOP": { "value": 1.8193845629692078, "unit": "precision" },
+          "Speed": { "value": 6.416454195976257, "unit": "km/h" },
+          "Engine Load": { "value": 21.536977881485427, "unit": "%" },
+          "MAF": { "value": 2.708811759569258, "unit": "l/s" },
+          "Throttle Position": { "value": 11.000000327825546, "unit": "%" },
+          "GPS Accuracy": { "value": 3.6057884097099304, "unit": "%" },
+          "GPS VDOP": { "value": 1.5193845719099044, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.636568223917644, 51.951143945390456]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c616",
+        "time": "2019-09-08T15:36:15Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "Throttle Position": { "value": 10.999999836087227, "unit": "%" },
+          "MAF": { "value": 3.709220843997798, "unit": "l/s" },
+          "Intake Temperature": { "value": 55.000000819563866, "unit": "c" },
+          "Engine Load": { "value": 28.623360968496513, "unit": "%" },
+          "GPS Accuracy": { "value": 2.999999910593033, "unit": "%" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Bearing": { "value": 143.7725024291126, "unit": "deg" },
+          "CO2": { "value": 2.865361671024186, "unit": "kg/h" },
+          "Rpm": { "value": 833.8302021026611, "unit": "u/min" },
+          "GPS PDOP": { "value": 1.5, "unit": "precision" },
+          "GPS VDOP": { "value": 1.2, "unit": "precision" },
+          "GPS Altitude": { "value": 132.89912219973465, "unit": "m" },
+          "Consumption": { "value": 1.2193028387336962, "unit": "l/h" },
+          "GPS HDOP": { "value": 0.9, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.636568451505118, 51.95114549365525]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c617",
+        "time": "2019-09-08T15:36:20Z",
+        "phenomenons": {
+          "Throttle Position": { "value": 14.950724601745605, "unit": "%" },
+          "Engine Load": { "value": 38.11782457307595, "unit": "%" },
+          "MAF": { "value": 5.726057078204311, "unit": "l/s" },
+          "GPS HDOP": { "value": 0.8, "unit": "precision" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS PDOP": { "value": 1.5, "unit": "precision" },
+          "Consumption": { "value": 1.8822814666059922, "unit": "l/h" },
+          "GPS Bearing": { "value": 143.7725067138672, "unit": "deg" },
+          "Rpm": { "value": 1060.6578480005264, "unit": "u/min" },
+          "GPS VDOP": { "value": 1.2, "unit": "precision" },
+          "Intake Temperature": { "value": 55.00000040978193, "unit": "c" },
+          "CO2": { "value": 4.423361446524082, "unit": "kg/h" },
+          "Speed": { "value": 4.135802507400513, "unit": "km/h" },
+          "GPS Altitude": { "value": 132.82018973110675, "unit": "m" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.63675875169454, 51.95099376525464]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c618",
+        "time": "2019-09-08T15:36:25Z",
+        "phenomenons": {
+          "Engine Load": { "value": 51.26797521862329, "unit": "%" },
+          "GPS Altitude": { "value": 131.70984041342842, "unit": "m" },
+          "GPS Speed": { "value": 15.500704236785253, "unit": "km/h" },
+          "Speed": { "value": 16.41454315185547, "unit": "km/h" },
+          "GPS Accuracy": { "value": 2.999999910593033, "unit": "%" },
+          "GPS Bearing": { "value": 143.13996220294712, "unit": "deg" },
+          "GPS HDOP": { "value": 0.7999999761581421, "unit": "precision" },
+          "GPS VDOP": { "value": 1.2999999612569808, "unit": "precision" },
+          "Throttle Position": { "value": 23.85981234908104, "unit": "%" },
+          "Consumption": { "value": 3.2427694779355645, "unit": "l/h" },
+          "GPS PDOP": { "value": 1.4999999552965164, "unit": "precision" },
+          "Intake Temperature": { "value": 54.811603248119354, "unit": "c" },
+          "CO2": { "value": 7.620508273148577, "unit": "kg/h" },
+          "MAF": { "value": 9.864774982669815, "unit": "l/s" },
+          "Rpm": { "value": 1238.6569830179214, "unit": "u/min" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.637028618953677, 51.95073712316052]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c619",
+        "time": "2019-09-08T15:36:30Z",
+        "phenomenons": {
+          "CO2": { "value": 11.28170116017971, "unit": "kg/h" },
+          "GPS HDOP": { "value": 0.8, "unit": "precision" },
+          "GPS Accuracy": { "value": 2.999999910593033, "unit": "%" },
+          "GPS Speed": { "value": 27.895195262739435, "unit": "km/h" },
+          "GPS Bearing": { "value": 155.40951880049352, "unit": "deg" },
+          "GPS PDOP": { "value": 1.5, "unit": "precision" },
+          "Throttle Position": { "value": 29.63452146947384, "unit": "%" },
+          "Intake Temperature": { "value": 53.99999839067459, "unit": "c" },
+          "GPS VDOP": { "value": 1.2, "unit": "precision" },
+          "MAF": { "value": 14.604202157885117, "unit": "l/s" },
+          "Rpm": { "value": 1466.9014870524406, "unit": "u/min" },
+          "GPS Altitude": { "value": 130.8565827712532, "unit": "m" },
+          "Speed": { "value": 28.230391293764114, "unit": "km/h" },
+          "Consumption": { "value": 4.800723897948813, "unit": "l/h" },
+          "Engine Load": { "value": 53.85765184954255, "unit": "%" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.637378265726008, 51.95038681273921]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c61a",
+        "time": "2019-09-08T15:36:35Z",
+        "phenomenons": {
+          "Consumption": { "value": 1.3489315123152472, "unit": "l/h" },
+          "CO2": { "value": 3.169989053940831, "unit": "kg/h" },
+          "GPS Speed": { "value": 33.53778672276792, "unit": "km/h" },
+          "MAF": { "value": 4.103562071422341, "unit": "l/s" },
+          "Throttle Position": { "value": 10.999999672174454, "unit": "%" },
+          "Engine Load": { "value": 25.60323838887831, "unit": "%" },
+          "GPS Altitude": { "value": 130.48827062399994, "unit": "m" },
+          "Rpm": { "value": 970.6674916148186, "unit": "u/min" },
+          "Speed": { "value": 31.40584123134613, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.6545365393161773, "unit": "precision" },
+          "GPS HDOP": { "value": 1.2454635471105577, "unit": "precision" },
+          "GPS PDOP": { "value": 2.0454635709524154, "unit": "precision" },
+          "Intake Temperature": { "value": 54.000000804662704, "unit": "c" },
+          "GPS Accuracy": { "value": 4.0000001192092896, "unit": "%" },
+          "GPS Bearing": { "value": 141.50820584837402, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.637657905188073, 51.95018273642131]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c61b",
+        "time": "2019-09-08T15:36:40Z",
+        "phenomenons": {
+          "Rpm": { "value": 806.0882682800293, "unit": "u/min" },
+          "Intake Temperature": { "value": 55.000000819563866, "unit": "c" },
+          "Engine Load": { "value": 25.952944829975138, "unit": "%" },
+          "GPS Speed": { "value": 14.11434655275059, "unit": "km/h" },
+          "Speed": { "value": 8.813617944717407, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.4000000417232514, "unit": "precision" },
+          "Consumption": { "value": 1.1521728853445043, "unit": "l/h" },
+          "GPS Bearing": { "value": 142.13729333015772, "unit": "deg" },
+          "CO2": { "value": 2.7076062805595855, "unit": "kg/h" },
+          "GPS Altitude": { "value": 130.0895679675092, "unit": "m" },
+          "GPS HDOP": { "value": 0.9000000268220902, "unit": "precision" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "GPS Accuracy": { "value": 4.0000001192092896, "unit": "%" },
+          "MAF": { "value": 3.505005931625094, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.1000000327825548, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.63778729674987, 51.95008522447165]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c61c",
+        "time": "2019-09-08T15:36:45Z",
+        "phenomenons": {
+          "Consumption": { "value": 6.551627608844978, "unit": "l/h" },
+          "GPS Altitude": { "value": 129.76447178405104, "unit": "m" },
+          "CO2": { "value": 15.396324880785698, "unit": "kg/h" },
+          "Throttle Position": { "value": 76.87025839090347, "unit": "%" },
+          "Rpm": { "value": 1975.3488179147243, "unit": "u/min" },
+          "GPS HDOP": { "value": 1.0, "unit": "precision" },
+          "GPS VDOP": { "value": 1.6, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS PDOP": { "value": 1.9, "unit": "precision" },
+          "Speed": { "value": 19.319796353578568, "unit": "km/h" },
+          "Intake Temperature": { "value": 54.99999959021807, "unit": "c" },
+          "GPS Bearing": { "value": 139.8939873324216, "unit": "deg" },
+          "MAF": { "value": 19.930597155073826, "unit": "l/s" },
+          "GPS Speed": { "value": 14.894964977299765, "unit": "km/h" },
+          "Engine Load": { "value": 64.02073294917068, "unit": "%" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.638157620127051, 51.94981986369163]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c61d",
+        "time": "2019-09-08T15:36:50Z",
+        "phenomenons": {
+          "MAF": { "value": 19.671447432216034, "unit": "l/s" },
+          "Engine Load": { "value": 85.40654673394738, "unit": "%" },
+          "CO2": { "value": 15.196132518517798, "unit": "kg/h" },
+          "Speed": { "value": 35.13838015496731, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.6692308217287064, "unit": "precision" },
+          "GPS Bearing": { "value": 140.6936280372529, "unit": "deg" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "Intake Temperature": { "value": 53.99999959766865, "unit": "c" },
+          "GPS VDOP": { "value": 1.4128205567598342, "unit": "precision" },
+          "Rpm": { "value": 1735.266261190176, "unit": "u/min" },
+          "GPS Speed": { "value": 32.376293443547524, "unit": "km/h" },
+          "Consumption": { "value": 6.466439369582042, "unit": "l/h" },
+          "GPS Altitude": { "value": 129.00189471595993, "unit": "m" },
+          "Throttle Position": { "value": 50.243389427661896, "unit": "%" },
+          "GPS HDOP": { "value": 0.9128205418586731, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.638728722813311, 51.94940556632498]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c61e",
+        "time": "2019-09-08T15:36:55Z",
+        "phenomenons": {
+          "GPS Speed": { "value": 44.02631909030151, "unit": "km/h" },
+          "Consumption": { "value": 1.4461557500255307, "unit": "l/h" },
+          "MAF": { "value": 4.3993263045568325, "unit": "l/s" },
+          "Intake Temperature": { "value": 55.000000819563866, "unit": "c" },
+          "CO2": { "value": 3.398466012559997, "unit": "kg/h" },
+          "Throttle Position": { "value": 14.261509776115417, "unit": "%" },
+          "Engine Load": { "value": 33.65723616117805, "unit": "%" },
+          "GPS Altitude": { "value": 129.07935162443368, "unit": "m" },
+          "GPS HDOP": { "value": 0.7999999761581422, "unit": "precision" },
+          "Speed": { "value": 44.34365129470825, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.299999961256981, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS PDOP": { "value": 1.4999999552965164, "unit": "precision" },
+          "Rpm": { "value": 1474.2586982250214, "unit": "u/min" },
+          "GPS Bearing": { "value": 139.72687540457719, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6393052808035105, 51.94906288882279]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c61f",
+        "time": "2019-09-08T15:37:00Z",
+        "phenomenons": {
+          "GPS Bearing": { "value": 130.19530597768016, "unit": "deg" },
+          "Intake Temperature": { "value": 56.331263333559036, "unit": "c" },
+          "GPS Speed": { "value": 32.90527792328487, "unit": "km/h" },
+          "Engine Load": { "value": 27.843137741088867, "unit": "%" },
+          "GPS HDOP": { "value": 0.9293156266212463, "unit": "precision" },
+          "GPS VDOP": { "value": 1.4586312532424928, "unit": "precision" },
+          "GPS PDOP": { "value": 1.7586312532424926, "unit": "precision" },
+          "Throttle Position": { "value": 11.000000092200935, "unit": "%" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "Rpm": { "value": 849.1386635303497, "unit": "u/min" },
+          "CO2": { "value": 2.802870726858187, "unit": "kg/h" },
+          "Consumption": { "value": 1.1927109475992284, "unit": "l/h" },
+          "GPS Altitude": { "value": 129.54977634513526, "unit": "m" },
+          "Speed": { "value": 27.539179027080536, "unit": "km/h" },
+          "MAF": { "value": 3.6283260951758187, "unit": "l/s" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.639481648811762, 51.94897458517909]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c620",
+        "time": "2019-09-08T15:37:05Z",
+        "phenomenons": {
+          "Consumption": { "value": 1.2105697901374086, "unit": "l/h" },
+          "GPS HDOP": { "value": 1.0472080916166306, "unit": "precision" },
+          "Intake Temperature": { "value": 57.000001698732376, "unit": "c" },
+          "Engine Load": { "value": 26.810842081784088, "unit": "%" },
+          "GPS Bearing": { "value": 128.55154418945312, "unit": "deg" },
+          "Speed": { "value": 7.0, "unit": "km/h" },
+          "CO2": { "value": 2.8448390068229106, "unit": "kg/h" },
+          "GPS Speed": { "value": 3.67938964651853, "unit": "km/h" },
+          "MAF": { "value": 3.6826541824138417, "unit": "l/s" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS Altitude": { "value": 129.57560338052332, "unit": "m" },
+          "Throttle Position": { "value": 11.000000286847353, "unit": "%" },
+          "GPS VDOP": { "value": 1.699999949336052, "unit": "precision" },
+          "Rpm": { "value": 864.9999742209911, "unit": "u/min" },
+          "GPS PDOP": { "value": 1.9999999403953552, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.639481648811762, 51.94897458517909]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c621",
+        "time": "2019-09-08T15:37:10Z",
+        "phenomenons": {
+          "Consumption": { "value": 0.7744097358305567, "unit": "l/h" },
+          "CO2": { "value": 1.8198628792018083, "unit": "kg/h" },
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.3999999582767484, "unit": "precision" },
+          "Intake Temperature": { "value": 57.0, "unit": "c" },
+          "Rpm": { "value": 768.3987503051758, "unit": "u/min" },
+          "GPS Bearing": { "value": 128.55154418945312, "unit": "deg" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.0999999672174456, "unit": "precision" },
+          "MAF": { "value": 2.355818950541206, "unit": "l/s" },
+          "GPS Altitude": { "value": 129.58649273697773, "unit": "m" },
+          "Throttle Position": { "value": 11.000000327825546, "unit": "%" },
+          "Engine Load": { "value": 20.776279937579304, "unit": "%" },
+          "GPS Accuracy": { "value": 4.0, "unit": "%" },
+          "GPS HDOP": { "value": 0.8999999731779098, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.639481421137466, 51.948973036979]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c622",
+        "time": "2019-09-08T15:37:15Z",
+        "phenomenons": {
+          "CO2": { "value": 2.0009047446134898, "unit": "kg/h" },
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.3999999582767486, "unit": "precision" },
+          "Engine Load": { "value": 18.813135595564574, "unit": "%" },
+          "GPS Accuracy": { "value": 3.9999998807907104, "unit": "%" },
+          "GPS Altitude": { "value": 129.59466114074405, "unit": "m" },
+          "Intake Temperature": { "value": 56.999998301267624, "unit": "c" },
+          "MAF": { "value": 2.590178287309058, "unit": "l/s" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.0999999672174454, "unit": "precision" },
+          "Consumption": { "value": 0.8514488274951021, "unit": "l/h" },
+          "Throttle Position": { "value": 11.000000327825546, "unit": "%" },
+          "GPS Bearing": { "value": 128.55154035831856, "unit": "deg" },
+          "GPS HDOP": { "value": 0.8999999731779098, "unit": "precision" },
+          "Rpm": { "value": 769.0346342241392, "unit": "u/min" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.639481648811762, 51.94897458517909]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c623",
+        "time": "2019-09-08T15:37:20Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "MAF": { "value": 2.1700000762939453, "unit": "l/s" },
+          "Intake Temperature": { "value": 57.0, "unit": "c" },
+          "GPS PDOP": { "value": 1.6717897355556488, "unit": "precision" },
+          "GPS Bearing": { "value": 128.55154418945312, "unit": "deg" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.0000000298023224, "unit": "precision" },
+          "CO2": { "value": 1.6763183714967613, "unit": "kg/h" },
+          "Rpm": { "value": 762.9774294495583, "unit": "u/min" },
+          "GPS Altitude": { "value": 129.59413277028068, "unit": "m" },
+          "GPS VDOP": { "value": 1.3076845675706863, "unit": "precision" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "Engine Load": { "value": 18.431371139545092, "unit": "%" },
+          "GPS Accuracy": { "value": 4.0, "unit": "%" },
+          "Consumption": { "value": 0.7133269665943665, "unit": "l/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.639481648811762, 51.94897458517909]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c624",
+        "time": "2019-09-08T15:37:25Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Accuracy": { "value": 6.0, "unit": "%" },
+          "GPS PDOP": { "value": 1.7646761119365693, "unit": "precision" },
+          "Throttle Position": { "value": 10.999999672174454, "unit": "%" },
+          "GPS Altitude": { "value": 129.58506993340882, "unit": "m" },
+          "Rpm": { "value": 791.410480260849, "unit": "u/min" },
+          "Consumption": { "value": 1.141305324962761, "unit": "l/h" },
+          "GPS Bearing": { "value": 128.55154418945312, "unit": "deg" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.0, "unit": "precision" },
+          "MAF": { "value": 3.471945907313799, "unit": "l/s" },
+          "CO2": { "value": 2.6820675136624885, "unit": "kg/h" },
+          "Intake Temperature": { "value": 56.999999575316906, "unit": "c" },
+          "Engine Load": { "value": 26.583946384489536, "unit": "%" },
+          "GPS VDOP": { "value": 1.4646761119365692, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.639481876486057, 51.948976133379176]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c625",
+        "time": "2019-09-08T15:37:30Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "Rpm": { "value": 752.6444582939148, "unit": "u/min" },
+          "Engine Load": { "value": 26.66666603088379, "unit": "%" },
+          "CO2": { "value": 2.293971040056567, "unit": "kg/h" },
+          "GPS HDOP": { "value": 0.8, "unit": "precision" },
+          "GPS Altitude": { "value": 129.5769202019767, "unit": "m" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Accuracy": { "value": 3.600000113248825, "unit": "%" },
+          "Intake Temperature": { "value": 56.99999946914613, "unit": "c" },
+          "GPS VDOP": { "value": 1.3572978317737578, "unit": "precision" },
+          "Consumption": { "value": 0.9761578893857732, "unit": "l/h" },
+          "GPS Bearing": { "value": 128.5515480205877, "unit": "deg" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "MAF": { "value": 2.9695536460023035, "unit": "l/s" },
+          "GPS PDOP": { "value": 1.557297831773758, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.639481421137466, 51.948973036979]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c626",
+        "time": "2019-09-08T15:37:35Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "Consumption": { "value": 0.7820048401850559, "unit": "l/h" },
+          "GPS Accuracy": { "value": 3.9999998807907104, "unit": "%" },
+          "GPS PDOP": { "value": 1.9000000566244126, "unit": "precision" },
+          "Intake Temperature": { "value": 56.99999915063381, "unit": "c" },
+          "Rpm": { "value": 758.5028403997421, "unit": "u/min" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.0000000298023224, "unit": "precision" },
+          "MAF": { "value": 2.3789238909129553, "unit": "l/s" },
+          "Engine Load": { "value": 20.784313201904297, "unit": "%" },
+          "GPS Altitude": { "value": 129.57398291621712, "unit": "m" },
+          "CO2": { "value": 1.8377113744348814, "unit": "kg/h" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "GPS Bearing": { "value": 128.55154035831856, "unit": "deg" },
+          "GPS VDOP": { "value": 1.7000000506639479, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.639481648811762, 51.94897458517909]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c633",
+        "time": "2019-09-08T15:37:40Z",
+        "phenomenons": {
+          "Rpm": { "value": 1068.78226223588, "unit": "u/min" },
+          "Intake Temperature": { "value": 57.0, "unit": "c" },
+          "GPS Bearing": { "value": 128.55154418945312, "unit": "deg" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "MAF": { "value": 10.350196946363099, "unit": "l/s" },
+          "Engine Load": { "value": 59.399119145356735, "unit": "%" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS HDOP": { "value": 1.1, "unit": "precision" },
+          "GPS VDOP": { "value": 1.6353682160377505, "unit": "precision" },
+          "Speed": { "value": 5.4514502584934235, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.93536821603775, "unit": "precision" },
+          "Consumption": { "value": 3.4023384017629694, "unit": "l/h" },
+          "Throttle Position": { "value": 34.97014963743277, "unit": "%" },
+          "CO2": { "value": 7.995495244142979, "unit": "kg/h" },
+          "GPS Altitude": { "value": 129.57751067153163, "unit": "m" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.639756229771613, 51.94887611075086]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c634",
+        "time": "2019-09-08T15:37:45Z",
+        "phenomenons": {
+          "GPS Bearing": { "value": 121.90561178776557, "unit": "deg" },
+          "MAF": { "value": 16.63728490109996, "unit": "l/s" },
+          "Rpm": { "value": 1750.5525022745132, "unit": "u/min" },
+          "Intake Temperature": { "value": 57.0, "unit": "c" },
+          "Consumption": { "value": 5.46904311226406, "unit": "l/h" },
+          "Speed": { "value": 24.619619518518448, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.4000000417232514, "unit": "precision" },
+          "GPS Accuracy": { "value": 2.999999910593033, "unit": "%" },
+          "Throttle Position": { "value": 46.47607034817338, "unit": "%" },
+          "Engine Load": { "value": 79.13440629247009, "unit": "%" },
+          "GPS Altitude": { "value": 129.60611602319824, "unit": "m" },
+          "GPS Speed": { "value": 17.577109043019846, "unit": "km/h" },
+          "GPS PDOP": { "value": 2.0000000596046448, "unit": "precision" },
+          "CO2": { "value": 12.852251313820542, "unit": "kg/h" },
+          "GPS HDOP": { "value": 1.3000000387430193, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.640308378259689, 51.94868148211881]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c635",
+        "time": "2019-09-08T15:37:50Z",
+        "phenomenons": {
+          "Throttle Position": { "value": 21.03667440265417, "unit": "%" },
+          "Intake Temperature": { "value": 57.0, "unit": "c" },
+          "GPS HDOP": { "value": 1.0686424493789672, "unit": "precision" },
+          "GPS Accuracy": { "value": 2.0000000596046448, "unit": "%" },
+          "GPS Bearing": { "value": 122.56276763918686, "unit": "deg" },
+          "GPS Speed": { "value": 33.4538002440234, "unit": "km/h" },
+          "MAF": { "value": 19.054517895442473, "unit": "l/s" },
+          "Engine Load": { "value": 34.19963364762873, "unit": "%" },
+          "CO2": { "value": 14.719556352594926, "unit": "kg/h" },
+          "Consumption": { "value": 6.263641001104224, "unit": "l/h" },
+          "GPS PDOP": { "value": 1.6686424493789673, "unit": "precision" },
+          "Speed": { "value": 35.26448467373848, "unit": "km/h" },
+          "GPS Altitude": { "value": 129.30762773926543, "unit": "m" },
+          "Rpm": { "value": 1741.0378028154373, "unit": "u/min" },
+          "GPS VDOP": { "value": 1.3, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.640963674153891, 51.948383121502886]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c636",
+        "time": "2019-09-08T15:37:55Z",
+        "phenomenons": {
+          "GPS Speed": { "value": 44.10266316349271, "unit": "km/h" },
+          "Intake Temperature": { "value": 57.0, "unit": "c" },
+          "Rpm": { "value": 1695.0918948203325, "unit": "u/min" },
+          "Throttle Position": { "value": 36.48168170452118, "unit": "%" },
+          "CO2": { "value": 10.83193957139022, "unit": "kg/h" },
+          "GPS Altitude": { "value": 128.90044220323847, "unit": "m" },
+          "Engine Load": { "value": 72.7527705560459, "unit": "%" },
+          "GPS VDOP": { "value": 1.6, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "Speed": { "value": 44.44391965866089, "unit": "km/h" },
+          "MAF": { "value": 14.021984186297871, "unit": "l/s" },
+          "GPS PDOP": { "value": 2.0, "unit": "precision" },
+          "Consumption": { "value": 4.6093359878256255, "unit": "l/h" },
+          "GPS Bearing": { "value": 130.13179366427084, "unit": "deg" },
+          "GPS HDOP": { "value": 1.2, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6416342919332365, 51.94798987324617]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c637",
+        "time": "2019-09-08T15:38:00Z",
+        "phenomenons": {
+          "Throttle Position": { "value": 18.886897385120392, "unit": "%" },
+          "Engine Load": { "value": 33.1736638444259, "unit": "%" },
+          "GPS Altitude": { "value": 128.39918788181916, "unit": "m" },
+          "GPS Bearing": { "value": 134.53040589119882, "unit": "deg" },
+          "GPS PDOP": { "value": 1.7199170112609865, "unit": "precision" },
+          "MAF": { "value": 7.068133035194876, "unit": "l/s" },
+          "Rpm": { "value": 1297.1833122968674, "unit": "u/min" },
+          "Intake Temperature": { "value": 57.46270543336868, "unit": "c" },
+          "Speed": { "value": 43.36658066511154, "unit": "km/h" },
+          "GPS Speed": { "value": 45.038327370821435, "unit": "km/h" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "Consumption": { "value": 2.3234514839703744, "unit": "l/h" },
+          "GPS VDOP": { "value": 1.4199170112609862, "unit": "precision" },
+          "CO2": { "value": 5.46011098733038, "unit": "kg/h" },
+          "GPS HDOP": { "value": 1.0199170112609863, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.642255354405057, 51.947598541173605]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c638",
+        "time": "2019-09-08T15:38:05Z",
+        "phenomenons": {
+          "Speed": { "value": 44.62304574251175, "unit": "km/h" },
+          "Rpm": { "value": 1326.1847134828568, "unit": "u/min" },
+          "GPS Accuracy": { "value": 2.0, "unit": "%" },
+          "GPS VDOP": { "value": 1.1942884802818299, "unit": "precision" },
+          "GPS Bearing": { "value": 134.54258126020432, "unit": "deg" },
+          "GPS HDOP": { "value": 0.7942884802818299, "unit": "precision" },
+          "MAF": { "value": 12.232298059653033, "unit": "l/s" },
+          "CO2": { "value": 9.44941255395742, "unit": "kg/h" },
+          "GPS Speed": { "value": 44.71332482248545, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.4414327204227448, "unit": "precision" },
+          "Throttle Position": { "value": 29.199999317526817, "unit": "%" },
+          "Intake Temperature": { "value": 58.45783132314682, "unit": "c" },
+          "Engine Load": { "value": 69.07095828285583, "unit": "%" },
+          "Consumption": { "value": 4.021026618705284, "unit": "l/h" },
+          "GPS Altitude": { "value": 128.29495972981215, "unit": "m" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.642900650724904, 51.94719144743977]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c639",
+        "time": "2019-09-08T15:38:10Z",
+        "phenomenons": {
+          "Consumption": { "value": 3.8501685862991044, "unit": "l/h" },
+          "GPS Accuracy": { "value": 2.3965691328048706, "unit": "%" },
+          "Intake Temperature": { "value": 59.00000175833702, "unit": "c" },
+          "CO2": { "value": 9.047896177802896, "unit": "kg/h" },
+          "GPS PDOP": { "value": 1.3835699796676635, "unit": "precision" },
+          "Speed": { "value": 44.0, "unit": "km/h" },
+          "MAF": { "value": 11.712533686904067, "unit": "l/s" },
+          "Throttle Position": { "value": 25.151023238897324, "unit": "%" },
+          "GPS HDOP": { "value": 0.8417849898338319, "unit": "precision" },
+          "GPS Altitude": { "value": 127.99593826813118, "unit": "m" },
+          "Rpm": { "value": 1309.5786516666412, "unit": "u/min" },
+          "Engine Load": { "value": 61.55906654849514, "unit": "%" },
+          "GPS Speed": { "value": 44.757095415081494, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.1417849898338317, "unit": "precision" },
+          "GPS Bearing": { "value": 135.6318496063086, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.643521586186669, 51.94679718726471]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c63a",
+        "time": "2019-09-08T15:38:15Z",
+        "phenomenons": {
+          "Intake Temperature": { "value": 59.00000175833702, "unit": "c" },
+          "GPS VDOP": { "value": 1.3000000387430193, "unit": "precision" },
+          "GPS Speed": { "value": 44.122875719015724, "unit": "km/h" },
+          "GPS Bearing": { "value": 136.49689239378358, "unit": "deg" },
+          "Speed": { "value": 42.4090159535408, "unit": "km/h" },
+          "GPS Altitude": { "value": 127.88840233227484, "unit": "m" },
+          "GPS Accuracy": { "value": 2.999999910593033, "unit": "%" },
+          "GPS HDOP": { "value": 1.0000000298023224, "unit": "precision" },
+          "Engine Load": { "value": 25.476290008882827, "unit": "%" },
+          "CO2": { "value": 4.1368670608544855, "unit": "kg/h" },
+          "Rpm": { "value": 1290.4847229123116, "unit": "u/min" },
+          "MAF": { "value": 5.355189080017482, "unit": "l/s" },
+          "GPS PDOP": { "value": 1.6454902440309525, "unit": "precision" },
+          "Consumption": { "value": 1.7603689620657383, "unit": "l/h" },
+          "Throttle Position": { "value": 11.5220228433609, "unit": "%" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.644107840969485, 51.94639825540889]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c63b",
+        "time": "2019-09-08T15:38:20Z",
+        "phenomenons": {
+          "GPS HDOP": { "value": 1.1000000327825548, "unit": "precision" },
+          "MAF": { "value": 7.091288396321069, "unit": "l/s" },
+          "Engine Load": { "value": 43.485139287607126, "unit": "%" },
+          "Speed": { "value": 41.53159421682358, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.3000000387430193, "unit": "precision" },
+          "Rpm": { "value": 1251.881346464157, "unit": "u/min" },
+          "GPS Accuracy": { "value": 2.0, "unit": "%" },
+          "Throttle Position": { "value": 20.691797591745853, "unit": "%" },
+          "GPS Bearing": { "value": 135.91039360448485, "unit": "deg" },
+          "Consumption": { "value": 2.331063162740798, "unit": "l/h" },
+          "GPS Speed": { "value": 41.98361793662252, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.700000050663948, "unit": "precision" },
+          "Intake Temperature": { "value": 59.99999821186066, "unit": "c" },
+          "GPS Altitude": { "value": 127.75483389240881, "unit": "m" },
+          "CO2": { "value": 5.4779984324408755, "unit": "kg/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.644687400380377, 51.946005795350516]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c63c",
+        "time": "2019-09-08T15:38:25Z",
+        "phenomenons": {
+          "GPS PDOP": { "value": 1.769222953915596, "unit": "precision" },
+          "GPS Accuracy": { "value": 2.0, "unit": "%" },
+          "GPS HDOP": { "value": 1.0673057198524476, "unit": "precision" },
+          "Throttle Position": { "value": 17.76418650150299, "unit": "%" },
+          "Speed": { "value": 45.24937963485718, "unit": "km/h" },
+          "CO2": { "value": 4.502115992309027, "unit": "kg/h" },
+          "Engine Load": { "value": 29.843850607668003, "unit": "%" },
+          "Intake Temperature": { "value": 60.0, "unit": "c" },
+          "GPS Bearing": { "value": 142.51212657251835, "unit": "deg" },
+          "GPS Speed": { "value": 43.71184594369629, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.4019172132015227, "unit": "precision" },
+          "Consumption": { "value": 1.915794039280437, "unit": "l/h" },
+          "Rpm": { "value": 1344.833353728056, "unit": "u/min" },
+          "MAF": { "value": 5.828005116994362, "unit": "l/s" },
+          "GPS Altitude": { "value": 127.29333827275863, "unit": "m" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.64519558703088, 51.94551789893827]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c63d",
+        "time": "2019-09-08T15:38:30Z",
+        "phenomenons": {
+          "GPS Speed": { "value": 48.831559232933614, "unit": "km/h" },
+          "GPS Altitude": { "value": 125.95020855773134, "unit": "m" },
+          "GPS VDOP": { "value": 1.256443518400192, "unit": "precision" },
+          "Consumption": { "value": 1.1810936119959083, "unit": "l/h" },
+          "GPS HDOP": { "value": 0.9999999701976776, "unit": "precision" },
+          "Engine Load": { "value": 14.136646248488411, "unit": "%" },
+          "GPS Accuracy": { "value": 2.0, "unit": "%" },
+          "MAF": { "value": 3.592985192159219, "unit": "l/s" },
+          "GPS Bearing": { "value": 148.94852846493086, "unit": "deg" },
+          "Intake Temperature": { "value": 60.00000178813934, "unit": "c" },
+          "CO2": { "value": 2.7755699881903846, "unit": "kg/h" },
+          "GPS PDOP": { "value": 1.5564435094594957, "unit": "precision" },
+          "Speed": { "value": 48.0, "unit": "km/h" },
+          "Throttle Position": { "value": 12.0, "unit": "%" },
+          "Rpm": { "value": 1441.7429683357477, "unit": "u/min" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.645701503958814, 51.9449887371982]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c63e",
+        "time": "2019-09-08T15:38:35Z",
+        "phenomenons": {
+          "GPS Altitude": { "value": 125.02636416489051, "unit": "m" },
+          "GPS Bearing": { "value": 149.2391900718212, "unit": "deg" },
+          "Rpm": { "value": 1442.824564062059, "unit": "u/min" },
+          "Consumption": { "value": 1.1167119425039778, "unit": "l/h" },
+          "MAF": { "value": 3.397130788425642, "unit": "l/s" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS PDOP": { "value": 1.5000000447034836, "unit": "precision" },
+          "Intake Temperature": { "value": 60.0, "unit": "c" },
+          "Engine Load": { "value": 16.309181000956897, "unit": "%" },
+          "GPS VDOP": { "value": 1.2000000357627867, "unit": "precision" },
+          "GPS HDOP": { "value": 0.9388015985488892, "unit": "precision" },
+          "CO2": { "value": 2.6242730648843478, "unit": "kg/h" },
+          "Speed": { "value": 48.0, "unit": "km/h" },
+          "GPS Speed": { "value": 49.141342889517546, "unit": "km/h" },
+          "Throttle Position": { "value": 12.0, "unit": "%" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.646194747126904, 51.944473301883065]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c63f",
+        "time": "2019-09-08T15:38:40Z",
+        "phenomenons": {
+          "MAF": { "value": 4.18945451130611, "unit": "l/s" },
+          "Speed": { "value": 47.0, "unit": "km/h" },
+          "Rpm": { "value": 1399.4426340833306, "unit": "u/min" },
+          "Consumption": { "value": 1.3771662549150343, "unit": "l/h" },
+          "GPS Speed": { "value": 48.3325676271952, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.0, "unit": "precision" },
+          "GPS Altitude": { "value": 124.3691438438224, "unit": "m" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "Intake Temperature": { "value": 60.0, "unit": "c" },
+          "Engine Load": { "value": 19.60784354513767, "unit": "%" },
+          "GPS PDOP": { "value": 1.6, "unit": "precision" },
+          "GPS Bearing": { "value": 148.95979732424894, "unit": "deg" },
+          "CO2": { "value": 3.2363406990503307, "unit": "kg/h" },
+          "Throttle Position": { "value": 14.0, "unit": "%" },
+          "GPS VDOP": { "value": 1.3, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.646693404185006, 51.94397162182241]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c640",
+        "time": "2019-09-08T15:38:45Z",
+        "phenomenons": {
+          "Throttle Position": { "value": 13.999999582767487, "unit": "%" },
+          "Intake Temperature": { "value": 61.000001817941666, "unit": "c" },
+          "Rpm": { "value": 1391.4118446931243, "unit": "u/min" },
+          "MAF": { "value": 3.8500000193715067, "unit": "l/s" },
+          "GPS HDOP": { "value": 1.0, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "Consumption": { "value": 1.2655800638942085, "unit": "l/h" },
+          "Engine Load": { "value": 19.55737248685898, "unit": "%" },
+          "Speed": { "value": 46.18902802467346, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.6, "unit": "precision" },
+          "GPS Bearing": { "value": 149.21775554930628, "unit": "deg" },
+          "CO2": { "value": 2.97411315015139, "unit": "kg/h" },
+          "GPS Speed": { "value": 47.53207422354046, "unit": "km/h" },
+          "GPS Altitude": { "value": 123.9390587047161, "unit": "m" },
+          "GPS VDOP": { "value": 1.3, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.647170447218519, 51.943473361702786]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c641",
+        "time": "2019-09-08T15:38:50Z",
+        "phenomenons": {
+          "MAF": { "value": 3.966337952289223, "unit": "l/s" },
+          "GPS Bearing": { "value": 149.11955908618984, "unit": "deg" },
+          "GPS Altitude": { "value": 123.4185852852099, "unit": "m" },
+          "Speed": { "value": 44.99999865889549, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.2553660988807678, "unit": "precision" },
+          "GPS HDOP": { "value": 1.0, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "CO2": { "value": 3.063983844803618, "unit": "kg/h" },
+          "GPS PDOP": { "value": 1.6, "unit": "precision" },
+          "Engine Load": { "value": 19.215687227599773, "unit": "%" },
+          "GPS Speed": { "value": 46.2356893366898, "unit": "km/h" },
+          "Consumption": { "value": 1.3038229126823906, "unit": "l/h" },
+          "Rpm": { "value": 1351.0000201314688, "unit": "u/min" },
+          "Intake Temperature": { "value": 60.390519201755524, "unit": "c" },
+          "Throttle Position": { "value": 14.0, "unit": "%" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.647647700372158, 51.94298458885946]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c642",
+        "time": "2019-09-08T15:38:55Z",
+        "phenomenons": {
+          "Engine Load": { "value": 24.569354404378032, "unit": "%" },
+          "Consumption": { "value": 1.5666111404430314, "unit": "l/h" },
+          "Rpm": { "value": 1312.0870524588972, "unit": "u/min" },
+          "Speed": { "value": 44.00000065565109, "unit": "km/h" },
+          "CO2": { "value": 3.681536180041124, "unit": "kg/h" },
+          "GPS HDOP": { "value": 0.9999999701976776, "unit": "precision" },
+          "GPS VDOP": { "value": 1.2598440170288085, "unit": "precision" },
+          "GPS Bearing": { "value": 149.07381722804894, "unit": "deg" },
+          "GPS PDOP": { "value": 1.5999999523162844, "unit": "precision" },
+          "Throttle Position": { "value": 14.629719853401184, "unit": "%" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "MAF": { "value": 4.765761640156072, "unit": "l/s" },
+          "Intake Temperature": { "value": 60.0, "unit": "c" },
+          "GPS Speed": { "value": 45.077236465449914, "unit": "km/h" },
+          "GPS Altitude": { "value": 122.84338635985299, "unit": "m" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.648122771102308, 51.94250223588933]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c643",
+        "time": "2019-09-08T15:39:00Z",
+        "phenomenons": {
+          "Throttle Position": { "value": 18.0, "unit": "%" },
+          "Consumption": { "value": 2.1522247298971946, "unit": "l/h" },
+          "CO2": { "value": 5.057728115258407, "unit": "kg/h" },
+          "GPS Bearing": { "value": 148.00348713622043, "unit": "deg" },
+          "Speed": { "value": 44.00000065565109, "unit": "km/h" },
+          "Rpm": { "value": 1321.853232383728, "unit": "u/min" },
+          "GPS HDOP": { "value": 1.2606212437152862, "unit": "precision" },
+          "GPS VDOP": { "value": 1.4606212437152863, "unit": "precision" },
+          "GPS Speed": { "value": 45.28736435493397, "unit": "km/h" },
+          "GPS Altitude": { "value": 121.99109092873366, "unit": "m" },
+          "Intake Temperature": { "value": 60.0, "unit": "c" },
+          "Engine Load": { "value": 32.20787615702329, "unit": "%" },
+          "GPS Accuracy": { "value": 4.0, "unit": "%" },
+          "GPS PDOP": { "value": 1.9212424874305727, "unit": "precision" },
+          "MAF": { "value": 6.54724698040809, "unit": "l/s" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.648684141454799, 51.94203396921212]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c644",
+        "time": "2019-09-08T15:39:05Z",
+        "phenomenons": {
+          "GPS Altitude": { "value": 121.24775924217023, "unit": "m" },
+          "Intake Temperature": { "value": 58.99999912083149, "unit": "c" },
+          "Consumption": { "value": 2.5830260699416185, "unit": "l/h" },
+          "Rpm": { "value": 1351.8586751520634, "unit": "u/min" },
+          "MAF": { "value": 7.857780556934898, "unit": "l/s" },
+          "GPS HDOP": { "value": 0.9713567852973939, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "Speed": { "value": 44.949570670723915, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.6070351779460907, "unit": "precision" },
+          "CO2": { "value": 6.0701112643628035, "unit": "kg/h" },
+          "Throttle Position": { "value": 19.545905709266663, "unit": "%" },
+          "GPS Bearing": { "value": 142.54850325246298, "unit": "deg" },
+          "GPS PDOP": { "value": 1.8427135705947877, "unit": "precision" },
+          "GPS Speed": { "value": 46.14993991139454, "unit": "km/h" },
+          "Engine Load": { "value": 36.68255266786548, "unit": "%" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.649280252493175, 51.94158792865045]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c645",
+        "time": "2019-09-08T15:39:10Z",
+        "phenomenons": {
+          "GPS PDOP": { "value": 1.5429710865020754, "unit": "precision" },
+          "Rpm": { "value": 1367.2300176173449, "unit": "u/min" },
+          "GPS HDOP": { "value": 0.9429710865020752, "unit": "precision" },
+          "GPS Bearing": { "value": 137.9981727123427, "unit": "deg" },
+          "GPS Accuracy": { "value": 2.999999910593033, "unit": "%" },
+          "Consumption": { "value": 2.4005550832422817, "unit": "l/h" },
+          "Speed": { "value": 45.99625305994414, "unit": "km/h" },
+          "GPS Speed": { "value": 46.589275501949146, "unit": "km/h" },
+          "Intake Temperature": { "value": 58.0, "unit": "c" },
+          "Throttle Position": { "value": 18.999999433755875, "unit": "%" },
+          "MAF": { "value": 7.302688609479958, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.242971086502075, "unit": "precision" },
+          "GPS Altitude": { "value": 121.21165781951173, "unit": "m" },
+          "CO2": { "value": 5.641304445619363, "unit": "kg/h" },
+          "Engine Load": { "value": 37.0027314097747, "unit": "%" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6499281085852395, 51.94115125866443]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c646",
+        "time": "2019-09-08T15:39:15Z",
+        "phenomenons": {
+          "GPS Bearing": { "value": 136.8466772444708, "unit": "deg" },
+          "MAF": { "value": 7.3035224683564195, "unit": "l/s" },
+          "GPS Accuracy": { "value": 2.0000000596046448, "unit": "%" },
+          "GPS Altitude": { "value": 120.91463142117902, "unit": "m" },
+          "Intake Temperature": { "value": 57.000001061707735, "unit": "c" },
+          "GPS VDOP": { "value": 1.2999999612569808, "unit": "precision" },
+          "GPS Speed": { "value": 46.571012990570466, "unit": "km/h" },
+          "Engine Load": { "value": 36.89145043036865, "unit": "%" },
+          "CO2": { "value": 5.641948599031668, "unit": "kg/h" },
+          "GPS PDOP": { "value": 1.5999999523162842, "unit": "precision" },
+          "Rpm": { "value": 1368.5784919261932, "unit": "u/min" },
+          "Speed": { "value": 46.0, "unit": "km/h" },
+          "Throttle Position": { "value": 18.999999433755875, "unit": "%" },
+          "Consumption": { "value": 2.4008291910773054, "unit": "l/h" },
+          "GPS HDOP": { "value": 0.8999999731779099, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.650576605622314, 51.9407200418621]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c647",
+        "time": "2019-09-08T15:39:20Z",
+        "phenomenons": {
+          "Speed": { "value": 47.0, "unit": "km/h" },
+          "GPS Accuracy": { "value": 2.0, "unit": "%" },
+          "Rpm": { "value": 1398.3392225503922, "unit": "u/min" },
+          "GPS Bearing": { "value": 136.90047597202647, "unit": "deg" },
+          "CO2": { "value": 6.1862566946672315, "unit": "kg/h" },
+          "MAF": { "value": 8.008131228327208, "unit": "l/s" },
+          "Consumption": { "value": 2.6324496573052047, "unit": "l/h" },
+          "Intake Temperature": { "value": 56.98585517704487, "unit": "c" },
+          "GPS Altitude": { "value": 120.42903888117472, "unit": "m" },
+          "GPS PDOP": { "value": 1.6, "unit": "precision" },
+          "GPS Speed": { "value": 47.248738137363716, "unit": "km/h" },
+          "Throttle Position": { "value": 18.999999433755875, "unit": "%" },
+          "Engine Load": { "value": 38.55283699516781, "unit": "%" },
+          "GPS VDOP": { "value": 1.3, "unit": "precision" },
+          "GPS HDOP": { "value": 0.8999999999999999, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.651227586206162, 51.940285691764736]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c648",
+        "time": "2019-09-08T15:39:25Z",
+        "phenomenons": {
+          "GPS Altitude": { "value": 119.74423178105937, "unit": "m" },
+          "Rpm": { "value": 1418.857185125351, "unit": "u/min" },
+          "GPS PDOP": { "value": 1.7818182349205016, "unit": "precision" },
+          "Throttle Position": { "value": 18.0, "unit": "%" },
+          "Engine Load": { "value": 36.86274337768555, "unit": "%" },
+          "GPS Accuracy": { "value": 2.0000000596046448, "unit": "%" },
+          "MAF": { "value": 7.097346613606305, "unit": "l/s" },
+          "GPS Speed": { "value": 47.743679375197985, "unit": "km/h" },
+          "Consumption": { "value": 2.3330546326058257, "unit": "l/h" },
+          "Intake Temperature": { "value": 56.0, "unit": "c" },
+          "GPS VDOP": { "value": 1.3818182229995726, "unit": "precision" },
+          "Speed": { "value": 47.204157173633575, "unit": "km/h" },
+          "GPS Bearing": { "value": 137.30331176099253, "unit": "deg" },
+          "CO2": { "value": 5.48267838662369, "unit": "kg/h" },
+          "GPS HDOP": { "value": 1.0909091234207153, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.651838205403756, 51.93980158106707]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c649",
+        "time": "2019-09-08T15:39:30Z",
+        "phenomenons": {
+          "Rpm": { "value": 1446.037831068039, "unit": "u/min" },
+          "GPS PDOP": { "value": 1.8589536666870117, "unit": "precision" },
+          "Engine Load": { "value": 30.712702586589558, "unit": "%" },
+          "Intake Temperature": { "value": 54.999999180436134, "unit": "c" },
+          "Throttle Position": { "value": 17.16149067878723, "unit": "%" },
+          "GPS Accuracy": { "value": 2.0, "unit": "%" },
+          "CO2": { "value": 4.491497334210397, "unit": "kg/h" },
+          "GPS Bearing": { "value": 146.87318060038797, "unit": "deg" },
+          "MAF": { "value": 5.814259226430871, "unit": "l/s" },
+          "GPS Altitude": { "value": 119.29219772324893, "unit": "m" },
+          "GPS HDOP": { "value": 1.3179074048995971, "unit": "precision" },
+          "GPS VDOP": { "value": 1.3410462379455566, "unit": "precision" },
+          "Speed": { "value": 48.0, "unit": "km/h" },
+          "GPS Speed": { "value": 49.01284039187544, "unit": "km/h" },
+          "Consumption": { "value": 1.9112754613661265, "unit": "l/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.652382077600044, 51.93931756162102]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c64a",
+        "time": "2019-09-08T15:39:35Z",
+        "phenomenons": {
+          "Rpm": { "value": 835.9454756677151, "unit": "u/min" },
+          "Intake Temperature": { "value": 55.3521488904953, "unit": "c" },
+          "MAF": { "value": 2.2794475640488265, "unit": "l/s" },
+          "Consumption": { "value": 0.7493047738278571, "unit": "l/h" },
+          "Throttle Position": { "value": 10.999999959021807, "unit": "%" },
+          "GPS HDOP": { "value": 1.3999999582767486, "unit": "precision" },
+          "GPS Speed": { "value": 43.501884167242224, "unit": "km/h" },
+          "CO2": { "value": 1.7608662184954642, "unit": "kg/h" },
+          "GPS Accuracy": { "value": 2.356589138507843, "unit": "%" },
+          "Engine Load": { "value": 19.448168919022777, "unit": "%" },
+          "Speed": { "value": 40.38021036982536, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.9999999403953552, "unit": "precision" },
+          "GPS VDOP": { "value": 1.4999999552965164, "unit": "precision" },
+          "GPS Altitude": { "value": 119.09890970002164, "unit": "m" },
+          "GPS Bearing": { "value": 142.24351855536315, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.652793022990414, 51.93901300964794]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c64b",
+        "time": "2019-09-08T15:39:40Z",
+        "phenomenons": {
+          "GPS Altitude": { "value": 118.86415297966148, "unit": "m" },
+          "GPS Speed": { "value": 26.099560537521597, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.3644240170717241, "unit": "precision" },
+          "Throttle Position": { "value": 10.999999672174454, "unit": "%" },
+          "CO2": { "value": 1.892617486499953, "unit": "kg/h" },
+          "MAF": { "value": 2.450000047683716, "unit": "l/s" },
+          "GPS Accuracy": { "value": 2.0, "unit": "%" },
+          "GPS HDOP": { "value": 1.3999999582767486, "unit": "precision" },
+          "GPS Bearing": { "value": 138.61721360040247, "unit": "deg" },
+          "Engine Load": { "value": 19.607843691227487, "unit": "%" },
+          "Rpm": { "value": 866.109165251255, "unit": "u/min" },
+          "Intake Temperature": { "value": 56.000001668930054, "unit": "c" },
+          "Speed": { "value": 20.56962075829506, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.9999999403953552, "unit": "precision" },
+          "Consumption": { "value": 0.8053691431914693, "unit": "l/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.652890995840471, 51.93894718353672]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c64c",
+        "time": "2019-09-08T15:39:45Z",
+        "phenomenons": {
+          "Speed": { "value": 2.0, "unit": "km/h" },
+          "Rpm": { "value": 875.2292191386223, "unit": "u/min" },
+          "GPS Bearing": { "value": 136.82428386283755, "unit": "deg" },
+          "GPS PDOP": { "value": 1.634365972876549, "unit": "precision" },
+          "GPS Accuracy": { "value": 2.0000000596046448, "unit": "%" },
+          "GPS HDOP": { "value": 1.0000000298023224, "unit": "precision" },
+          "CO2": { "value": 1.9793493524451935, "unit": "kg/h" },
+          "Engine Load": { "value": 24.035909422466787, "unit": "%" },
+          "Intake Temperature": { "value": 56.000001668930054, "unit": "c" },
+          "Consumption": { "value": 0.842276320189444, "unit": "l/h" },
+          "Throttle Position": { "value": 11.000000327825546, "unit": "%" },
+          "MAF": { "value": 2.5622747557096375, "unit": "l/s" },
+          "GPS Speed": { "value": 1.4597095997295355, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.334365963935852, "unit": "precision" },
+          "GPS Altitude": { "value": 118.82727086815274, "unit": "m" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.652890767766554, 51.93894563563552]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c64d",
+        "time": "2019-09-08T15:39:50Z",
+        "phenomenons": {
+          "GPS Bearing": { "value": 136.82427978515625, "unit": "deg" },
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.7567148238420487, "unit": "precision" },
+          "Rpm": { "value": 768.9301362037659, "unit": "u/min" },
+          "GPS HDOP": { "value": 1.156714841723442, "unit": "precision" },
+          "Consumption": { "value": 0.8455427867835287, "unit": "l/h" },
+          "GPS VDOP": { "value": 1.3567148357629777, "unit": "precision" },
+          "GPS Accuracy": { "value": 2.0, "unit": "%" },
+          "GPS Altitude": { "value": 118.82345526969594, "unit": "m" },
+          "CO2": { "value": 1.9870255489412925, "unit": "kg/h" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "Engine Load": { "value": 23.572983764290562, "unit": "%" },
+          "Intake Temperature": { "value": 55.999998331069946, "unit": "c" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "MAF": { "value": 2.572211619294393, "unit": "l/s" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.652890995840471, 51.938947183536726]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c64e",
+        "time": "2019-09-08T15:39:55Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Accuracy": { "value": 2.3512974679470062, "unit": "%" },
+          "GPS VDOP": { "value": 1.3999999582767486, "unit": "precision" },
+          "GPS Bearing": { "value": 136.82428386283755, "unit": "deg" },
+          "Rpm": { "value": 784.1827099919319, "unit": "u/min" },
+          "GPS PDOP": { "value": 1.7999999463558196, "unit": "precision" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "Engine Load": { "value": 20.865963064452544, "unit": "%" },
+          "CO2": { "value": 2.2512395600561455, "unit": "kg/h" },
+          "GPS Altitude": { "value": 118.82065003201727, "unit": "m" },
+          "Intake Temperature": { "value": 56.000001668930054, "unit": "c" },
+          "MAF": { "value": 2.9142375936116878, "unit": "l/s" },
+          "Consumption": { "value": 0.9579742808749555, "unit": "l/h" },
+          "Throttle Position": { "value": 12.525423765182495, "unit": "%" },
+          "GPS HDOP": { "value": 1.199999964237213, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6529815415387805, 51.93889097795478]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c64f",
+        "time": "2019-09-08T15:40:00Z",
+        "phenomenons": {
+          "GPS Altitude": { "value": 118.69823373696445, "unit": "m" },
+          "GPS PDOP": { "value": 1.6727897346019747, "unit": "precision" },
+          "Consumption": { "value": 3.1261471255486346, "unit": "l/h" },
+          "Rpm": { "value": 1142.7034475803375, "unit": "u/min" },
+          "GPS Speed": { "value": 13.370779344529183, "unit": "km/h" },
+          "Throttle Position": { "value": 17.964846342802048, "unit": "%" },
+          "Intake Temperature": { "value": 54.99999836087227, "unit": "c" },
+          "GPS HDOP": { "value": 0.9999999701976776, "unit": "precision" },
+          "GPS Accuracy": { "value": 2.0, "unit": "%" },
+          "CO2": { "value": 7.346445745039292, "unit": "kg/h" },
+          "MAF": { "value": 9.510000068179409, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.299999961256981, "unit": "precision" },
+          "Engine Load": { "value": 27.784939630434025, "unit": "%" },
+          "GPS Bearing": { "value": 136.33592835440322, "unit": "deg" },
+          "Speed": { "value": 14.585248321294785, "unit": "km/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.653355472658092, 51.938652034146465]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c663",
+        "time": "2019-09-08T15:40:05Z",
+        "phenomenons": {
+          "Rpm": { "value": 1646.9544892311096, "unit": "u/min" },
+          "GPS VDOP": { "value": 1.2283095717430115, "unit": "precision" },
+          "Consumption": { "value": 3.1459056110468713, "unit": "l/h" },
+          "CO2": { "value": 7.392878185960147, "unit": "kg/h" },
+          "GPS Altitude": { "value": 118.47022793313269, "unit": "m" },
+          "GPS HDOP": { "value": 1.0, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "Engine Load": { "value": 55.92229035938374, "unit": "%" },
+          "MAF": { "value": 9.570107027605502, "unit": "l/s" },
+          "Speed": { "value": 32.784204959869385, "unit": "km/h" },
+          "Intake Temperature": { "value": 54.0, "unit": "c" },
+          "GPS PDOP": { "value": 1.6, "unit": "precision" },
+          "GPS Speed": { "value": 31.76741429936601, "unit": "km/h" },
+          "Throttle Position": { "value": 17.6144580245018, "unit": "%" },
+          "GPS Bearing": { "value": 137.9618202764541, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.653901149997948, 51.93827925937463]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c664",
+        "time": "2019-09-08T15:40:10Z",
+        "phenomenons": {
+          "GPS Altitude": { "value": 118.27561811120218, "unit": "m" },
+          "Throttle Position": { "value": 16.78089874982834, "unit": "%" },
+          "Consumption": { "value": 3.281147370038587, "unit": "l/h" },
+          "GPS HDOP": { "value": 0.9999999701976776, "unit": "precision" },
+          "GPS Bearing": { "value": 138.15327111988154, "unit": "deg" },
+          "Speed": { "value": 41.99999937415123, "unit": "km/h" },
+          "MAF": { "value": 9.981523728604884, "unit": "l/s" },
+          "Engine Load": { "value": 47.700050412856854, "unit": "%" },
+          "CO2": { "value": 7.71069631959068, "unit": "kg/h" },
+          "GPS VDOP": { "value": 1.299999961256981, "unit": "precision" },
+          "GPS PDOP": { "value": 1.5999999523162844, "unit": "precision" },
+          "Rpm": { "value": 1648.6007299609482, "unit": "u/min" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS Speed": { "value": 42.23443898647383, "unit": "km/h" },
+          "Intake Temperature": { "value": 54.0, "unit": "c" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.654502684672498, 51.93786217899121]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c665",
+        "time": "2019-09-08T15:40:15Z",
+        "phenomenons": {
+          "Consumption": { "value": 1.7369853769647707, "unit": "l/h" },
+          "GPS Accuracy": { "value": 2.373239368200302, "unit": "%" },
+          "GPS HDOP": { "value": 1.0, "unit": "precision" },
+          "CO2": { "value": 4.081915635867212, "unit": "kg/h" },
+          "Engine Load": { "value": 27.172027987369233, "unit": "%" },
+          "Throttle Position": { "value": 13.541115701198578, "unit": "%" },
+          "GPS VDOP": { "value": 1.2, "unit": "precision" },
+          "GPS Altitude": { "value": 118.15070847816344, "unit": "m" },
+          "Intake Temperature": { "value": 54.0, "unit": "c" },
+          "Rpm": { "value": 903.1832765713334, "unit": "u/min" },
+          "GPS PDOP": { "value": 1.6, "unit": "precision" },
+          "GPS Bearing": { "value": 137.2129390818559, "unit": "deg" },
+          "MAF": { "value": 5.284054265508246, "unit": "l/s" },
+          "GPS Speed": { "value": 46.91346700273209, "unit": "km/h" },
+          "Speed": { "value": 46.19662243127823, "unit": "km/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6551509983755714, 51.93743450721258]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c666",
+        "time": "2019-09-08T15:40:20Z",
+        "phenomenons": {
+          "Engine Load": { "value": 32.840599278307764, "unit": "%" },
+          "Intake Temperature": { "value": 55.0, "unit": "c" },
+          "GPS Accuracy": { "value": 2.0, "unit": "%" },
+          "GPS Bearing": { "value": 137.1349538676277, "unit": "deg" },
+          "GPS PDOP": { "value": 1.7999999999999998, "unit": "precision" },
+          "Rpm": { "value": 1385.5152585804462, "unit": "u/min" },
+          "GPS Altitude": { "value": 118.02574600475111, "unit": "m" },
+          "Throttle Position": { "value": 18.83829054236412, "unit": "%" },
+          "GPS HDOP": { "value": 1.330078125, "unit": "precision" },
+          "GPS Speed": { "value": 47.01051661136171, "unit": "km/h" },
+          "CO2": { "value": 6.3990603064086935, "unit": "kg/h" },
+          "MAF": { "value": 8.283606258349266, "unit": "l/s" },
+          "Speed": { "value": 46.0, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.2699218749999999, "unit": "precision" },
+          "Consumption": { "value": 2.723004385705827, "unit": "l/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.655818057055591, 51.93699234031041]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c667",
+        "time": "2019-09-08T15:40:25Z",
+        "phenomenons": {
+          "Consumption": { "value": 3.122418053299538, "unit": "l/h" },
+          "MAF": { "value": 9.498655919641635, "unit": "l/s" },
+          "GPS Altitude": { "value": 117.86392686627875, "unit": "m" },
+          "Engine Load": { "value": 47.450980433062, "unit": "%" },
+          "Throttle Position": { "value": 22.0, "unit": "%" },
+          "GPS Accuracy": { "value": 2.0, "unit": "%" },
+          "GPS VDOP": { "value": 1.4755600810050964, "unit": "precision" },
+          "GPS HDOP": { "value": 1.2622199594974517, "unit": "precision" },
+          "GPS Bearing": { "value": 137.11234762913318, "unit": "deg" },
+          "Speed": { "value": 47.77529413998127, "unit": "km/h" },
+          "Rpm": { "value": 1440.6399999856949, "unit": "u/min" },
+          "GPS PDOP": { "value": 1.9377800405025483, "unit": "precision" },
+          "Intake Temperature": { "value": 55.999998331069946, "unit": "c" },
+          "CO2": { "value": 7.337682425253914, "unit": "kg/h" },
+          "GPS Speed": { "value": 48.702859754843985, "unit": "km/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.656499086939839, 51.936527596544046]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c668",
+        "time": "2019-09-08T15:40:30Z",
+        "phenomenons": {
+          "GPS Bearing": { "value": 137.0597778333954, "unit": "deg" },
+          "GPS HDOP": { "value": 1.1000000327825548, "unit": "precision" },
+          "GPS PDOP": { "value": 2.2000000655651095, "unit": "precision" },
+          "GPS Altitude": { "value": 117.59035022199139, "unit": "m" },
+          "Throttle Position": { "value": 21.0, "unit": "%" },
+          "Engine Load": { "value": 44.33335288888776, "unit": "%" },
+          "Consumption": { "value": 3.090148644185315, "unit": "l/h" },
+          "MAF": { "value": 9.400489687998743, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.9000000566244124, "unit": "precision" },
+          "GPS Accuracy": { "value": 2.999999910593033, "unit": "%" },
+          "CO2": { "value": 7.261849313835491, "unit": "kg/h" },
+          "Speed": { "value": 50.66112035512924, "unit": "km/h" },
+          "Rpm": { "value": 1514.8711827993393, "unit": "u/min" },
+          "Intake Temperature": { "value": 55.999998331069946, "unit": "c" },
+          "GPS Speed": { "value": 50.992497281938654, "unit": "km/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6572223715846714, 51.93605482190024]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c669",
+        "time": "2019-09-08T15:40:35Z",
+        "phenomenons": {
+          "GPS Bearing": { "value": 137.08743399547984, "unit": "deg" },
+          "GPS VDOP": { "value": 1.5415311455726624, "unit": "precision" },
+          "CO2": { "value": 3.0144673435447356, "unit": "kg/h" },
+          "GPS HDOP": { "value": 1.0415311306715012, "unit": "precision" },
+          "Engine Load": { "value": 15.776809706526832, "unit": "%" },
+          "GPS PDOP": { "value": 1.8830622553825378, "unit": "precision" },
+          "Speed": { "value": 49.65822932124138, "unit": "km/h" },
+          "Rpm": { "value": 1481.9852666854858, "unit": "u/min" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "GPS Altitude": { "value": 117.426556643186, "unit": "m" },
+          "Throttle Position": { "value": 12.5706617385149, "unit": "%" },
+          "GPS Speed": { "value": 51.69404201741543, "unit": "km/h" },
+          "Consumption": { "value": 1.2827520610828662, "unit": "l/h" },
+          "MAF": { "value": 3.9022386658191692, "unit": "l/s" },
+          "Intake Temperature": { "value": 56.50878256559372, "unit": "c" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.657915909022558, 51.93559137508044]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c66a",
+        "time": "2019-09-08T15:40:40Z",
+        "phenomenons": {
+          "GPS HDOP": { "value": 1.1000000327825548, "unit": "precision" },
+          "GPS Bearing": { "value": 137.18669566995777, "unit": "deg" },
+          "Intake Temperature": { "value": 57.0, "unit": "c" },
+          "MAF": { "value": 5.770075481450135, "unit": "l/s" },
+          "Speed": { "value": 47.0, "unit": "km/h" },
+          "Engine Load": { "value": 29.01308334481655, "unit": "%" },
+          "GPS Altitude": { "value": 116.93996307691017, "unit": "m" },
+          "GPS PDOP": { "value": 2.1349950790405274, "unit": "precision" },
+          "GPS Speed": { "value": 48.382909298566574, "unit": "km/h" },
+          "Rpm": { "value": 1405.9658516030759, "unit": "u/min" },
+          "GPS VDOP": { "value": 1.8024925768375395, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "Consumption": { "value": 1.8967512882454904, "unit": "l/h" },
+          "Throttle Position": { "value": 16.99999949336052, "unit": "%" },
+          "CO2": { "value": 4.457365527376902, "unit": "kg/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.658553502032963, 51.935163407872224]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c66b",
+        "time": "2019-09-08T15:40:45Z",
+        "phenomenons": {
+          "GPS PDOP": { "value": 1.930883812904358, "unit": "precision" },
+          "Intake Temperature": { "value": 56.999998301267624, "unit": "c" },
+          "GPS VDOP": { "value": 1.5308838129043578, "unit": "precision" },
+          "GPS Altitude": { "value": 116.72093599546977, "unit": "m" },
+          "CO2": { "value": 2.0548419300358116, "unit": "kg/h" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "GPS Bearing": { "value": 139.34024134016272, "unit": "deg" },
+          "GPS Speed": { "value": 45.56028165884311, "unit": "km/h" },
+          "Speed": { "value": 43.060415755957365, "unit": "km/h" },
+          "Engine Load": { "value": 20.431518944474078, "unit": "%" },
+          "MAF": { "value": 2.6600001651048686, "unit": "l/s" },
+          "Rpm": { "value": 929.0831122994423, "unit": "u/min" },
+          "Throttle Position": { "value": 11.000000327825546, "unit": "%" },
+          "Consumption": { "value": 0.8744008212918346, "unit": "l/h" },
+          "GPS HDOP": { "value": 1.2, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.658975216029138, 51.934857147625436]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c66d",
+        "time": "2019-09-08T15:40:50Z",
+        "phenomenons": {
+          "Engine Load": { "value": 19.60784281468858, "unit": "%" },
+          "Rpm": { "value": 820.1754057407379, "unit": "u/min" },
+          "Intake Temperature": { "value": 57.0, "unit": "c" },
+          "GPS Bearing": { "value": 141.6728382196452, "unit": "deg" },
+          "Speed": { "value": 16.932098496705294, "unit": "km/h" },
+          "MAF": { "value": 2.4267542190511477, "unit": "l/s" },
+          "GPS PDOP": { "value": 1.844411474466324, "unit": "precision" },
+          "GPS Speed": { "value": 24.744991253654916, "unit": "km/h" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS Altitude": { "value": 116.57517348597878, "unit": "m" },
+          "GPS HDOP": { "value": 1.0444114744663238, "unit": "precision" },
+          "CO2": { "value": 1.874660155519583, "unit": "kg/h" },
+          "Throttle Position": { "value": 11.000000327825546, "unit": "%" },
+          "GPS VDOP": { "value": 1.5, "unit": "precision" },
+          "Consumption": { "value": 0.797727725753014, "unit": "l/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6591101743508005, 51.93475418666543]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c66f",
+        "time": "2019-09-08T15:40:55Z",
+        "phenomenons": {
+          "GPS Speed": { "value": 10.11979793242, "unit": "km/h" },
+          "Intake Temperature": { "value": 57.00000132713467, "unit": "c" },
+          "Consumption": { "value": 0.8475503643981348, "unit": "l/h" },
+          "GPS HDOP": { "value": 1.3, "unit": "precision" },
+          "Rpm": { "value": 838.9770554900169, "unit": "u/min" },
+          "Engine Load": { "value": 19.60784339904785, "unit": "%" },
+          "Speed": { "value": 7.662556767463684, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.4368861019611359, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "CO2": { "value": 1.9917433563356168, "unit": "kg/h" },
+          "MAF": { "value": 2.578318837696159, "unit": "l/s" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "GPS Altitude": { "value": 116.54924078083462, "unit": "m" },
+          "GPS PDOP": { "value": 1.9368861019611359, "unit": "precision" },
+          "GPS Bearing": { "value": 141.29682313632475, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.659148440903442, 51.934728746946305]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c670",
+        "time": "2019-09-08T15:41:00Z",
+        "phenomenons": {
+          "Throttle Position": { "value": 10.999999836087227, "unit": "%" },
+          "Intake Temperature": { "value": 57.00000084936619, "unit": "c" },
+          "Engine Load": { "value": 18.872907587469115, "unit": "%" },
+          "GPS Accuracy": { "value": 2.0000000596046448, "unit": "%" },
+          "MAF": { "value": 2.450915930068242, "unit": "l/s" },
+          "Speed": { "value": 2.0897666215896606, "unit": "km/h" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "Consumption": { "value": 0.8056702139657281, "unit": "l/h" },
+          "GPS Altitude": { "value": 116.59778200709945, "unit": "m" },
+          "GPS VDOP": { "value": 1.2747398674488069, "unit": "precision" },
+          "CO2": { "value": 1.8933250028194613, "unit": "kg/h" },
+          "Rpm": { "value": 831.4140436649323, "unit": "u/min" },
+          "GPS HDOP": { "value": 1.200000035762787, "unit": "precision" },
+          "GPS PDOP": { "value": 1.7373699665069582, "unit": "precision" },
+          "GPS Bearing": { "value": 140.03947866080625, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6591482126430375, 51.93472719917082]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c671",
+        "time": "2019-09-08T15:41:05Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "Throttle Position": { "value": 10.999999672174454, "unit": "%" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS Bearing": { "value": 140.0394744873047, "unit": "deg" },
+          "GPS PDOP": { "value": 1.8317587971687317, "unit": "precision" },
+          "MAF": { "value": 2.099999842047694, "unit": "l/s" },
+          "GPS HDOP": { "value": 1.2317587971687316, "unit": "precision" },
+          "Rpm": { "value": 753.6573587656021, "unit": "u/min" },
+          "Intake Temperature": { "value": 55.99999916553497, "unit": "c" },
+          "Consumption": { "value": 0.6903163430919692, "unit": "l/h" },
+          "Engine Load": { "value": 18.431371139545092, "unit": "%" },
+          "CO2": { "value": 1.6222434062661277, "unit": "kg/h" },
+          "GPS Altitude": { "value": 116.60721440609828, "unit": "m" },
+          "GPS VDOP": { "value": 1.3, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.659148440903442, 51.934728746946305]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c672",
+        "time": "2019-09-08T15:41:10Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.3000000387430193, "unit": "precision" },
+          "GPS Altitude": { "value": 116.61750745489633, "unit": "m" },
+          "Rpm": { "value": 752.1595905721188, "unit": "u/min" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "Engine Load": { "value": 18.84080136300804, "unit": "%" },
+          "GPS PDOP": { "value": 1.6435203582048414, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "MAF": { "value": 2.1012052649390185, "unit": "l/s" },
+          "Intake Temperature": { "value": 54.0, "unit": "c" },
+          "CO2": { "value": 1.62317459173484, "unit": "kg/h" },
+          "Throttle Position": { "value": 11.000000163912773, "unit": "%" },
+          "Consumption": { "value": 0.6907125922275914, "unit": "l/h" },
+          "GPS Bearing": { "value": 140.03947866080625, "unit": "deg" },
+          "GPS HDOP": { "value": 1.043520340323448, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6591482126430375, 51.93472719917082]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c673",
+        "time": "2019-09-08T15:41:15Z",
+        "phenomenons": {
+          "GPS Altitude": { "value": 116.62154420353875, "unit": "m" },
+          "CO2": { "value": 1.7289604434951098, "unit": "kg/h" },
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.3, "unit": "precision" },
+          "Rpm": { "value": 746.969381570816, "unit": "u/min" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "MAF": { "value": 2.2381454251698223, "unit": "l/s" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS PDOP": { "value": 2.06109482049942, "unit": "precision" },
+          "GPS Bearing": { "value": 140.0394744873047, "unit": "deg" },
+          "Intake Temperature": { "value": 53.999999195337296, "unit": "c" },
+          "Engine Load": { "value": 21.3735005027699, "unit": "%" },
+          "Consumption": { "value": 0.7357278482957914, "unit": "l/h" },
+          "Throttle Position": { "value": 11.000000163912773, "unit": "%" },
+          "GPS VDOP": { "value": 1.6221896409988403, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.659148440903442, 51.934728746946305]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c674",
+        "time": "2019-09-08T15:41:20Z",
+        "phenomenons": {
+          "CO2": { "value": 2.734530372342798, "unit": "kg/h" },
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Altitude": { "value": 116.62157114108352, "unit": "m" },
+          "Intake Temperature": { "value": 54.99999836087227, "unit": "c" },
+          "Engine Load": { "value": 28.20673586976352, "unit": "%" },
+          "Consumption": { "value": 1.1636299456777863, "unit": "l/h" },
+          "MAF": { "value": 3.539859263913966, "unit": "l/s" },
+          "GPS PDOP": { "value": 1.9465000569820405, "unit": "precision" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.1772000342607498, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "Throttle Position": { "value": 11.000000081956387, "unit": "%" },
+          "Rpm": { "value": 754.3506261110306, "unit": "u/min" },
+          "GPS VDOP": { "value": 1.5772000461816789, "unit": "precision" },
+          "GPS Bearing": { "value": 140.03947866080625, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.659169700899987, 51.93471326916662]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c675",
+        "time": "2019-09-08T15:41:25Z",
+        "phenomenons": {
+          "Engine Load": { "value": 28.472166648553014, "unit": "%" },
+          "GPS VDOP": { "value": 1.231589537858963, "unit": "precision" },
+          "CO2": { "value": 7.045580670710075, "unit": "kg/h" },
+          "GPS HDOP": { "value": 1.031589537858963, "unit": "precision" },
+          "Consumption": { "value": 2.9981194343447126, "unit": "l/h" },
+          "Rpm": { "value": 1578.162638783455, "unit": "u/min" },
+          "GPS Altitude": { "value": 116.59125402831899, "unit": "m" },
+          "Speed": { "value": 10.894284188747406, "unit": "km/h" },
+          "Throttle Position": { "value": 12.669702790677547, "unit": "%" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS Bearing": { "value": 137.98938634747628, "unit": "deg" },
+          "Intake Temperature": { "value": 55.999998331069946, "unit": "c" },
+          "GPS PDOP": { "value": 1.594768613576889, "unit": "precision" },
+          "MAF": { "value": 9.12052916256281, "unit": "l/s" },
+          "GPS Speed": { "value": 7.840207392350635, "unit": "km/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.659450063723288, 51.93452321341128]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c676",
+        "time": "2019-09-08T15:41:30Z",
+        "phenomenons": {
+          "GPS PDOP": { "value": 1.7989440381526949, "unit": "precision" },
+          "GPS Speed": { "value": 25.271634307444288, "unit": "km/h" },
+          "GPS Altitude": { "value": 115.98574353527812, "unit": "m" },
+          "MAF": { "value": 5.6278105032675825, "unit": "l/s" },
+          "Intake Temperature": { "value": 55.784410923719406, "unit": "c" },
+          "GPS Bearing": { "value": 138.19408959328848, "unit": "deg" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS HDOP": { "value": 1.265258717536926, "unit": "precision" },
+          "GPS VDOP": { "value": 1.2663146793842315, "unit": "precision" },
+          "Rpm": { "value": 1691.5536941289902, "unit": "u/min" },
+          "Throttle Position": { "value": 12.918367505073547, "unit": "%" },
+          "Speed": { "value": 27.778596967458725, "unit": "km/h" },
+          "Engine Load": { "value": 27.77183719518564, "unit": "%" },
+          "Consumption": { "value": 1.8499856468760716, "unit": "l/h" },
+          "CO2": { "value": 4.347466270158768, "unit": "kg/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.659929336054535, 51.93420443899102]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c678",
+        "time": "2019-09-08T15:41:35Z",
+        "phenomenons": {
+          "GPS VDOP": { "value": 1.1999999642372132, "unit": "precision" },
+          "GPS Speed": { "value": 36.85029070330506, "unit": "km/h" },
+          "Engine Load": { "value": 30.455064121160262, "unit": "%" },
+          "MAF": { "value": 5.590202726169622, "unit": "l/s" },
+          "Intake Temperature": { "value": 55.0, "unit": "c" },
+          "GPS HDOP": { "value": 1.0783810138702392, "unit": "precision" },
+          "Speed": { "value": 38.4864364862442, "unit": "km/h" },
+          "Consumption": { "value": 1.8376231396804674, "unit": "l/h" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "CO2": { "value": 4.3184143782490985, "unit": "kg/h" },
+          "GPS PDOP": { "value": 1.6783809959888458, "unit": "precision" },
+          "Throttle Position": { "value": 11.327272973954678, "unit": "%" },
+          "Rpm": { "value": 1635.8993019461632, "unit": "u/min" },
+          "GPS Bearing": { "value": 136.91930464676307, "unit": "deg" },
+          "GPS Altitude": { "value": 115.46457902097467, "unit": "m" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.660551495806386, 51.93379619785651]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c67a",
+        "time": "2019-09-08T15:41:40Z",
+        "phenomenons": {
+          "Consumption": { "value": 1.362344442281172, "unit": "l/h" },
+          "GPS Speed": { "value": 46.57288019058569, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.760571375489235, "unit": "precision" },
+          "Intake Temperature": { "value": 54.99999836087227, "unit": "c" },
+          "Engine Load": { "value": 22.45189872360669, "unit": "%" },
+          "Rpm": { "value": 1539.2628051638603, "unit": "u/min" },
+          "MAF": { "value": 4.144365322122848, "unit": "l/s" },
+          "GPS Bearing": { "value": 135.64937866617583, "unit": "deg" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "CO2": { "value": 3.201509439360754, "unit": "kg/h" },
+          "GPS Altitude": { "value": 115.18089932962525, "unit": "m" },
+          "Throttle Position": { "value": 11.221171207726002, "unit": "%" },
+          "GPS HDOP": { "value": 1.199999964237213, "unit": "precision" },
+          "Speed": { "value": 47.4774232506752, "unit": "km/h" },
+          "GPS PDOP": { "value": 2.0999999374151233, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.661252088328334, 51.93336298293292]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c67b",
+        "time": "2019-09-08T15:41:45Z",
+        "phenomenons": {
+          "GPS PDOP": { "value": 1.7332027435302735, "unit": "precision" },
+          "CO2": { "value": 5.768355553441416, "unit": "kg/h" },
+          "Intake Temperature": { "value": 57.000001698732376, "unit": "c" },
+          "GPS Altitude": { "value": 115.27793282375819, "unit": "m" },
+          "Engine Load": { "value": 38.33656494472592, "unit": "%" },
+          "Consumption": { "value": 2.4546193844431556, "unit": "l/h" },
+          "GPS Bearing": { "value": 135.10056395126412, "unit": "deg" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "MAF": { "value": 7.467156719091449, "unit": "l/s" },
+          "GPS HDOP": { "value": 1.0664054870605468, "unit": "precision" },
+          "Rpm": { "value": 1415.7991372942924, "unit": "u/min" },
+          "Throttle Position": { "value": 19.999999701976776, "unit": "%" },
+          "GPS VDOP": { "value": 1.3332027435302733, "unit": "precision" },
+          "Speed": { "value": 47.60635697841644, "unit": "km/h" },
+          "GPS Speed": { "value": 47.80884811117721, "unit": "km/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.661935499928168, 51.93294182797014]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c67c",
+        "time": "2019-09-08T15:41:50Z",
+        "phenomenons": {
+          "GPS VDOP": { "value": 1.1999999642372132, "unit": "precision" },
+          "Consumption": { "value": 2.1023270928760085, "unit": "l/h" },
+          "CO2": { "value": 4.94046866825862, "unit": "kg/h" },
+          "Intake Temperature": { "value": 57.000001698732376, "unit": "c" },
+          "GPS HDOP": { "value": 0.8399801343679428, "unit": "precision" },
+          "Rpm": { "value": 1454.42502951622, "unit": "u/min" },
+          "MAF": { "value": 6.395454210453224, "unit": "l/s" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS PDOP": { "value": 1.4999999552965164, "unit": "precision" },
+          "Engine Load": { "value": 29.316264422040618, "unit": "%" },
+          "GPS Speed": { "value": 48.74729393566122, "unit": "km/h" },
+          "GPS Bearing": { "value": 135.7164012949379, "unit": "deg" },
+          "GPS Altitude": { "value": 115.62950331906276, "unit": "m" },
+          "Throttle Position": { "value": 17.9999997317791, "unit": "%" },
+          "Speed": { "value": 48.553054213523865, "unit": "km/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.662606855943427, 51.932487906574316]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c67d",
+        "time": "2019-09-08T15:41:55Z",
+        "phenomenons": {
+          "GPS Altitude": { "value": 115.77975148575993, "unit": "m" },
+          "Throttle Position": { "value": 16.00000023841858, "unit": "%" },
+          "GPS HDOP": { "value": 1.1268951177597044, "unit": "precision" },
+          "GPS PDOP": { "value": 1.9268951177597047, "unit": "precision" },
+          "GPS Speed": { "value": 47.54195026185914, "unit": "km/h" },
+          "GPS Bearing": { "value": 136.23111212045842, "unit": "deg" },
+          "Consumption": { "value": 1.733275960367031, "unit": "l/h" },
+          "Engine Load": { "value": 25.488972796761672, "unit": "%" },
+          "MAF": { "value": 5.272769911099871, "unit": "l/s" },
+          "Rpm": { "value": 1402.8947957754135, "unit": "u/min" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "CO2": { "value": 4.073198506862523, "unit": "kg/h" },
+          "Intake Temperature": { "value": 58.0000017285347, "unit": "c" },
+          "Speed": { "value": 47.329089760780334, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.5634475588798524, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.663270473996663, 51.932062705142144]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c67e",
+        "time": "2019-09-08T15:42:00Z",
+        "phenomenons": {
+          "GPS PDOP": { "value": 1.862268042564392, "unit": "precision" },
+          "Consumption": { "value": 1.863854291618336, "unit": "l/h" },
+          "CO2": { "value": 4.38005758530309, "unit": "kg/h" },
+          "Intake Temperature": { "value": 58.99999824166298, "unit": "c" },
+          "Throttle Position": { "value": 18.0, "unit": "%" },
+          "GPS Bearing": { "value": 137.09300994873047, "unit": "deg" },
+          "Rpm": { "value": 1357.9931540060788, "unit": "u/min" },
+          "Engine Load": { "value": 25.738545250303446, "unit": "%" },
+          "GPS HDOP": { "value": 1.293402063846588, "unit": "precision" },
+          "GPS Speed": { "value": 46.661091566085815, "unit": "km/h" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "Speed": { "value": 45.16624069213867, "unit": "km/h" },
+          "GPS Altitude": { "value": 115.62537113540344, "unit": "m" },
+          "MAF": { "value": 5.670000076293945, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.3, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.663885071872046, 51.93162939866716]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c67f",
+        "time": "2019-09-08T15:42:05Z",
+        "phenomenons": {
+          "MAF": { "value": 6.904661210717791, "unit": "l/s" },
+          "Speed": { "value": 45.05187516659498, "unit": "km/h" },
+          "Intake Temperature": { "value": 59.00000175833702, "unit": "c" },
+          "Consumption": { "value": 2.2697146837039717, "unit": "l/h" },
+          "Engine Load": { "value": 25.241939447087134, "unit": "%" },
+          "GPS Speed": { "value": 46.12936783333498, "unit": "km/h" },
+          "Throttle Position": { "value": 17.200000435113907, "unit": "%" },
+          "GPS Accuracy": { "value": 2.999999910593033, "unit": "%" },
+          "CO2": { "value": 5.333829506704333, "unit": "kg/h" },
+          "GPS HDOP": { "value": 1.0, "unit": "precision" },
+          "GPS VDOP": { "value": 1.6, "unit": "precision" },
+          "GPS PDOP": { "value": 1.9, "unit": "precision" },
+          "GPS Bearing": { "value": 140.52703241233667, "unit": "deg" },
+          "GPS Altitude": { "value": 116.01505319831641, "unit": "m" },
+          "Rpm": { "value": 1389.2089240774512, "unit": "u/min" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.664441556880386, 51.931175451951944]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c680",
+        "time": "2019-09-08T15:42:10Z",
+        "phenomenons": {
+          "Speed": { "value": 46.98145920410752, "unit": "km/h" },
+          "Throttle Position": { "value": 18.000000536441803, "unit": "%" },
+          "Engine Load": { "value": 28.63580993954497, "unit": "%" },
+          "GPS Altitude": { "value": 115.97317256335137, "unit": "m" },
+          "GPS VDOP": { "value": 1.4101878911256789, "unit": "precision" },
+          "GPS Speed": { "value": 47.347398464450634, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.1261127263307573, "unit": "precision" },
+          "MAF": { "value": 6.059605651497847, "unit": "l/s" },
+          "Rpm": { "value": 1398.613419815898, "unit": "u/min" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS PDOP": { "value": 1.7522254675626754, "unit": "precision" },
+          "Intake Temperature": { "value": 58.00000086426735, "unit": "c" },
+          "GPS Bearing": { "value": 143.3537311052496, "unit": "deg" },
+          "Consumption": { "value": 1.9919262516908416, "unit": "l/h" },
+          "CO2": { "value": 4.681026691473478, "unit": "kg/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6650162446153995, 51.93069629829348]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c681",
+        "time": "2019-09-08T15:42:15Z",
+        "phenomenons": {
+          "GPS PDOP": { "value": 1.7, "unit": "precision" },
+          "GPS Speed": { "value": 47.5446577697262, "unit": "km/h" },
+          "Intake Temperature": { "value": 57.99999902769923, "unit": "c" },
+          "Rpm": { "value": 1365.0452992022038, "unit": "u/min" },
+          "GPS Bearing": { "value": 142.19320614994513, "unit": "deg" },
+          "MAF": { "value": 3.6704138154315515, "unit": "l/s" },
+          "GPS HDOP": { "value": 1.0, "unit": "precision" },
+          "Speed": { "value": 45.814276695251465, "unit": "km/h" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "CO2": { "value": 2.835383361051082, "unit": "kg/h" },
+          "Engine Load": { "value": 17.64705796101515, "unit": "%" },
+          "Consumption": { "value": 1.2065461110855669, "unit": "l/h" },
+          "GPS Altitude": { "value": 115.41782084061899, "unit": "m" },
+          "Throttle Position": { "value": 13.304623186588287, "unit": "%" },
+          "GPS VDOP": { "value": 1.3, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.665628879276802, 51.93025608934566]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c683",
+        "time": "2019-09-08T15:42:20Z",
+        "phenomenons": {
+          "GPS HDOP": { "value": 0.9855421721935272, "unit": "precision" },
+          "Rpm": { "value": 1337.0442920029163, "unit": "u/min" },
+          "Speed": { "value": 44.65411615371704, "unit": "km/h" },
+          "Throttle Position": { "value": 13.226130783557892, "unit": "%" },
+          "GPS VDOP": { "value": 1.3140562295913696, "unit": "precision" },
+          "GPS PDOP": { "value": 1.642570286989212, "unit": "precision" },
+          "MAF": { "value": 3.512702985045401, "unit": "l/s" },
+          "GPS Accuracy": { "value": 2.999999910593033, "unit": "%" },
+          "Consumption": { "value": 1.1547030768537134, "unit": "l/h" },
+          "GPS Bearing": { "value": 139.4905068079238, "unit": "deg" },
+          "GPS Altitude": { "value": 114.8226775850436, "unit": "m" },
+          "GPS Speed": { "value": 45.7825334668164, "unit": "km/h" },
+          "Intake Temperature": { "value": 57.99999913573265, "unit": "c" },
+          "Engine Load": { "value": 21.704546302185122, "unit": "%" },
+          "CO2": { "value": 2.7135522306062265, "unit": "kg/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.666189291699131, 51.9298169965937]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c684",
+        "time": "2019-09-08T15:42:25Z",
+        "phenomenons": {
+          "GPS Speed": { "value": 44.85513350381211, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.7440913558006286, "unit": "precision" },
+          "GPS VDOP": { "value": 1.4064548134803772, "unit": "precision" },
+          "CO2": { "value": 3.9083665346417664, "unit": "kg/h" },
+          "Speed": { "value": 44.000001311302185, "unit": "km/h" },
+          "Consumption": { "value": 1.663134695592241, "unit": "l/h" },
+          "GPS Altitude": { "value": 114.21038792892561, "unit": "m" },
+          "MAF": { "value": 5.059394338549563, "unit": "l/s" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "Intake Temperature": { "value": 58.0, "unit": "c" },
+          "GPS Bearing": { "value": 144.96144843259572, "unit": "deg" },
+          "GPS HDOP": { "value": 1.075273084640503, "unit": "precision" },
+          "Rpm": { "value": 1322.0000393986702, "unit": "u/min" },
+          "Throttle Position": { "value": 15.999999523162842, "unit": "%" },
+          "Engine Load": { "value": 25.345718230133343, "unit": "%" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.666709397858023, 51.92938819499631]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c686",
+        "time": "2019-09-08T15:42:30Z",
+        "phenomenons": {
+          "GPS Bearing": { "value": 144.41322911696307, "unit": "deg" },
+          "GPS VDOP": { "value": 1.324035608768463, "unit": "precision" },
+          "Throttle Position": { "value": 11.00000006146729, "unit": "%" },
+          "Engine Load": { "value": 19.16465133272817, "unit": "%" },
+          "Rpm": { "value": 794.8250223696232, "unit": "u/min" },
+          "GPS Speed": { "value": 41.75539267253009, "unit": "km/h" },
+          "CO2": { "value": 1.784467863500191, "unit": "kg/h" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "Consumption": { "value": 0.7593480270213578, "unit": "l/h" },
+          "GPS PDOP": { "value": 1.7067260146141052, "unit": "precision" },
+          "Speed": { "value": 39.41528034210205, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.0653808116912842, "unit": "precision" },
+          "MAF": { "value": 2.3099999772012225, "unit": "l/s" },
+          "Intake Temperature": { "value": 57.640174239873886, "unit": "c" },
+          "GPS Altitude": { "value": 113.74783377499348, "unit": "m" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.667073422889952, 51.929042846954665]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c687",
+        "time": "2019-09-08T15:42:35Z",
+        "phenomenons": {
+          "GPS Altitude": { "value": 113.35043241352997, "unit": "m" },
+          "Consumption": { "value": 0.9121646444218625, "unit": "l/h" },
+          "Speed": { "value": 26.251256227493286, "unit": "km/h" },
+          "Intake Temperature": { "value": 56.999998301267624, "unit": "c" },
+          "Engine Load": { "value": 25.49019629924613, "unit": "%" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS Speed": { "value": 28.944569060248114, "unit": "km/h" },
+          "CO2": { "value": 2.143586914391377, "unit": "kg/h" },
+          "GPS HDOP": { "value": 1.2335436016321182, "unit": "precision" },
+          "MAF": { "value": 2.774880862051674, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.599999952316284, "unit": "precision" },
+          "GPS PDOP": { "value": 2.0335435777902604, "unit": "precision" },
+          "Throttle Position": { "value": 11.000000163912773, "unit": "%" },
+          "GPS Bearing": { "value": 147.7120960580878, "unit": "deg" },
+          "Rpm": { "value": 757.7757235169411, "unit": "u/min" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.667272237307138, 51.92884647240896]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c688",
+        "time": "2019-09-08T15:42:40Z",
+        "phenomenons": {
+          "Consumption": { "value": 0.8860138518649924, "unit": "l/h" },
+          "Intake Temperature": { "value": 56.999998301267624, "unit": "c" },
+          "Engine Load": { "value": 25.207881546817475, "unit": "%" },
+          "Speed": { "value": 9.707057803869247, "unit": "km/h" },
+          "Rpm": { "value": 769.9874428873882, "unit": "u/min" },
+          "CO2": { "value": 2.082132551882732, "unit": "kg/h" },
+          "GPS PDOP": { "value": 2.1, "unit": "precision" },
+          "GPS HDOP": { "value": 1.4, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "GPS Bearing": { "value": 146.80888234689155, "unit": "deg" },
+          "GPS Speed": { "value": 13.771865118356175, "unit": "km/h" },
+          "GPS Altitude": { "value": 113.28259344159382, "unit": "m" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "GPS VDOP": { "value": 1.5, "unit": "precision" },
+          "MAF": { "value": 2.695327971860962, "unit": "l/s" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.667318832602294, 51.9288012063646]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c689",
+        "time": "2019-09-08T15:42:45Z",
+        "phenomenons": {
+          "Rpm": { "value": 817.1122720241547, "unit": "u/min" },
+          "Intake Temperature": { "value": 57.0, "unit": "c" },
+          "GPS Bearing": { "value": 145.33621215820312, "unit": "deg" },
+          "GPS PDOP": { "value": 2.1, "unit": "precision" },
+          "CO2": { "value": 1.784467863500191, "unit": "kg/h" },
+          "GPS HDOP": { "value": 1.4, "unit": "precision" },
+          "Speed": { "value": 3.2252861857414246, "unit": "km/h" },
+          "GPS Altitude": { "value": 113.2911960860162, "unit": "m" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "Consumption": { "value": 0.7593480270213578, "unit": "l/h" },
+          "Engine Load": { "value": 18.98413624054973, "unit": "%" },
+          "Throttle Position": { "value": 11.00000024586916, "unit": "%" },
+          "GPS Speed": { "value": 1.3042268392646577, "unit": "km/h" },
+          "MAF": { "value": 2.3099999772012225, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.5, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.667318604098386, 51.928799658765726]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c68a",
+        "time": "2019-09-08T15:42:50Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "Consumption": { "value": 0.690316379094773, "unit": "l/h" },
+          "Throttle Position": { "value": 10.999999836087227, "unit": "%" },
+          "GPS Altitude": { "value": 113.29966399670536, "unit": "m" },
+          "Engine Load": { "value": 20.77715028329186, "unit": "%" },
+          "GPS PDOP": { "value": 2.013191428780556, "unit": "precision" },
+          "CO2": { "value": 1.6222434908727166, "unit": "kg/h" },
+          "Rpm": { "value": 772.864617973566, "unit": "u/min" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Bearing": { "value": 145.33620782684648, "unit": "deg" },
+          "GPS Accuracy": { "value": 1.9999999403953552, "unit": "%" },
+          "GPS VDOP": { "value": 1.6131914407014847, "unit": "precision" },
+          "Intake Temperature": { "value": 55.88291358202696, "unit": "c" },
+          "GPS HDOP": { "value": 1.2565957069396974, "unit": "precision" },
+          "MAF": { "value": 2.099999951571224, "unit": "l/s" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.667319061106201, 51.928802753963474]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c68b",
+        "time": "2019-09-08T15:42:55Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "Intake Temperature": { "value": 53.99999859184027, "unit": "c" },
+          "CO2": { "value": 1.6165962100313847, "unit": "kg/h" },
+          "Engine Load": { "value": 18.431372238140455, "unit": "%" },
+          "GPS Altitude": { "value": 113.3116041777962, "unit": "m" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.300000038743019, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "Rpm": { "value": 766.8551911711693, "unit": "u/min" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "GPS PDOP": { "value": 2.0000000596046448, "unit": "precision" },
+          "MAF": { "value": 2.092689526496301, "unit": "l/s" },
+          "Consumption": { "value": 0.6879132808644189, "unit": "l/h" },
+          "GPS VDOP": { "value": 1.5000000447034836, "unit": "precision" },
+          "GPS Bearing": { "value": 145.33621648955977, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.667319061106202, 51.928802753963474]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c68e",
+        "time": "2019-09-08T15:43:00Z",
+        "phenomenons": {
+          "CO2": { "value": 1.673445149528578, "unit": "kg/h" },
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "MAF": { "value": 2.166280680267402, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.4, "unit": "precision" },
+          "GPS Altitude": { "value": 113.32235366516292, "unit": "m" },
+          "Rpm": { "value": 747.4930361509323, "unit": "u/min" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.4, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "Engine Load": { "value": 18.92075258532509, "unit": "%" },
+          "Intake Temperature": { "value": 54.0, "unit": "c" },
+          "Throttle Position": { "value": 11.000000163912773, "unit": "%" },
+          "GPS PDOP": { "value": 2.0, "unit": "precision" },
+          "Consumption": { "value": 0.712104318948331, "unit": "l/h" },
+          "GPS Bearing": { "value": 145.33621648955977, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.667318718350339, 51.928800432565154]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c68f",
+        "time": "2019-09-08T15:43:05Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Altitude": { "value": 113.33272881052893, "unit": "m" },
+          "GPS PDOP": { "value": 1.700000025331974, "unit": "precision" },
+          "CO2": { "value": 1.6763183964758512, "unit": "kg/h" },
+          "Consumption": { "value": 0.7133269772237665, "unit": "l/h" },
+          "GPS Bearing": { "value": 145.3362099925248, "unit": "deg" },
+          "Rpm": { "value": 744.823222309351, "unit": "u/min" },
+          "GPS Accuracy": { "value": 2.9999999552965164, "unit": "%" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.0000000149011612, "unit": "precision" },
+          "Engine Load": { "value": 18.431371688842773, "unit": "%" },
+          "GPS VDOP": { "value": 1.4000000208616257, "unit": "precision" },
+          "Intake Temperature": { "value": 54.00000120699406, "unit": "c" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "MAF": { "value": 2.1700001086294662, "unit": "l/s" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.667318832602293, 51.9288012063646]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c690",
+        "time": "2019-09-08T15:43:10Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Accuracy": { "value": 2.0, "unit": "%" },
+          "CO2": { "value": 1.686587178326945, "unit": "kg/h" },
+          "GPS Bearing": { "value": 145.33621215820312, "unit": "deg" },
+          "Engine Load": { "value": 19.02309196467877, "unit": "%" },
+          "MAF": { "value": 2.1832930831498274, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.5396226406097413, "unit": "precision" },
+          "Consumption": { "value": 0.7176966716284873, "unit": "l/h" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "Throttle Position": { "value": 11.000000327825546, "unit": "%" },
+          "GPS Altitude": { "value": 113.34545089311064, "unit": "m" },
+          "GPS PDOP": { "value": 1.8396226406097411, "unit": "precision" },
+          "Intake Temperature": { "value": 53.99999909475446, "unit": "c" },
+          "GPS HDOP": { "value": 1.0698113203048707, "unit": "precision" },
+          "Rpm": { "value": 777.5970058143139, "unit": "u/min" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.667318604098385, 51.928799658765726]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c691",
+        "time": "2019-09-08T15:43:15Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.0999999672174454, "unit": "precision" },
+          "Intake Temperature": { "value": 53.13959023356438, "unit": "c" },
+          "Consumption": { "value": 0.6834387289027726, "unit": "l/h" },
+          "GPS Altitude": { "value": 113.35845115744954, "unit": "m" },
+          "Engine Load": { "value": 18.431372238140455, "unit": "%" },
+          "GPS Accuracy": { "value": 2.999999910593033, "unit": "%" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Bearing": { "value": 145.33620782684648, "unit": "deg" },
+          "MAF": { "value": 2.0790775665496426, "unit": "l/s" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "CO2": { "value": 1.6060810129215155, "unit": "kg/h" },
+          "GPS PDOP": { "value": 1.8999999433755872, "unit": "precision" },
+          "Rpm": { "value": 759.2460936456919, "unit": "u/min" },
+          "GPS VDOP": { "value": 1.4999999552965164, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.667318946854247, 51.92880198016403]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c692",
+        "time": "2019-09-08T15:43:20Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Bearing": { "value": 145.33621432388145, "unit": "deg" },
+          "GPS HDOP": { "value": 1.0999999672174454, "unit": "precision" },
+          "Consumption": { "value": 1.0764629479552725, "unit": "l/h" },
+          "GPS Accuracy": { "value": 2.0000000298023224, "unit": "%" },
+          "GPS Altitude": { "value": 113.36748373661251, "unit": "m" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "CO2": { "value": 2.5296879276948907, "unit": "kg/h" },
+          "Engine Load": { "value": 20.89551187898161, "unit": "%" },
+          "MAF": { "value": 3.2746899929256017, "unit": "l/s" },
+          "Intake Temperature": { "value": 53.000001184642315, "unit": "c" },
+          "Rpm": { "value": 731.2708093523979, "unit": "u/min" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "GPS PDOP": { "value": 1.8999999433755872, "unit": "precision" },
+          "GPS VDOP": { "value": 1.4999999552965164, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.667319061106202, 51.928802753963474]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c693",
+        "time": "2019-09-08T15:43:25Z",
+        "phenomenons": {
+          "Rpm": { "value": 779.669585108757, "unit": "u/min" },
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Altitude": { "value": 113.374915911247, "unit": "m" },
+          "CO2": { "value": 2.434392703217421, "unit": "kg/h" },
+          "GPS PDOP": { "value": 1.7513238310813903, "unit": "precision" },
+          "GPS VDOP": { "value": 1.3769857466220856, "unit": "precision" },
+          "Engine Load": { "value": 26.843943424901113, "unit": "%" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "Intake Temperature": { "value": 53.99999959766865, "unit": "c" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "Consumption": { "value": 1.035911788603158, "unit": "l/h" },
+          "GPS HDOP": { "value": 1.0256619155406952, "unit": "precision" },
+          "MAF": { "value": 3.15132998691319, "unit": "l/s" },
+          "GPS Bearing": { "value": 145.33621648955977, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.667319061106201, 51.928802753963474]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c694",
+        "time": "2019-09-08T15:43:30Z",
+        "phenomenons": {
+          "Speed": { "value": 0.0, "unit": "km/h" },
+          "Intake Temperature": { "value": 55.0, "unit": "c" },
+          "GPS PDOP": { "value": 1.8000000000000003, "unit": "precision" },
+          "GPS Accuracy": { "value": 2.0000000596046448, "unit": "%" },
+          "GPS Speed": { "value": 0.0, "unit": "km/h" },
+          "Consumption": { "value": 0.905258597405514, "unit": "l/h" },
+          "GPS HDOP": { "value": 1.1, "unit": "precision" },
+          "MAF": { "value": 2.7538720915240233, "unit": "l/s" },
+          "Throttle Position": { "value": 11.0, "unit": "%" },
+          "Rpm": { "value": 728.2025529593229, "unit": "u/min" },
+          "Engine Load": { "value": 30.9252755046665, "unit": "%" },
+          "GPS Altitude": { "value": 113.3838674144712, "unit": "m" },
+          "CO2": { "value": 2.127357703902958, "unit": "kg/h" },
+          "GPS VDOP": { "value": 1.5, "unit": "precision" },
+          "GPS Bearing": { "value": 145.33621648955977, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.667396626633001, 51.92872298845802]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c695",
+        "time": "2019-09-08T15:43:35Z",
+        "phenomenons": {
+          "GPS HDOP": { "value": 1.0999999672174454, "unit": "precision" },
+          "Rpm": { "value": 1606.4542244523764, "unit": "u/min" },
+          "GPS Speed": { "value": 12.09309434334557, "unit": "km/h" },
+          "Throttle Position": { "value": 18.16772449016571, "unit": "%" },
+          "MAF": { "value": 9.174646232132034, "unit": "l/s" },
+          "GPS Altitude": { "value": 113.57859102047931, "unit": "m" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "GPS PDOP": { "value": 1.9381725311279296, "unit": "precision" },
+          "Consumption": { "value": 3.015908910713174, "unit": "l/h" },
+          "GPS Bearing": { "value": 150.40676515953828, "unit": "deg" },
+          "Intake Temperature": { "value": 56.00000083446503, "unit": "c" },
+          "Speed": { "value": 14.545126557350159, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.5999999523162842, "unit": "precision" },
+          "CO2": { "value": 7.087385940175959, "unit": "kg/h" },
+          "Engine Load": { "value": 28.49519525601852, "unit": "%" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.667641089940069, 51.92848795112937]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c696",
+        "time": "2019-09-08T15:43:40Z",
+        "phenomenons": {
+          "Intake Temperature": { "value": 56.55181938409805, "unit": "c" },
+          "Consumption": { "value": 3.120522387446218, "unit": "l/h" },
+          "GPS HDOP": { "value": 1.164099782705307, "unit": "precision" },
+          "Speed": { "value": 22.751015663146973, "unit": "km/h" },
+          "CO2": { "value": 7.3332276104986125, "unit": "kg/h" },
+          "Rpm": { "value": 1145.9083419591188, "unit": "u/min" },
+          "Throttle Position": { "value": 26.768346518278122, "unit": "%" },
+          "MAF": { "value": 9.492889146143682, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.6, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "Engine Load": { "value": 60.45861670788361, "unit": "%" },
+          "GPS Bearing": { "value": 125.8297334641029, "unit": "deg" },
+          "GPS Altitude": { "value": 114.17289506316253, "unit": "m" },
+          "GPS PDOP": { "value": 2.0, "unit": "precision" },
+          "GPS Speed": { "value": 23.41833156975906, "unit": "km/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.668197571593428, 51.92852231282649]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c698",
+        "time": "2019-09-08T15:43:45Z",
+        "phenomenons": {
+          "CO2": { "value": 9.697567577513263, "unit": "kg/h" },
+          "MAF": { "value": 12.553535617628427, "unit": "l/s" },
+          "GPS Bearing": { "value": 65.29047480475765, "unit": "deg" },
+          "Intake Temperature": { "value": 57.0, "unit": "c" },
+          "GPS Altitude": { "value": 114.3590272613431, "unit": "m" },
+          "Speed": { "value": 34.67384970188141, "unit": "km/h" },
+          "GPS Speed": { "value": 32.101947461762336, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.3393003702163695, "unit": "precision" },
+          "GPS PDOP": { "value": 2.1089505523443224, "unit": "precision" },
+          "Throttle Position": { "value": 51.56901650130749, "unit": "%" },
+          "Engine Load": { "value": 91.62335039878405, "unit": "%" },
+          "GPS VDOP": { "value": 1.639300361275673, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.000000089406967, "unit": "%" },
+          "Rpm": { "value": 1640.5999999046326, "unit": "u/min" },
+          "Consumption": { "value": 4.1266245010694735, "unit": "l/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.668958585603441, 51.92873650038964]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c699",
+        "time": "2019-09-08T15:43:50Z",
+        "phenomenons": {
+          "CO2": { "value": 8.274461691605385, "unit": "kg/h" },
+          "Consumption": { "value": 3.521047528342717, "unit": "l/h" },
+          "MAF": { "value": 10.711320001845905, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.5626968562602996, "unit": "precision" },
+          "Intake Temperature": { "value": 56.31682640314102, "unit": "c" },
+          "Engine Load": { "value": 43.54293367639434, "unit": "%" },
+          "GPS Accuracy": { "value": 2.9999999552965164, "unit": "%" },
+          "Speed": { "value": 41.975426107645035, "unit": "km/h" },
+          "Throttle Position": { "value": 22.174140222370625, "unit": "%" },
+          "Rpm": { "value": 1604.6502875089645, "unit": "u/min" },
+          "GPS PDOP": { "value": 1.8352362275123597, "unit": "precision" },
+          "GPS Speed": { "value": 42.22262094930812, "unit": "km/h" },
+          "GPS Altitude": { "value": 114.46071112231812, "unit": "m" },
+          "GPS HDOP": { "value": 1.01761811375618, "unit": "precision" },
+          "GPS Bearing": { "value": 67.0010168179706, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.669798522185524, 51.928979224640884]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c69b",
+        "time": "2019-09-08T15:43:55Z",
+        "phenomenons": {
+          "Throttle Position": { "value": 18.53940886259079, "unit": "%" },
+          "GPS VDOP": { "value": 1.3278855979442596, "unit": "precision" },
+          "Intake Temperature": { "value": 57.000001698732376, "unit": "c" },
+          "Rpm": { "value": 1677.1131826788187, "unit": "u/min" },
+          "GPS Altitude": { "value": 114.62399879156573, "unit": "m" },
+          "Engine Load": { "value": 29.447022688390916, "unit": "%" },
+          "GPS Speed": { "value": 45.533693204069095, "unit": "km/h" },
+          "MAF": { "value": 6.871626161767949, "unit": "l/s" },
+          "GPS HDOP": { "value": 1.3884576082229614, "unit": "precision" },
+          "CO2": { "value": 5.308310033196992, "unit": "kg/h" },
+          "GPS PDOP": { "value": 1.87211440205574, "unit": "precision" },
+          "GPS Accuracy": { "value": 4.0, "unit": "%" },
+          "GPS Bearing": { "value": 67.8096888285545, "unit": "deg" },
+          "Consumption": { "value": 2.258855333275316, "unit": "l/h" },
+          "Speed": { "value": 44.99999983236194, "unit": "km/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.670647768975922, 51.929212311039436]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c69c",
+        "time": "2019-09-08T15:44:00Z",
+        "phenomenons": {
+          "CO2": { "value": 2.2780174793442245, "unit": "kg/h" },
+          "GPS Altitude": { "value": 114.73275686461672, "unit": "m" },
+          "Throttle Position": { "value": 10.999999672174454, "unit": "%" },
+          "Intake Temperature": { "value": 58.494314789772034, "unit": "c" },
+          "MAF": { "value": 2.948901705087266, "unit": "l/s" },
+          "GPS HDOP": { "value": 1.3999999582767484, "unit": "precision" },
+          "Consumption": { "value": 0.9693691401464785, "unit": "l/h" },
+          "GPS Speed": { "value": 44.894874965199506, "unit": "km/h" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS Bearing": { "value": 67.22137665974242, "unit": "deg" },
+          "Engine Load": { "value": 18.43137220380935, "unit": "%" },
+          "GPS VDOP": { "value": 1.5246834993362426, "unit": "precision" },
+          "Speed": { "value": 43.3349295258522, "unit": "km/h" },
+          "GPS PDOP": { "value": 2.0999999374151233, "unit": "precision" },
+          "Rpm": { "value": 1129.547138273716, "unit": "u/min" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.671436261417947, 51.92943055605883]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c69d",
+        "time": "2019-09-08T15:44:05Z",
+        "phenomenons": {
+          "Intake Temperature": { "value": 59.00000175833702, "unit": "c" },
+          "Throttle Position": { "value": 10.99999987706542, "unit": "%" },
+          "GPS VDOP": { "value": 1.3000000387430193, "unit": "precision" },
+          "MAF": { "value": 4.368755140946057, "unit": "l/s" },
+          "Rpm": { "value": 764.2515560388565, "unit": "u/min" },
+          "Consumption": { "value": 1.436106333142109, "unit": "l/h" },
+          "GPS PDOP": { "value": 1.6611471354961396, "unit": "precision" },
+          "GPS Speed": { "value": 42.09870541047212, "unit": "km/h" },
+          "CO2": { "value": 3.374849882883956, "unit": "kg/h" },
+          "GPS HDOP": { "value": 1.0000000298023224, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "Speed": { "value": 41.0, "unit": "km/h" },
+          "GPS Bearing": { "value": 67.62935784377487, "unit": "deg" },
+          "GPS Altitude": { "value": 115.0209947627556, "unit": "m" },
+          "Engine Load": { "value": 22.46765317015752, "unit": "%" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.67220887084245, 51.92963792604805]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c69e",
+        "time": "2019-09-08T15:44:10Z",
+        "phenomenons": {
+          "GPS HDOP": { "value": 1.1253999650478361, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.6463537514209747, "unit": "%" },
+          "GPS PDOP": { "value": 1.6880999475717544, "unit": "precision" },
+          "GPS Bearing": { "value": 66.39780020118314, "unit": "deg" },
+          "Speed": { "value": 44.73736131191254, "unit": "km/h" },
+          "Throttle Position": { "value": 24.00627002120018, "unit": "%" },
+          "GPS Altitude": { "value": 115.04285175955994, "unit": "m" },
+          "CO2": { "value": 7.687745806558442, "unit": "kg/h" },
+          "Intake Temperature": { "value": 58.00000086426735, "unit": "c" },
+          "GPS VDOP": { "value": 1.2253999620676042, "unit": "precision" },
+          "MAF": { "value": 9.951814208099854, "unit": "l/s" },
+          "GPS Speed": { "value": 43.90218213669391, "unit": "km/h" },
+          "Rpm": { "value": 1677.68558883667, "unit": "u/min" },
+          "Engine Load": { "value": 51.31691086030469, "unit": "%" },
+          "Consumption": { "value": 3.271381194280188, "unit": "l/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.673098877307245, 51.92988498927242]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c69f",
+        "time": "2019-09-08T15:44:15Z",
+        "phenomenons": {
+          "Consumption": { "value": 1.1668707909402936, "unit": "l/h" },
+          "Rpm": { "value": 931.4204902350903, "unit": "u/min" },
+          "GPS Bearing": { "value": 64.7952634629255, "unit": "deg" },
+          "GPS Altitude": { "value": 114.54738775503618, "unit": "m" },
+          "Speed": { "value": 45.0, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.6233367696404457, "unit": "precision" },
+          "GPS Speed": { "value": 46.681991648319126, "unit": "km/h" },
+          "Engine Load": { "value": 23.71012084483877, "unit": "%" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS VDOP": { "value": 1.1233367621898651, "unit": "precision" },
+          "Intake Temperature": { "value": 58.25974199175835, "unit": "c" },
+          "Throttle Position": { "value": 11.000000163912773, "unit": "%" },
+          "MAF": { "value": 3.549718185272951, "unit": "l/s" },
+          "GPS HDOP": { "value": 1.1233367621898651, "unit": "precision" },
+          "CO2": { "value": 2.74214635870969, "unit": "kg/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.67393185949596, 51.93011851581224]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6a0",
+        "time": "2019-09-08T15:44:20Z",
+        "phenomenons": {
+          "Intake Temperature": { "value": 59.240985572338104, "unit": "c" },
+          "GPS Altitude": { "value": 114.39724221041524, "unit": "m" },
+          "Speed": { "value": 45.0, "unit": "km/h" },
+          "GPS Bearing": { "value": 64.90374326444498, "unit": "deg" },
+          "Engine Load": { "value": 19.426128002176313, "unit": "%" },
+          "Rpm": { "value": 1347.8533653020859, "unit": "u/min" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS PDOP": { "value": 1.5000000447034836, "unit": "precision" },
+          "Throttle Position": { "value": 13.281690537929535, "unit": "%" },
+          "GPS Speed": { "value": 45.43936472282439, "unit": "km/h" },
+          "CO2": { "value": 2.737895038650975, "unit": "kg/h" },
+          "GPS HDOP": { "value": 0.9000000268220901, "unit": "precision" },
+          "Consumption": { "value": 1.1650617185748828, "unit": "l/h" },
+          "MAF": { "value": 3.5442148363813413, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.1000000327825548, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.674759802803498, 51.93033448413905]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6a1",
+        "time": "2019-09-08T15:44:25Z",
+        "phenomenons": {
+          "GPS HDOP": { "value": 1.0684426546096804, "unit": "precision" },
+          "Engine Load": { "value": 21.200841811370964, "unit": "%" },
+          "GPS Speed": { "value": 44.45793519625545, "unit": "km/h" },
+          "Rpm": { "value": 1291.6494325399399, "unit": "u/min" },
+          "GPS Accuracy": { "value": 2.999999910593033, "unit": "%" },
+          "CO2": { "value": 2.8515480011152685, "unit": "kg/h" },
+          "Consumption": { "value": 1.2134246813256462, "unit": "l/h" },
+          "Intake Temperature": { "value": 60.0, "unit": "c" },
+          "GPS Altitude": { "value": 114.59604350007312, "unit": "m" },
+          "Throttle Position": { "value": 13.861557483673096, "unit": "%" },
+          "GPS VDOP": { "value": 1.1684426575899125, "unit": "precision" },
+          "GPS Bearing": { "value": 67.25035808092821, "unit": "deg" },
+          "Speed": { "value": 43.0, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.536885291337967, "unit": "precision" },
+          "MAF": { "value": 3.6913389993160592, "unit": "l/s" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.675567670891091, 51.93054727346462]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6a2",
+        "time": "2019-09-08T15:44:30Z",
+        "phenomenons": {
+          "GPS VDOP": { "value": 1.2643141150474548, "unit": "precision" },
+          "Engine Load": { "value": 14.418593464601486, "unit": "%" },
+          "Speed": { "value": 41.618634790182114, "unit": "km/h" },
+          "Rpm": { "value": 1238.3375078439713, "unit": "u/min" },
+          "GPS HDOP": { "value": 1.3356858849525453, "unit": "precision" },
+          "GPS PDOP": { "value": 1.8000000000000003, "unit": "precision" },
+          "Throttle Position": { "value": 12.107165195047855, "unit": "%" },
+          "GPS Bearing": { "value": 68.6329851263813, "unit": "deg" },
+          "MAF": { "value": 2.79010957698239, "unit": "l/s" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "Intake Temperature": { "value": 59.99999910593033, "unit": "c" },
+          "CO2": { "value": 2.1553510497439636, "unit": "kg/h" },
+          "GPS Altitude": { "value": 114.95978714521536, "unit": "m" },
+          "Consumption": { "value": 0.9171706594655165, "unit": "l/h" },
+          "GPS Speed": { "value": 42.76849148987685, "unit": "km/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.676367210338206, 51.93058180855999]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6a3",
+        "time": "2019-09-08T15:44:35Z",
+        "phenomenons": {
+          "GPS VDOP": { "value": 1.1370841145515442, "unit": "precision" },
+          "GPS Speed": { "value": 40.243507956490475, "unit": "km/h" },
+          "Engine Load": { "value": 46.70244673014349, "unit": "%" },
+          "Intake Temperature": { "value": 58.99999912083149, "unit": "c" },
+          "GPS PDOP": { "value": 1.5370841026306152, "unit": "precision" },
+          "Rpm": { "value": 1224.6311049163342, "unit": "u/min" },
+          "GPS HDOP": { "value": 1.0629158198833466, "unit": "precision" },
+          "Throttle Position": { "value": 23.082837089896202, "unit": "%" },
+          "CO2": { "value": 7.934742682674886, "unit": "kg/h" },
+          "GPS Altitude": { "value": 114.88899759778516, "unit": "m" },
+          "Speed": { "value": 41.0, "unit": "km/h" },
+          "Consumption": { "value": 3.37648624794676, "unit": "l/h" },
+          "GPS Accuracy": { "value": 3.651026278734207, "unit": "%" },
+          "MAF": { "value": 10.27155254010804, "unit": "l/s" },
+          "GPS Bearing": { "value": 106.6602201089454, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.677130269894283, 51.93034317385706]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6a4",
+        "time": "2019-09-08T15:44:40Z",
+        "phenomenons": {
+          "GPS Speed": { "value": 41.34352559359695, "unit": "km/h" },
+          "Engine Load": { "value": 22.352942179231093, "unit": "%" },
+          "Intake Temperature": { "value": 59.0, "unit": "c" },
+          "Speed": { "value": 42.00000125169754, "unit": "km/h" },
+          "GPS Bearing": { "value": 110.99013479920268, "unit": "deg" },
+          "CO2": { "value": 3.5722409511002295, "unit": "kg/h" },
+          "GPS HDOP": { "value": 1.2581371545791624, "unit": "precision" },
+          "Rpm": { "value": 1247.0, "unit": "u/min" },
+          "GPS Altitude": { "value": 114.01812605465534, "unit": "m" },
+          "Consumption": { "value": 1.5201025323830764, "unit": "l/h" },
+          "Throttle Position": { "value": 15.000000153668225, "unit": "%" },
+          "MAF": { "value": 4.62427857872035, "unit": "l/s" },
+          "GPS Accuracy": { "value": 4.0000001192092896, "unit": "%" },
+          "GPS PDOP": { "value": 2.0, "unit": "precision" },
+          "GPS VDOP": { "value": 1.5709314227104187, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.677941141851807, 51.930113789284064]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6a5",
+        "time": "2019-09-08T15:44:45Z",
+        "phenomenons": {
+          "Engine Load": { "value": 26.93664203056852, "unit": "%" },
+          "CO2": { "value": 4.461363273082089, "unit": "kg/h" },
+          "Speed": { "value": 44.0, "unit": "km/h" },
+          "Throttle Position": { "value": 15.779244273900986, "unit": "%" },
+          "MAF": { "value": 5.775250577441902, "unit": "l/s" },
+          "GPS HDOP": { "value": 1.3452611207962037, "unit": "precision" },
+          "Consumption": { "value": 1.898452456630676, "unit": "l/h" },
+          "GPS PDOP": { "value": 1.7452611207962034, "unit": "precision" },
+          "Rpm": { "value": 1319.5838451087475, "unit": "u/min" },
+          "GPS Speed": { "value": 43.19648896130383, "unit": "km/h" },
+          "Intake Temperature": { "value": 57.9999982714653, "unit": "c" },
+          "GPS VDOP": { "value": 1.1226305603981017, "unit": "precision" },
+          "GPS Accuracy": { "value": 4.000000059604645, "unit": "%" },
+          "GPS Bearing": { "value": 111.5601627471234, "unit": "deg" },
+          "GPS Altitude": { "value": 113.8667470213963, "unit": "m" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.678756293237869, 51.92988132911817]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6a6",
+        "time": "2019-09-08T15:44:50Z",
+        "phenomenons": {
+          "Engine Load": { "value": 35.74088369024548, "unit": "%" },
+          "MAF": { "value": 7.6795814235258035, "unit": "l/s" },
+          "Intake Temperature": { "value": 57.0, "unit": "c" },
+          "Rpm": { "value": 1307.2644526958466, "unit": "u/min" },
+          "GPS Speed": { "value": 44.269234332514316, "unit": "km/h" },
+          "GPS PDOP": { "value": 1.7685508728027344, "unit": "precision" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS Bearing": { "value": 111.89744340125253, "unit": "deg" },
+          "Speed": { "value": 43.602460235357285, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.2314491271972656, "unit": "precision" },
+          "GPS Altitude": { "value": 113.68620024460947, "unit": "m" },
+          "Throttle Position": { "value": 19.70278638601303, "unit": "%" },
+          "CO2": { "value": 5.932452982972954, "unit": "kg/h" },
+          "Consumption": { "value": 2.5244480778608316, "unit": "l/h" },
+          "GPS HDOP": { "value": 1.237101745605469, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.679617782601932, 51.92971588948954]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6a7",
+        "time": "2019-09-08T15:44:55Z",
+        "phenomenons": {
+          "GPS Speed": { "value": 44.758122692697725, "unit": "km/h" },
+          "Rpm": { "value": 1325.3970691263676, "unit": "u/min" },
+          "GPS HDOP": { "value": 1.0999999672174454, "unit": "precision" },
+          "Intake Temperature": { "value": 57.0, "unit": "c" },
+          "Consumption": { "value": 2.560174133176932, "unit": "l/h" },
+          "GPS Bearing": { "value": 104.31926713613257, "unit": "deg" },
+          "Speed": { "value": 43.999998688697815, "unit": "km/h" },
+          "GPS Accuracy": { "value": 2.999999910593033, "unit": "%" },
+          "CO2": { "value": 6.01640921296579, "unit": "kg/h" },
+          "MAF": { "value": 7.78826306096866, "unit": "l/s" },
+          "GPS VDOP": { "value": 1.0999999672174454, "unit": "precision" },
+          "Throttle Position": { "value": 17.353681564331055, "unit": "%" },
+          "GPS PDOP": { "value": 1.4999999552965164, "unit": "precision" },
+          "Engine Load": { "value": 27.718988578846258, "unit": "%" },
+          "GPS Altitude": { "value": 113.64242377672724, "unit": "m" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.680518103472664, 51.92959567134159]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6a8",
+        "time": "2019-09-08T15:45:00Z",
+        "phenomenons": {
+          "GPS Speed": { "value": 44.73243057761283, "unit": "km/h" },
+          "Engine Load": { "value": 32.54901788982693, "unit": "%" },
+          "Intake Temperature": { "value": 56.999998301267624, "unit": "c" },
+          "CO2": { "value": 5.3311672558464585, "unit": "kg/h" },
+          "GPS Bearing": { "value": 104.71348148557172, "unit": "deg" },
+          "GPS Altitude": { "value": 113.6069389279736, "unit": "m" },
+          "GPS HDOP": { "value": 1.2341846376657486, "unit": "precision" },
+          "GPS VDOP": { "value": 1.0670923054218293, "unit": "precision" },
+          "Rpm": { "value": 1326.940960822627, "unit": "u/min" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "Consumption": { "value": 2.268581810998493, "unit": "l/h" },
+          "GPS PDOP": { "value": 1.6341846257448196, "unit": "precision" },
+          "Throttle Position": { "value": 17.999999463558197, "unit": "%" },
+          "MAF": { "value": 6.901214917541665, "unit": "l/s" },
+          "Speed": { "value": 44.82386076450348, "unit": "km/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.68138759261136, 51.92939997115329]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6bf",
+        "time": "2019-09-08T15:45:05Z",
+        "phenomenons": {
+          "GPS VDOP": { "value": 1.4, "unit": "precision" },
+          "GPS Altitude": { "value": 112.98067991287556, "unit": "m" },
+          "GPS Bearing": { "value": 116.16186569220463, "unit": "deg" },
+          "GPS Speed": { "value": 44.777868220161395, "unit": "km/h" },
+          "CO2": { "value": 6.92839098364085, "unit": "kg/h" },
+          "Consumption": { "value": 2.9482514824003614, "unit": "l/h" },
+          "Speed": { "value": 44.9867631457746, "unit": "km/h" },
+          "Engine Load": { "value": 47.18609057096387, "unit": "%" },
+          "MAF": { "value": 8.968826697085433, "unit": "l/s" },
+          "GPS PDOP": { "value": 1.9734468936920164, "unit": "precision" },
+          "Throttle Position": { "value": 22.508485913276672, "unit": "%" },
+          "Rpm": { "value": 1342.1818581819534, "unit": "u/min" },
+          "Intake Temperature": { "value": 55.99999916553497, "unit": "c" },
+          "GPS Accuracy": { "value": 4.000000059604645, "unit": "%" },
+          "GPS HDOP": { "value": 1.3734468936920166, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.682216112221236, 51.929140025486674]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6c0",
+        "time": "2019-09-08T15:45:10Z",
+        "phenomenons": {
+          "Consumption": { "value": 2.139980867894899, "unit": "l/h" },
+          "Throttle Position": { "value": 18.000000536441803, "unit": "%" },
+          "GPS Speed": { "value": 45.75175691695597, "unit": "km/h" },
+          "GPS Altitude": { "value": 111.94876216975689, "unit": "m" },
+          "GPS Bearing": { "value": 117.90515578070313, "unit": "deg" },
+          "Rpm": { "value": 1375.2036627233028, "unit": "u/min" },
+          "GPS HDOP": { "value": 1.1875380277633667, "unit": "precision" },
+          "Intake Temperature": { "value": 54.99999959021807, "unit": "c" },
+          "GPS Accuracy": { "value": 3.2753769755363464, "unit": "%" },
+          "Speed": { "value": 46.000000685453415, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.2291793674230576, "unit": "precision" },
+          "CO2": { "value": 5.028955039553013, "unit": "kg/h" },
+          "GPS PDOP": { "value": 1.7167173743247985, "unit": "precision" },
+          "MAF": { "value": 6.510000131875273, "unit": "l/s" },
+          "Engine Load": { "value": 29.409338484225145, "unit": "%" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.683026585943432, 51.928863280190136]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6c1",
+        "time": "2019-09-08T15:45:15Z",
+        "phenomenons": {
+          "GPS PDOP": { "value": 1.8234468936920165, "unit": "precision" },
+          "GPS VDOP": { "value": 1.4617234468460083, "unit": "precision" },
+          "GPS Speed": { "value": 46.07355406262741, "unit": "km/h" },
+          "Consumption": { "value": 1.0825809485593847, "unit": "l/h" },
+          "Speed": { "value": 44.83207547664642, "unit": "km/h" },
+          "Engine Load": { "value": 18.166134845654653, "unit": "%" },
+          "MAF": { "value": 3.2933014605966946, "unit": "l/s" },
+          "Throttle Position": { "value": 12.649648666381836, "unit": "%" },
+          "GPS Bearing": { "value": 116.36905952473899, "unit": "deg" },
+          "Intake Temperature": { "value": 54.99999915482476, "unit": "c" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "GPS HDOP": { "value": 1.0617234468460084, "unit": "precision" },
+          "GPS Altitude": { "value": 111.06643028844891, "unit": "m" },
+          "CO2": { "value": 2.5440652291145542, "unit": "kg/h" },
+          "Rpm": { "value": 1331.5827560424805, "unit": "u/min" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.683862284832841, 51.92864213894009]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6c2",
+        "time": "2019-09-08T15:45:20Z",
+        "phenomenons": {
+          "Rpm": { "value": 1266.183333158493, "unit": "u/min" },
+          "CO2": { "value": 5.763245240312313, "unit": "kg/h" },
+          "GPS HDOP": { "value": 1.270916372537613, "unit": "precision" },
+          "Speed": { "value": 41.22822177410126, "unit": "km/h" },
+          "Throttle Position": { "value": 18.83026695251465, "unit": "%" },
+          "MAF": { "value": 7.460541400624148, "unit": "l/s" },
+          "GPS Altitude": { "value": 110.30380674388014, "unit": "m" },
+          "Intake Temperature": { "value": 54.95961381494999, "unit": "c" },
+          "GPS PDOP": { "value": 1.8709163904190063, "unit": "precision" },
+          "Consumption": { "value": 2.4524447831116225, "unit": "l/h" },
+          "GPS Accuracy": { "value": 3.0, "unit": "%" },
+          "Engine Load": { "value": 33.69212758620648, "unit": "%" },
+          "GPS Speed": { "value": 41.93249939512816, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.4031872928142548, "unit": "precision" },
+          "GPS Bearing": { "value": 103.81359527472159, "unit": "deg" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.684723195213534, 51.92855076184558]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6c3",
+        "time": "2019-09-08T15:45:25Z",
+        "phenomenons": {
+          "Throttle Position": { "value": 20.689741373062134, "unit": "%" },
+          "GPS Accuracy": { "value": 6.000000089406967, "unit": "%" },
+          "MAF": { "value": 7.306788293534445, "unit": "l/s" },
+          "GPS Bearing": { "value": 98.05999886404163, "unit": "deg" },
+          "Engine Load": { "value": 42.718938645203366, "unit": "%" },
+          "Rpm": { "value": 1363.9722921848297, "unit": "u/min" },
+          "GPS HDOP": { "value": 1.2271815627813338, "unit": "precision" },
+          "Speed": { "value": 45.33835530281067, "unit": "km/h" },
+          "GPS Altitude": { "value": 109.24332642083122, "unit": "m" },
+          "GPS VDOP": { "value": 1.47572720348835, "unit": "precision" },
+          "CO2": { "value": 5.644471438917171, "unit": "kg/h" },
+          "Intake Temperature": { "value": 53.99999839067459, "unit": "c" },
+          "GPS Speed": { "value": 42.121248808729376, "unit": "km/h" },
+          "Consumption": { "value": 2.4019027399647537, "unit": "l/h" },
+          "GPS PDOP": { "value": 1.9271815732121467, "unit": "precision" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.685640919773974, 51.92848180048507]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6c4",
+        "time": "2019-09-08T15:45:30Z",
+        "phenomenons": {
+          "GPS Altitude": { "value": 108.04784191631617, "unit": "m" },
+          "GPS VDOP": { "value": 1.4, "unit": "precision" },
+          "GPS Speed": { "value": 45.59790989483554, "unit": "km/h" },
+          "GPS Accuracy": { "value": 8.0, "unit": "%" },
+          "CO2": { "value": 2.875054224409068, "unit": "kg/h" },
+          "Consumption": { "value": 1.2234273295357736, "unit": "l/h" },
+          "Rpm": { "value": 1370.7592480182648, "unit": "u/min" },
+          "Engine Load": { "value": 20.48386679398675, "unit": "%" },
+          "GPS HDOP": { "value": 1.1891566276550294, "unit": "precision" },
+          "Intake Temperature": { "value": 54.0, "unit": "c" },
+          "Speed": { "value": 46.00000137090683, "unit": "km/h" },
+          "GPS Bearing": { "value": 101.8420006594838, "unit": "deg" },
+          "GPS PDOP": { "value": 1.8594377517700196, "unit": "precision" },
+          "Throttle Position": { "value": 14.999999888241291, "unit": "%" },
+          "MAF": { "value": 3.721767888725285, "unit": "l/s" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.686583697656735, 51.928379846390705]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6c5",
+        "time": "2019-09-08T15:45:35Z",
+        "phenomenons": {
+          "GPS Bearing": { "value": 99.61763254884681, "unit": "deg" },
+          "Rpm": { "value": 795.1078493595123, "unit": "u/min" },
+          "GPS HDOP": { "value": 1.1000000327825548, "unit": "precision" },
+          "CO2": { "value": 1.6763183964758512, "unit": "kg/h" },
+          "GPS Speed": { "value": 43.94882141823632, "unit": "km/h" },
+          "Consumption": { "value": 0.7133269772237665, "unit": "l/h" },
+          "Engine Load": { "value": 18.431371414193933, "unit": "%" },
+          "Speed": { "value": 42.46130347251892, "unit": "km/h" },
+          "Intake Temperature": { "value": 54.00000160932541, "unit": "c" },
+          "GPS VDOP": { "value": 1.1647059172391891, "unit": "precision" },
+          "Throttle Position": { "value": 11.000000081956387, "unit": "%" },
+          "MAF": { "value": 2.1700001086294662, "unit": "l/s" },
+          "GPS Altitude": { "value": 107.93383403922044, "unit": "m" },
+          "GPS PDOP": { "value": 1.600000047683716, "unit": "precision" },
+          "GPS Accuracy": { "value": 4.671356797218323, "unit": "%" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.687361024629057, 51.92830615015191]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6c6",
+        "time": "2019-09-08T15:45:40Z",
+        "phenomenons": {
+          "Rpm": { "value": 757.2418717443943, "unit": "u/min" },
+          "Consumption": { "value": 0.9067880008522715, "unit": "l/h" },
+          "Throttle Position": { "value": 10.999999836087227, "unit": "%" },
+          "Speed": { "value": 32.79064232110977, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.4005830466747284, "unit": "precision" },
+          "GPS Accuracy": { "value": 2.999999910593033, "unit": "%" },
+          "GPS Bearing": { "value": 100.47136361712455, "unit": "deg" },
+          "GPS Speed": { "value": 35.826767951030206, "unit": "km/h" },
+          "GPS HDOP": { "value": 1.3005830496549606, "unit": "precision" },
+          "MAF": { "value": 2.7585246642593475, "unit": "l/s" },
+          "GPS PDOP": { "value": 1.9674440592527391, "unit": "precision" },
+          "GPS Altitude": { "value": 108.8647361223872, "unit": "m" },
+          "Intake Temperature": { "value": 54.0, "unit": "c" },
+          "Engine Load": { "value": 23.815935676456988, "unit": "%" },
+          "CO2": { "value": 2.130951802002838, "unit": "kg/h" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6878800466377, 51.928252163509896]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6c7",
+        "time": "2019-09-08T15:45:45Z",
+        "phenomenons": {
+          "Throttle Position": { "value": 11.588750265538692, "unit": "%" },
+          "GPS Accuracy": { "value": 3.9999998807907104, "unit": "%" },
+          "GPS Bearing": { "value": 88.66838965599459, "unit": "deg" },
+          "Consumption": { "value": 1.1672229605787272, "unit": "l/h" },
+          "GPS PDOP": { "value": 1.9000000566244126, "unit": "precision" },
+          "GPS Altitude": { "value": 108.32101611810708, "unit": "m" },
+          "GPS VDOP": { "value": 1.466734528541565, "unit": "precision" },
+          "Speed": { "value": 15.9597989320755, "unit": "km/h" },
+          "Engine Load": { "value": 25.35647947774646, "unit": "%" },
+          "CO2": { "value": 2.742973957360009, "unit": "kg/h" },
+          "Intake Temperature": { "value": 54.0, "unit": "c" },
+          "MAF": { "value": 3.5507895146605364, "unit": "l/s" },
+          "GPS HDOP": { "value": 1.1666327923536302, "unit": "precision" },
+          "GPS Speed": { "value": 21.1193639158094, "unit": "km/h" },
+          "Rpm": { "value": 835.9625359177589, "unit": "u/min" }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.687999847032719, 51.92836608261119]
+      },
+      "properties": {
+        "id": "5d7b7ecf44ea853f9f67c6c8",
+        "time": "2019-09-08T15:45:50Z",
+        "phenomenons": {
+          "MAF": { "value": 3.8994841916276215, "unit": "l/s" },
+          "Rpm": { "value": 1239.2933949232101, "unit": "u/min" },
+          "GPS Bearing": { "value": 8.69620727455083, "unit": "deg" },
+          "Speed": { "value": 19.111668169498444, "unit": "km/h" },
+          "GPS VDOP": { "value": 1.539858728647232, "unit": "precision" },
+          "CO2": { "value": 3.01233952072042, "unit": "kg/h" },
+          "GPS Speed": { "value": 14.318566651290212, "unit": "km/h" },
+          "Throttle Position": { "value": 11.500312995165586, "unit": "%" },
+          "Consumption": { "value": 1.2818466045618808, "unit": "l/h" },
+          "Engine Load": { "value": 20.1930878643106, "unit": "%" },
+          "Intake Temperature": { "value": 53.61302441358566, "unit": "c" },
+          "GPS PDOP": { "value": 1.939858728647232, "unit": "precision" },
+          "GPS Altitude": { "value": 108.21542617520748, "unit": "m" },
+          "GPS Accuracy": { "value": 4.0, "unit": "%" },
+          "GPS HDOP": { "value": 1.2, "unit": "precision" }
+        }
+      }
+    }
+  ]
+}

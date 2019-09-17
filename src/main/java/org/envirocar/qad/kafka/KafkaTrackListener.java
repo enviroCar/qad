@@ -1,7 +1,7 @@
 package org.envirocar.qad.kafka;
 
 import org.envirocar.qad.TrackAnalysisService;
-import org.envirocar.qad.TrackProperties;
+import org.envirocar.qad.JsonConstants;
 import org.envirocar.qad.model.FeatureCollection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +22,7 @@ public class KafkaTrackListener {
 
     @KafkaListener(topics = "tracks")
     public void onNewTrack(FeatureCollection track) {
-        String id = track.getProperties().path(TrackProperties.ID).textValue();
+        String id = track.getProperties().path(JsonConstants.ID).textValue();
         LOG.info("Received track {}", id);
         service.analyzeTrack(track);
     }

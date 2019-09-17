@@ -7,3 +7,11 @@ kafka:
     id: qad
   bootstrap:
     servers: processing.envirocar.org:9092
+
+qad:
+  model:
+    bufferSize: 10
+  densify:
+    numPoints: 4
+  mapMatching:
+    url: https://processing.envirocar.org/mapmatching

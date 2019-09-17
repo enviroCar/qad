@@ -1,9 +1,10 @@
-package org.envirocar.qad;
+package org.envirocar.qad.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.envirocar.qad.AxisModelParser;
+import org.envirocar.qad.AxisModelRepository;
 import org.envirocar.qad.model.FeatureCollection;
 import org.envirocar.qad.model.axis.AxisModel;
-import org.envirocar.qad.model.axis.AxisModels;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -19,8 +20,8 @@ public class AxisModelConfiguration {
     private static final String CHEMNITZ = "chemnitz";
 
     @Bean
-    public AxisModels axisModels(List<AxisModel> axisModels) {
-        return new AxisModels(axisModels);
+    public AxisModelRepository axisModelRepository(List<AxisModel> axisModels) {
+        return new AxisModelRepository(axisModels);
     }
 
     @Bean(name = KREFELD)

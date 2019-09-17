@@ -1,9 +1,10 @@
-package org.envirocar.qad.kafka;
+package org.envirocar.qad.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.Deserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
+import org.envirocar.qad.kafka.KafkaJsonDeserializer;
 import org.envirocar.qad.model.FeatureCollection;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +19,7 @@ import java.util.Map;
 
 @EnableKafka
 @Configuration
-public class KafkaConsumerConfiguration {
+public class KafkaConfiguration {
     @Bean
     public ConsumerFactory<String, FeatureCollection> consumerFactory(
             Deserializer<String> keyDeserializer,
