@@ -1,17 +1,36 @@
-
-
 kafka:
-  group:
-    id: qad
-  client:
-    id: qad
+  enabled: true
+  groupId: qad
+  clientId: qad
   bootstrap:
-    servers: processing.envirocar.org:9092
+    servers: ${KAFKA_ENDPOINT:processing.envirocar.org:9092}
 
 qad:
+  simplifyLengthCalculation: ${QAD_SIMPLIFY_LENGTH_CALCULATION:false}
+  maxAngleDeviation: ${QAD_MAX_ANGLE_DEVIATION:90}
+  maxLengthDeviation: ${QAD_MAX_LENGTH_DEVIATION:0.30}
+  snappingTolerance: ${QAD_SNAPPING_TOLERANCE:20}
+  stops:
+    startThresholdSpeed: ${QAD_STOP_START_THRESHOLD:5.0}
+    endThresholdSpeed: ${QAD_STOP_END_THRESHOLD:10.0}
   model:
-    bufferSize: 10
+    segments:
+      bufferSize: ${QAD_SEGMENT_BUFFER_SIZE:20}
   densify:
-    numPoints: 4
+    numPoints: ${QAD_DENSIFY_NUM_POINTS:4}
   mapMatching:
-    url: https://processing.envirocar.org/mapmatching
+    enabled: ${QAD_MAPMATCHING_ENABLE:true}
+    url: ${QAD_MAPMATCHING_ENDPOINT:https://processing.envirocar.org}
+  outputPath: ${QAD_OUTPUT_PATH:/tmp}
+  spring:
+    output:
+      ansi:
+        enabled: true
+
+
+
+logging:
+  level:
+    root: warn
+    org:
+      envirocar: debug

@@ -1,4 +1,4 @@
-package org.envirocar.qad.model.axis;
+package org.envirocar.qad.axis;
 
 public enum SegmentType {
     INFLUENCE, NON_INFLUENCE;

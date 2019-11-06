@@ -7,8 +7,10 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class JtsConfiguration {
+    private static final GeometryFactory GEOMETRY_FACTORY = new GeometryFactory(new PrecisionModel(PrecisionModel.FLOATING), 4326);
+
     @Bean
-    public GeometryFactory geometryFactory() {
-        return new GeometryFactory(new PrecisionModel(PrecisionModel.FLOATING), 4326);
+    public static GeometryFactory geometryFactory() {
+        return GEOMETRY_FACTORY;
     }
 }

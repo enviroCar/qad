@@ -1,6 +1,9 @@
 {
   "type": "FeatureCollection",
-  "name": "Achsensegmente_190611",
+  "properties": {
+    "name": "KRE",
+    "version": "2019-10-23"
+  },
   "features": [
     {
       "type": "Feature",
@@ -10,7 +13,7 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -36,7 +39,6 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_02",
         "type": 1
       },
       "geometry": {
@@ -63,7 +65,7 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -93,7 +95,6 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_04",
         "type": 1
       },
       "geometry": {
@@ -136,7 +137,7 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_05"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -170,7 +171,6 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_06",
         "type": 1
       },
       "geometry": {
@@ -201,7 +201,7 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_07"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -239,7 +239,6 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_08",
         "type": 1
       },
       "geometry": {
@@ -266,7 +265,7 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_09"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -292,7 +291,6 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_10",
         "type": 1
       },
       "geometry": {
@@ -319,7 +317,7 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_11"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -365,7 +363,6 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_12",
         "type": 1
       },
       "geometry": {
@@ -400,7 +397,7 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_13"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -430,7 +427,6 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_14",
         "type": 1
       },
       "geometry": {
@@ -457,7 +453,7 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_15"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -495,7 +491,6 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_16",
         "type": 1
       },
       "geometry": {
@@ -522,7 +517,7 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_17"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -548,7 +543,6 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_18",
         "type": 1
       },
       "geometry": {
@@ -575,7 +569,7 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_19"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -601,7 +595,6 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_20",
         "type": 1
       },
       "geometry": {
@@ -636,7 +629,7 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_21"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -678,7 +671,6 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_22",
         "type": 1
       },
       "geometry": {
@@ -709,7 +701,7 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_23"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -743,7 +735,6 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_24",
         "type": 1
       },
       "geometry": {
@@ -794,7 +785,7 @@
         "axis": 8,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "8_1_25"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -844,7 +835,7 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -886,7 +877,6 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_02",
         "type": 1
       },
       "geometry": {
@@ -929,7 +919,7 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -963,7 +953,6 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_04",
         "type": 1
       },
       "geometry": {
@@ -1002,7 +991,7 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_05"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1068,7 +1057,6 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_06",
         "type": 1
       },
       "geometry": {
@@ -1099,7 +1087,7 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_07"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1141,7 +1129,6 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_08",
         "type": 1
       },
       "geometry": {
@@ -1168,7 +1155,7 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_09"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1194,7 +1181,6 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_10",
         "type": 1
       },
       "geometry": {
@@ -1221,7 +1207,7 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_11"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1267,7 +1253,6 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_12",
         "type": 1
       },
       "geometry": {
@@ -1298,7 +1283,7 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_13"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1324,7 +1309,6 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_14",
         "type": 1
       },
       "geometry": {
@@ -1351,7 +1335,7 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_15"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1389,7 +1373,6 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_16",
         "type": 1
       },
       "geometry": {
@@ -1428,7 +1411,7 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_17"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1454,7 +1437,6 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_18",
         "type": 1
       },
       "geometry": {
@@ -1481,7 +1463,7 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_19"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1523,7 +1505,6 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_20",
         "type": 1
       },
       "geometry": {
@@ -1554,7 +1535,7 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_21"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1584,7 +1565,6 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_22",
         "type": 1
       },
       "geometry": {
@@ -1627,7 +1607,7 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_23"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1657,7 +1637,6 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_24",
         "type": 1
       },
       "geometry": {
@@ -1696,7 +1675,7 @@
         "axis": 8,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "8_2_25"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1726,7 +1705,7 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1752,7 +1731,6 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_02",
         "type": 1
       },
       "geometry": {
@@ -1779,7 +1757,7 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1813,7 +1791,6 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_04",
         "type": 1
       },
       "geometry": {
@@ -1840,7 +1817,7 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_05"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1870,7 +1847,6 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_06",
         "type": 1
       },
       "geometry": {
@@ -1897,7 +1873,7 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_07"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1923,7 +1899,6 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_08",
         "type": 1
       },
       "geometry": {
@@ -1950,7 +1925,7 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_09"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1976,7 +1951,6 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_10",
         "type": 1
       },
       "geometry": {
@@ -2003,7 +1977,7 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_11"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2029,7 +2003,6 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_12",
         "type": 1
       },
       "geometry": {
@@ -2056,7 +2029,7 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_13"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2086,7 +2059,6 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_14",
         "type": 1
       },
       "geometry": {
@@ -2113,7 +2085,7 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_15"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2139,7 +2111,6 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_16",
         "type": 1
       },
       "geometry": {
@@ -2166,7 +2137,7 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_17"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2192,7 +2163,6 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_18",
         "type": 1
       },
       "geometry": {
@@ -2219,7 +2189,7 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_19"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2265,7 +2235,6 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_20",
         "type": 1
       },
       "geometry": {
@@ -2292,7 +2261,7 @@
         "axis": 9,
         "direction": 1,
         "maxSpeed": 50,
-        "name": "9_1_21"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2326,7 +2295,7 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2352,7 +2321,6 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_02",
         "type": 1
       },
       "geometry": {
@@ -2387,7 +2355,7 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2465,7 +2433,6 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_04",
         "type": 1
       },
       "geometry": {
@@ -2496,7 +2463,7 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_05"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2530,7 +2497,6 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_06",
         "type": 1
       },
       "geometry": {
@@ -2557,7 +2523,7 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_07"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2607,7 +2573,6 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_08",
         "type": 1
       },
       "geometry": {
@@ -2638,7 +2603,7 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_09"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2688,7 +2653,6 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_10",
         "type": 1
       },
       "geometry": {
@@ -2715,7 +2679,7 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_11"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2761,7 +2725,6 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_12",
         "type": 1
       },
       "geometry": {
@@ -2788,7 +2751,7 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_13"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2814,7 +2777,6 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_14",
         "type": 1
       },
       "geometry": {
@@ -2845,7 +2807,7 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_15"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2883,7 +2845,6 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_16",
         "type": 1
       },
       "geometry": {
@@ -2914,7 +2875,7 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_17"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2952,7 +2913,6 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_18",
         "type": 1
       },
       "geometry": {
@@ -2979,7 +2939,7 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_19"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -3021,7 +2981,6 @@
         "axis": 9,
         "direction": 2,
         "maxSpeed": 50,
-        "name": "9_2_20",
         "type": 1
       },
       "geometry": {
@@ -3043,54 +3002,24 @@
     {
       "type": "Feature",
       "properties": {
-        "LSA": null,
-        "rank": 20,
-        "axis": 9,
-        "direction": 2,
-        "maxSpeed": 50,
-        "name": "9_2_21"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.566038038078039,
-              51.3337603743598
-            ],
-            [
-              6.565805386068152,
-              51.333711681833044
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K006",
+        "LSA": "K021",
         "rank": 0,
         "axis": 801,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "801_3_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
           [
             [
-              6.566730318321317,
-              51.331826230174194
+              6.565809496929892,
+              51.33369706970521
             ],
             [
-              6.566414852893655,
-              51.33243464555896
-            ],
-            [
-              6.566316294556429,
-              51.33259390074441
+              6.565753590642847,
+              51.33384475309532
             ]
           ]
         ]
@@ -3099,12 +3028,11 @@
     {
       "type": "Feature",
       "properties": {
-        "LSA": "K006",
+        "LSA": "K021",
         "rank": 1,
         "axis": 801,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "801_3_02",
         "type": 1
       },
       "geometry": {
@@ -3112,61 +3040,8 @@
         "coordinates": [
           [
             [
-              6.566316294556429,
-              51.33259390074441
-            ],
-            [
-              6.565930480612794,
-              51.333424258306934
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K021",
-        "rank": 2,
-        "axis": 801,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "801_3_03"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.565930480612794,
-              51.333424258306934
-            ],
-            [
-              6.565802279958244,
-              51.33370548890164
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K021",
-        "rank": 3,
-        "axis": 801,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "801_3_04",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.565822174055499,
-              51.33371880679265
+              6.565753590642847,
+              51.33384475309532
             ],
             [
               6.565476799916135,
@@ -3180,11 +3055,11 @@
       "type": "Feature",
       "properties": {
         "LSA": null,
-        "rank": 4,
+        "rank": 2,
         "axis": 801,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "801_3_05"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -3214,7 +3089,7 @@
         "axis": 801,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "801_4_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -3240,7 +3115,6 @@
         "axis": 801,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "801_4_02",
         "type": 1
       },
       "geometry": {
@@ -3262,12 +3136,12 @@
     {
       "type": "Feature",
       "properties": {
-        "LSA": "K006",
+        "LSA": null,
         "rank": 2,
         "axis": 801,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "801_4_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -3278,69 +3152,8 @@
               51.334671265996896
             ],
             [
-              6.565088056469386,
-              51.334368630031726
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K006",
-        "rank": 3,
-        "axis": 801,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "801_4_04",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.565088056469386,
-              51.334368630031726
-            ],
-            [
-              6.565431046442868,
-              51.333690614938185
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": null,
-        "rank": 4,
-        "axis": 801,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "801_4_05"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.565431046442868,
-              51.333690614938185
-            ],
-            [
-              6.565547173181928,
-              51.33348953338363
-            ],
-            [
-              6.565664557817385,
-              51.333264692972634
-            ],
-            [
-              6.56596811359459,
-              51.3326314448071
+              6.565022030876967,
+              51.33451005251375
             ]
           ]
         ]
@@ -3354,7 +3167,7 @@
         "axis": 802,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "802_3_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -3380,7 +3193,6 @@
         "axis": 802,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "802_3_02",
         "type": 1
       },
       "geometry": {
@@ -3402,119 +3214,20 @@
     {
       "type": "Feature",
       "properties": {
-        "LSA": null,
-        "rank": 0,
-        "axis": 802,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "802_4_01"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.568745594317482,
-              51.33497217241017
-            ],
-            [
-              6.568873558245762,
-              51.33492762155636
-            ],
-            [
-              6.569022592935633,
-              51.33486462480822
-            ],
-            [
-              6.569208256064115,
-              51.33477406347085
-            ],
-            [
-              6.569311790572742,
-              51.33471641545459
-            ],
-            [
-              6.569410804159797,
-              51.33464923274472
-            ],
-            [
-              6.569474354723839,
-              51.33458760754386
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K002",
-        "rank": 0,
-        "axis": 803,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "803_3_01"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.572281011963601,
-              51.33296202442864
-            ],
-            [
-              6.571887366421148,
-              51.333766084582564
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K002",
-        "rank": 1,
-        "axis": 803,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "803_3_02",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.571887366421148,
-              51.333766084582564
-            ],
-            [
-              6.571359505777166,
-              51.33482385111445
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "LSA": "K019",
-        "rank": 2,
+        "rank": 0,
         "axis": 803,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "803_3_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
           [
             [
-              6.571359505777166,
-              51.33482385111445
+              6.571296367050039,
+              51.33495575043824
             ],
             [
               6.57118968450296,
@@ -3528,11 +3241,10 @@
       "type": "Feature",
       "properties": {
         "LSA": "K019",
-        "rank": 3,
+        "rank": 1,
         "axis": 803,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "803_3_04",
         "type": 1
       },
       "geometry": {
@@ -3555,11 +3267,11 @@
       "type": "Feature",
       "properties": {
         "LSA": null,
-        "rank": 4,
+        "rank": 2,
         "axis": 803,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "803_3_05"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -3589,7 +3301,7 @@
         "axis": 803,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "803_4_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -3608,8 +3320,8 @@
               51.337550869087636
             ],
             [
-              6.57006444047442,
-              51.3372402286181
+              6.570064741027355,
+              51.337238808447594
             ]
           ]
         ]
@@ -3623,7 +3335,6 @@
         "axis": 803,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "803_4_02",
         "type": 1
       },
       "geometry": {
@@ -3657,12 +3368,12 @@
     {
       "type": "Feature",
       "properties": {
-        "LSA": "K002",
+        "LSA": null,
         "rank": 2,
         "axis": 803,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "803_4_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -3673,130 +3384,8 @@
               51.33641572422255
             ],
             [
-              6.57052429661273,
-              51.33612645742119
-            ],
-            [
-              6.570646990371207,
-              51.335914167050355
-            ],
-            [
-              6.570823909270373,
-              51.33564929191412
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K002",
-        "rank": 3,
-        "axis": 803,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "803_4_04",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.570823909270373,
-              51.33564929191412
-            ],
-            [
-              6.57105272755047,
-              51.33521362362879
-            ],
-            [
-              6.571156017045902,
-              51.33504389778811
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": null,
-        "rank": 4,
-        "axis": 803,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "803_4_05"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.571156017045902,
-              51.33504389778811
-            ],
-            [
-              6.571472660864237,
-              51.3344064933716
-            ],
-            [
-              6.571710609430061,
-              51.33388436201914
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K027",
-        "rank": 0,
-        "axis": 804,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "804_3_01"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.577792549353071,
-              51.33422805606824
-            ],
-            [
-              6.577094384220508,
-              51.335155255704045
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K027",
-        "rank": 1,
-        "axis": 804,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "804_3_02",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.577094384220508,
-              51.335155255704045
-            ],
-            [
-              6.576638621987915,
-              51.33602784598535
+              6.57046947082579,
+              51.336253557966664
             ]
           ]
         ]
@@ -3806,27 +3395,19 @@
       "type": "Feature",
       "properties": {
         "LSA": "K059",
-        "rank": 2,
+        "rank": 0,
         "axis": 804,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "804_3_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
           [
             [
-              6.576638621987915,
-              51.33602784598535
-            ],
-            [
-              6.576381243523066,
-              51.33646837026447
-            ],
-            [
-              6.576137040893157,
-              51.33687267556951
+              6.575826959596715,
+              51.33741510382377
             ],
             [
               6.575570302770867,
@@ -3843,123 +3424,11 @@
     {
       "type": "Feature",
       "properties": {
-        "LSA": "K027",
-        "rank": 2,
-        "axis": 804,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "804_4_03"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.574440568755005,
-              51.3389747169479
-            ],
-            [
-              6.574596513806717,
-              51.33896703645466
-            ],
-            [
-              6.574791354333502,
-              51.33890974795624
-            ],
-            [
-              6.574908751590438,
-              51.33884334705303
-            ],
-            [
-              6.574987616274476,
-              51.33874986550799
-            ],
-            [
-              6.575548885784696,
-              51.3377769585355
-            ],
-            [
-              6.575684426319579,
-              51.33751577471666
-            ],
-            [
-              6.575818575106936,
-              51.33725244659708
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K027",
-        "rank": 3,
-        "axis": 804,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "804_4_04",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.575818575106936,
-              51.33725244659708
-            ],
-            [
-              6.576156640600589,
-              51.336642648218294
-            ],
-            [
-              6.576427281834871,
-              51.33621706506967
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "",
-        "rank": 4,
-        "axis": 804,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "804_4_05"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.576427281834871,
-              51.33621706506967
-            ],
-            [
-              6.576669432116123,
-              51.335809958304
-            ],
-            [
-              6.576908374918533,
-              51.33538591779713
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "LSA": "K059",
-        "rank": 3,
+        "rank": 1,
         "axis": 804,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "804_3_04",
         "type": 1
       },
       "geometry": {
@@ -3998,11 +3467,11 @@
       "type": "Feature",
       "properties": {
         "LSA": null,
-        "rank": 4,
+        "rank": 2,
         "axis": 804,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "804_3_05"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -4032,11 +3501,36 @@
       "type": "Feature",
       "properties": {
         "LSA": "K059",
+        "rank": 0,
+        "axis": 804,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.571983482797396,
+              51.33902738768838
+            ],
+            [
+              6.572767639754196,
+              51.339010274343515
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K059",
         "rank": 1,
         "axis": 804,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "804_4_02",
         "type": 1
       },
       "geometry": {
@@ -4070,77 +3564,40 @@
     {
       "type": "Feature",
       "properties": {
-        "LSA": "K059",
-        "rank": 0,
+        "LSA": null,
+        "rank": 2,
         "axis": 804,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "804_4_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
           [
             [
-              6.571983482797396,
-              51.33902738768838
+              6.574440568755005,
+              51.3389747169479
             ],
             [
-              6.572767639754196,
-              51.339010274343515
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K242",
-        "rank": 0,
-        "axis": 805,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "805_3_01"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.580722514015105,
-              51.335187362196805
+              6.574596513806717,
+              51.33896703645466
             ],
             [
-              6.580240927790647,
-              51.33603293681274
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K242",
-        "rank": 1,
-        "axis": 805,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "805_3_02",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.580240927790647,
-              51.33603293681274
+              6.574791354333502,
+              51.33890974795624
             ],
             [
-              6.579803325566826,
-              51.33675260435995
+              6.574908751590438,
+              51.33884334705303
+            ],
+            [
+              6.575018949960191,
+              51.338694193920084
+            ],
+            [
+              6.575241830302526,
+              51.33831305787362
             ]
           ]
         ]
@@ -4150,59 +3607,19 @@
       "type": "Feature",
       "properties": {
         "LSA": "K042",
-        "rank": 2,
+        "rank": 0,
         "axis": 805,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "805_3_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
           [
             [
-              6.579803325566826,
-              51.33675260435995
-            ],
-            [
-              6.579759156513843,
-              51.33678193631516
-            ],
-            [
-              6.579555621953812,
-              51.33685281906136
-            ],
-            [
-              6.579447202357088,
-              51.33688812276542
-            ],
-            [
-              6.579391235012883,
-              51.336939112197186
-            ],
-            [
-              6.579229282396586,
-              51.33723195521489
-            ],
-            [
-              6.578935715075793,
-              51.33774734785984
-            ],
-            [
-              6.578766774800915,
-              51.338046303587106
-            ],
-            [
-              6.578634170618442,
-              51.33828760616159
-            ],
-            [
-              6.578528257526371,
-              51.33846479927806
-            ],
-            [
-              6.578392812504113,
-              51.3385704622678
+              6.57814231655984,
+              51.338692832615806
             ],
             [
               6.577876668190271,
@@ -4220,11 +3637,10 @@
       "type": "Feature",
       "properties": {
         "LSA": "K042",
-        "rank": 3,
+        "rank": 1,
         "axis": 805,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "805_3_04",
         "type": 1
       },
       "geometry": {
@@ -4247,11 +3663,11 @@
       "type": "Feature",
       "properties": {
         "LSA": null,
-        "rank": 4,
+        "rank": 2,
         "axis": 805,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "805_3_05"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -4281,7 +3697,7 @@
         "axis": 805,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "805_4_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -4307,7 +3723,6 @@
         "axis": 805,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "805_4_02",
         "type": 1
       },
       "geometry": {
@@ -4329,12 +3744,12 @@
     {
       "type": "Feature",
       "properties": {
-        "LSA": "K242",
+        "LSA": null,
         "rank": 2,
         "axis": 805,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "805_4_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -4353,146 +3768,8 @@
               51.3391002948894
             ],
             [
-              6.578266199833333,
-              51.3384509931415
-            ],
-            [
-              6.578430110800588,
-              51.33837885773706
-            ],
-            [
-              6.578560979222295,
-              51.33828095427965
-            ],
-            [
-              6.578758596282998,
-              51.33797664974724
-            ],
-            [
-              6.578895125111188,
-              51.337731929630316
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K242",
-        "rank": 3,
-        "axis": 805,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "805_4_04",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.578895125111188,
-              51.337731929630316
-            ],
-            [
-              6.579372053087093,
-              51.33692089900567
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": null,
-        "rank": 4,
-        "axis": 805,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "805_4_05"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.579372053087093,
-              51.33692089900567
-            ],
-            [
-              6.579421518763369,
-              51.33687209464298
-            ],
-            [
-              6.579654867928793,
-              51.3367923365133
-            ],
-            [
-              6.579734686883738,
-              51.33675297698171
-            ],
-            [
-              6.579845910894425,
-              51.336583548947814
-            ],
-            [
-              6.580014769573851,
-              51.336297183034844
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K132",
-        "rank": 0,
-        "axis": 806,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "806_3_01"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.583030131162206,
-              51.33594943255533
-            ],
-            [
-              6.58230762225334,
-              51.33647909744274
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K132",
-        "rank": 1,
-        "axis": 806,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "806_3_02",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.58230762225334,
-              51.33647909744274
-            ],
-            [
-              6.58135452488826,
-              51.33717717420795
+              6.576904801596092,
+              51.339062303651986
             ]
           ]
         ]
@@ -4502,35 +3779,19 @@
       "type": "Feature",
       "properties": {
         "LSA": "K100",
-        "rank": 2,
+        "rank": 0,
         "axis": 806,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "806_3_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
           [
             [
-              6.58135452488826,
-              51.33717717420795
-            ],
-            [
-              6.581258848412779,
-              51.33724616355342
-            ],
-            [
-              6.581204324243657,
-              51.33731664878977
-            ],
-            [
-              6.580804880779636,
-              51.33793042642772
-            ],
-            [
-              6.580471830059736,
-              51.33856586648817
+              6.580227186324434,
+              51.33901062471817
             ],
             [
               6.579880161769738,
@@ -4548,11 +3809,10 @@
       "type": "Feature",
       "properties": {
         "LSA": "K100",
-        "rank": 3,
+        "rank": 1,
         "axis": 806,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "806_3_04",
         "type": 1
       },
       "geometry": {
@@ -4575,11 +3835,11 @@
       "type": "Feature",
       "properties": {
         "LSA": null,
-        "rank": 4,
+        "rank": 2,
         "axis": 806,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "806_3_05"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -4609,7 +3869,7 @@
         "axis": 806,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "806_4_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -4655,7 +3915,6 @@
         "axis": 806,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "806_4_02",
         "type": 1
       },
       "geometry": {
@@ -4677,12 +3936,12 @@
     {
       "type": "Feature",
       "properties": {
-        "LSA": "K132",
+        "LSA": null,
         "rank": 2,
         "axis": 806,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "806_4_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -4705,146 +3964,8 @@
               51.34012236965265
             ],
             [
-              6.579751244181294,
-              51.33979794815739
-            ],
-            [
-              6.580025568192102,
-              51.339298741172264
-            ],
-            [
-              6.580398876252447,
-              51.338601847365766
-            ],
-            [
-              6.580616047165422,
-              51.33817460655424
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K132",
-        "rank": 3,
-        "axis": 806,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "806_4_04",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.580616047165422,
-              51.33817460655424
-            ],
-            [
-              6.580894055704778,
-              51.337686008959494
-            ],
-            [
-              6.581104626646137,
-              51.337366720259354
-            ],
-            [
-              6.581162019470544,
-              51.33728607115993
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": null,
-        "rank": 4,
-        "axis": 806,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "806_4_05"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.581162019470544,
-              51.33728607115993
-            ],
-            [
-              6.581277936098566,
-              51.33715547386687
-            ],
-            [
-              6.581495768929143,
-              51.33698840233864
-            ],
-            [
-              6.581968383602911,
-              51.33663695911408
-            ],
-            [
-              6.582200375338326,
-              51.336474693585025
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K026",
-        "rank": 0,
-        "axis": 807,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "807_3_01"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.587586843812068,
-              51.33598982121043
-            ],
-            [
-              6.586838030154836,
-              51.337144008586755
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K026",
-        "rank": 1,
-        "axis": 807,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "807_3_02",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.586838030154836,
-              51.337144008586755
-            ],
-            [
-              6.586109896207767,
-              51.3382056198263
+              6.579641363759013,
+              51.3400505760927
             ]
           ]
         ]
@@ -4854,28 +3975,16 @@
       "type": "Feature",
       "properties": {
         "LSA": "K041",
-        "rank": 2,
+        "rank": 0,
         "axis": 807,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "807_3_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
           [
-            [
-              6.586109896207767,
-              51.3382056198263
-            ],
-            [
-              6.585957162605131,
-              51.33836150849841
-            ],
-            [
-              6.585587884528882,
-              51.338927197755304
-            ],
             [
               6.584963688757652,
               51.33977832476945
@@ -4892,11 +4001,10 @@
       "type": "Feature",
       "properties": {
         "LSA": "K041",
-        "rank": 3,
+        "rank": 1,
         "axis": 807,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "807_3_04",
         "type": 1
       },
       "geometry": {
@@ -4919,11 +4027,11 @@
       "type": "Feature",
       "properties": {
         "LSA": null,
-        "rank": 4,
+        "rank": 2,
         "axis": 807,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "807_3_05"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -4957,7 +4065,7 @@
         "axis": 807,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "807_4_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -4995,7 +4103,6 @@
         "axis": 807,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "807_4_02",
         "type": 1
       },
       "geometry": {
@@ -5029,12 +4136,12 @@
     {
       "type": "Feature",
       "properties": {
-        "LSA": "K026",
+        "LSA": null,
         "rank": 2,
         "axis": 807,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "807_4_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -5053,138 +4160,8 @@
               51.34116057561339
             ],
             [
-              6.58392815258515,
-              51.34078687425297
-            ],
-            [
-              6.584318105809602,
-              51.34023712279398
-            ],
-            [
-              6.584796232912951,
-              51.339569728985246
-            ],
-            [
-              6.585000549597558,
-              51.33925412680807
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K026",
-        "rank": 3,
-        "axis": 807,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "807_4_04",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.585000549597558,
-              51.33925412680807
-            ],
-            [
-              6.5856835441695,
-              51.338317229321405
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": null,
-        "rank": 4,
-        "axis": 807,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "807_4_05"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.5856835441695,
-              51.338317229321405
-            ],
-            [
-              6.585908967490234,
-              51.33802839896452
-            ],
-            [
-              6.586637102466308,
-              51.33704621884069
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K029",
-        "rank": 0,
-        "axis": 808,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "808_3_01"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.593233672545824,
-              51.337326046628185
-            ],
-            [
-              6.592857497618347,
-              51.338056712240466
-            ],
-            [
-              6.592752436708641,
-              51.338285586255886
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K029",
-        "rank": 1,
-        "axis": 803,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "808_3_01",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.592752436708641,
-              51.338285586255886
-            ],
-            [
-              6.592084231401651,
-              51.339532720035564
-            ],
-            [
-              6.592043967111687,
-              51.33960774401207
+              6.583839550805449,
+              51.34090970423083
             ]
           ]
         ]
@@ -5194,31 +4171,19 @@
       "type": "Feature",
       "properties": {
         "LSA": "K040",
-        "rank": 2,
+        "rank": 0,
         "axis": 808,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "808_3_02"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
           [
             [
-              6.592043967111687,
-              51.33960774401207
-            ],
-            [
-              6.591820458042509,
-              51.340001171802065
-            ],
-            [
-              6.591345639625873,
-              51.34089415831065
-            ],
-            [
-              6.591054516345392,
-              51.341404591368764
+              6.590857655339832,
+              51.3417675256286
             ],
             [
               6.590340908097553,
@@ -5232,11 +4197,10 @@
       "type": "Feature",
       "properties": {
         "LSA": "K040",
-        "rank": 3,
+        "rank": 1,
         "axis": 808,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "808_3_03",
         "type": 1
       },
       "geometry": {
@@ -5259,11 +4223,11 @@
       "type": "Feature",
       "properties": {
         "LSA": null,
-        "rank": 4,
+        "rank": 2,
         "axis": 808,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "808_3_04"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -5297,7 +4261,7 @@
         "axis": 808,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "803_4_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -5323,7 +4287,6 @@
         "axis": 808,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "803_4_02",
         "type": 1
       },
       "geometry": {
@@ -5349,12 +4312,12 @@
     {
       "type": "Feature",
       "properties": {
-        "LSA": "K029",
+        "LSA": null,
         "rank": 2,
         "axis": 808,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "803_4_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -5373,316 +4336,8 @@
               51.34319068760968
             ],
             [
-              6.590431896807765,
-              51.34236812056078
-            ],
-            [
-              6.591068558539423,
-              51.341163532188986
-            ],
-            [
-              6.591482051146311,
-              51.34047997196232
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K029",
-        "rank": 3,
-        "axis": 808,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "803_4_04",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.591482051146311,
-              51.34047997196232
-            ],
-            [
-              6.591919214211107,
-              51.33970859237402
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": null,
-        "rank": 4,
-        "axis": 808,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "803_4_05"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.591919214211107,
-              51.33970859237402
-            ],
-            [
-              6.592126339794843,
-              51.33930917489873
-            ],
-            [
-              6.592436318810039,
-              51.33872348981464
-            ],
-            [
-              6.592551363156418,
-              51.33849146401296
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K185",
-        "rank": 0,
-        "axis": 809,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "809_3_01"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.59739297096791,
-              51.33850369739456
-            ],
-            [
-              6.596682565323175,
-              51.33959197284186
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K185",
-        "rank": 1,
-        "axis": 809,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "809_3_02",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.596682565323175,
-              51.33959197284186
-            ],
-            [
-              6.596028088545047,
-              51.34052983678658
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": null,
-        "rank": 2,
-        "axis": 809,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "809_3_03"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.596028088545047,
-              51.34052983678658
-            ],
-            [
-              6.595351443836954,
-              51.34148494056627
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K185",
-        "rank": 0,
-        "axis": 809,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "809_4_01"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.594368012477376,
-              51.342755672604305
-            ],
-            [
-              6.594792314614597,
-              51.34217171534311
-            ],
-            [
-              6.594862145613008,
-              51.34203852126951
-            ],
-            [
-              6.594851938764974,
-              51.34198016907717
-            ],
-            [
-              6.59487816360461,
-              51.34192256528345
-            ],
-            [
-              6.594945706251436,
-              51.3418990338882
-            ],
-            [
-              6.595064627176702,
-              51.34171893141
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K185",
-        "rank": 1,
-        "axis": 809,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "809_4_02",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.595064627176702,
-              51.34171893141
-            ],
-            [
-              6.595860768148305,
-              51.34062977568323
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "",
-        "rank": 2,
-        "axis": 809,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "809_4_03"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.595860768148305,
-              51.34062977568323
-            ],
-            [
-              6.596188076027448,
-              51.34018426655663
-            ],
-            [
-              6.596397828123116,
-              51.33988819655638
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K045",
-        "rank": 0,
-        "axis": 810,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "810_3_01"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.600230510062808,
-              51.339623001959495
-            ],
-            [
-              6.599650170456758,
-              51.34029732661
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K045",
-        "rank": 1,
-        "axis": 810,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "810_3_02",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.599650170456758,
-              51.34029732661
-            ],
-            [
-              6.59919756710308,
-              51.34083392739694
-            ],
-            [
-              6.598962842842971,
-              51.341129426304136
+              6.59019854215486,
+              51.34284618576354
             ]
           ]
         ]
@@ -5692,60 +4347,16 @@
       "type": "Feature",
       "properties": {
         "LSA": "K108",
-        "rank": 2,
+        "rank": 0,
         "axis": 810,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "810_3_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
           [
-            [
-              6.598962842842971,
-              51.341129426304136
-            ],
-            [
-              6.598712197705708,
-              51.3415672788066
-            ],
-            [
-              6.598458442310585,
-              51.34200805648979
-            ],
-            [
-              6.598171076743824,
-              51.342505784785345
-            ],
-            [
-              6.598177317755008,
-              51.34253949979288
-            ],
-            [
-              6.598204810072613,
-              51.34256651424581
-            ],
-            [
-              6.598205412929224,
-              51.34260765211152
-            ],
-            [
-              6.598168958212239,
-              51.342638800441904
-            ],
-            [
-              6.598126302062594,
-              51.34265299432647
-            ],
-            [
-              6.598050105114369,
-              51.34270475301654
-            ],
-            [
-              6.597709966210458,
-              51.34296217676434
-            ],
             [
               6.596791989479469,
               51.34360119596642
@@ -5774,11 +4385,10 @@
       "type": "Feature",
       "properties": {
         "LSA": "K108",
-        "rank": 3,
+        "rank": 1,
         "axis": 810,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "810_3_04",
         "type": 1
       },
       "geometry": {
@@ -5801,11 +4411,11 @@
       "type": "Feature",
       "properties": {
         "LSA": "",
-        "rank": 4,
+        "rank": 2,
         "axis": 810,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "810_3_05"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -5839,7 +4449,7 @@
         "axis": 810,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "810_4_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -5865,7 +4475,6 @@
         "axis": 810,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "810_4_02",
         "type": 1
       },
       "geometry": {
@@ -5887,12 +4496,12 @@
     {
       "type": "Feature",
       "properties": {
-        "LSA": "K045",
+        "LSA": null,
         "rank": 2,
         "axis": 810,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "810_4_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -5917,139 +4526,6 @@
             [
               6.595722243107911,
               51.344522016635594
-            ],
-            [
-              6.595799431289494,
-              51.34436859428741
-            ],
-            [
-              6.595852061255281,
-              51.34426709641065
-            ],
-            [
-              6.595992786070058,
-              51.34415145162377
-            ],
-            [
-              6.596416328383847,
-              51.34384785352284
-            ],
-            [
-              6.597073057682014,
-              51.343365538731916
-            ],
-            [
-              6.597727399540637,
-              51.342916984958684
-            ],
-            [
-              6.59788919505577,
-              51.342792651544364
-            ],
-            [
-              6.59795283341255,
-              51.34273133222118
-            ],
-            [
-              6.59799719698051,
-              51.34268120041998
-            ],
-            [
-              6.598033229073588,
-              51.342638366949075
-            ],
-            [
-              6.598011092361798,
-              51.342605545372365
-            ],
-            [
-              6.598019521192526,
-              51.342558411422495
-            ],
-            [
-              6.598056302699749,
-              51.34253924675483
-            ],
-            [
-              6.598107242698958,
-              51.34251539362053
-            ],
-            [
-              6.598157953364466,
-              51.342457922699005
-            ],
-            [
-              6.598345042160547,
-              51.34211948543676
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K045",
-        "rank": 3,
-        "axis": 810,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "810_4_04",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.598345042160547,
-              51.34211948543676
-            ],
-            [
-              6.598593368818207,
-              51.34168979650418
-            ],
-            [
-              6.598809892609648,
-              51.34131262918068
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": null,
-        "rank": 4,
-        "axis": 810,
-        "direction": 4,
-        "maxSpeed": 50,
-        "name": "810_4_05"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.598809892609648,
-              51.34131262918068
-            ],
-            [
-              6.598890365905087,
-              51.34116568921996
-            ],
-            [
-              6.59892002908879,
-              51.34111395330855
-            ],
-            [
-              6.59906080643653,
-              51.34094798712013
-            ],
-            [
-              6.599425065877844,
-              51.340502019969584
             ]
           ]
         ]
@@ -6063,7 +4539,7 @@
         "axis": 811,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "811_3_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -6089,7 +4565,6 @@
         "axis": 811,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "811_3_02",
         "type": 1
       },
       "geometry": {
@@ -6128,7 +4603,7 @@
         "axis": 811,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "811_3_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -6178,7 +4653,7 @@
         "axis": 811,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "811_4_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -6232,7 +4707,6 @@
         "axis": 811,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "811_4_02",
         "type": 1
       },
       "geometry": {
@@ -6283,7 +4757,7 @@
         "axis": 811,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "811_4_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -6320,98 +4794,17 @@
     {
       "type": "Feature",
       "properties": {
-        "LSA": "K232",
+        "LSA": "K114",
         "rank": 0,
         "axis": 812,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "812_3_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
           [
-            [
-              6.615109752593816,
-              51.34294235644928
-            ],
-            [
-              6.614872998502245,
-              51.343149829452486
-            ],
-            [
-              6.614661400510324,
-              51.343416786032805
-            ],
-            [
-              6.614490484211093,
-              51.343625599573016
-            ],
-            [
-              6.614438863992075,
-              51.34371300423762
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K232",
-        "rank": 1,
-        "axis": 812,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "812_3_02",
-        "type": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.614438863992075,
-              51.34371300423762
-            ],
-            [
-              6.613927707538932,
-              51.344558682995654
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "LSA": "K114",
-        "rank": 2,
-        "axis": 812,
-        "direction": 3,
-        "maxSpeed": 50,
-        "name": "812_3_03"
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.613927707538932,
-              51.344558682995654
-            ],
-            [
-              6.613794846308052,
-              51.344799691368536
-            ],
-            [
-              6.613573713404839,
-              51.34510853310826
-            ],
-            [
-              6.613391722378703,
-              51.34534033022932
-            ],
             [
               6.613172517835241,
               51.34566194827601
@@ -6432,11 +4825,10 @@
       "type": "Feature",
       "properties": {
         "LSA": "K114",
-        "rank": 3,
+        "rank": 1,
         "axis": 812,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "812_3_04",
         "type": 1
       },
       "geometry": {
@@ -6475,11 +4867,11 @@
       "type": "Feature",
       "properties": {
         "LSA": null,
-        "rank": 4,
+        "rank": 2,
         "axis": 812,
         "direction": 3,
         "maxSpeed": 50,
-        "name": "812_3_05"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -6529,7 +4921,7 @@
         "axis": 812,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "812_4_01"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -6559,7 +4951,6 @@
         "axis": 812,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "812_4_02",
         "type": 1
       },
       "geometry": {
@@ -6609,12 +5000,12 @@
     {
       "type": "Feature",
       "properties": {
-        "LSA": "K232",
+        "LSA": null,
         "rank": 2,
         "axis": 812,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "812_4_03"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",
@@ -6649,8 +5040,1776 @@
               51.34714312499398
             ],
             [
-              6.612615998602803,
-              51.34650953056687
+              6.612348433090208,
+              51.34699854510133
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K006",
+        "rank": 0,
+        "axis": 901,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.566730318321317,
+              51.331826230174194
+            ],
+            [
+              6.566414852893655,
+              51.33243464555896
+            ],
+            [
+              6.566316294556429,
+              51.33259390074441
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K006",
+        "rank": 1,
+        "axis": 901,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.566316294556429,
+              51.33259390074441
+            ],
+            [
+              6.565930480612794,
+              51.333424258306934
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 901,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.565930480612794,
+              51.333424258306934
+            ],
+            [
+              6.565826047172379,
+              51.33365335069464
+            ],
+            [
+              6.565814680252319,
+              51.33368337925212
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K006",
+        "rank": 0,
+        "axis": 901,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.565027322297533,
+              51.334498717110634
+            ],
+            [
+              6.565088056469386,
+              51.334368630031726
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K006",
+        "rank": 1,
+        "axis": 901,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.565088056469386,
+              51.334368630031726
+            ],
+            [
+              6.565431046442868,
+              51.333690614938185
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 901,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.565431046442868,
+              51.333690614938185
+            ],
+            [
+              6.565547173181928,
+              51.33348953338363
+            ],
+            [
+              6.565664557817385,
+              51.333264692972634
+            ],
+            [
+              6.56596811359459,
+              51.3326314448071
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K002",
+        "rank": 0,
+        "axis": 903,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.572281011963601,
+              51.33296202442864
+            ],
+            [
+              6.571887366421148,
+              51.333766084582564
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K002",
+        "rank": 1,
+        "axis": 903,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.571887366421148,
+              51.333766084582564
+            ],
+            [
+              6.571359505777166,
+              51.33482385111445
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 903,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.571359505777166,
+              51.33482385111445
+            ],
+            [
+              6.571302934496813,
+              51.334942030909495
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K002",
+        "rank": 0,
+        "axis": 903,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.570481700120039,
+              51.33622520532914
+            ],
+            [
+              6.57052429661273,
+              51.33612645742119
+            ],
+            [
+              6.570646990371207,
+              51.335914167050355
+            ],
+            [
+              6.570823909270373,
+              51.33564929191412
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K002",
+        "rank": 1,
+        "axis": 903,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.570823909270373,
+              51.33564929191412
+            ],
+            [
+              6.57105272755047,
+              51.33521362362879
+            ],
+            [
+              6.571156017045902,
+              51.33504389778811
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 903,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.571156017045902,
+              51.33504389778811
+            ],
+            [
+              6.571472660864237,
+              51.3344064933716
+            ],
+            [
+              6.571710609430061,
+              51.33388436201914
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K027",
+        "rank": 0,
+        "axis": 904,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.577792549353071,
+              51.33422805606824
+            ],
+            [
+              6.577094384220508,
+              51.335155255704045
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K027",
+        "rank": 1,
+        "axis": 904,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.577094384220508,
+              51.335155255704045
+            ],
+            [
+              6.576638621987915,
+              51.33602784598535
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 904,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.576638621987915,
+              51.33602784598535
+            ],
+            [
+              6.576007499807497,
+              51.337090673861844
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K027",
+        "rank": 0,
+        "axis": 904,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.575271400065398,
+              51.3382579585629
+            ],
+            [
+              6.575548885784696,
+              51.3377769585355
+            ],
+            [
+              6.575684426319579,
+              51.33751577471666
+            ],
+            [
+              6.575818575106936,
+              51.33725244659708
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K027",
+        "rank": 1,
+        "axis": 904,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.575818575106936,
+              51.33725244659708
+            ],
+            [
+              6.576156640600589,
+              51.336642648218294
+            ],
+            [
+              6.576427281834871,
+              51.33621706506967
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "",
+        "rank": 2,
+        "axis": 904,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.576427281834871,
+              51.33621706506967
+            ],
+            [
+              6.576669432116123,
+              51.335809958304
+            ],
+            [
+              6.576908374918533,
+              51.33538591779713
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K242",
+        "rank": 0,
+        "axis": 905,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.580722514015105,
+              51.335187362196805
+            ],
+            [
+              6.580240927790647,
+              51.33603293681274
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K242",
+        "rank": 1,
+        "axis": 905,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.580240927790647,
+              51.33603293681274
+            ],
+            [
+              6.579803325566826,
+              51.33675260435995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 905,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.579803325566826,
+              51.33675260435995
+            ],
+            [
+              6.579759156513843,
+              51.33678193631516
+            ],
+            [
+              6.579555621953812,
+              51.33685281906136
+            ],
+            [
+              6.579447202357088,
+              51.33688812276542
+            ],
+            [
+              6.579391235012883,
+              51.336939112197186
+            ],
+            [
+              6.579229282396586,
+              51.33723195521489
+            ],
+            [
+              6.579032090044143,
+              51.33757815223754
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K242",
+        "rank": 0,
+        "axis": 905,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.578266199833333,
+              51.3384509931415
+            ],
+            [
+              6.578430110800588,
+              51.33837885773706
+            ],
+            [
+              6.578560979222295,
+              51.33828095427965
+            ],
+            [
+              6.578758596282998,
+              51.33797664974724
+            ],
+            [
+              6.578895125111188,
+              51.337731929630316
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K242",
+        "rank": 1,
+        "axis": 905,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.578895125111188,
+              51.337731929630316
+            ],
+            [
+              6.579372053087093,
+              51.33692089900567
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 905,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.579372053087093,
+              51.33692089900567
+            ],
+            [
+              6.579421518763369,
+              51.33687209464298
+            ],
+            [
+              6.579654867928793,
+              51.3367923365133
+            ],
+            [
+              6.579734686883738,
+              51.33675297698171
+            ],
+            [
+              6.579845910894425,
+              51.336583548947814
+            ],
+            [
+              6.580014769573851,
+              51.336297183034844
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K132",
+        "rank": 0,
+        "axis": 906,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.583030131162206,
+              51.33594943255533
+            ],
+            [
+              6.58230762225334,
+              51.33647909744274
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K132",
+        "rank": 1,
+        "axis": 906,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.58230762225334,
+              51.33647909744274
+            ],
+            [
+              6.58135452488826,
+              51.33717717420795
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 906,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.58135452488826,
+              51.33717717420795
+            ],
+            [
+              6.581258848412779,
+              51.33724616355342
+            ],
+            [
+              6.581204324243657,
+              51.33731664878977
+            ],
+            [
+              6.580804880779636,
+              51.33793042642772
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K132",
+        "rank": 0,
+        "axis": 906,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.580146785994395,
+              51.33907245331582
+            ],
+            [
+              6.580398876252447,
+              51.338601847365766
+            ],
+            [
+              6.580616047165422,
+              51.33817460655424
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K132",
+        "rank": 1,
+        "axis": 906,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.580616047165422,
+              51.33817460655424
+            ],
+            [
+              6.580894055704778,
+              51.337686008959494
+            ],
+            [
+              6.581104626646137,
+              51.337366720259354
+            ],
+            [
+              6.581162019470544,
+              51.33728607115993
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 906,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.581162019470544,
+              51.33728607115993
+            ],
+            [
+              6.581277936098566,
+              51.33715547386687
+            ],
+            [
+              6.581495768929143,
+              51.33698840233864
+            ],
+            [
+              6.581968383602911,
+              51.33663695911408
+            ],
+            [
+              6.582200375338326,
+              51.336474693585025
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K026",
+        "rank": 0,
+        "axis": 907,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.587586843812068,
+              51.33598982121043
+            ],
+            [
+              6.586838030154836,
+              51.337144008586755
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K026",
+        "rank": 1,
+        "axis": 907,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.586838030154836,
+              51.337144008586755
+            ],
+            [
+              6.586109896207767,
+              51.3382056198263
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 907,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.586109896207767,
+              51.3382056198263
+            ],
+            [
+              6.585957162605131,
+              51.33836150849841
+            ],
+            [
+              6.58542158490117,
+              51.339167893807414
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K026",
+        "rank": 0,
+        "axis": 907,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.584318105809602,
+              51.34023712279398
+            ],
+            [
+              6.584796232912951,
+              51.339569728985246
+            ],
+            [
+              6.585000549597558,
+              51.33925412680807
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K026",
+        "rank": 1,
+        "axis": 907,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.585000549597558,
+              51.33925412680807
+            ],
+            [
+              6.5856835441695,
+              51.338317229321405
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 907,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.5856835441695,
+              51.338317229321405
+            ],
+            [
+              6.585908967490234,
+              51.33802839896452
+            ],
+            [
+              6.586637102466308,
+              51.33704621884069
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K029",
+        "rank": 0,
+        "axis": 908,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.593233672545824,
+              51.337326046628185
+            ],
+            [
+              6.592857497618347,
+              51.338056712240466
+            ],
+            [
+              6.592752436708641,
+              51.338285586255886
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K029",
+        "rank": 1,
+        "axis": 908,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.592752436708641,
+              51.338285586255886
+            ],
+            [
+              6.592084231401651,
+              51.339532720035564
+            ],
+            [
+              6.592043967111687,
+              51.33960774401207
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 908,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.592043967111687,
+              51.33960774401207
+            ],
+            [
+              6.591820458042509,
+              51.340001171802065
+            ],
+            [
+              6.591598553011996,
+              51.34041851047783
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K029",
+        "rank": 0,
+        "axis": 908,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.590998257696612,
+              51.34129654803506
+            ],
+            [
+              6.591068558539423,
+              51.341163532188986
+            ],
+            [
+              6.591482051146311,
+              51.34047997196232
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K029",
+        "rank": 1,
+        "axis": 908,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.591482051146311,
+              51.34047997196232
+            ],
+            [
+              6.591919214211107,
+              51.33970859237402
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 908,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.591919214211107,
+              51.33970859237402
+            ],
+            [
+              6.592126339794843,
+              51.33930917489873
+            ],
+            [
+              6.592436318810039,
+              51.33872348981464
+            ],
+            [
+              6.592551363156418,
+              51.33849146401296
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K185",
+        "rank": 0,
+        "axis": 909,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.59739297096791,
+              51.33850369739456
+            ],
+            [
+              6.596682565323175,
+              51.33959197284186
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K185",
+        "rank": 1,
+        "axis": 909,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.596682565323175,
+              51.33959197284186
+            ],
+            [
+              6.596028088545047,
+              51.34052983678658
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 909,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.596028088545047,
+              51.34052983678658
+            ],
+            [
+              6.595351443836954,
+              51.34148494056627
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K185",
+        "rank": 0,
+        "axis": 909,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.594368012477376,
+              51.342755672604305
+            ],
+            [
+              6.594792314614597,
+              51.34217171534311
+            ],
+            [
+              6.594862145613008,
+              51.34203852126951
+            ],
+            [
+              6.594851938764974,
+              51.34198016907717
+            ],
+            [
+              6.59487816360461,
+              51.34192256528345
+            ],
+            [
+              6.594945706251436,
+              51.3418990338882
+            ],
+            [
+              6.595064627176702,
+              51.34171893141
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K185",
+        "rank": 1,
+        "axis": 909,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.595064627176702,
+              51.34171893141
+            ],
+            [
+              6.595860768148305,
+              51.34062977568323
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "",
+        "rank": 2,
+        "axis": 909,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.595860768148305,
+              51.34062977568323
+            ],
+            [
+              6.596188076027448,
+              51.34018426655663
+            ],
+            [
+              6.596397828123116,
+              51.33988819655638
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K045",
+        "rank": 0,
+        "axis": 910,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.600230510062808,
+              51.339623001959495
+            ],
+            [
+              6.599650170456758,
+              51.34029732661
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K045",
+        "rank": 1,
+        "axis": 910,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.599650170456758,
+              51.34029732661
+            ],
+            [
+              6.59919756710308,
+              51.34083392739694
+            ],
+            [
+              6.598962842842971,
+              51.341129426304136
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 910,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.598962842842971,
+              51.341129426304136
+            ],
+            [
+              6.598712197705708,
+              51.3415672788066
+            ],
+            [
+              6.598458442310585,
+              51.34200805648979
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K045",
+        "rank": 0,
+        "axis": 910,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.597652251582039,
+              51.34295460253505
+            ],
+            [
+              6.59795283341255,
+              51.34273133222118
+            ],
+            [
+              6.59799719698051,
+              51.34268120041998
+            ],
+            [
+              6.598033229073588,
+              51.342638366949075
+            ],
+            [
+              6.598011092361798,
+              51.342605545372365
+            ],
+            [
+              6.598019521192526,
+              51.342558411422495
+            ],
+            [
+              6.598056302699749,
+              51.34253924675483
+            ],
+            [
+              6.598107242698958,
+              51.34251539362053
+            ],
+            [
+              6.598157953364466,
+              51.342457922699005
+            ],
+            [
+              6.598345042160547,
+              51.34211948543676
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K045",
+        "rank": 1,
+        "axis": 910,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.598345042160547,
+              51.34211948543676
+            ],
+            [
+              6.598593368818207,
+              51.34168979650418
+            ],
+            [
+              6.598809892609648,
+              51.34131262918068
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 910,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.598809892609648,
+              51.34131262918068
+            ],
+            [
+              6.598890365905087,
+              51.34116568921996
+            ],
+            [
+              6.59892002908879,
+              51.34111395330855
+            ],
+            [
+              6.59906080643653,
+              51.34094798712013
+            ],
+            [
+              6.599425065877844,
+              51.340502019969584
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K232",
+        "rank": 0,
+        "axis": 912,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.615109752593816,
+              51.34294235644928
+            ],
+            [
+              6.614872998502245,
+              51.343149829452486
+            ],
+            [
+              6.614661400510324,
+              51.343416786032805
+            ],
+            [
+              6.614490484211093,
+              51.343625599573016
+            ],
+            [
+              6.614438863992075,
+              51.34371300423762
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K232",
+        "rank": 1,
+        "axis": 912,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 1
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.614438863992075,
+              51.34371300423762
+            ],
+            [
+              6.613927707538932,
+              51.344558682995654
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": null,
+        "rank": 2,
+        "axis": 912,
+        "direction": 3,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.613927707538932,
+              51.344558682995654
+            ],
+            [
+              6.613794846308052,
+              51.344799691368536
+            ],
+            [
+              6.613573713404839,
+              51.34510853310826
+            ],
+            [
+              6.613391722378703,
+              51.34534033022932
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LSA": "K232",
+        "rank": 0,
+        "axis": 912,
+        "direction": 4,
+        "maxSpeed": 50,
+        "type": 0
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.61267535488599,
+              51.34632309317693
             ],
             [
               6.612846184292673,
@@ -6672,11 +6831,10 @@
       "type": "Feature",
       "properties": {
         "LSA": "K232",
-        "rank": 3,
-        "axis": 812,
+        "rank": 1,
+        "axis": 912,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "812_4_04",
         "type": 1
       },
       "geometry": {
@@ -6699,11 +6857,11 @@
       "type": "Feature",
       "properties": {
         "LSA": null,
-        "rank": 4,
-        "axis": 812,
+        "rank": 2,
+        "axis": 912,
         "direction": 4,
         "maxSpeed": 50,
-        "name": "812_4_05"
+        "type": 0
       },
       "geometry": {
         "type": "MultiLineString",

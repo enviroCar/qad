@@ -10,14 +10,12 @@ public interface JsonConstants {
     String UNMATCHED_POINT = "unmatchedPoint";
     String STREET_NAME = "streetName";
     String MEASUREMENT_ID = "measurementId";
-    String UNIT = "unit";
     String VALUE = "value";
     String PHENOMENONS = "phenomenons";
     String TIME = "time";
     String SEGMENTS = "segments";
-    String TOWN = "town";
+    String CITY = "city";
     String AXIS = "axis";
-    String DIRECTION = "direction";
     String START = "start";
     String END = "end";
     String FUEL_TYPE = "fuelType";
@@ -31,4 +29,18 @@ public interface JsonConstants {
     String CONSUMPTION = "consumption";
     String EMISSION = "emission";
     String SPEED = "speed";
+    String NAME = "name";
+    String VERSION = "version";
+    String SEGMENT_TYPE = "type";
+    String SEGMENT_RANK = "rank";
+    String AXIS_ID = "axis";
+    String AXIS_DIRECTION = "direction";
+    String MAX_SPEED = "maxSpeed";
+    String TRAFFIC_LIGHT = "LSA";
+    String SENSOR = "sensor";
+    String PROPERTIES = "properties";
+    String FEATURES = "features";
+    String TYPE = "type";
+    String GEOMETRY = "geometry";
+    String UNIT = "unit";
 }

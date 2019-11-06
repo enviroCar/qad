@@ -6,10 +6,13 @@ import org.envirocar.qad.model.FeatureCollection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.annotation.KafkaListenerAnnotationBeanPostProcessor;
 import org.springframework.stereotype.Service;
 
 @Service
+@ConditionalOnBean(KafkaListenerAnnotationBeanPostProcessor.class)
 public class KafkaTrackListener {
     private static final Logger LOG = LoggerFactory.getLogger(KafkaTrackListener.class);
 

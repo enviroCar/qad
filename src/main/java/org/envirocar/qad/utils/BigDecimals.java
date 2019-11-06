@@ -1,4 +1,4 @@
-package org.envirocar.qad;
+package org.envirocar.qad.utils;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -7,6 +7,7 @@ import java.time.Instant;
 
 public class BigDecimals {
     private static final BigInteger NANOS_PER_SECOND = BigInteger.TEN.pow(9);
+    public static final BigDecimal TWO = BigDecimal.valueOf(2);
 
     public static BigDecimal create(Instant instant) {
         return create(instant.getEpochSecond(), instant.getNano());
@@ -26,7 +27,7 @@ public class BigDecimals {
         return Instant.ofEpochSecond(divRem[0].longValue(), divRem[1].longValue());
     }
 
-    private static Duration toDuration(BigDecimal result) {
+    public static Duration toDuration(BigDecimal result) {
         BigInteger[] divRem = result.movePointRight(9).toBigIntegerExact().divideAndRemainder(NANOS_PER_SECOND);
         return Duration.ofSeconds(divRem[0].longValue(), divRem[1].longValue());
     }

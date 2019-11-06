@@ -1,12 +1,11 @@
-package org.envirocar.qad.configuration;
+package org.envirocar.qad.kafka;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.Deserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
-import org.envirocar.qad.kafka.KafkaJsonDeserializer;
 import org.envirocar.qad.model.FeatureCollection;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
@@ -19,18 +18,18 @@ import java.util.Map;
 
 @EnableKafka
 @Configuration
+@ConditionalOnProperty(name = "kafka.enabled", matchIfMissing = true)
 public class KafkaConfiguration {
+
     @Bean
     public ConsumerFactory<String, FeatureCollection> consumerFactory(
             Deserializer<String> keyDeserializer,
             Deserializer<FeatureCollection> valueDeserializer,
-            @Value("${kafka.bootstrap.servers}") String bootstrapServers,
-            @Value("${kafka.group.id}") String groupId,
-            @Value("${kafka.client.id}") String clientId) {
+            KafkaParameters kafkaParameters) {
         Map<String, Object> props = new HashMap<>();
-        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
-        props.put(ConsumerConfig.CLIENT_ID_CONFIG, clientId);
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaParameters.getBootstrap().getServers());
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, kafkaParameters.getGroupId());
+        props.put(ConsumerConfig.CLIENT_ID_CONFIG, kafkaParameters.getClientId());
         return new DefaultKafkaConsumerFactory<>(props, keyDeserializer, valueDeserializer);
     }
 
