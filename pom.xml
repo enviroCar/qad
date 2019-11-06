@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.envirocar.qad</groupId>
-    <artifactId>server</artifactId>
+    <artifactId>qad</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>enviroCar QAD Server</name>
     <description>enviroCar QAD Server</description>
@@ -17,12 +17,32 @@
     <properties>
         <java.version>1.8</java.version>
         <retrofit.version>2.6.0</retrofit.version>
+        <geotools.version>21.2</geotools.version>
     </properties>
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>boundlessgeo</id>
+            <url>https://repo.boundlessgeo.com/main</url>
+        </repository>
+        <repository>
+            <id>geomajas</id>
+            <url>http://maven.geomajas.org/</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.kafka</groupId>
@@ -57,6 +77,14 @@
             <version>1.16.1</version>
         </dependency>
         <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jdk8</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.n52.jackson</groupId>
             <artifactId>jackson-datatype-jts</artifactId>
             <version>1.0.0</version>
@@ -76,6 +104,38 @@
             <artifactId>converter-jackson</artifactId>
             <version>${retrofit.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-referencing</artifactId>
+            <version>${geotools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-epsg-hsql</artifactId>
+            <version>${geotools.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.media</groupId>
+                    <artifactId>jai_core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-main</artifactId>
+            <version>${geotools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-metadata</artifactId>
+            <version>${geotools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-opengis</artifactId>
+            <version>${geotools.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
