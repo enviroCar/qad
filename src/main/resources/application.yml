@@ -31,6 +31,6 @@ qad:
 
 logging:
   level:
-    root: warn
+    root: info
     org:
       envirocar: debug
