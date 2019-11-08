@@ -1,7 +1,5 @@
 package org.envirocar.qad.model.result;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.envirocar.qad.JsonConstants;
 import org.envirocar.qad.axis.AxisId;
@@ -10,29 +8,14 @@ import java.time.Instant;
 import java.util.List;
 
 public class AnalysisResult {
-    @JsonProperty(JsonConstants.CITY)
     private String city;
-    @JsonProperty(JsonConstants.AXIS)
     private AxisId axis;
-    @JsonProperty(JsonConstants.START)
     private Instant start;
-    @JsonProperty(JsonConstants.END)
     private Instant end;
-    @JsonProperty(JsonConstants.FUEL_TYPE)
     private String fuelType;
-    @JsonProperty(JsonConstants.SEGMENTS)
     private List<SegmentResult> segments;
-    @JsonIgnore
-    private String trackId;
 
-    public String getTrackId() {
-        return trackId;
-    }
-
-    public void setTrackId(String trackId) {
-        this.trackId = trackId;
-    }
-
+    @JsonProperty(JsonConstants.SEGMENTS)
     public List<SegmentResult> getSegments() {
         return segments;
     }
@@ -41,6 +24,7 @@ public class AnalysisResult {
         this.segments = segments;
     }
 
+    @JsonProperty(JsonConstants.CITY)
     public String getCity() {
         return city;
     }
@@ -49,6 +33,7 @@ public class AnalysisResult {
         this.city = city;
     }
 
+    @JsonProperty(JsonConstants.AXIS)
     public AxisId getAxis() {
         return axis;
     }
@@ -57,6 +42,7 @@ public class AnalysisResult {
         this.axis = axis;
     }
 
+    @JsonProperty(JsonConstants.START)
     public Instant getStart() {
         return start;
     }
@@ -65,6 +51,7 @@ public class AnalysisResult {
         this.start = start;
     }
 
+    @JsonProperty(JsonConstants.END)
     public Instant getEnd() {
         return end;
     }
@@ -73,16 +60,12 @@ public class AnalysisResult {
         this.end = end;
     }
 
+    @JsonProperty(JsonConstants.FUEL_TYPE)
     public String getFuelType() {
         return fuelType;
     }
 
     public void setFuelType(String fuelType) {
         this.fuelType = fuelType;
-    }
-
-    @JsonGetter("numSegments")
-    public int size() {
-        return segments == null ? 0 : segments.size();
     }
 }

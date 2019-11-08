@@ -32,14 +32,4 @@ public class SegmentResult {
     public double getSegmentLength() {
         return GeometryUtils.length(segment.getGeometry());
     }
-
-    @JsonGetter(JsonConstants.TRAFFIC_LIGHT_INFLUENCE)
-    public boolean isTrafficLightInfluence() {
-        return segment.isTrafficLightInfluence();
-    }
-
-    @JsonGetter(JsonConstants.TRAFFIC_LIGHT_ID)
-    public String getTrafficLightId() {
-        return segment.getTrafficLight();
-    }
 }

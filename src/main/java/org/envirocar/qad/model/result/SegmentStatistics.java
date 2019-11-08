@@ -6,46 +6,14 @@ import org.envirocar.qad.JsonConstants;
 import java.time.Duration;
 
 public class SegmentStatistics {
-    @JsonProperty(JsonConstants.TRAVEL_TIME)
     private Duration travelTime;
-    @JsonProperty(JsonConstants.STOPS)
     private int stops;
-    @JsonProperty(JsonConstants.STOPPED_TIME)
     private Duration stoppedTime;
-    @JsonProperty(JsonConstants.CONSUMPTION)
     private double consumption;
-    @JsonProperty(JsonConstants.EMISSION)
     private double emission;
-    @JsonProperty(JsonConstants.SPEED)
     private double speed;
-    private int begin;
-    private int end;
-    private String trackId;
 
-    public int getBegin() {
-        return begin;
-    }
-
-    public void setBegin(int begin) {
-        this.begin = begin;
-    }
-
-    public int getEnd() {
-        return end;
-    }
-
-    public void setEnd(int end) {
-        this.end = end;
-    }
-
-    public String getTrackId() {
-        return trackId;
-    }
-
-    public void setTrackId(String trackId) {
-        this.trackId = trackId;
-    }
-
+    @JsonProperty(JsonConstants.TRAVEL_TIME)
     public Duration getTravelTime() {
         return travelTime;
     }
@@ -54,6 +22,7 @@ public class SegmentStatistics {
         this.travelTime = travelTime;
     }
 
+    @JsonProperty(JsonConstants.STOPS)
     public int getStops() {
         return stops;
     }
@@ -62,6 +31,7 @@ public class SegmentStatistics {
         this.stops = stops;
     }
 
+    @JsonProperty(JsonConstants.STOPPED_TIME)
     public Duration getStoppedTime() {
         return stoppedTime;
     }
@@ -70,6 +40,7 @@ public class SegmentStatistics {
         this.stoppedTime = stoppedTime;
     }
 
+    @JsonProperty(JsonConstants.CONSUMPTION)
     public double getConsumption() {
         return consumption;
     }
@@ -78,6 +49,7 @@ public class SegmentStatistics {
         this.consumption = consumption;
     }
 
+    @JsonProperty(JsonConstants.EMISSION)
     public double getEmission() {
         return emission;
     }
@@ -86,6 +58,7 @@ public class SegmentStatistics {
         this.emission = emission;
     }
 
+    @JsonProperty(JsonConstants.SPEED)
     public double getSpeed() {
         return speed;
     }

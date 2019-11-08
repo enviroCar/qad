@@ -76,9 +76,6 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
         statistics.setStoppedTime(getStopTime());
         statistics.setTravelTime(getDuration());
         statistics.setStops(getStops());
-        statistics.setTrackId(track.getId());
-        statistics.setBegin(getStart());
-        statistics.setEnd(getEnd());
         return new SegmentResult(segment, statistics);
     }
 
