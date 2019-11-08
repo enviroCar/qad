@@ -156,7 +156,7 @@ public class AxisAnalyzer implements Analyzer {
 
     private AnalysisResult createAnalysisResults(Deque<MatchCandidate> results) {
         AnalysisResult result = new AnalysisResult();
-        result.setTrackId(track.getId());
+        result.setTrack(track.getId());
         result.setAxis(axis.getId());
         result.setCity(axis.getModelId().getValue());
         result.setFuelType(track.getFuelType());

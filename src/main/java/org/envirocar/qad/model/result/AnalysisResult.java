@@ -14,6 +14,7 @@ public class AnalysisResult {
     private Instant end;
     private String fuelType;
     private List<SegmentResult> segments;
+    private String track;
 
     @JsonProperty(JsonConstants.SEGMENTS)
     public List<SegmentResult> getSegments() {
@@ -67,5 +68,14 @@ public class AnalysisResult {
 
     public void setFuelType(String fuelType) {
         this.fuelType = fuelType;
+    }
+
+    @JsonProperty(JsonConstants.TRACK)
+    public String getTrack() {
+        return track;
+    }
+
+    public void setTrack(String track) {
+        this.track = track;
     }
 }
