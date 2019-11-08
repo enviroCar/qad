@@ -40,6 +40,7 @@ public class DirectoryResultPersistence implements ResultPersistence {
     public void persist(AnalysisResult result) {
         try {
             Path path = Files.createTempFile(parameters.getOutputPath(), getPrefix(result), ".json");
+            LOG.info("Writing output {}", path.toAbsolutePath());
             try (BufferedWriter w = Files.newBufferedWriter(path, StandardCharsets.UTF_8)) {
                 writer.writeValue(w, result);
             } catch (IOException e) {
@@ -48,17 +49,15 @@ public class DirectoryResultPersistence implements ResultPersistence {
         } catch (IOException ex) {
             LOG.error("Error creating output file", ex);
         }
-
     }
 
     private String getPrefix(AnalysisResult result) {
-        return String.format("%s_%02d_%d_%s_%s",
+        return String.format("%s_%02d_%d_%s_%s_",
                              result.getCity(),
                              result.getAxis().getId(),
                              result.getAxis().getDirection(),
                              TIME_FORMATTER.format(result.getEnd()),
                              DATE_FORMATTER.format(result.getEnd()));
-
     }
 
 }
