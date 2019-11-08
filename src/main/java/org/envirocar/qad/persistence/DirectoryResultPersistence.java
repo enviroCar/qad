@@ -13,14 +13,20 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 import java.util.Objects;
 
 @Component
 public class DirectoryResultPersistence implements ResultPersistence {
     private static final Logger LOG = LoggerFactory.getLogger(DirectoryResultPersistence.class);
-    private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HHmmss");
-    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMdd");
+    private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HHmmss")
+                                                                             .withLocale(Locale.ROOT)
+                                                                             .withZone(ZoneId.of("Europe/Berlin"));
+    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMdd")
+                                                                             .withLocale(Locale.ROOT)
+                                                                             .withZone(ZoneId.of("Europe/Berlin"));
     private final AlgorithmParameters parameters;
     private final ObjectWriter writer;
 
