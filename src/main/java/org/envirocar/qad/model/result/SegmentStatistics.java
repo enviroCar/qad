@@ -1,7 +1,9 @@
 package org.envirocar.qad.model.result;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.envirocar.qad.JsonConstants;
+import org.envirocar.qad.utils.DecimalPlaces;
 
 import java.time.Duration;
 
@@ -40,6 +42,7 @@ public class SegmentStatistics {
         this.stoppedTime = stoppedTime;
     }
 
+    @JsonSerialize(using = DecimalPlaces.Two.class)
     @JsonProperty(JsonConstants.CONSUMPTION)
     public double getConsumption() {
         return consumption;
@@ -49,6 +52,7 @@ public class SegmentStatistics {
         this.consumption = consumption;
     }
 
+    @JsonSerialize(using = DecimalPlaces.Two.class)
     @JsonProperty(JsonConstants.EMISSION)
     public double getEmission() {
         return emission;
@@ -58,6 +62,7 @@ public class SegmentStatistics {
         this.emission = emission;
     }
 
+    @JsonSerialize(using = DecimalPlaces.Two.class)
     @JsonProperty(JsonConstants.SPEED)
     public double getSpeed() {
         return speed;
@@ -66,4 +71,5 @@ public class SegmentStatistics {
     public void setSpeed(double speed) {
         this.speed = speed;
     }
+
 }

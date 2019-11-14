@@ -53,7 +53,7 @@ public class DirectoryResultPersistence implements ResultPersistence {
 
     private String getPrefix(AnalysisResult result) {
         return String.format("%s_%02d_%d_%s_%s_",
-                             result.getCity(),
+                             result.getModel(),
                              result.getAxis().getId(),
                              result.getAxis().getDirection(),
                              TIME_FORMATTER.format(result.getEnd()),

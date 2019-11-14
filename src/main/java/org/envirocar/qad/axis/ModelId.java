@@ -1,5 +1,7 @@
 package org.envirocar.qad.axis;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.envirocar.qad.JsonConstants;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Comparator;
@@ -16,10 +18,12 @@ public class ModelId implements Comparable<ModelId> {
         this.version = Objects.requireNonNull(version);
     }
 
+    @JsonProperty(JsonConstants.CITY)
     public String getValue() {
         return value;
     }
 
+    @JsonProperty(JsonConstants.VERSION)
     public String getVersion() {
         return version;
     }

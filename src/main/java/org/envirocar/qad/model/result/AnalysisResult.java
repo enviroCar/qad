@@ -1,14 +1,16 @@
 package org.envirocar.qad.model.result;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import org.envirocar.qad.JsonConstants;
 import org.envirocar.qad.axis.AxisId;
+import org.envirocar.qad.axis.ModelId;
 
 import java.time.Instant;
 import java.util.List;
 
 public class AnalysisResult {
-    private String city;
+    private ModelId model;
     private AxisId axis;
     private Instant start;
     private Instant end;
@@ -25,13 +27,13 @@ public class AnalysisResult {
         this.segments = segments;
     }
 
-    @JsonProperty(JsonConstants.CITY)
-    public String getCity() {
-        return city;
+    @JsonUnwrapped
+    public ModelId getModel() {
+        return model;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setModel(ModelId model) {
+        this.model = model;
     }
 
     @JsonProperty(JsonConstants.AXIS)

@@ -158,7 +158,7 @@ public class AxisAnalyzer implements Analyzer {
         AnalysisResult result = new AnalysisResult();
         result.setTrack(track.getId());
         result.setAxis(axis.getId());
-        result.setCity(axis.getModelId().getValue());
+        result.setModel(axis.getModelId());
         result.setFuelType(track.getFuelType());
         result.setStart(track.getTime(results.getFirst().getStart()));
         result.setEnd(track.getTime(results.getLast().getEnd()));

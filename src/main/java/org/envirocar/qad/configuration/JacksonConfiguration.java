@@ -52,6 +52,6 @@ public class JacksonConfiguration {
 
     @Bean
     public JtsModule jtsModule(GeometryFactory geometryFactory) {
-        return new JtsModule(geometryFactory, IncludeBoundingBox.never());
+        return new JtsModule(geometryFactory, IncludeBoundingBox.never(), 8);
     }
 }
