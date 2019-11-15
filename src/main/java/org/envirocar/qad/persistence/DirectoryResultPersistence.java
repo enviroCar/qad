@@ -73,7 +73,7 @@ public class DirectoryResultPersistence implements ResultPersistence {
         String fileName = file.getFileName().toString();
         for (int i = 0; true; i++) {
             try {
-                Files.move(file, getArchive().resolve(fileName), StandardCopyOption.COPY_ATTRIBUTES);
+                Files.move(file, getArchive().resolve(fileName));
                 break;
             } catch (FileAlreadyExistsException ex) {
                 fileName = String.format("%s.%d", file.getFileName(), i);
