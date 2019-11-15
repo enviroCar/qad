@@ -135,7 +135,6 @@
             <artifactId>gt-opengis</artifactId>
             <version>${geotools.version}</version>
         </dependency>
-
     </dependencies>
 
     <build>
