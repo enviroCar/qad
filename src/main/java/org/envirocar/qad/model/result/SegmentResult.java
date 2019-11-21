@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.envirocar.qad.JsonConstants;
 import org.envirocar.qad.axis.Segment;
-import org.envirocar.qad.axis.SegmentId;
 import org.envirocar.qad.utils.DecimalPlaces;
 import org.envirocar.qad.utils.GeometryUtils;
 
@@ -26,8 +25,8 @@ public class SegmentResult {
     }
 
     @JsonGetter(JsonConstants.SEGMENT_ID)
-    public SegmentId getSegmentId() {
-        return segment.getId();
+    public int getSegmentId() {
+        return segment.getId().getRank();
     }
 
     @JsonSerialize(using = DecimalPlaces.Two.class)
