@@ -54,7 +54,7 @@ public class SegmentStatistics {
     }
 
     @JsonSerialize(using = DecimalPlaces.Two.class)
-    @JsonProperty(JsonConstants.FUEL_CONSUMPTION)
+    @JsonProperty(JsonConstants.ENERGY_CONSUMPTION)
     public double getEnergyConsumption() {
         return energyConsumption;
     }
