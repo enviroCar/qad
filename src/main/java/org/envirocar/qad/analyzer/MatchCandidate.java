@@ -267,6 +267,7 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
 
     @Override
     public int compareTo(MatchCandidate other) {
+        Objects.requireNonNull(other);
         return COMPARATOR.compare(this, other);
     }
 
