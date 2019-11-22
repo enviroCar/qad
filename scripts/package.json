@@ -1,0 +1,10 @@
+{
+	"type": "module",
+	"dependencies": {
+		"glob": "^7.1.6",
+		"mkdirs": "0.0.2",
+		"mongodb": "^3.3.4",
+		"request": "^2.88.0",
+		"request-promise-native": "^1.0.8"
+	}
+}

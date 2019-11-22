@@ -1,0 +1,45 @@
+#!/usr/bin/env -S node --experimental-modules
+
+import { promises as fs } from "fs";
+import { fileURLToPath } from "url";
+import { dirname, resolve } from "path";
+
+async function main(path) {
+  const fileNames = await fs.readdir(path);
+
+  const features = await Promise.all(
+    fileNames.map(async file => {
+      const data = await fs.readFile(resolve(path, file), "UTF8");
+      const track = JSON.parse(data);
+      return {
+        type: "Feature",
+        properties: {
+          id: track.properties.id
+        },
+        geometry: {
+          type: "LineString",
+          coordinates: track.features.map(f => f.geometry.coordinates)
+        }
+      };
+    })
+  );
+
+  const featureCollection = { type: "FeatureCollection", features: features };
+  return JSON.stringify(featureCollection, null, 2);
+}
+
+(async () => {
+  try {
+    const directory = resolve(
+        dirname(fileURLToPath(import.meta.url)),
+        "..",
+        "src",
+        "main",
+        "resources",
+        "tracks"
+      );
+    console.log(await main("directory));
+  } catch (e) {
+    console.error(e);
+  }
+})();

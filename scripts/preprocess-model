@@ -1,0 +1,78 @@
+#!/usr/bin/env -S node --experimental-modules
+
+import { promises as fs } from "fs";
+
+const propertiesToDelete = [
+  "Shape_Len",
+  "Shape_Length",
+  "zul_V",
+  "Segment_Name",
+  "Segment_Na",
+  "Segmenttyp",
+  "Achsen_ID",
+  "name",
+  "id"
+];
+
+async function main() {
+  const args = process.argv.slice(2);
+  if (args.length < 1) {
+    throw new Error("missing input");
+  }
+  await Promise.all(args.map(preprocessFile));
+}
+
+async function preprocessFile(file) {
+  const content = await fs.readFile(file);
+  const data = preprocessModel(JSON.parse(content));
+  await fs.writeFile(file, JSON.stringify(data, null, 2));
+}
+
+function preprocessModel(data) {
+  for (let feature of data.features) {
+    const p = feature.properties;
+    if (p["Achsen_ID"] !== undefined) {
+      const s = p["Achsen_ID"].split("_");
+      p.axis = parseInt(s[0]);
+      p.direction = parseInt(s[1]);
+    }
+    if (p.rank !== undefined) {
+      p.rank = parseInt(p.rank);
+    }
+    if (p["zul_V"] !== undefined) {
+      p.maxSpeed = parseInt(p["zul_V"]);
+    }
+    if (p.maxSpeed !== undefined) {
+      p.maxSpeed = parseInt(p.maxSpeed);
+    }
+    if (p["Segmenttyp"] !== undefined) {
+      p.type = parseInt(p["Segmenttyp"]);
+    }
+
+    for (let name of propertiesToDelete) {
+      delete p[name];
+    }
+  }
+  data.features.sort(compareFeature);
+  return data;
+}
+
+function compareFeature(f1, f2) {
+  const p1 = f1.properties;
+  const p2 = f2.properties;
+  if (p1.axis < p2.axis) return -1;
+  if (p1.axis > p2.axis) return 1;
+  if (p1.direction < p2.direction) return -1;
+  if (p1.direction > p2.direction) return 1;
+  if (p1.rank < p2.rank) return -1;
+  if (p1.rank > p2.rank) return 1;
+  return 0;
+}
+
+(async () => {
+  try {
+    console.log(await main());
+  } catch (e) {
+    console.error(e);
+  }
+})();

@@ -1,0 +1,174 @@
+#!/usr/bin/env -S node --experimental-modules
+
+import { promises as fs } from "fs";
+import mongodb from "mongodb";
+import { promisify } from "util";
+import { fileURLToPath } from "url";
+import { dirname, resolve } from "path";
+import mkdirs from "mkdirs";
+import glob from "glob";
+import request from "request-promise-native";
+
+const globAsync = promisify(glob);
+const connectAsync = promisify(mongodb.connect);
+const mongoUrl = "mongodb://localhost:27017";
+const emptyBoundingBox = [Infinity, Infinity, -Infinity, -Infinity];
+const apiUrl = "https://envirocar.org/api/stable";
+
+const database = "enviroCar";
+
+const resourceDirectory = resolve(
+  dirname(fileURLToPath(import.meta.url)),
+  "..",
+  "src",
+  "main",
+  "resources"
+);
+const modelDirectory = resourceDirectory;
+
+const downloadDirectory = resolve(resourceDirectory, "tracks");
+
+async function main() {
+  const files = await globAsync(`${modelDirectory}/*.json`);
+  const geometries = [];
+  for (let file of files) {
+    let model = JSON.parse(await fs.readFile(file));
+    let bbox = emptyBoundingBox;
+    if (!model.features) continue;
+    for (let feature of model.features) {
+      bbox = mergeBoundingBox(bbox, getBoundingBox(feature.geometry));
+    }
+    geometries.push(polygon(bbox));
+  }
+  const tracks = await getTrackIds(geometries);
+  console.log(`downloading ${tracks.length} tracks`);
+  await downloadTracks(tracks);
+}
+
+async function getTrackIds(geometries) {
+  const query = createQuery(geometries);
+  let connection;
+  try {
+    connection = await connectAsync(mongoUrl);
+    return await getTrackIdsFromMeasurements(connection, query);
+  } finally {
+    if (connection) {
+      connection.close();
+    }
+  }
+}
+
+async function getTrackIdsFromMeasurements(connection, query) {
+  const cursor = await aggregate(connection, database, "measurements", [
+    { $match: query },
+    { $group: { _id: 1, tracks: { $addToSet: "$track" } } }
+  ]);
+
+  const results = await cursorToArray(cursor);
+
+  return results[0].tracks.map(x => x.oid.toHexString());
+}
+
+function aggregate(connection, database, collection, pipeline) {
+  return new Promise((resolve, reject) => {
+    connection
+      .db(database)
+      .collection(collection)
+      .aggregate(pipeline, callback(resolve, reject));
+  });
+}
+
+function cursorToArray(cursor) {
+  return new Promise((resolve, reject) => {
+    cursor.toArray(callback(resolve, reject));
+  });
+}
+
+async function downloadTracks(tracks) {
+  mkdirs(downloadDirectory);
+  return Promise.all(
+    tracks.map(async track => {
+      let content = await request({ uri: `${apiUrl}/tracks/${track}` });
+      await fs.writeFile(
+        resolve(downloadDirectory, `${track}.json`),
+        content,
+        "UTF-8"
+      );
+      console.log(`downloaded track ${track}`);
+    })
+  );
+}
+
+function callback(resolve, reject) {
+  return (err, res) => {
+    if (err) reject(err);
+    else resolve(res);
+  };
+}
+
+function geoWithin(geometry) {
+  return { $geoWithin: { $geometry: geometry } };
+}
+
+function polygon(bbox) {
+  return {
+    type: "Polygon",
+    coordinates: [
+      [
+        [bbox[0], bbox[1]],
+        [bbox[0], bbox[3]],
+        [bbox[2], bbox[3]],
+        [bbox[2], bbox[1]],
+        [bbox[0], bbox[1]]
+      ]
+    ]
+  };
+}
+
+function or(criteria) {
+  return { $or: criteria };
+}
+
+function createQuery(geometries) {
+  return or(
+    Object.values(geometries).map(bbox => ({ geometry: geoWithin(bbox) }))
+  );
+}
+
+function mergeBoundingBox(a, b) {
+  return [
+    Math.min(a[0], b[0]),
+    Math.min(a[1], b[1]),
+    Math.max(a[2], b[2]),
+    Math.max(a[3], b[3])
+  ];
+}
+
+function getBoundingBox(obj) {
+  if (Array.isArray(obj)) {
+    return [
+      obj.reduce((x, c) => Math.min(x, c[0]), Infinity),
+      obj.reduce((x, c) => Math.min(x, c[1]), Infinity),
+      obj.reduce((x, c) => Math.max(x, c[0]), -Infinity),
+      obj.reduce((x, c) => Math.max(x, c[1]), -Infinity)
+    ];
+  }
+  switch (obj.type) {
+    case "LineString":
+      return getBoundingBox(obj.coordinates);
+    case "MultiLineString":
+      return obj.coordinates
+        .map(getBoundingBox)
+        .reduce(mergeBoundingBox, emptyBoundingBox);
+    default:
+      return emptyBoundingBox;
+  }
+}
+
+(async () => {
+  try {
+    console.log(await main());
+  } catch (e) {
+    console.error(e);
+  }
+})();
