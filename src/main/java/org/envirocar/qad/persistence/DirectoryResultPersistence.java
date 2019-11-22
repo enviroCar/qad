@@ -16,7 +16,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.FileAttribute;
 import java.nio.file.attribute.PosixFilePermission;
 import java.nio.file.attribute.PosixFilePermissions;
@@ -123,8 +122,8 @@ public class DirectoryResultPersistence implements ResultPersistence {
                                       result.getModel(),
                                       result.getAxis().getId(),
                                       result.getAxis().getDirection(),
-                                      timeFormat.format(result.getEnd()),
-                                      dateFormat.format(result.getEnd()),
+                                      timeFormat.format(result.getStart()),
+                                      dateFormat.format(result.getStart()),
                                       result.getTrack());
         Path path = parameters.getOutputPath().resolve(String.format("%s.json", prefix));
 
