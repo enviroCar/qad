@@ -18,6 +18,7 @@ public class AxisModelConfiguration {
     private static final String KREFELD = "KRE";
     private static final String HAMM = "HAM";
     private static final String CHEMNITZ = "CHE";
+    private static final String MOENCHENGLADBACH = "MGL";
 
     @Bean
     public AxisModelRepository axisModelRepository(List<AxisModel> axisModels) {
@@ -37,6 +38,11 @@ public class AxisModelConfiguration {
     @Bean(name = CHEMNITZ)
     public AxisModel modelChemnitz(ObjectMapper mapper, AxisModelParser parser) throws IOException {
         return readModel(mapper, parser, "/Chemnitz-2019-11-18.json");
+    }
+
+    @Bean(name = MOENCHENGLADBACH)
+    public AxisModel modelMoenchengladbach(ObjectMapper mapper, AxisModelParser parser) throws IOException {
+        return readModel(mapper, parser, "/Mönchengladbach-2016-12-12.json");
     }
 
     private AxisModel readModel(ObjectMapper mapper, AxisModelParser parser, String path) throws IOException {
