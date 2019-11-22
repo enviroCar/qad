@@ -11,7 +11,16 @@ const propertiesToDelete = [
   "Segmenttyp",
   "Achsen_ID",
   "name",
-  "id"
+  "id",
+  "N_Einfluss",
+  "K_LSA",
+  "bbox_area",
+  "laenge",
+  "Rang_LSA",
+  "LSA",
+  "length",
+  "duration",
+  "segment_id"
 ];
 
 async function main() {
