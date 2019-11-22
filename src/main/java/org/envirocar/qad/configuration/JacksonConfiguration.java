@@ -14,6 +14,8 @@ import org.n52.jackson.datatype.jts.JtsModule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.Locale;
+
 @Configuration
 public class JacksonConfiguration {
 
@@ -33,21 +35,33 @@ public class JacksonConfiguration {
     }
 
     @Bean
-    public ObjectMapper objectMapper(JtsModule jtsModule) {
-        return new ObjectMapper().findAndRegisterModules()
-                                 .registerModule(new Jdk8Module())
-                                 .registerModule(new JavaTimeModule())
+    public ObjectMapper objectMapper(Jdk8Module jdk8Module, JavaTimeModule javaTimeModule, JtsModule jtsModule) {
+        return new ObjectMapper().setLocale(Locale.ROOT)
+                                 .findAndRegisterModules()
+                                 .registerModule(jdk8Module)
+                                 .registerModule(javaTimeModule)
                                  .registerModule(jtsModule)
-                                 .enable(SerializationFeature.INDENT_OUTPUT)
-                                 .disable(SerializationFeature.WRITE_DATE_KEYS_AS_TIMESTAMPS)
-                                 .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
-                                 .disable(SerializationFeature.WRITE_DURATIONS_AS_TIMESTAMPS)
-                                 .enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT)
-                                 .enable(DeserializationFeature.ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT)
-                                 .enable(DeserializationFeature.USE_BIG_DECIMAL_FOR_FLOATS)
-                                 .enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
-                                 .enable(DeserializationFeature.UNWRAP_SINGLE_VALUE_ARRAYS)
-                                 .disable(DeserializationFeature.ADJUST_DATES_TO_CONTEXT_TIME_ZONE);
+                                 .configure(SerializationFeature.INDENT_OUTPUT, true)
+                                 .configure(SerializationFeature.WRITE_DATE_KEYS_AS_TIMESTAMPS, false)
+                                 .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
+                                 .configure(SerializationFeature.WRITE_DURATIONS_AS_TIMESTAMPS, false)
+                                 .configure(SerializationFeature.WRITE_DATES_WITH_ZONE_ID, false)
+                                 .configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, true)
+                                 .configure(DeserializationFeature.ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT, true)
+                                 .configure(DeserializationFeature.USE_BIG_DECIMAL_FOR_FLOATS, true)
+                                 .configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true)
+                                 .configure(DeserializationFeature.UNWRAP_SINGLE_VALUE_ARRAYS, true)
+                                 .configure(DeserializationFeature.ADJUST_DATES_TO_CONTEXT_TIME_ZONE, false);
+    }
+
+    @Bean
+    public Jdk8Module jdk8Module() {
+        return new Jdk8Module();
+    }
+
+    @Bean
+    public JavaTimeModule javaTimeModule() {
+        return new JavaTimeModule();
     }
 
     @Bean

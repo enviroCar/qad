@@ -1,5 +1,6 @@
 package org.envirocar.qad.model.result;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import org.envirocar.qad.JsonConstants;
@@ -10,6 +11,8 @@ import java.time.Instant;
 import java.util.List;
 
 public class AnalysisResult {
+    private static final String DATE_TIME_PATTERN = "yyyy-MM-dd'T'HH:mm:ss.SSSXX";
+    private static final String TIME_ZONE = "Europe/Berlin";
     private ModelId model;
     private AxisId axis;
     private Instant start;
@@ -45,6 +48,7 @@ public class AnalysisResult {
         this.axis = axis;
     }
 
+    @JsonFormat(timezone = TIME_ZONE, pattern = DATE_TIME_PATTERN)
     @JsonProperty(JsonConstants.START)
     public Instant getStart() {
         return start;
@@ -54,6 +58,7 @@ public class AnalysisResult {
         this.start = start;
     }
 
+    @JsonFormat(timezone = TIME_ZONE, pattern = DATE_TIME_PATTERN)
     @JsonProperty(JsonConstants.END)
     public Instant getEnd() {
         return end;
