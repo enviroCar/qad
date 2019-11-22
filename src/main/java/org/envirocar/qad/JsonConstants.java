@@ -26,7 +26,8 @@ public interface JsonConstants {
     String TRAVEL_TIME = "travelTime";
     String STOPS = "stops";
     String STOPPED_TIME = "stoppedTime";
-    String CONSUMPTION = "consumption";
+    String FUEL_CONSUMPTION = "fuelConsumption";
+    String ENERGY_CONSUMPTION = "energyConsumption";
     String EMISSION = "emission";
     String SPEED = "speed";
     String NAME = "name";

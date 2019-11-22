@@ -11,7 +11,8 @@ public class SegmentStatistics {
     private Duration travelTime;
     private int stops;
     private Duration stoppedTime;
-    private double consumption;
+    private double fuelConsumption;
+    private double energyConsumption;
     private double emission;
     private double speed;
 
@@ -43,13 +44,23 @@ public class SegmentStatistics {
     }
 
     @JsonSerialize(using = DecimalPlaces.Two.class)
-    @JsonProperty(JsonConstants.CONSUMPTION)
-    public double getConsumption() {
-        return consumption;
+    @JsonProperty(JsonConstants.FUEL_CONSUMPTION)
+    public double getFuelConsumption() {
+        return fuelConsumption;
     }
 
-    public void setConsumption(double consumption) {
-        this.consumption = consumption;
+    public void setFuelConsumption(double fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
+    @JsonSerialize(using = DecimalPlaces.Two.class)
+    @JsonProperty(JsonConstants.FUEL_CONSUMPTION)
+    public double getEnergyConsumption() {
+        return energyConsumption;
+    }
+
+    public void setEnergyConsumption(double energyConsumption) {
+        this.energyConsumption = energyConsumption;
     }
 
     @JsonSerialize(using = DecimalPlaces.Two.class)

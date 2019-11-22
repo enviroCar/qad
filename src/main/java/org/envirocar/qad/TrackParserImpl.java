@@ -24,14 +24,16 @@ public class TrackParserImpl implements TrackParser {
     public static final String PHENOMENON_SPEED = "Speed";
     public static final String PHENOMENON_CONSUMPTION = "Consumption";
     public static final String PHENOMENON_CARBON_DIOXIDE = "CO2";
+    public static final String PHENOMENON_ENERGY_CONSUMPTION = "Energy Consumption";
 
     @Override
     public Track createTrack(FeatureCollection collection) throws TrackParsingException {
 
         String id = collection.getProperties().path(JsonConstants.ID).textValue();
         List<Measurement> measurements = new ArrayList<>();
-        AtomicBoolean missingConsumption = new AtomicBoolean(false);
+        AtomicBoolean missingFuelConsumption = new AtomicBoolean(false);
         AtomicBoolean missingEmission = new AtomicBoolean(false);
+        AtomicBoolean missingEnergyConsumption = new AtomicBoolean(false);
         for (Feature feature : collection.getFeatures()) {
             Point geometry = (Point) feature.getGeometry();
             String measurementId = feature.getProperties().path(JsonConstants.ID).textValue();
@@ -39,25 +41,29 @@ public class TrackParserImpl implements TrackParser {
                                                 DateTimeFormatter.ISO_DATE_TIME).toInstant();
             JsonNode phenomenons = feature.getProperties().path(JsonConstants.PHENOMENONS);
             JsonNode speed = phenomenons.path(PHENOMENON_SPEED).path(JsonConstants.VALUE);
-            JsonNode consumption = phenomenons.path(PHENOMENON_CONSUMPTION).path(JsonConstants.VALUE);
+            JsonNode fuelConsumption = phenomenons.path(PHENOMENON_CONSUMPTION).path(JsonConstants.VALUE);
             JsonNode emission = phenomenons.path(PHENOMENON_CARBON_DIOXIDE).path(JsonConstants.VALUE);
+            JsonNode energyConsumption = phenomenons.path(PHENOMENON_ENERGY_CONSUMPTION).path(JsonConstants.VALUE);
             if (speed.isNull() || speed.isMissingNode()) {
                 throw new TrackParsingException(String.format("track %s is missing speed measurements", measurementId));
             }
-            if (consumption.isNull() || consumption.isMissingNode()) {
-                missingConsumption.lazySet(true);
-
+            if (fuelConsumption.isNull() || fuelConsumption.isMissingNode()) {
+                missingFuelConsumption.lazySet(true);
+            }
+            if (energyConsumption.isNull() || energyConsumption.isMissingNode()) {
+                missingEnergyConsumption.lazySet(true);
             }
             if (emission.isNull() || emission.isMissingNode()) {
                 missingEmission.lazySet(true);
             }
             measurements.add(new Measurement(measurementId, geometry, time,
                                              new Values(speed.doubleValue(),
-                                                        consumption.doubleValue(),
+                                                        fuelConsumption.doubleValue(),
+                                                        energyConsumption.doubleValue(),
                                                         emission.doubleValue())));
         }
 
-        if (missingConsumption.get()) {
+        if (missingFuelConsumption.get() && missingEnergyConsumption.get()) {
             LOG.warn("track {} is missing consumption values", id);
         }
 

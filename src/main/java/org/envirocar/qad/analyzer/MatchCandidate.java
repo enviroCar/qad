@@ -70,7 +70,8 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     public SegmentResult toSegmentResult() {
         Values meanValues = getMeanValues();
         SegmentStatistics statistics = new SegmentStatistics();
-        statistics.setConsumption(meanValues.getConsumption());
+        statistics.setFuelConsumption(meanValues.getFuelConsumption());
+        statistics.setEnergyConsumption(meanValues.getEnergyConsumption());;
         statistics.setEmission(meanValues.getCarbonDioxide());
         statistics.setSpeed(meanValues.getSpeed());
         statistics.setStoppedTime(getStopTime());
@@ -177,7 +178,8 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
         double sumLength = 0.0d;
         double sumWeightedSpeeds = 0.0d;
         double sumCarbonDioxide = 0.0d;
-        double sumConsumption = 0.0d;
+        double sumFuelConsumption = 0.0d;
+        double sumEnergyConsumption = 0.0d;
         int maxIdx = track.size() - 1;
         for (int idx = start; idx <= end; idx++) {
             Values values = track.getValues(idx);
@@ -200,13 +202,15 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
 
             }
             sumCarbonDioxide += values.getCarbonDioxide();
-            sumConsumption += values.getConsumption();
+            sumFuelConsumption += values.getFuelConsumption();
+            sumEnergyConsumption += values.getEnergyConsumption();
         }
 
         double speed = sumWeightedSpeeds == 0.0d ? 0.0d : sumLength / sumWeightedSpeeds;
-        double consumption = sumConsumption / count;
+        double fuelConsumption = sumFuelConsumption / count;
         double carbonDioxide = sumCarbonDioxide / count;
-        return new Values(speed, consumption, carbonDioxide);
+        double energyConsumption = sumEnergyConsumption / count;
+        return new Values(speed, fuelConsumption, energyConsumption, carbonDioxide);
     }
 
     private Duration getStopTime() {
