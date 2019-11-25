@@ -14,7 +14,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.time.Duration;
 import java.util.Comparator;
 import java.util.LinkedList;
@@ -247,7 +246,7 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     private Duration getDuration() {
         if (duration == null) {
             duration = track.getDuration(start, end);
-            BigDecimal scaleFactor = BigDecimal.ONE.divide(BigDecimal.valueOf(getLengthRatio()), RoundingMode.HALF_UP);
+            BigDecimal scaleFactor = BigDecimal.valueOf(1 / getLengthRatio());
             duration = BigDecimals.toDuration(BigDecimals.create(duration).multiply(scaleFactor));
         }
         return duration;
