@@ -73,7 +73,7 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
         statistics.setFuelConsumption(meanValues.getFuelConsumption());
         statistics.setEnergyConsumption(meanValues.getEnergyConsumption());
         statistics.setEmission(meanValues.getCarbonDioxide());
-        statistics.setSpeed(meanValues.getSpeed());
+        statistics.setSpeed(meanValues.getSpeed() / 3.6);
         statistics.setStoppedTime(getStopTime());
         statistics.setTravelTime(getDuration());
         statistics.setStops(getStops());
