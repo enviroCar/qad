@@ -23,12 +23,13 @@ public class BigDecimals {
     }
 
     public static Instant toInstant(BigDecimal result) {
-        BigInteger[] divRem = result.movePointRight(9).toBigIntegerExact().divideAndRemainder(NANOS_PER_SECOND);
+        BigInteger[] divRem = result.movePointRight(9).toBigInteger().divideAndRemainder(NANOS_PER_SECOND);
         return Instant.ofEpochSecond(divRem[0].longValue(), divRem[1].longValue());
     }
 
     public static Duration toDuration(BigDecimal result) {
-        BigInteger[] divRem = result.movePointRight(9).toBigIntegerExact().divideAndRemainder(NANOS_PER_SECOND);
+        BigInteger[] divRem = result.movePointRight(9).toBigInteger().divideAndRemainder(NANOS_PER_SECOND);
         return Duration.ofSeconds(divRem[0].longValue(), divRem[1].longValue());
     }
+
 }

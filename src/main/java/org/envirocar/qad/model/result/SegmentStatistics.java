@@ -1,10 +1,16 @@
 package org.envirocar.qad.model.result;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.databind.JsonSerializer;
+import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.envirocar.qad.JsonConstants;
+import org.envirocar.qad.utils.BigDecimals;
 import org.envirocar.qad.utils.DecimalPlaces;
 
+import java.io.IOException;
+import java.math.RoundingMode;
 import java.time.Duration;
 
 public class SegmentStatistics {
@@ -16,6 +22,7 @@ public class SegmentStatistics {
     private double emission;
     private double speed;
 
+    @JsonSerialize(using = DurationSerializer.class)
     @JsonProperty(JsonConstants.TRAVEL_TIME)
     public Duration getTravelTime() {
         return travelTime;
@@ -34,6 +41,7 @@ public class SegmentStatistics {
         this.stops = stops;
     }
 
+    @JsonSerialize(using = DurationSerializer.class)
     @JsonProperty(JsonConstants.STOPPED_TIME)
     public Duration getStoppedTime() {
         return stoppedTime;
@@ -83,4 +91,14 @@ public class SegmentStatistics {
         this.speed = speed;
     }
 
+    private static class DurationSerializer extends JsonSerializer<Duration> {
+        @Override
+        public void serialize(Duration value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
+            if (value == null) {
+                gen.writeNull();
+            } else {
+                gen.writeNumber(BigDecimals.create(value).setScale(3, RoundingMode.HALF_UP));
+            }
+        }
+    }
 }
