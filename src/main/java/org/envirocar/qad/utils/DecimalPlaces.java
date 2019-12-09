@@ -14,6 +14,7 @@ public class DecimalPlaces extends CustomDoubleSerializer {
         NumberFormat format = DecimalFormat.getInstance(Locale.ROOT);
         format.setMinimumFractionDigits(0);
         format.setMaximumFractionDigits(decimalPlaces);
+        format.setGroupingUsed(false);
         return format;
     }
 
