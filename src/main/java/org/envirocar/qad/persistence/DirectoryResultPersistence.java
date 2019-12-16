@@ -118,10 +118,9 @@ public class DirectoryResultPersistence implements ResultPersistence {
     }
 
     private Path createFile(AnalysisResult result) throws IOException {
-        String prefix = String.format("%s_%02d_%d_%s_%s_%s",
+        String prefix = String.format("%s_%s_%s_%s_%s",
                                       result.getModel(),
-                                      result.getAxis().getId(),
-                                      result.getAxis().getDirection(),
+                                      result.getAxis(),
                                       timeFormat.format(result.getStart()),
                                       dateFormat.format(result.getStart()),
                                       result.getTrack());

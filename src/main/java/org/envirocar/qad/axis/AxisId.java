@@ -46,7 +46,7 @@ public class AxisId implements Comparable<AxisId> {
     @JsonValue
     @Override
     public String toString() {
-        return String.format("%d_%d", id, direction);
+        return String.format("%02d_%d", id, direction);
     }
 
     @Override
