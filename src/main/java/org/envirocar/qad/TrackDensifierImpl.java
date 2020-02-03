@@ -19,23 +19,16 @@ import org.springframework.stereotype.Service;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.OffsetDateTime;
-import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Locale;
 import java.util.Objects;
 import java.util.Set;
 
 @Service
 public class TrackDensifierImpl implements TrackDensifier {
-    DateTimeFormatter formatter =
-            DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT)
-                             .withLocale(Locale.ROOT)
-                             .withZone(ZoneId.of("UTC"));
     private final int numPoints;
     private final JsonNodeCreator nodeFactory;
 
@@ -168,9 +161,7 @@ public class TrackDensifierImpl implements TrackDensifier {
 
             Point geometry = geometryFactory.createPoint(lineSegment.pointAlong(distanceDeltaSum / distance));
 
-            properties.put(JsonConstants.ID, String.format("%s_%s_%d",
-                                                           getId(m1),
-                                                           getId(m2), i));
+            properties.put(JsonConstants.ID, String.format("%s_%s_%d", getId(m1), getId(m2), i));
             properties.put(JsonConstants.TIME, time.toString());
             properties.set(JsonConstants.PHENOMENONS, interpolateValues(m1, m2, fraction));
             Feature feature = new Feature();
