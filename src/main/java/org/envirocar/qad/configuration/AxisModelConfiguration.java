@@ -36,7 +36,7 @@ public class AxisModelConfiguration {
 
     @Bean(name = CHEMNITZ)
     public AxisModel modelChemnitz(ObjectMapper mapper, AxisModelParser parser) throws IOException {
-        return readModel(mapper, parser, "/Chemnitz-2019-11-18.json");
+        return readModel(mapper, parser, "/Chemnitz-2020-01-28.json");
     }
 
     private AxisModel readModel(ObjectMapper mapper, AxisModelParser parser, String path) throws IOException {
