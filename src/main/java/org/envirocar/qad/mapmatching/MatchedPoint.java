@@ -1,10 +1,12 @@
 package org.envirocar.qad.mapmatching;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import org.envirocar.qad.JsonConstants;
 import org.envirocar.qad.model.Feature;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MatchedPoint {
     private Long osmId;
     private String measurementId;

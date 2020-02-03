@@ -1,12 +1,14 @@
 package org.envirocar.qad.mapmatching;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import org.envirocar.qad.JsonConstants;
 import org.envirocar.qad.model.Feature;
 
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MapMatchingResult {
     private Feature matchedRoute;
     private List<MatchedPoint> matchedPoints;
