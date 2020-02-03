@@ -11,7 +11,8 @@ const propertiesToDelete = [
   "Segmenttyp",
   "Achsen_ID",
   "name",
-  "id"
+  "id",
+  "FID"
 ];
 
 async function main() {
