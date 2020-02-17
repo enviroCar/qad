@@ -4,7 +4,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.envirocar.qad.analyzer.Analyzer;
 import org.envirocar.qad.analyzer.AnalyzerFactory;
+import org.envirocar.qad.analyzer.TrackPreparer;
+import org.envirocar.qad.axis.Axis;
+import org.envirocar.qad.axis.AxisModelRepository;
+import org.envirocar.qad.model.Feature;
 import org.envirocar.qad.model.FeatureCollection;
+import org.envirocar.qad.model.Track;
 import org.envirocar.qad.model.result.AnalysisResult;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,12 +21,19 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -32,6 +44,10 @@ public class EnviroCarQadServerApplicationTests {
     private AnalyzerFactory analyzerFactory;
     @Autowired
     private ObjectMapper objectMapper;
+    @Autowired
+    private TrackPreparer trackPreparer;
+    @Autowired
+    private AxisModelRepository axisModelRepository;
 
     private Stream<String> getResourceFiles(String path) throws IOException {
         List<String> filenames = new ArrayList<>();
@@ -46,6 +62,34 @@ public class EnviroCarQadServerApplicationTests {
     }
 
     @Test
+    public void testDuplication() throws IOException {
+        FeatureCollection fc = readFeatureCollection("/tracks/5e4132753965f36894e62148.json");
+        Axis axis = axisModelRepository.getAxisModel("CHE").flatMap(x -> x.getAxis("22_2")).get();
+        Track track = trackPreparer.prepare(fc);
+
+        try (final BufferedWriter writer = Files.newBufferedWriter(Paths.get("/home/autermann/Source/enviroCar/qad/src/test/resources/tracks/5e4132753965f36894e62148.processed.json"), StandardCharsets.UTF_8)) {
+            final FeatureCollection featureCollection = new FeatureCollection();
+            final AtomicInteger idx = new AtomicInteger(0);
+            featureCollection.setFeatures(track.getMeasurements().stream().map(x -> {
+                Feature feature = new Feature();
+                feature.setGeometry(x.getGeometry());
+                feature.setId(x.getId());
+                feature.setProperties(objectMapper.createObjectNode()
+                                                  .putPOJO("time", x.getTime())
+                                                  .put("idx", idx.getAndIncrement()));
+                return feature;
+            }).collect(toList()));
+
+            objectMapper.writeValue(writer, featureCollection);
+        }
+
+        final Analyzer analyzer = analyzerFactory.create(axis, track);
+        analyzer.analyze().map(this::toJSON)
+                .forEach(x -> {});
+        //.forEach(System.err::println);
+    }
+
+    @Test
     public void contextLoads() throws IOException {
         //getResourceFiles("/tracks")
         Stream.of("/tracks/5d138cb844ea855023b210ab.json")
@@ -54,7 +98,7 @@ public class EnviroCarQadServerApplicationTests {
               .filter(Analyzer::isApplicable)
               .flatMap(Analyzer::analyze)
               .map(this::toJSON)
-              .forEach(System.err::println);
+              .forEach(x -> {});
     }
 
     private String toJSON(AnalysisResult result) {

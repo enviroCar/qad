@@ -7,7 +7,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.function.Function;
+import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toMap;
 
@@ -35,8 +37,13 @@ public class AxisModel implements Comparable<AxisModel>, Enveloped {
         return Collections.unmodifiableCollection(axis.values());
     }
 
-    public Axis getAxis(String id) {
-        return axis.get(id);
+    public Optional<Axis> getAxis(String id) {
+        return Optional.ofNullable(id)
+                       .map(x -> x.split("_"))
+                       .filter(x -> x.length == 2)
+                       .map(x -> Stream.of(x).mapToInt(Integer::parseInt).toArray())
+                       .map(x -> new AxisId(x[0], x[1]))
+                       .map(axis::get);
     }
 
     @Override

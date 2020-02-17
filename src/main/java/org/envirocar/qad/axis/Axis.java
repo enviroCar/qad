@@ -4,12 +4,15 @@ import org.envirocar.qad.model.Enveloped;
 import org.envirocar.qad.utils.TypeSafeSpatialIndex;
 import org.locationtech.jts.geom.Envelope;
 import org.locationtech.jts.geom.Geometry;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
 public class Axis implements Comparable<Axis>, Enveloped {
+    private static final Logger LOG = LoggerFactory.getLogger(Axis.class);
     private final List<Segment> segments;
     private final Envelope envelope = new Envelope();
     private final double length;
@@ -34,7 +37,9 @@ public class Axis implements Comparable<Axis>, Enveloped {
     }
 
     public List<Segment> findIntersectingSegments(Geometry geometry) {
-        return spatialIndex.query(geometry, segment -> {return segment.bufferIntersects(geometry);});
+        return spatialIndex.query(geometry, segment -> {
+            return segment.bufferIntersects(geometry);
+        });
     }
 
     public ModelId getModelId() {

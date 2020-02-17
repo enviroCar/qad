@@ -44,12 +44,28 @@ public class Track implements Enveloped {
         return getGeometry(0, size() - 1);
     }
 
-    public Stream<Track> subset(Envelope envelope) {
+    public final Stream<Track> subset(Envelope envelope) {
         return StreamSupport.stream(new SubsetSpliterator(this, envelope), false);
     }
 
     public Track subset(int begin, int end) {
-        return new Track(getId(), getFuelType(), measurements.subList(begin, end + 1));
+        return new TrackSubset(getId(), getFuelType(), getMeasurements(), begin, end);
+    }
+
+    private static class TrackSubset extends Track {
+        private final int begin;
+        private final int end;
+
+        public TrackSubset(String id, String fuelType, List<Measurement> measurements, int begin, int end) {
+            super(id, fuelType, measurements.subList(begin, end + 1));
+            this.begin = begin;
+            this.end = end;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("TrackSubset{id=%s, begin=%d, end=%d}", getId(), begin, end);
+        }
     }
 
     public List<Measurement> getMeasurements() {
@@ -60,27 +76,31 @@ public class Track implements Enveloped {
         return this.measurements.get(idx);
     }
 
-    public Point getGeometry(int idx) {
-        return this.measurements.get(idx).getGeometry();
+    public int size() {
+        return measurements.size();
     }
 
-    public Instant getTime(int idx) {
+    public final Point getGeometry(int idx) {
+        return getMeasurement(idx).getGeometry();
+    }
+
+    public final Instant getTime(int idx) {
         return getMeasurement(idx).getTime();
     }
 
-    public double getSpeed(int idx) {
+    public final double getSpeed(int idx) {
         return getMeasurement(idx).getValues().getSpeed();
     }
 
-    public Values getValues(int idx) {
+    public final Values getValues(int idx) {
         return getMeasurement(idx).getValues();
     }
 
-    public double getLength(int start, int end) {
+    public final double getLength(int start, int end) {
         return getGeometry(start, end).getLength();
     }
 
-    public LineString getGeometry(int start, int end) {
+    public final LineString getGeometry(int start, int end) {
         return JtsConfiguration.geometryFactory().createLineString(IntStream.rangeClosed(start, end)
                                                                             .mapToObj(this::getMeasurement)
                                                                             .map(Measurement::getGeometry)
@@ -88,7 +108,7 @@ public class Track implements Enveloped {
                                                                             .toArray(Coordinate[]::new));
     }
 
-    public Duration getExtendedDuration(int start, int end) {
+    public final Duration getExtendedDuration(int start, int end) {
         Temporal startTime = getTime(start);
         Temporal endTime = getTime(end);
         if (start > 0) {
@@ -100,15 +120,11 @@ public class Track implements Enveloped {
         return Duration.between(startTime, endTime);
     }
 
-    public Duration getDuration(int start, int end) {
+    public final Duration getDuration(int start, int end) {
         return Duration.between(getTime(start), getTime(end));
     }
 
-    public int size() {
-        return measurements.size();
-    }
-
-    public String getId() {
+    public final String getId() {
         return id;
     }
 
@@ -123,7 +139,7 @@ public class Track implements Enveloped {
 
     @Override
     public Envelope getEnvelope() {
-        return geometry.getEnvelopeInternal();
+        return getGeometry().getEnvelopeInternal();
     }
 
 }

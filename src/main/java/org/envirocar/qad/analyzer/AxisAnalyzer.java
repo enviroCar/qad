@@ -50,13 +50,14 @@ public class AxisAnalyzer implements Analyzer {
     public Stream<AnalysisResult> analyze() {
         LOG.debug("Analyzing axis {} for track {}", axis.getId(), track.getId());
         return track.subset(axis.getEnvelope()).flatMap(track -> {
+            LOG.debug("Analyzing axis {} for subset of track {}", axis.getId(), track);
             Stream<MatchCandidate> candidates = axis.findIntersectingSegments(track.getGeometry()).stream()
-                                                    .flatMap(this::getCandidates);
+                                                    .flatMap(segment -> getCandidates(segment, track));
             return createResults(candidates);
         });
     }
 
-    private Stream<MatchCandidate> getCandidates(Segment segment) {
+    private Stream<MatchCandidate> getCandidates(Segment segment, Track track) {
 
         return StreamSupport.stream(new SpliteratorAdapter<MatchCandidate>() {
             private final int size = track.size();
@@ -80,7 +81,7 @@ public class AxisAnalyzer implements Analyzer {
             }
 
             private boolean checkCandidate(Consumer<? super MatchCandidate> action) {
-                // the last index no more longer in the segment buffer
+                // the last index is no longer in the segment buffer
                 final int end = idx - 1;
                 final int start = this.start;
                 this.start = -1;
@@ -89,6 +90,8 @@ public class AxisAnalyzer implements Analyzer {
                 }
                 MatchCandidate candidate = analyzerFactory.create(segment, track, start, end);
                 if (candidate.checkOrientation() && candidate.checkLength()) {
+                    LOG.debug("Found match for track {} on segment {}: [{},{}]",
+                              track.getId(), segment.getId(), start, end);
                     action.accept(candidate);
                     idx++;
                     return true;

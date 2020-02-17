@@ -5,8 +5,10 @@ import org.locationtech.jts.geom.Envelope;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -22,6 +24,21 @@ public class AxisModelRepository implements Enveloped {
 
     public Collection<AxisModel> getAxisModels() {
         return Collections.unmodifiableCollection(axisModels.values());
+    }
+
+    public Optional<AxisModel> getAxisModel(ModelId modelId) {
+        return Optional.ofNullable(axisModels.get(modelId));
+    }
+
+    public Optional<AxisModel> getAxisModel(String modelId, String version) {
+        return getAxisModel(new ModelId(modelId, version));
+    }
+
+    public Optional<AxisModel> getAxisModel(String modelId) {
+        return axisModels.keySet().stream()
+                         .filter(x -> x.getValue().equals(modelId))
+                         .max(Comparator.comparing(ModelId::getVersion))
+                         .map(axisModels::get);
     }
 
     @Override
