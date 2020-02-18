@@ -66,7 +66,7 @@ public class EnviroCarQadServerApplicationTests {
         FeatureCollection fc = readFeatureCollection("/tracks/5e4132753965f36894e62148.json");
         Axis axis = axisModelRepository.getAxisModel("CHE").flatMap(x -> x.getAxis("22_2")).get();
         Track track = trackPreparer.prepare(fc);
-
+        /*
         try (final BufferedWriter writer = Files.newBufferedWriter(Paths.get("/home/autermann/Source/enviroCar/qad/src/test/resources/tracks/5e4132753965f36894e62148.processed.json"), StandardCharsets.UTF_8)) {
             final FeatureCollection featureCollection = new FeatureCollection();
             final AtomicInteger idx = new AtomicInteger(0);
@@ -82,7 +82,7 @@ public class EnviroCarQadServerApplicationTests {
 
             objectMapper.writeValue(writer, featureCollection);
         }
-
+        */
         final Analyzer analyzer = analyzerFactory.create(axis, track);
         analyzer.analyze().map(this::toJSON)
                 .forEach(x -> {});
