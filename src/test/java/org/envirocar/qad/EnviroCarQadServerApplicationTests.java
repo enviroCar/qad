@@ -62,14 +62,35 @@ public class EnviroCarQadServerApplicationTests {
     }
 
     @Test
+    public void testasdf() throws IOException {
+        FeatureCollection fc = readFeatureCollection("/tracks/5e5620e777e02d42aa8e1153.json");
+        Axis axis = axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("01_1")).get();
+        Track track = trackPreparer.prepare(fc);
+
+        //writeTrack(track, "/home/autermann/Source/enviroCar/qad/src/test/resources/tracks/5e5620e777e02d42aa8e1153.processed.json");
+
+        final Analyzer analyzer = analyzerFactory.create(axis, track);
+        analyzer.analyze().map(this::toJSON)
+                .forEach(System.err::println);
+    }
+
+    @Test
     public void testDuplication() throws IOException {
         FeatureCollection fc = readFeatureCollection("/tracks/5e4132753965f36894e62148.json");
         Axis axis = axisModelRepository.getAxisModel("CHE").flatMap(x -> x.getAxis("22_2")).get();
         Track track = trackPreparer.prepare(fc);
-        /*
-        try (final BufferedWriter writer = Files.newBufferedWriter(Paths.get("/home/autermann/Source/enviroCar/qad/src/test/resources/tracks/5e4132753965f36894e62148.processed.json"), StandardCharsets.UTF_8)) {
-            final FeatureCollection featureCollection = new FeatureCollection();
-            final AtomicInteger idx = new AtomicInteger(0);
+
+        //writeTrack(track, "/home/autermann/Source/enviroCar/qad/src/test/resources/tracks/5e4132753965f36894e62148.processed.json");
+
+        final Analyzer analyzer = analyzerFactory.create(axis, track);
+        analyzer.analyze().map(this::toJSON)
+                .forEach(System.err::println);
+    }
+
+    private void writeTrack(Track track, String path) throws IOException {
+        try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(path), StandardCharsets.UTF_8)) {
+            FeatureCollection featureCollection = new FeatureCollection();
+            AtomicInteger idx = new AtomicInteger(0);
             featureCollection.setFeatures(track.getMeasurements().stream().map(x -> {
                 Feature feature = new Feature();
                 feature.setGeometry(x.getGeometry());
@@ -82,11 +103,6 @@ public class EnviroCarQadServerApplicationTests {
 
             objectMapper.writeValue(writer, featureCollection);
         }
-        */
-        final Analyzer analyzer = analyzerFactory.create(axis, track);
-        analyzer.analyze().map(this::toJSON)
-                .forEach(x -> {});
-        //.forEach(System.err::println);
     }
 
     @Test

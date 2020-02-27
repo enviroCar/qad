@@ -85,10 +85,16 @@ public class AxisAnalyzer implements Analyzer {
                 final int end = idx - 1;
                 final int start = this.start;
                 this.start = -1;
-                if (start == end) {
-                    return false;
-                }
                 MatchCandidate candidate = analyzerFactory.create(segment, track, start, end);
+                if (start == end) {
+                    LOG.warn("Found match with single measurement for track {} on segment {}: [{},{}]",
+                             track.getId(), segment.getId(), start, end);
+                    action.accept(candidate);
+                    idx++;
+                    return true;
+                    // return false;
+                }
+
                 if (candidate.checkOrientation() && candidate.checkLength()) {
                     LOG.debug("Found match for track {} on segment {}: [{},{}]",
                               track.getId(), segment.getId(), start, end);
@@ -110,7 +116,9 @@ public class AxisAnalyzer implements Analyzer {
     }
 
     private Stream<AnalysisResult> createResults(Stream<MatchCandidate> segmentResults) {
-        return findStreaks(segmentResults).map(this::createAnalysisResults);
+        return findStreaks(segmentResults).map(this::createAnalysisResults)
+                                          .filter(Optional::isPresent)
+                                          .map(Optional::get);
     }
 
     private Stream<Deque<MatchCandidate>> findStreaks(Stream<MatchCandidate> results) {
@@ -157,7 +165,19 @@ public class AxisAnalyzer implements Analyzer {
                      .orElse(null);
     }
 
-    private AnalysisResult createAnalysisResults(Deque<MatchCandidate> results) {
+    private Optional<AnalysisResult> createAnalysisResults(Deque<MatchCandidate> results) {
+
+        if (!results.isEmpty() && results.getFirst().getSize() == 1) {
+            results.removeFirst();
+
+        }
+        if (!results.isEmpty() && results.getLast().getSize() == 1) {
+            results.removeLast();
+        }
+        if (results.isEmpty()) {
+            return Optional.empty();
+        }
+
         AnalysisResult result = new AnalysisResult();
         result.setTrack(track.getId());
         result.setAxis(axis.getId());
@@ -166,6 +186,6 @@ public class AxisAnalyzer implements Analyzer {
         result.setStart(track.getTime(results.getFirst().getStart()));
         result.setEnd(track.getTime(results.getLast().getEnd()));
         result.setSegments(results.stream().map(MatchCandidate::toSegmentResult).collect(toList()));
-        return result;
+        return Optional.of(result);
     }
 }

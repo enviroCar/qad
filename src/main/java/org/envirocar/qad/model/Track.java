@@ -2,6 +2,7 @@ package org.envirocar.qad.model;
 
 import org.envirocar.qad.configuration.JtsConfiguration;
 import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.CoordinateSequence;
 import org.locationtech.jts.geom.Envelope;
 import org.locationtech.jts.geom.LineString;
 import org.locationtech.jts.geom.Point;
@@ -101,6 +102,9 @@ public class Track implements Enveloped {
     }
 
     public final LineString getGeometry(int start, int end) {
+        if (start == end) {
+            return JtsConfiguration.geometryFactory().createLineString((CoordinateSequence) null);
+        }
         return JtsConfiguration.geometryFactory().createLineString(IntStream.rangeClosed(start, end)
                                                                             .mapToObj(this::getMeasurement)
                                                                             .map(Measurement::getGeometry)

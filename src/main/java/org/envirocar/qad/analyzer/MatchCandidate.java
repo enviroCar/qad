@@ -47,7 +47,7 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
         this.track = Objects.requireNonNull(track);
         this.start = start;
         this.end = end;
-        if (start >= end) {
+        if (start > end) {
             throw new IllegalArgumentException("start >= end");
         }
         this.simplifiedLength = parameters.isSimplifyLengthCalculation();
@@ -57,6 +57,10 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
 
     public int getStart() {
         return start;
+    }
+
+    public int getSize() {
+        return end - start + 1;
     }
 
     public int getEnd() {
@@ -123,6 +127,9 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     }
 
     private double getLength() {
+        if (getSize() == 1) {
+            return 0.0d;
+        }
         if (length < 0) {
             if (simplifiedLength) {
                 length = GeometryUtils.distance(track.getGeometry(start),
@@ -171,8 +178,8 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     }
 
     private Values getMeanValues() {
-        int count = (end - start);
-        if (count <= 1) {
+        int count = getSize();
+        if (count == 1) {
             return track.getValues(start);
         }
         double length = 0.0d;
@@ -244,6 +251,14 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     }
 
     private Duration getDuration() {
+        if (start == end) {
+            double speed = track.getValues(start).getSpeed();
+            if (speed == 0) {
+                return Duration.ZERO;
+            }
+            return BigDecimals.toDuration(BigDecimal.valueOf((segment.getLength() / (speed / 3.6)) * 1000));
+        }
+
         if (duration == null) {
             duration = track.getDuration(start, end);
             BigDecimal scaleFactor = BigDecimal.valueOf(1 / getLengthRatio());
