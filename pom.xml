@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <retrofit.version>2.7.1</retrofit.version>
+        <retrofit.version>2.7.2</retrofit.version>
         <geotools.version>22.3</geotools.version>
     </properties>
     <repositories>
@@ -92,7 +92,7 @@
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
-            <version>4.3.1</version>
+            <version>4.4.0</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
