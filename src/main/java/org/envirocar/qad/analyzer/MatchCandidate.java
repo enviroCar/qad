@@ -157,6 +157,11 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     }
 
     private void calculateStops() {
+        if (start == end) {
+            this.stops = 0;
+            this.stopTime = Duration.ZERO;
+            return;
+        }
         List<Stop> stops = new LinkedList<>();
         int stopStart = -1;
         for (int idx = start; idx <= end; ++idx) {
@@ -166,14 +171,17 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
                     stopStart = idx;
                 }
             } else if (speed > endThresholdSpeed) {
-                stops.add(new Stop(start, idx));
+                stops.add(new Stop(stopStart, idx));
                 stopStart = -1;
             }
         }
-        stopTime = stops.stream()
-                        .peek(this::logStop)
-                        .map(this::getDuration)
-                        .reduce(Duration.ZERO, Duration::plus);
+        if (stopStart >= 0) {
+            stops.add(new Stop(stopStart, end));
+        }
+        this.stopTime = stops.stream()
+                             .peek(this::logStop)
+                             .map(this::getDuration)
+                             .reduce(Duration.ZERO, Duration::plus);
         this.stops = stops.size();
     }
 
