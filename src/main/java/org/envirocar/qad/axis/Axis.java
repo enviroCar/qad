@@ -37,9 +37,11 @@ public class Axis implements Comparable<Axis>, Enveloped {
     }
 
     public List<Segment> findIntersectingSegments(Geometry geometry) {
-        return spatialIndex.query(geometry, segment -> {
+        final List<Segment> query = spatialIndex.query(geometry, segment -> {
             return segment.bufferIntersects(geometry);
         });
+        Collections.sort(query);
+        return query;
     }
 
     public ModelId getModelId() {

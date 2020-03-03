@@ -6,16 +6,13 @@ import org.envirocar.qad.model.Feature;
 import org.envirocar.qad.model.FeatureCollection;
 import org.envirocar.qad.utils.GeometryException;
 import org.envirocar.qad.utils.GeometryUtils;
-import org.locationtech.jts.geom.Coordinate;
 import org.locationtech.jts.geom.Geometry;
 import org.locationtech.jts.geom.LineString;
 import org.locationtech.jts.geom.MultiLineString;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
