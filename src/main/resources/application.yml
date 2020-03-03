@@ -8,7 +8,8 @@ kafka:
 qad:
   simplifyLengthCalculation: ${QAD_SIMPLIFY_LENGTH_CALCULATION:false}
   maxAngleDeviation: ${QAD_MAX_ANGLE_DEVIATION:90}
-  maxLengthDeviation: ${QAD_MAX_LENGTH_DEVIATION:0.30}
+  maxLengthDeviation: ${QAD_MAX_LENGTH_DEVIATION:0.20}
+  lengthDifferenceToTolerate: ${QAD_LENGTH_DIFFERENCE_TO_TOLERATE:10}
   snappingTolerance: ${QAD_SNAPPING_TOLERANCE:20}
   stops:
     startThresholdSpeed: ${QAD_STOP_START_THRESHOLD:5.0}

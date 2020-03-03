@@ -9,6 +9,7 @@ import org.envirocar.qad.axis.Axis;
 import org.envirocar.qad.axis.AxisModelRepository;
 import org.envirocar.qad.model.Feature;
 import org.envirocar.qad.model.FeatureCollection;
+import org.envirocar.qad.model.Measurement;
 import org.envirocar.qad.model.Track;
 import org.envirocar.qad.model.result.AnalysisResult;
 import org.junit.Test;
@@ -34,6 +35,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -62,7 +65,20 @@ public class EnviroCarQadServerApplicationTests {
     }
 
     @Test
-    public void testasdf() throws IOException {
+    public void test_5e5d226377e02d42aa9350a0() throws IOException {
+        FeatureCollection fc = readFeatureCollection("/tracks/5e5d226377e02d42aa934f4f.json");
+        Axis axis = axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("01_2")).get();
+        Track track = trackPreparer.prepare(fc);
+
+        //writeTrack(track, "/home/autermann/Source/enviroCar/qad/src/test/resources/tracks/5e5d226377e02d42aa934f4f.processed.json");
+
+        final Analyzer analyzer = analyzerFactory.create(axis, track);
+        final List<AnalysisResult> collect = analyzer.analyze().collect(toList());
+        assertThat(collect.size(), is(1));
+    }
+
+    @Test
+    public void test_5e5620e777e02d42aa8e1153() throws IOException {
         FeatureCollection fc = readFeatureCollection("/tracks/5e5620e777e02d42aa8e1153.json");
         Axis axis = axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("01_1")).get();
         Track track = trackPreparer.prepare(fc);
@@ -75,7 +91,7 @@ public class EnviroCarQadServerApplicationTests {
     }
 
     @Test
-    public void testDuplication() throws IOException {
+    public void test_5e4132753965f36894e62148() throws IOException {
         FeatureCollection fc = readFeatureCollection("/tracks/5e4132753965f36894e62148.json");
         Axis axis = axisModelRepository.getAxisModel("CHE").flatMap(x -> x.getAxis("22_2")).get();
         Track track = trackPreparer.prepare(fc);
@@ -90,16 +106,19 @@ public class EnviroCarQadServerApplicationTests {
     private void writeTrack(Track track, String path) throws IOException {
         try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(path), StandardCharsets.UTF_8)) {
             FeatureCollection featureCollection = new FeatureCollection();
-            AtomicInteger idx = new AtomicInteger(0);
-            featureCollection.setFeatures(track.getMeasurements().stream().map(x -> {
+             List<Feature> features = new ArrayList<>(track.size());
+            for (int idx=0; idx<track.size(); idx++) {
                 Feature feature = new Feature();
+                final Measurement x = track.getMeasurement(idx);
                 feature.setGeometry(x.getGeometry());
                 feature.setId(x.getId());
                 feature.setProperties(objectMapper.createObjectNode()
                                                   .putPOJO("time", x.getTime())
-                                                  .put("idx", idx.getAndIncrement()));
-                return feature;
-            }).collect(toList()));
+                                                  .put("idx", idx));
+                features.add(feature);
+            }
+
+            featureCollection.setFeatures(features);
 
             objectMapper.writeValue(writer, featureCollection);
         }

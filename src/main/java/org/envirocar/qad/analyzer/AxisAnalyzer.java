@@ -58,7 +58,6 @@ public class AxisAnalyzer implements Analyzer {
     }
 
     private Stream<MatchCandidate> getCandidates(Segment segment, Track track) {
-
         return StreamSupport.stream(new SpliteratorAdapter<MatchCandidate>() {
             private final int size = track.size();
             private int idx = 0;
@@ -95,13 +94,22 @@ public class AxisAnalyzer implements Analyzer {
                     // return false;
                 }
 
-                if (candidate.checkOrientation() && candidate.checkLength()) {
-                    LOG.debug("Found match for track {} on segment {}: [{},{}]",
+                if (candidate.checkOrientation()) {
+                    if (candidate.checkLength()) {
+                        LOG.debug("Found match for track {} on segment {}: [{},{}]",
+                                  track.getId(), segment.getId(), start, end);
+                        action.accept(candidate);
+                        idx++;
+                        return true;
+                    } else {
+                        LOG.debug("Rejecting match for track {} on segment {}: [{},{}]: length deviation",
+                                  track.getId(), segment.getId(), start, end);
+                    }
+                } else {
+                    LOG.debug("Rejecting match for track {} on segment {}: [{},{}]: orientation deviation",
                               track.getId(), segment.getId(), start, end);
-                    action.accept(candidate);
-                    idx++;
-                    return true;
                 }
+
                 return false;
             }
 

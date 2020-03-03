@@ -12,12 +12,21 @@ public class AlgorithmParameters {
     private double maxAngleDeviation = 180.0d;
     private double maxLengthDeviation = 0.20d;
     private double snappingTolerance = 20.0d;
+    private double lengthDifferenceToTolerate = 10.0d;
     private Densify densify = new Densify();
     private Stops stops = new Stops();
     private Segments segments = new Segments();
     private MapMatching mapMatching = new MapMatching();
     private Path outputPath;
     private boolean simplifyLengthCalculation = false;
+
+    public double getLengthDifferenceToTolerate() {
+        return lengthDifferenceToTolerate;
+    }
+
+    public void setLengthDifferenceToTolerate(double lengthDifferenceToTolerate) {
+        this.lengthDifferenceToTolerate = lengthDifferenceToTolerate;
+    }
 
     public double getSnappingTolerance() {
         return snappingTolerance;

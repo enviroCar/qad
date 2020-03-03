@@ -89,19 +89,16 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
         double segmentHeading = segment.getHeading();
         double deviation = Math.abs(AngleUtils.deviation(trackHeading, segmentHeading));
         if (deviation <= parameters.getMaxAngleDeviation()) {
-            LOG.debug("Matching orientation ({}) for segment {}: segment: {}, track: {}",
-                      segment, deviation, segmentHeading, trackHeading);
             return true;
-        } else {
-            LOG.debug("Orientation deviation to big ({}) for segment {}: segment: {}, track: {}",
-                      segment, deviation, segmentHeading, trackHeading);
-            return false;
         }
+        LOG.debug("Orientation deviation to big ({}) for segment {}: segment: {}, track: {}",
+                  segment, deviation, segmentHeading, trackHeading);
+        return false;
     }
 
     public boolean checkLength() {
-        double ratio = getLengthRatio();
-        if (Math.abs(1 - ratio) <= parameters.getMaxLengthDeviation()) {
+        if (Math.abs(getLength() - getSegmentLength()) <= parameters.getLengthDifferenceToTolerate() ||
+            Math.abs(1 - getLengthRatio()) <= parameters.getMaxLengthDeviation()) {
             return true;
         }
         LOG.debug("Length deviation to big for segment {}: segment: {}, track: {}",
