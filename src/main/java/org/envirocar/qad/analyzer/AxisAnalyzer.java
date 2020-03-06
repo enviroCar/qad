@@ -53,7 +53,7 @@ public class AxisAnalyzer implements Analyzer {
             LOG.debug("Analyzing axis {} for subset of track {}", axis.getId(), track);
             Stream<MatchCandidate> candidates = axis.findIntersectingSegments(track.getGeometry()).stream()
                                                     .flatMap(segment -> getCandidates(segment, track));
-            return createResults(candidates);
+            return createResults(track, candidates);
         });
     }
 
@@ -123,8 +123,8 @@ public class AxisAnalyzer implements Analyzer {
         }, false);
     }
 
-    private Stream<AnalysisResult> createResults(Stream<MatchCandidate> segmentResults) {
-        return findStreaks(segmentResults).map(this::createAnalysisResults)
+    private Stream<AnalysisResult> createResults(Track track, Stream<MatchCandidate> segmentResults) {
+        return findStreaks(segmentResults).map(results -> createAnalysisResults(track, results))
                                           .filter(Optional::isPresent)
                                           .map(Optional::get);
     }
@@ -173,7 +173,7 @@ public class AxisAnalyzer implements Analyzer {
                      .orElse(null);
     }
 
-    private Optional<AnalysisResult> createAnalysisResults(Deque<MatchCandidate> results) {
+    private Optional<AnalysisResult> createAnalysisResults(Track track, Deque<MatchCandidate> results) {
 
         if (!results.isEmpty() && results.getFirst().getSize() == 1) {
             results.removeFirst();
