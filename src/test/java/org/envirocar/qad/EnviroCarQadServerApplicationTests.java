@@ -48,7 +48,7 @@ import static org.hamcrest.Matchers.is;
 @ActiveProfiles("test")
 public class EnviroCarQadServerApplicationTests {
     private static final Logger LOG = LoggerFactory.getLogger(EnviroCarQadServerApplicationTests.class);
-    private static final Path PATH = Paths.get("/home/autermann/Source/enviroCar/qad/src/test/resources/tracks");
+    private static final Path PATH = Paths.get("src/test/resources/tracks");
     @Autowired
     private AnalyzerFactory analyzerFactory;
     @Autowired
@@ -82,7 +82,6 @@ public class EnviroCarQadServerApplicationTests {
 
     @Test
     public void test_5e5f7a8e77e02d42aa95b384() throws IOException, MapMatchingException {
-
         AxisModel axis = axisModelRepository.getAxisModel("CHE").orElseThrow(IllegalStateException::new);
         Stream<Track> track = writeAndPrepare("5e5f7a8e77e02d42aa95b384");
 
