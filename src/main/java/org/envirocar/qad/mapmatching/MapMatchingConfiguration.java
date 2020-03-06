@@ -23,11 +23,12 @@ public class MapMatchingConfiguration {
 
     @Bean
     public MapMatcher mapMatcher(MapMatchingService service) {
-        return new MapMatcherImpl(service);
+        return new RemoteMapMatcher(service);
     }
 
     @Bean
-    public MapMatchingService mapMatchingService(JacksonConverterFactory factory, OkHttpClient client,
+    public MapMatchingService mapMatchingService(JacksonConverterFactory factory,
+                                                 OkHttpClient client,
                                                  AlgorithmParameters parameters) {
         return retrofit(factory, client).baseUrl(parameters.getMapMatching().getUrl())
                                         .build().create(MapMatchingService.class);

@@ -27,12 +27,12 @@ import java.util.Objects;
 import java.util.Set;
 
 @Service
-public class TrackDensifierImpl implements TrackDensifier {
+public class LinearTrackDensifier implements TrackDensifier {
     private final int numPoints;
     private final JsonNodeCreator nodeFactory;
 
     @Autowired
-    public TrackDensifierImpl(AlgorithmParameters parameters, JsonNodeCreator nodeFactory) {
+    public LinearTrackDensifier(AlgorithmParameters parameters, JsonNodeCreator nodeFactory) {
         this.numPoints = parameters.getDensify().getNumPoints();
         this.nodeFactory = Objects.requireNonNull(nodeFactory);
     }

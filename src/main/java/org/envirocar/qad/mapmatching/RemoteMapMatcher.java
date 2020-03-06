@@ -16,11 +16,11 @@ import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.toList;
 
-public class MapMatcherImpl implements MapMatcher {
-    private static final Logger LOG = LoggerFactory.getLogger(MapMatcherImpl.class);
+public class RemoteMapMatcher implements MapMatcher {
+    private static final Logger LOG = LoggerFactory.getLogger(RemoteMapMatcher.class);
     private final MapMatchingService service;
 
-    public MapMatcherImpl(MapMatchingService service) {
+    public RemoteMapMatcher(MapMatchingService service) {
         this.service = Objects.requireNonNull(service);
     }
 
