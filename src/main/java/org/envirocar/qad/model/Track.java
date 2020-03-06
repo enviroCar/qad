@@ -117,7 +117,7 @@ public class Track implements Enveloped {
         if (start > 0) {
             startTime = Duration.between(getTime(start - 1), startTime).dividedBy(2).subtractFrom(startTime);
         }
-        if (end < size()) {
+        if (end + 1 < size()) {
             endTime = Duration.between(endTime, getTime(end + 1)).dividedBy(2).addTo(endTime);
         }
         return Duration.between(startTime, endTime);
