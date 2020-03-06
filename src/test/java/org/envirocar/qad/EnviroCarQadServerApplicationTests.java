@@ -4,14 +4,17 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.envirocar.qad.analyzer.Analyzer;
 import org.envirocar.qad.analyzer.AnalyzerFactory;
-import org.envirocar.qad.analyzer.TrackPreparer;
 import org.envirocar.qad.axis.Axis;
+import org.envirocar.qad.axis.AxisModel;
 import org.envirocar.qad.axis.AxisModelRepository;
+import org.envirocar.qad.mapmatching.MapMatcher;
+import org.envirocar.qad.mapmatching.MapMatchingException;
 import org.envirocar.qad.model.Feature;
 import org.envirocar.qad.model.FeatureCollection;
 import org.envirocar.qad.model.Measurement;
 import org.envirocar.qad.model.Track;
 import org.envirocar.qad.model.result.AnalysisResult;
+import org.envirocar.qad.persistence.DirectoryResultPersistence;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -26,12 +29,14 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UncheckedIOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -43,16 +48,27 @@ import static org.hamcrest.Matchers.is;
 @ActiveProfiles("test")
 public class EnviroCarQadServerApplicationTests {
     private static final Logger LOG = LoggerFactory.getLogger(EnviroCarQadServerApplicationTests.class);
+    private static final Path PATH = Paths.get("/home/autermann/Source/enviroCar/qad/src/test/resources/tracks");
     @Autowired
     private AnalyzerFactory analyzerFactory;
     @Autowired
     private ObjectMapper objectMapper;
     @Autowired
-    private TrackPreparer trackPreparer;
-    @Autowired
     private AxisModelRepository axisModelRepository;
+    @Autowired
+    private TrackParser trackParser;
+    @Autowired
+    private TrackDensifier densifier;
+    @Autowired
+    private Optional<MapMatcher> mapMatcher;
+    @Autowired
+    private Optional<TrackSplitter> trackSplitter;
+
+    @Autowired
+    private DirectoryResultPersistence directoryResultPersistence;
 
     private Stream<String> getResourceFiles(String path) throws IOException {
+
         List<String> filenames = new ArrayList<>();
         try (InputStream in = getClass().getResourceAsStream(path);
              BufferedReader br = new BufferedReader(new InputStreamReader(in))) {
@@ -65,51 +81,55 @@ public class EnviroCarQadServerApplicationTests {
     }
 
     @Test
-    public void test_5e5d226377e02d42aa9350a0() throws IOException {
-        FeatureCollection fc = readFeatureCollection("/tracks/5e5d226377e02d42aa934f4f.json");
+    public void test_5e5f7a8e77e02d42aa95b384() throws IOException, MapMatchingException {
+
+        AxisModel axis = axisModelRepository.getAxisModel("CHE").orElseThrow(IllegalStateException::new);
+        Stream<Track> track = writeAndPrepare("5e5f7a8e77e02d42aa95b384");
+
+        List<AnalysisResult> collect = track.flatMap(t -> analyzerFactory.create(axis, t).analyze())
+                                            .collect(toList());
+
+        for (AnalysisResult result : collect) {
+            directoryResultPersistence.persist(result);
+        }
+        assertThat(collect.size(), is(4));
+
+    }
+
+    @Test
+    public void test_5e5d226377e02d42aa9350a0() throws IOException, MapMatchingException {
         Axis axis = axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("01_2")).get();
-        Track track = trackPreparer.prepare(fc);
-
-        //writeTrack(track, "/home/autermann/Source/enviroCar/qad/src/test/resources/tracks/5e5d226377e02d42aa934f4f.processed.json");
-
-        final Analyzer analyzer = analyzerFactory.create(axis, track);
-        final List<AnalysisResult> collect = analyzer.analyze().collect(toList());
+        Stream<Track> track = writeAndPrepare("5e5d226377e02d42aa934f4f");
+        List<AnalysisResult> collect = track.flatMap(t -> analyzerFactory.create(axis, t).analyze())
+                                            .collect(toList());
         assertThat(collect.size(), is(1));
     }
 
     @Test
-    public void test_5e5620e777e02d42aa8e1153() throws IOException {
-        FeatureCollection fc = readFeatureCollection("/tracks/5e5620e777e02d42aa8e1153.json");
+    public void test_5e5620e777e02d42aa8e1153() throws IOException, MapMatchingException {
         Axis axis = axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("01_1")).get();
-        Track track = trackPreparer.prepare(fc);
-
-        //writeTrack(track, "/home/autermann/Source/enviroCar/qad/src/test/resources/tracks/5e5620e777e02d42aa8e1153.processed.json");
-
-        final Analyzer analyzer = analyzerFactory.create(axis, track);
-        analyzer.analyze().map(this::toJSON)
-                .forEach(System.err::println);
+        Stream<Track> track = writeAndPrepare("5e5620e777e02d42aa8e1153");
+        track.flatMap(t -> analyzerFactory.create(axis, t).analyze())
+             .map(this::toJSON)
+             .forEach(System.err::println);
     }
 
     @Test
-    public void test_5e4132753965f36894e62148() throws IOException {
-        FeatureCollection fc = readFeatureCollection("/tracks/5e4132753965f36894e62148.json");
+    public void test_5e4132753965f36894e62148() throws IOException, MapMatchingException {
         Axis axis = axisModelRepository.getAxisModel("CHE").flatMap(x -> x.getAxis("22_2")).get();
-        Track track = trackPreparer.prepare(fc);
-
-        //writeTrack(track, "/home/autermann/Source/enviroCar/qad/src/test/resources/tracks/5e4132753965f36894e62148.processed.json");
-
-        final Analyzer analyzer = analyzerFactory.create(axis, track);
-        analyzer.analyze().map(this::toJSON)
-                .forEach(System.err::println);
+        Stream<Track> track = writeAndPrepare("5e4132753965f36894e62148");
+        track.flatMap(t -> analyzerFactory.create(axis, t).analyze())
+             .map(this::toJSON)
+             .forEach(System.err::println);
     }
 
-    private void writeTrack(Track track, String path) throws IOException {
-        try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(path), StandardCharsets.UTF_8)) {
+    private void writeTrack(Track track, Path path) throws IOException {
+        try (BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8)) {
             FeatureCollection featureCollection = new FeatureCollection();
-             List<Feature> features = new ArrayList<>(track.size());
-            for (int idx=0; idx<track.size(); idx++) {
+            List<Feature> features = new ArrayList<>(track.size());
+            for (int idx = 0; idx < track.size(); idx++) {
                 Feature feature = new Feature();
-                final Measurement x = track.getMeasurement(idx);
+                Measurement x = track.getMeasurement(idx);
                 feature.setGeometry(x.getGeometry());
                 feature.setId(x.getId());
                 feature.setProperties(objectMapper.createObjectNode()
@@ -124,10 +144,35 @@ public class EnviroCarQadServerApplicationTests {
         }
     }
 
+    private Stream<Track> writeAndPrepare(String id) throws MapMatchingException, IOException {
+        FeatureCollection featureCollection = readFeatureCollection(id);
+
+        if (mapMatcher.isPresent()) {
+            featureCollection = this.mapMatcher.get().mapMatch(featureCollection);
+            writeTrack(trackParser.createTrack(featureCollection), "matched");
+        }
+        featureCollection = densifier.densify(featureCollection);
+        Track track = trackParser.createTrack(featureCollection);
+        writeTrack(track, "processed");
+        if (trackSplitter.isPresent()) {
+            return trackSplitter.get().split(track);
+        }
+        return Stream.of(track);
+    }
+
+    private void writeTrack(Track track, String classifier) throws IOException {
+        writeTrack(track, PATH.resolve(String.format("%s.%s.json", track.getId(), classifier)));
+    }
+
+    private FeatureCollection readFeatureCollection(String id) {
+        return readFeatureCollection(PATH.resolve(String.format("%s.json", id)));
+    }
+
     @Test
     public void contextLoads() throws IOException {
         //getResourceFiles("/tracks")
-        Stream.of("/tracks/5d138cb844ea855023b210ab.json")
+        Stream.of("5d138cb844ea855023b210ab")
+              .map(x -> PATH.resolve(String.format("%s.json", x)))
               .map(this::readFeatureCollection)
               .map(analyzerFactory::create)
               .filter(Analyzer::isApplicable)
@@ -144,11 +189,11 @@ public class EnviroCarQadServerApplicationTests {
         }
     }
 
-    private FeatureCollection readFeatureCollection(String resource) {
-        try {
-            return objectMapper.readValue(getClass().getResourceAsStream(resource), FeatureCollection.class);
+    private FeatureCollection readFeatureCollection(Path path) {
+        try (InputStream in = Files.newInputStream(path)) {
+            return objectMapper.readValue(in, FeatureCollection.class);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new UncheckedIOException(e);
         }
     }
 

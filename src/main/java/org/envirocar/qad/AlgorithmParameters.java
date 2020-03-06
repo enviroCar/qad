@@ -17,6 +17,7 @@ public class AlgorithmParameters {
     private Stops stops = new Stops();
     private Segments segments = new Segments();
     private MapMatching mapMatching = new MapMatching();
+    private UTurn uturn = new UTurn();
     private Path outputPath;
     private boolean simplifyLengthCalculation = false;
 
@@ -96,6 +97,14 @@ public class AlgorithmParameters {
         return segments;
     }
 
+    public UTurn getUTurn() {
+        return uturn;
+    }
+
+    public void setUTurn(UTurn uturn) {
+        this.uturn = uturn;
+    }
+
     public void setSegments(Segments segments) {
         this.segments = segments;
     }
@@ -155,6 +164,36 @@ public class AlgorithmParameters {
 
         public void setNumPoints(int numPoints) {
             this.numPoints = numPoints;
+        }
+    }
+
+    public static class UTurn {
+        private int windowSize = 45;
+        private double bufferSize = 20.0d;
+        private double minAngleDeviation = 170.0d;
+
+        public int getWindowSize() {
+            return windowSize;
+        }
+
+        public void setWindowSize(int windowSize) {
+            this.windowSize = windowSize;
+        }
+
+        public double getBufferSize() {
+            return bufferSize;
+        }
+
+        public void setBufferSize(double bufferSize) {
+            this.bufferSize = bufferSize;
+        }
+
+        public double getMinAngleDeviation() {
+            return minAngleDeviation;
+        }
+
+        public void setMinAngleDeviation(double minAngleDeviation) {
+            this.minAngleDeviation = minAngleDeviation;
         }
     }
 }

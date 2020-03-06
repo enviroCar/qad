@@ -22,6 +22,10 @@ qad:
   mapMatching:
     enabled: ${QAD_MAPMATCHING_ENABLE:true}
     url: ${QAD_MAPMATCHING_ENDPOINT:https://processing.envirocar.org}
+  uturn:
+    windowSize: ${QAD_UTURN_WINDOW_SIZE:45}
+    bufferSize: ${QAD_UTURN_BUFFER_SIZE:20}
+    minAngleDeviation: ${QAD_UTURN_MIN_ANGLE_DEVIATION:170}
   outputPath: ${QAD_OUTPUT_PATH:/tmp}
   spring:
     output:

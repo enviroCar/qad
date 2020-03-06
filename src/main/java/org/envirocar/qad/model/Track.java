@@ -1,6 +1,7 @@
 package org.envirocar.qad.model;
 
 import org.envirocar.qad.configuration.JtsConfiguration;
+import org.envirocar.qad.utils.GeometryUtils;
 import org.locationtech.jts.geom.Coordinate;
 import org.locationtech.jts.geom.CoordinateSequence;
 import org.locationtech.jts.geom.Envelope;
@@ -83,6 +84,16 @@ public class Track implements Enveloped {
 
     public final Point getGeometry(int idx) {
         return getMeasurement(idx).getGeometry();
+    }
+
+    public final double getHeading(int idx) {
+        if (idx < 0) {
+            return getHeading(0);
+        }
+        if (idx > this.measurements.size() - 1) {
+            return getHeading(this.measurements.size() - 2);
+        }
+        return GeometryUtils.heading(getGeometry(idx), getGeometry(idx + 1));
     }
 
     public final Instant getTime(int idx) {

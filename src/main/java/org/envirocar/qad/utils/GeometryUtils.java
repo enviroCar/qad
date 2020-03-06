@@ -53,6 +53,17 @@ public class GeometryUtils {
     }
 
     /**
+     * Calculates the heading of the {@linkplain Geometry geometries} in degrees.
+     *
+     * @param c0 The first {@link Geometry}.
+     * @param c1 The second {@link Geometry}.
+     * @return The heading in degrees.
+     */
+    public static double heading(Geometry c0, Geometry c1) {
+        return heading(new LineSegment(c0.getCoordinate(), c1.getCoordinate()));
+    }
+
+    /**
      * Calculates the heading of the {@linkplain Coordinate coordinates} in degrees.
      *
      * @param c0 The first {@link Coordinate}.
