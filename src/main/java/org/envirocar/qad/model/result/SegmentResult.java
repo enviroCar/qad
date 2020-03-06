@@ -1,6 +1,7 @@
 package org.envirocar.qad.model.result;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.envirocar.qad.JsonConstants;
@@ -13,10 +14,20 @@ import java.util.Objects;
 public class SegmentResult {
     private final Segment segment;
     private final SegmentStatistics statistics;
+    private final int begin;
+    private final int end;
 
-    public SegmentResult(Segment segment, SegmentStatistics statistics) {
+    public SegmentResult(Segment segment, SegmentStatistics statistics, int begin, int end) {
         this.segment = Objects.requireNonNull(segment);
         this.statistics = Objects.requireNonNull(statistics);
+        this.begin = begin;
+        this.end = end;
+    }
+
+    //@JsonGetter("index")
+    @JsonIgnore
+    public int[] getBegin() {
+        return new int[]{begin, end};
     }
 
     @JsonUnwrapped

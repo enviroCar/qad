@@ -38,6 +38,10 @@ public class Track implements Enveloped {
         this.geometry = calculateLineString();
     }
 
+    public int getRealIndex(int index) {
+        return index;
+    }
+
     public String getFuelType() {
         return fuelType;
     }
@@ -52,22 +56,6 @@ public class Track implements Enveloped {
 
     public Track subset(int begin, int end) {
         return new TrackSubset(getId(), getFuelType(), getMeasurements(), begin, end);
-    }
-
-    private static class TrackSubset extends Track {
-        private final int begin;
-        private final int end;
-
-        public TrackSubset(String id, String fuelType, List<Measurement> measurements, int begin, int end) {
-            super(id, fuelType, measurements.subList(begin, end + 1));
-            this.begin = begin;
-            this.end = end;
-        }
-
-        @Override
-        public String toString() {
-            return String.format("TrackSubset{id=%s, begin=%d, end=%d}", getId(), begin, end);
-        }
     }
 
     public List<Measurement> getMeasurements() {
@@ -157,4 +145,36 @@ public class Track implements Enveloped {
         return getGeometry().getEnvelopeInternal();
     }
 
+    private static class TrackSubset extends Track {
+        private final int begin;
+        private final int end;
+
+        public TrackSubset(String id, String fuelType, List<Measurement> measurements, int begin, int end) {
+            super(id, fuelType, measurements.subList(begin, end + 1));
+            this.begin = begin;
+            this.end = end;
+        }
+
+        private TrackSubset(String id, String fuelType, List<Measurement> measurements, int begin, int end,
+                            int offset) {
+            super(id, fuelType, measurements.subList(begin, end + 1));
+            this.begin = offset + begin;
+            this.end = offset + end;
+        }
+
+        @Override
+        public Track subset(int begin, int end) {
+            return new TrackSubset(getId(), getFuelType(), getMeasurements(), begin, end, this.begin);
+        }
+
+        @Override
+        public int getRealIndex(int index) {
+            return begin + index;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("TrackSubset{id=%s, begin=%d, end=%d}", getId(), begin, end);
+        }
+    }
 }

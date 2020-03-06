@@ -81,7 +81,7 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
         statistics.setStoppedTime(getStopTime());
         statistics.setTravelTime(getDuration());
         statistics.setStops(getStops());
-        return new SegmentResult(segment, statistics);
+        return new SegmentResult(segment, statistics, track.getRealIndex(start), track.getRealIndex(end));
     }
 
     public boolean checkOrientation() {
@@ -252,7 +252,8 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     }
 
     private void logStop(Stop stop) {
-        LOG.debug("Found stop in track {} on segment {}, from {} to {}", track, segment, stop.start, stop.end);
+        LOG.debug("Found stop in track {} on segment {}, from {} to {}",
+                  track, segment, track.getRealIndex(stop.start), track.getRealIndex(stop.end));
     }
 
     private Duration getDuration() {
