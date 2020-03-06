@@ -36,8 +36,10 @@ public class DirectoryResultPersistence implements ResultPersistence {
     private static final Locale LOCALE = Locale.ROOT;
     private static final FileAttribute<?> directoryPermissions = getPermissions("rwxr-xr-x");
     private static final FileAttribute<?> filePermissions = getPermissions("rw-r--r--");
-    private final DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("HHmmss", LOCALE).withZone(ZONE_ID);
-    private final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyyMMdd", LOCALE).withZone(ZONE_ID);
+    private static final DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("HHmmss", LOCALE).withZone(ZONE_ID);
+    private static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyyMMdd", LOCALE).withZone(ZONE_ID);
+    //private static final DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("HH:mm:ss", LOCALE).withZone(ZONE_ID);
+    //private static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd", LOCALE).withZone(ZONE_ID);
 
     private final AlgorithmParameters parameters;
     private final ObjectWriter writer;
@@ -124,6 +126,12 @@ public class DirectoryResultPersistence implements ResultPersistence {
                                       timeFormat.format(result.getStart()),
                                       dateFormat.format(result.getStart()),
                                       result.getTrack());
+//        String prefix = String.format("%s_%s_%s_%s_%s",
+//                                      result.getModel(),
+//                                      dateFormat.format(result.getStart()),
+//                                      timeFormat.format(result.getStart()),
+//                                      result.getAxis(),
+//                                      result.getTrack());
         Path path = parameters.getOutputPath().resolve(String.format("%s.json", prefix));
 
         for (int i = 0; true; i++) {
