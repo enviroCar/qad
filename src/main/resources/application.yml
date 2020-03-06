@@ -7,16 +7,15 @@ kafka:
 
 qad:
   simplifyLengthCalculation: ${QAD_SIMPLIFY_LENGTH_CALCULATION:false}
-  maxAngleDeviation: ${QAD_MAX_ANGLE_DEVIATION:90}
-  maxLengthDeviation: ${QAD_MAX_LENGTH_DEVIATION:0.20}
+  maxAngleDeviation: ${QAD_MAX_ANGLE_DEVIATION:45}
+  maxLengthDeviation: ${QAD_MAX_LENGTH_DEVIATION:0.30}
   lengthDifferenceToTolerate: ${QAD_LENGTH_DIFFERENCE_TO_TOLERATE:10}
-  snappingTolerance: ${QAD_SNAPPING_TOLERANCE:20}
+  snappingTolerance: ${QAD_SNAPPING_TOLERANCE:50}
   stops:
     startThresholdSpeed: ${QAD_STOP_START_THRESHOLD:5.0}
     endThresholdSpeed: ${QAD_STOP_END_THRESHOLD:10.0}
-  model:
-    segments:
-      bufferSize: ${QAD_SEGMENT_BUFFER_SIZE:20}
+  segments:
+    bufferSize: ${QAD_SEGMENT_BUFFER_SIZE:10}
   densify:
     numPoints: ${QAD_DENSIFY_NUM_POINTS:4}
   mapMatching:
