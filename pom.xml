@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <retrofit.version>2.8.1</retrofit.version>
+        <retrofit.version>2.8.2</retrofit.version>
         <geotools.version>23.0</geotools.version>
     </properties>
     <repositories>
