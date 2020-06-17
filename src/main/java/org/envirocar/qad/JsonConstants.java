@@ -21,8 +21,6 @@ public interface JsonConstants {
     String FUEL_TYPE = "fuelType";
     String SEGMENT_ID = "segmentId";
     String SEGMENT_LENGTH = "segmentLength";
-    String TRAFFIC_LIGHT_INFLUENCE = "trafficLightInfluence";
-    String TRAFFIC_LIGHT_ID = "trafficLightId";
     String TRAVEL_TIME = "travelTime";
     String STOPS = "stops";
     String STOPPED_TIME = "stoppedTime";

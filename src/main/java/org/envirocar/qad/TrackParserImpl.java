@@ -6,6 +6,7 @@ import org.envirocar.qad.model.FeatureCollection;
 import org.envirocar.qad.model.Measurement;
 import org.envirocar.qad.model.Track;
 import org.envirocar.qad.model.Values;
+import org.jetbrains.annotations.NotNull;
 import org.locationtech.jts.geom.Point;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,9 +15,9 @@ import org.springframework.stereotype.Component;
 import java.time.Instant;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.OptionalDouble;
+import java.util.stream.Collectors;
 
 @Component
 public class TrackParserImpl implements TrackParser {
@@ -25,56 +26,163 @@ public class TrackParserImpl implements TrackParser {
     public static final String PHENOMENON_CONSUMPTION = "Consumption";
     public static final String PHENOMENON_CARBON_DIOXIDE = "CO2";
     public static final String PHENOMENON_ENERGY_CONSUMPTION = "Energy Consumption";
+    public static final String PHENOMENON_GPS_SPEED = "GPS Speed";
 
     @Override
     public Track createTrack(FeatureCollection collection) throws TrackParsingException {
-
-        String id = collection.getProperties().path(JsonConstants.ID).textValue();
-        List<Measurement> measurements = new ArrayList<>();
-        AtomicBoolean missingFuelConsumption = new AtomicBoolean(false);
-        AtomicBoolean missingEmission = new AtomicBoolean(false);
-        AtomicBoolean missingEnergyConsumption = new AtomicBoolean(false);
-        for (Feature feature : collection.getFeatures()) {
-            Point geometry = (Point) feature.getGeometry();
-            String measurementId = feature.getProperties().path(JsonConstants.ID).textValue();
-            Instant time = OffsetDateTime.parse(feature.getProperties().path(JsonConstants.TIME).textValue(),
-                                                DateTimeFormatter.ISO_DATE_TIME).toInstant();
-            JsonNode phenomenons = feature.getProperties().path(JsonConstants.PHENOMENONS);
-            JsonNode speed = phenomenons.path(PHENOMENON_SPEED).path(JsonConstants.VALUE);
-            JsonNode fuelConsumption = phenomenons.path(PHENOMENON_CONSUMPTION).path(JsonConstants.VALUE);
-            JsonNode emission = phenomenons.path(PHENOMENON_CARBON_DIOXIDE).path(JsonConstants.VALUE);
-            JsonNode energyConsumption = phenomenons.path(PHENOMENON_ENERGY_CONSUMPTION).path(JsonConstants.VALUE);
-            if (speed.isNull() || speed.isMissingNode()) {
-                throw new TrackParsingException(String.format("track %s is missing speed measurements", measurementId));
-            }
-            if (fuelConsumption.isNull() || fuelConsumption.isMissingNode()) {
-                missingFuelConsumption.lazySet(true);
-            }
-            if (energyConsumption.isNull() || energyConsumption.isMissingNode()) {
-                missingEnergyConsumption.lazySet(true);
-            }
-            if (emission.isNull() || emission.isMissingNode()) {
-                missingEmission.lazySet(true);
-            }
-            measurements.add(new Measurement(measurementId, geometry, time,
-                                             new Values(speed.doubleValue(),
-                                                        fuelConsumption.doubleValue(),
-                                                        energyConsumption.doubleValue(),
-                                                        emission.doubleValue())));
-        }
-
-        if (missingFuelConsumption.get() && missingEnergyConsumption.get()) {
-            LOG.warn("track {} is missing consumption values", id);
-        }
-
-        if (missingEmission.get()) {
-            LOG.warn("track {} is missing emission values", id);
-        }
-
-        String fuelType = collection.getProperties().path(JsonConstants.SENSOR).path(JsonConstants.PROPERTIES)
-                                    .path(JsonConstants.FUEL_TYPE).textValue();
-
-        return new Track(id, fuelType, measurements);
+        return new ParseContext(collection).createTrack();
     }
 
+    private static class ParseContext {
+        private final FeatureCollection featureCollection;
+        private final boolean hasNonZeroSpeedValues;
+        private boolean missingFuelConsumption = false;
+        private boolean missingEmission = false;
+        private boolean missingEnergyConsumption = false;
+
+        ParseContext(FeatureCollection featureCollection) {
+            this.featureCollection = featureCollection;
+            this.hasNonZeroSpeedValues = hasNonZeroSpeedValues();
+        }
+
+        private void missingFuelConsumption() {
+            missingFuelConsumption = true;
+        }
+
+        private void missingEmission() {
+            missingEmission = true;
+        }
+
+        private void missingEnergyConsumption() {
+            missingEnergyConsumption = true;
+        }
+
+        private boolean hasMissingConsumption() {
+            return missingFuelConsumption && missingEnergyConsumption;
+        }
+
+        private boolean hasMissingEmission() {
+            return missingEmission;
+        }
+
+        private boolean hasNonZeroSpeedValues() {
+            return featureCollection.getFeatures().stream()
+                                    .map(this::getSpeed)
+                                    .filter(OptionalDouble::isPresent)
+                                    .mapToDouble(OptionalDouble::getAsDouble)
+                                    .filter(s -> s != 0.0d)
+                                    .findAny()
+                                    .isPresent();
+        }
+
+        private OptionalDouble getSpeed(Feature feature) {
+            return getPhenomenon(feature, PHENOMENON_SPEED);
+        }
+
+        @NotNull
+        private OptionalDouble optionalDoubleValue(JsonNode node) {
+            if (node.isNumber()) {
+                return OptionalDouble.of(node.doubleValue());
+            } else {
+                return OptionalDouble.empty();
+            }
+        }
+
+        private String getFuelType() {
+            return featureCollection.getProperties()
+                                    .path(JsonConstants.SENSOR)
+                                    .path(JsonConstants.PROPERTIES)
+                                    .path(JsonConstants.FUEL_TYPE)
+                                    .textValue();
+        }
+
+        Track createTrack() {
+            String id = getId();
+            List<Measurement> measurements = featureCollection.getFeatures().stream()
+                                                              .map(this::createMeasurement)
+                                                              .collect(Collectors.toList());
+
+            if (hasMissingConsumption()) {
+                LOG.warn("track {} is missing consumption values", id);
+            }
+
+            if (hasMissingEmission()) {
+                LOG.warn("track {} is missing emission values", id);
+            }
+
+            return new Track(id, getFuelType(), measurements);
+        }
+
+        private Measurement createMeasurement(Feature feature) {
+            return new Measurement(getId(feature), getGeometry(feature), getTime(feature), getValues(feature));
+        }
+
+        private Values getValues(Feature feature) {
+            OptionalDouble fuelConsumption = getFuelConsumption(feature);
+            OptionalDouble emission = getEmission(feature);
+            OptionalDouble energyConsumption = getEnergyConsumption(feature);
+
+            if (!fuelConsumption.isPresent()) {
+                missingFuelConsumption();
+            }
+            if (!energyConsumption.isPresent()) {
+                missingEnergyConsumption();
+            }
+            if (!emission.isPresent()) {
+                missingEmission();
+            }
+            OptionalDouble speed;
+            if (hasNonZeroSpeedValues) {
+                speed = getPhenomenon(feature, PHENOMENON_SPEED);
+            } else {
+                speed = getPhenomenon(feature, PHENOMENON_GPS_SPEED);
+                if (!speed.isPresent()) {
+                    speed = getPhenomenon(feature, PHENOMENON_SPEED);
+                }
+            }
+            return new Values(speed.orElseThrow(() -> missingSpeedValue(feature)),
+                              fuelConsumption, energyConsumption, emission);
+        }
+
+        private TrackParsingException missingSpeedValue(Feature feature) {
+            return new TrackParsingException(String.format("track %s is missing speed measurements", getId(feature)));
+        }
+
+        private Point getGeometry(Feature feature) {
+            return (Point) feature.getGeometry();
+        }
+
+        private Instant getTime(Feature feature) {
+            return OffsetDateTime.parse(feature.getProperties().path(JsonConstants.TIME).textValue(),
+                                        DateTimeFormatter.ISO_DATE_TIME).toInstant();
+        }
+
+        private OptionalDouble getEnergyConsumption(Feature feature) {
+            return getPhenomenon(feature, PHENOMENON_ENERGY_CONSUMPTION);
+        }
+
+        private OptionalDouble getFuelConsumption(Feature feature) {
+            return getPhenomenon(feature, PHENOMENON_CONSUMPTION);
+        }
+
+        private OptionalDouble getEmission(Feature feature) {
+            return getPhenomenon(feature, PHENOMENON_CARBON_DIOXIDE);
+        }
+
+        private OptionalDouble getPhenomenon(Feature feature, String phenomenon) {
+            return optionalDoubleValue(feature.getProperties()
+                                              .path(JsonConstants.PHENOMENONS)
+                                              .path(phenomenon)
+                                              .path(JsonConstants.VALUE));
+        }
+
+        private String getId() {
+            return featureCollection.getProperties().path(JsonConstants.ID).textValue();
+        }
+
+        private String getId(Feature feature) {
+            return feature.getProperties().path(JsonConstants.ID).textValue();
+        }
+
+    }
 }

@@ -74,9 +74,9 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     public SegmentResult toSegmentResult() {
         Values meanValues = getMeanValues();
         SegmentStatistics statistics = new SegmentStatistics();
-        statistics.setFuelConsumption(meanValues.getFuelConsumption());
-        statistics.setEnergyConsumption(meanValues.getEnergyConsumption());
-        statistics.setEmission(meanValues.getCarbonDioxide());
+        statistics.setFuelConsumption(meanValues.getFuelConsumption().orElse(0.0d));
+        statistics.setEnergyConsumption(meanValues.getEnergyConsumption().orElse(0.0d));
+        statistics.setEmission(meanValues.getCarbonDioxide().orElse(0.0d));
         statistics.setSpeed(meanValues.getSpeed() / 3.6);
         statistics.setStoppedTime(getStopTime());
         statistics.setTravelTime(getDuration());
@@ -218,9 +218,9 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
                 speed += values.getSpeed();
             }
 
-            carbonDioxide += values.getCarbonDioxide();
-            fuelConsumption += values.getFuelConsumption();
-            energyConsumption += values.getEnergyConsumption();
+            carbonDioxide += values.getCarbonDioxide().orElse(0.0d);
+            fuelConsumption += values.getFuelConsumption().orElse(0.0d);
+            energyConsumption += values.getEnergyConsumption().orElse(0.0d);
         }
 
         fuelConsumption /= count;
