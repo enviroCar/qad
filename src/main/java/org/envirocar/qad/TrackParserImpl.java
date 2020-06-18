@@ -22,11 +22,13 @@ import java.util.stream.Collectors;
 @Component
 public class TrackParserImpl implements TrackParser {
     private static final Logger LOG = LoggerFactory.getLogger(TrackParserImpl.class);
-    public static final String PHENOMENON_SPEED = "Speed";
-    public static final String PHENOMENON_CONSUMPTION = "Consumption";
-    public static final String PHENOMENON_CARBON_DIOXIDE = "CO2";
-    public static final String PHENOMENON_ENERGY_CONSUMPTION = "Energy Consumption";
-    public static final String PHENOMENON_GPS_SPEED = "GPS Speed";
+    private static final String PHENOMENON_SPEED = "Speed";
+    private static final String PHENOMENON_CONSUMPTION = "Consumption";
+    private static final String PHENOMENON_CARBON_DIOXIDE = "CO2";
+    private static final String PHENOMENON_ENERGY_CONSUMPTION = "Energy Consumption";
+    private static final String PHENOMENON_GPS_SPEED = "GPS Speed";
+    private static final String PHENOMENON_CARBON_DIOXIDE_GPS = "CO2 Emission (GPS-based)";
+    private static final String PHENOMENON_CONSUMPTION_GPS = "Consumption (GPS-based)";
 
     @Override
     public Track createTrack(FeatureCollection collection) throws TrackParsingException {
@@ -162,11 +164,19 @@ public class TrackParserImpl implements TrackParser {
         }
 
         private OptionalDouble getFuelConsumption(Feature feature) {
-            return getPhenomenon(feature, PHENOMENON_CONSUMPTION);
+            OptionalDouble consumption = getPhenomenon(feature, PHENOMENON_CONSUMPTION);
+            if (!consumption.isPresent()) {
+                return getPhenomenon(feature, PHENOMENON_CONSUMPTION_GPS);
+            }
+            return consumption;
         }
 
         private OptionalDouble getEmission(Feature feature) {
-            return getPhenomenon(feature, PHENOMENON_CARBON_DIOXIDE);
+            OptionalDouble emission = getPhenomenon(feature, PHENOMENON_CARBON_DIOXIDE);
+            if (!emission.isPresent()) {
+                return getPhenomenon(feature, PHENOMENON_CARBON_DIOXIDE_GPS);
+            }
+            return emission;
         }
 
         private OptionalDouble getPhenomenon(Feature feature, String phenomenon) {
