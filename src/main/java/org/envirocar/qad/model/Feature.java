@@ -22,7 +22,7 @@ public class Feature implements Enveloped {
     private ObjectNode properties;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(String id) {
@@ -30,7 +30,7 @@ public class Feature implements Enveloped {
     }
 
     public Geometry getGeometry() {
-        return geometry;
+        return this.geometry;
     }
 
     public void setGeometry(Geometry geometry) {
@@ -38,7 +38,7 @@ public class Feature implements Enveloped {
     }
 
     public ObjectNode getProperties() {
-        return properties;
+        return this.properties;
     }
 
     public void setProperties(ObjectNode properties) {
@@ -48,6 +48,6 @@ public class Feature implements Enveloped {
     @JsonIgnore
     @Override
     public Envelope getEnvelope() {
-        return geometry.getEnvelopeInternal();
+        return this.geometry.getEnvelopeInternal();
     }
 }

@@ -23,11 +23,11 @@ public class AxisModelRepository implements Enveloped {
     }
 
     public Collection<AxisModel> getAxisModels() {
-        return Collections.unmodifiableCollection(axisModels.values());
+        return Collections.unmodifiableCollection(this.axisModels.values());
     }
 
     public Optional<AxisModel> getAxisModel(ModelId modelId) {
-        return Optional.ofNullable(axisModels.get(modelId));
+        return Optional.ofNullable(this.axisModels.get(modelId));
     }
 
     public Optional<AxisModel> getAxisModel(String modelId, String version) {
@@ -35,15 +35,15 @@ public class AxisModelRepository implements Enveloped {
     }
 
     public Optional<AxisModel> getAxisModel(String modelId) {
-        return axisModels.keySet().stream()
-                         .filter(x -> x.getValue().equals(modelId))
-                         .max(Comparator.comparing(ModelId::getVersion))
-                         .map(axisModels::get);
+        return this.axisModels.keySet().stream()
+                              .filter(x -> x.getValue().equals(modelId))
+                              .max(Comparator.comparing(ModelId::getVersion))
+                              .map(this.axisModels::get);
     }
 
     @Override
     public Envelope getEnvelope() {
-        return new Envelope(envelope);
+        return new Envelope(this.envelope);
     }
 
     private Envelope calculateEnvelope() {

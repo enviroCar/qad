@@ -18,11 +18,11 @@ public class AxisId implements Comparable<AxisId> {
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public int getDirection() {
-        return direction;
+        return this.direction;
     }
 
     @Override
@@ -46,7 +46,7 @@ public class AxisId implements Comparable<AxisId> {
     @JsonValue
     @Override
     public String toString() {
-        return String.format("%02d_%d", id, direction);
+        return String.format("%02d_%d", this.id, this.direction);
     }
 
     @Override
@@ -61,7 +61,8 @@ public class AxisId implements Comparable<AxisId> {
             throw new IllegalArgumentException("invalid axis id: " + value);
         }
         try {
-            return new AxisId(Integer.parseInt(s[0], 10), Integer.parseInt(s[1], 10));
+            return new AxisId(Integer.parseInt(s[0], 10),
+                              Integer.parseInt(s[1], 10));
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException("invalid axis id: " + value, e);
         }

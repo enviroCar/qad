@@ -43,16 +43,16 @@ public class AxisAnalyzer implements Analyzer {
 
     @Override
     public boolean isApplicable() {
-        return axis.getEnvelope().intersects(track.getEnvelope());
+        return this.axis.getEnvelope().intersects(this.track.getEnvelope());
     }
 
     @Override
     public Stream<AnalysisResult> analyze() {
-        LOG.debug("Analyzing axis {} for track {}", axis.getId(), track.getId());
-        return track.subset(axis.getEnvelope()).flatMap(track -> {
-            LOG.debug("Analyzing axis {} for subset of track {}", axis.getId(), track);
-            Stream<MatchCandidate> candidates = axis.findIntersectingSegments(track.getGeometry()).stream()
-                                                    .flatMap(segment -> getCandidates(segment, track));
+        LOG.debug("Analyzing axis {} for track {}", this.axis.getId(), this.track.getId());
+        return this.track.subset(this.axis.getEnvelope()).flatMap(track -> {
+            LOG.debug("Analyzing axis {} for subset of track {}", this.axis.getId(), track);
+            Stream<MatchCandidate> candidates = this.axis.findIntersectingSegments(track.getGeometry()).stream()
+                                                         .flatMap(segment -> getCandidates(segment, track));
             return createResults(track, candidates);
         });
     }
@@ -60,36 +60,36 @@ public class AxisAnalyzer implements Analyzer {
     private Stream<MatchCandidate> getCandidates(Segment segment, Track track) {
         return StreamSupport.stream(new SpliteratorAdapter<MatchCandidate>() {
             private final int size = track.size();
-            private int idx = 0;
+            private int idx;
             private int start = -1;
 
             @Override
             public boolean tryAdvance(Consumer<? super MatchCandidate> action) {
-                while (idx < size) {
-                    Point geom = track.getMeasurement(idx).getGeometry();
+                while (this.idx < this.size) {
+                    Point geom = track.getMeasurement(this.idx).getGeometry();
                     if (segment.getBuffer().contains(geom) && isNearestSegment(geom)) {
-                        if (start < 0) {
-                            start = idx;
+                        if (this.start < 0) {
+                            this.start = this.idx;
                         }
-                    } else if (start >= 0 && checkCandidate(action)) {
+                    } else if (this.start >= 0 && checkCandidate(action)) {
                         return true;
                     }
-                    idx++;
+                    this.idx++;
                 }
-                return start >= 0 && checkCandidate(action);
+                return this.start >= 0 && checkCandidate(action);
             }
 
             private boolean checkCandidate(Consumer<? super MatchCandidate> action) {
                 // the last index is no longer in the segment buffer
-                final int end = idx - 1;
-                final int start = this.start;
+                int end = this.idx - 1;
+                int start = this.start;
                 this.start = -1;
-                MatchCandidate candidate = analyzerFactory.create(segment, track, start, end);
+                MatchCandidate candidate = AxisAnalyzer.this.analyzerFactory.create(segment, track, start, end);
                 if (start == end) {
                     LOG.warn("Found match with single measurement for track {} on segment {}: [{},{}]",
                              track.getId(), segment.getId(), start, end);
                     action.accept(candidate);
-                    idx++;
+                    this.idx++;
                     return true;
                     // return false;
                 }
@@ -99,7 +99,7 @@ public class AxisAnalyzer implements Analyzer {
                         LOG.debug("Found match for track {} on segment {}: [{},{}]",
                                   track.getId(), segment.getId(), start, end);
                         action.accept(candidate);
-                        idx++;
+                        this.idx++;
                         return true;
                     } else {
                         LOG.debug("Rejecting match for track {} on segment {}: [{},{}]: length deviation",
@@ -166,8 +166,8 @@ public class AxisAnalyzer implements Analyzer {
         }, Long.MAX_VALUE, Spliterator.ORDERED & Spliterator.NONNULL), false);
     }
 
-    private Deque<MatchCandidate> getNextCandidates(Map<Segment, Deque<MatchCandidate>> bySegment,
-                                                    Deque<MatchCandidate> streak) {
+    private Deque<MatchCandidate> getNextCandidates(Map<Segment, ? extends Deque<MatchCandidate>> bySegment,
+                                                    Deque<? extends MatchCandidate> streak) {
         return streak.getLast().getSegment().next().map(bySegment::get)
                      .filter(nextCandidates -> streak.getLast().getEnd() + 1 == nextCandidates.getFirst().getStart())
                      .orElse(null);
@@ -188,8 +188,8 @@ public class AxisAnalyzer implements Analyzer {
 
         AnalysisResult result = new AnalysisResult();
         result.setTrack(track.getId());
-        result.setAxis(axis.getId());
-        result.setModel(axis.getModelId());
+        result.setAxis(this.axis.getId());
+        result.setModel(this.axis.getModelId());
         result.setFuelType(track.getFuelType());
         result.setStart(track.getTime(results.getFirst().getStart()));
         result.setEnd(track.getTime(results.getLast().getEnd()));

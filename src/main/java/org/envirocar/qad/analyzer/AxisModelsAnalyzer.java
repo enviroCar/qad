@@ -30,22 +30,22 @@ public class AxisModelsAnalyzer implements Analyzer {
 
     @Override
     public boolean isApplicable() {
-        return repository.getEnvelope().intersects(featureCollection.getEnvelope());
+        return this.repository.getEnvelope().intersects(this.featureCollection.getEnvelope());
     }
 
     @Override
     public Stream<AnalysisResult> analyze() throws AnalysisException {
-        Track track = preparer.prepare(featureCollection);
-        return split(track).flatMap(t -> repository.getAxisModels()
-                                                   .stream()
-                                                   .map(model -> analyzerFactory.create(model, t))
-                                                   .filter(Analyzer::isApplicable)
-                                                   .flatMap(Analyzer::analyze));
+        Track track = this.preparer.prepare(this.featureCollection);
+        return split(track).flatMap(t -> this.repository.getAxisModels()
+                                                        .stream()
+                                                        .map(model -> this.analyzerFactory.create(model, t))
+                                                        .filter(Analyzer::isApplicable)
+                                                        .flatMap(Analyzer::analyze));
 
     }
 
     private Stream<Track> split(Track track) {
-        return Optional.ofNullable(trackSplitter).<Function<Track, Stream<Track>>>map(s -> s::split)
+        return Optional.ofNullable(this.trackSplitter).<Function<Track, Stream<Track>>>map(s -> s::split)
                        .orElse(Stream::of)
                        .apply(track);
     }

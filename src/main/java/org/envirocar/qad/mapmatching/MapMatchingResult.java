@@ -15,7 +15,7 @@ public class MapMatchingResult {
 
     @JsonGetter(JsonConstants.MATCHED_ROUTE)
     public Feature getMatchedRoute() {
-        return matchedRoute;
+        return this.matchedRoute;
     }
 
     @JsonSetter(JsonConstants.MATCHED_ROUTE)
@@ -25,7 +25,7 @@ public class MapMatchingResult {
 
     @JsonGetter(JsonConstants.MATCHED_POINTS)
     public List<MatchedPoint> getMatchedPoints() {
-        return matchedPoints;
+        return this.matchedPoints;
     }
 
     @JsonSetter(JsonConstants.MATCHED_POINTS)

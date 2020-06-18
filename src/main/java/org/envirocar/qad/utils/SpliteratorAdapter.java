@@ -5,6 +5,7 @@ import java.util.function.Consumer;
 
 @FunctionalInterface
 public interface SpliteratorAdapter<T> extends Spliterator<T> {
+    @Override
     boolean tryAdvance(Consumer<? super T> action);
 
     @Override

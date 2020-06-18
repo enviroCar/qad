@@ -30,19 +30,19 @@ public class Values {
     }
 
     public double getSpeed() {
-        return speed;
+        return this.speed;
     }
 
     public OptionalDouble getFuelConsumption() {
-        return fuelConsumption;
+        return this.fuelConsumption;
     }
 
     public OptionalDouble getEnergyConsumption() {
-        return energyConsumption;
+        return this.energyConsumption;
     }
 
     public OptionalDouble getCarbonDioxide() {
-        return carbonDioxide;
+        return this.carbonDioxide;
     }
 
     public static Values interpolate(Values v1, Values v2, double fraction) {

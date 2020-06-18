@@ -15,10 +15,10 @@ import java.util.function.Predicate;
 
 public class TypeSafeSpatialIndex<T> {
     private final SpatialIndex index;
-    private Function<T, Envelope> envelopeFunction;
+    private final Function<T, Envelope> envelopeFunction;
 
     public TypeSafeSpatialIndex(Collection<T> items, Function<T, Envelope> envelopeFunction) {
-        index = new STRtree();
+        this.index = new STRtree();
         this.envelopeFunction = Objects.requireNonNull(envelopeFunction);
         items.forEach(this::insert);
     }
@@ -27,7 +27,7 @@ public class TypeSafeSpatialIndex<T> {
     public List<T> query(Envelope search, Predicate<T> predicate) {
         List<T> items = new LinkedList<>();
         Predicate<T> test = predicate == null ? (t) -> true : predicate;
-        index.query(search, item -> {
+        this.index.query(search, item -> {
             T t = (T) item;
             if (test.test(t)) {
                 items.add(t);
@@ -39,11 +39,11 @@ public class TypeSafeSpatialIndex<T> {
     @SuppressWarnings("unchecked")
     public void query(Envelope search, Consumer<T> consumer) {
         Objects.requireNonNull(consumer);
-        index.query(search, item -> consumer.accept((T) item));
+        this.index.query(search, item -> consumer.accept((T) item));
     }
 
     public void insert(T item) {
-        index.insert(envelopeFunction.apply(item), item);
+        this.index.insert(this.envelopeFunction.apply(item), item);
     }
 
     public List<T> query(Geometry search, Predicate<T> predicate) {

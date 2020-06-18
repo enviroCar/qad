@@ -43,7 +43,7 @@ public class Track implements Enveloped {
     }
 
     public String getFuelType() {
-        return fuelType;
+        return this.fuelType;
     }
 
     private LineString calculateLineString() {
@@ -59,7 +59,7 @@ public class Track implements Enveloped {
     }
 
     public List<Measurement> getMeasurements() {
-        return Collections.unmodifiableList(measurements);
+        return Collections.unmodifiableList(this.measurements);
     }
 
     public Measurement getMeasurement(int idx) {
@@ -67,7 +67,7 @@ public class Track implements Enveloped {
     }
 
     public int size() {
-        return measurements.size();
+        return this.measurements.size();
     }
 
     public final Point getGeometry(int idx) {
@@ -128,7 +128,7 @@ public class Track implements Enveloped {
     }
 
     public final String getId() {
-        return id;
+        return this.id;
     }
 
     @Override
@@ -137,7 +137,7 @@ public class Track implements Enveloped {
     }
 
     public LineString getGeometry() {
-        return geometry;
+        return this.geometry;
     }
 
     @Override
@@ -169,12 +169,12 @@ public class Track implements Enveloped {
 
         @Override
         public int getRealIndex(int index) {
-            return begin + index;
+            return this.begin + index;
         }
 
         @Override
         public String toString() {
-            return String.format("TrackSubset{id=%s, begin=%d, end=%d}", getId(), begin, end);
+            return String.format("TrackSubset{id=%s, begin=%d, end=%d}", getId(), this.begin, this.end);
         }
     }
 }

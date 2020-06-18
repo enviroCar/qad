@@ -23,18 +23,18 @@ public class AxisModelAnalyzer implements Analyzer {
 
     @Override
     public boolean isApplicable() {
-        return model.getEnvelope().intersects(track.getEnvelope());
+        return this.model.getEnvelope().intersects(this.track.getEnvelope());
     }
 
     @Override
     public Stream<AnalysisResult> analyze() {
-        LOG.debug("Analyzing track {} in regard to model {}", track.getId(), model.getId());
+        LOG.debug("Analyzing track {} in regard to model {}", this.track.getId(), this.model.getId());
 
-        return track.subset(model.getEnvelope())
-                    .flatMap(track -> model.getAxis().stream()
-                                           .map(axis -> analyzerFactory.create(axis, track))
-                                           .filter(Analyzer::isApplicable)
-                                           .flatMap(Analyzer::analyze));
+        return this.track.subset(this.model.getEnvelope())
+                         .flatMap(track -> this.model.getAxis().stream()
+                                                     .map(axis -> this.analyzerFactory.create(axis, track))
+                                                     .filter(Analyzer::isApplicable)
+                                                     .flatMap(Analyzer::analyze));
 
     }
 }

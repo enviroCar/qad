@@ -56,7 +56,7 @@ public class DirectoryResultPersistence implements ResultPersistence {
         LOG.debug("Archiving result entries older than {}", today());
         try {
             Files.createDirectories(getArchive(), directoryPermissions);
-            Files.list(parameters.getOutputPath())
+            Files.list(this.parameters.getOutputPath())
                  .filter(f -> f.getFileName().toString().endsWith(".json"))
                  .filter(Files::isRegularFile)
                  .filter(this::isBeforeToday)
@@ -67,7 +67,7 @@ public class DirectoryResultPersistence implements ResultPersistence {
     }
 
     private Path getArchive() {
-        return parameters.getOutputPath().resolve("archive");
+        return this.parameters.getOutputPath().resolve("archive");
     }
 
     private void archiveFile(Path file) {
@@ -110,7 +110,7 @@ public class DirectoryResultPersistence implements ResultPersistence {
             Path path = createFile(result);
             LOG.info("Writing output {}", path.toAbsolutePath());
             try (BufferedWriter w = Files.newBufferedWriter(path, StandardCharsets.UTF_8)) {
-                writer.writeValue(w, result);
+                this.writer.writeValue(w, result);
             } catch (IOException e) {
                 LOG.error(String.format("Error writing %s", path), e);
             }
@@ -132,14 +132,14 @@ public class DirectoryResultPersistence implements ResultPersistence {
 //                                      timeFormat.format(result.getStart()),
 //                                      result.getAxis(),
 //                                      result.getTrack());
-        Path path = parameters.getOutputPath().resolve(String.format("%s.json", prefix));
+        Path path = this.parameters.getOutputPath().resolve(String.format("%s.json", prefix));
 
         for (int i = 0; true; i++) {
             try {
                 Files.createFile(path, filePermissions);
                 break;
             } catch (FileAlreadyExistsException ignored) {
-                path = parameters.getOutputPath().resolve(String.format("%s_%d.json", prefix, i));
+                path = this.parameters.getOutputPath().resolve(String.format("%s_%d.json", prefix, i));
             }
         }
         return path;

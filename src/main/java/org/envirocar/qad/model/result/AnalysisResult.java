@@ -23,7 +23,7 @@ public class AnalysisResult {
 
     @JsonProperty(JsonConstants.SEGMENTS)
     public List<SegmentResult> getSegments() {
-        return segments;
+        return this.segments;
     }
 
     public void setSegments(List<SegmentResult> segments) {
@@ -32,7 +32,7 @@ public class AnalysisResult {
 
     @JsonUnwrapped
     public ModelId getModel() {
-        return model;
+        return this.model;
     }
 
     public void setModel(ModelId model) {
@@ -41,7 +41,7 @@ public class AnalysisResult {
 
     @JsonProperty(JsonConstants.AXIS)
     public AxisId getAxis() {
-        return axis;
+        return this.axis;
     }
 
     public void setAxis(AxisId axis) {
@@ -51,7 +51,7 @@ public class AnalysisResult {
     @JsonFormat(timezone = TIME_ZONE, pattern = DATE_TIME_PATTERN)
     @JsonProperty(JsonConstants.START)
     public Instant getStart() {
-        return start;
+        return this.start;
     }
 
     public void setStart(Instant start) {
@@ -61,7 +61,7 @@ public class AnalysisResult {
     @JsonFormat(timezone = TIME_ZONE, pattern = DATE_TIME_PATTERN)
     @JsonProperty(JsonConstants.END)
     public Instant getEnd() {
-        return end;
+        return this.end;
     }
 
     public void setEnd(Instant end) {
@@ -70,7 +70,7 @@ public class AnalysisResult {
 
     @JsonProperty(JsonConstants.FUEL_TYPE)
     public String getFuelType() {
-        return fuelType;
+        return this.fuelType;
     }
 
     public void setFuelType(String fuelType) {
@@ -79,7 +79,7 @@ public class AnalysisResult {
 
     @JsonProperty(JsonConstants.TRACK)
     public String getTrack() {
-        return track;
+        return this.track;
     }
 
     public void setTrack(String track) {

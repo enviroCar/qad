@@ -27,22 +27,22 @@ public class SegmentResult {
     //@JsonGetter("index")
     @JsonIgnore
     public int[] getBegin() {
-        return new int[]{begin, end};
+        return new int[]{this.begin, this.end};
     }
 
     @JsonUnwrapped
     public SegmentStatistics getStatistics() {
-        return statistics;
+        return this.statistics;
     }
 
     @JsonGetter(JsonConstants.SEGMENT_ID)
     public int getSegmentId() {
-        return segment.getId().getRank();
+        return this.segment.getId().getRank();
     }
 
     @JsonSerialize(using = DecimalPlaces.Two.class)
     @JsonGetter(JsonConstants.SEGMENT_LENGTH)
     public double getSegmentLength() {
-        return GeometryUtils.length(segment.getGeometry());
+        return GeometryUtils.length(this.segment.getGeometry());
     }
 }

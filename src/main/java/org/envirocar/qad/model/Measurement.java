@@ -19,19 +19,19 @@ public class Measurement {
     }
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public Point getGeometry() {
-        return geometry;
+        return this.geometry;
     }
 
     public Instant getTime() {
-        return time;
+        return this.time;
     }
 
     public Values getValues() {
-        return values;
+        return this.values;
     }
 
 }

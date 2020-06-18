@@ -26,15 +26,15 @@ public class AxisModel implements Comparable<AxisModel>, Enveloped {
     }
 
     public ModelId getId() {
-        return id;
+        return this.id;
     }
 
     public String getVersion() {
-        return id.getVersion();
+        return this.id.getVersion();
     }
 
     public Collection<Axis> getAxis() {
-        return Collections.unmodifiableCollection(axis.values());
+        return Collections.unmodifiableCollection(this.axis.values());
     }
 
     public Optional<Axis> getAxis(String id) {
@@ -43,12 +43,12 @@ public class AxisModel implements Comparable<AxisModel>, Enveloped {
                        .filter(x -> x.length == 2)
                        .map(x -> Stream.of(x).mapToInt(Integer::parseInt).toArray())
                        .map(x -> new AxisId(x[0], x[1]))
-                       .map(axis::get);
+                       .map(this.axis::get);
     }
 
     @Override
     public Envelope getEnvelope() {
-        return new Envelope(envelope);
+        return new Envelope(this.envelope);
     }
 
     private Envelope calculateEnvelope() {

@@ -25,7 +25,7 @@ public class SegmentStatistics {
     @JsonSerialize(using = DurationSerializer.class)
     @JsonProperty(JsonConstants.TRAVEL_TIME)
     public Duration getTravelTime() {
-        return travelTime;
+        return this.travelTime;
     }
 
     public void setTravelTime(Duration travelTime) {
@@ -34,7 +34,7 @@ public class SegmentStatistics {
 
     @JsonProperty(JsonConstants.STOPS)
     public int getStops() {
-        return stops;
+        return this.stops;
     }
 
     public void setStops(int stops) {
@@ -44,7 +44,7 @@ public class SegmentStatistics {
     @JsonSerialize(using = DurationSerializer.class)
     @JsonProperty(JsonConstants.STOPPED_TIME)
     public Duration getStoppedTime() {
-        return stoppedTime;
+        return this.stoppedTime;
     }
 
     public void setStoppedTime(Duration stoppedTime) {
@@ -54,7 +54,7 @@ public class SegmentStatistics {
     @JsonSerialize(using = DecimalPlaces.Two.class)
     @JsonProperty(JsonConstants.FUEL_CONSUMPTION)
     public double getFuelConsumption() {
-        return fuelConsumption;
+        return this.fuelConsumption;
     }
 
     public void setFuelConsumption(double fuelConsumption) {
@@ -64,7 +64,7 @@ public class SegmentStatistics {
     @JsonSerialize(using = DecimalPlaces.Two.class)
     @JsonProperty(JsonConstants.ENERGY_CONSUMPTION)
     public double getEnergyConsumption() {
-        return energyConsumption;
+        return this.energyConsumption;
     }
 
     public void setEnergyConsumption(double energyConsumption) {
@@ -74,7 +74,7 @@ public class SegmentStatistics {
     @JsonSerialize(using = DecimalPlaces.Two.class)
     @JsonProperty(JsonConstants.EMISSION)
     public double getEmission() {
-        return emission;
+        return this.emission;
     }
 
     public void setEmission(double emission) {
@@ -84,7 +84,7 @@ public class SegmentStatistics {
     @JsonSerialize(using = DecimalPlaces.Two.class)
     @JsonProperty(JsonConstants.SPEED)
     public double getSpeed() {
-        return speed;
+        return this.speed;
     }
 
     public void setSpeed(double speed) {

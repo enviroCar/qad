@@ -39,12 +39,12 @@ public class LinearTrackDensifier implements TrackDensifier {
 
     @Override
     public Track densify(Track track) {
-        return densify(track, numPoints);
+        return densify(track, this.numPoints);
     }
 
     @Override
     public FeatureCollection densify(FeatureCollection track) {
-        return densify(track, numPoints);
+        return densify(track, this.numPoints);
     }
 
     @Override
@@ -90,13 +90,14 @@ public class LinearTrackDensifier implements TrackDensifier {
 
     private Instant getTime(Feature feature) {
         return OffsetDateTime.parse(feature.getProperties().path(JsonConstants.TIME).textValue(),
-                                    DateTimeFormatter.ISO_DATE_TIME).toInstant();
+                                    DateTimeFormatter.ISO_DATE_TIME)
+                             .toInstant();
     }
 
     private ObjectNode interpolateValues(Feature f1, Feature f2, double fraction) {
         JsonNode p1 = f1.getProperties().path(JsonConstants.PHENOMENONS);
         JsonNode p2 = f2.getProperties().path(JsonConstants.PHENOMENONS);
-        ObjectNode node = nodeFactory.objectNode();
+        ObjectNode node = this.nodeFactory.objectNode();
         Set<String> keys = new HashSet<>();
         p1.fieldNames().forEachRemaining(keys::add);
         p2.fieldNames().forEachRemaining(keys::add);
@@ -132,7 +133,7 @@ public class LinearTrackDensifier implements TrackDensifier {
         }
         List<Feature> features = new ArrayList<>(numPoints);
         for (int i = 1; i <= numPoints; ++i) {
-            ObjectNode properties = nodeFactory.objectNode();
+            ObjectNode properties = this.nodeFactory.objectNode();
             double fraction = i / (double) (numPoints + 1);
             Instant time = Interpolate.linear(getTime(m1), getTime(m2), fraction);
             Point geometry = geometryFactory.createPoint(lineSegment.pointAlong(fraction));

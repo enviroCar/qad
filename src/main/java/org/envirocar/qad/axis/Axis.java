@@ -4,15 +4,12 @@ import org.envirocar.qad.model.Enveloped;
 import org.envirocar.qad.utils.TypeSafeSpatialIndex;
 import org.locationtech.jts.geom.Envelope;
 import org.locationtech.jts.geom.Geometry;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
 public class Axis implements Comparable<Axis>, Enveloped {
-    private static final Logger LOG = LoggerFactory.getLogger(Axis.class);
     private final List<Segment> segments;
     private final Envelope envelope = new Envelope();
     private final double length;
@@ -29,7 +26,7 @@ public class Axis implements Comparable<Axis>, Enveloped {
         }
         this.segments = Objects.requireNonNull(segments);
 
-        segments.stream().map(Segment::getEnvelope).forEach(envelope::expandToInclude);
+        segments.stream().map(Segment::getEnvelope).forEach(this.envelope::expandToInclude);
         this.length = segments.stream().mapToDouble(Segment::getLength).sum();
         this.size = segments.size();
         setPrevAndNext(segments);
@@ -37,7 +34,7 @@ public class Axis implements Comparable<Axis>, Enveloped {
     }
 
     public List<Segment> findIntersectingSegments(Geometry geometry) {
-        final List<Segment> query = spatialIndex.query(geometry, segment -> {
+        List<Segment> query = this.spatialIndex.query(geometry, segment -> {
             return segment.bufferIntersects(geometry);
         });
         Collections.sort(query);
@@ -45,38 +42,38 @@ public class Axis implements Comparable<Axis>, Enveloped {
     }
 
     public ModelId getModelId() {
-        return modelId;
+        return this.modelId;
     }
 
-    private void setPrevAndNext(List<Segment> segments) {
-        for (int i = 0; i < size; ++i) {
+    private void setPrevAndNext(List<? extends Segment> segments) {
+        for (int i = 0; i < this.size; ++i) {
             Segment segment = segments.get(i);
             int prev = i - 1;
             int next = i + 1;
             if (prev >= 0) {
                 segment.setPrev(segments.get(prev));
             }
-            if (next < size) {
+            if (next < this.size) {
                 segment.setNext(segments.get(next));
             }
         }
     }
 
     public int getSize() {
-        return size;
+        return this.size;
     }
 
     public AxisId getId() {
-        return id;
+        return this.id;
     }
 
     @Override
     public Envelope getEnvelope() {
-        return envelope;
+        return this.envelope;
     }
 
     public List<Segment> getSegments() {
-        return Collections.unmodifiableList(segments);
+        return Collections.unmodifiableList(this.segments);
     }
 
     public boolean isApplicable(Enveloped enveloped) {
@@ -84,12 +81,12 @@ public class Axis implements Comparable<Axis>, Enveloped {
     }
 
     public double getLength() {
-        return length;
+        return this.length;
     }
 
     @Override
     public String toString() {
-        return String.format("Axis %s", id);
+        return String.format("Axis %s", this.id);
     }
 
     @Override

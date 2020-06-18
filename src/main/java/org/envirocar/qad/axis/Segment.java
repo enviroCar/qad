@@ -12,10 +12,8 @@ import java.util.Objects;
 import java.util.Optional;
 
 public class Segment implements Comparable<Segment>, Enveloped {
-    private final boolean trafficLightInfluence;
     private final LineString geometry;
     private final int maxSpeed;
-    private final String trafficLight;
     private final double length;
     private final double heading;
     private final Geometry buffer;
@@ -23,24 +21,22 @@ public class Segment implements Comparable<Segment>, Enveloped {
     private Segment prev;
     private Segment next;
 
-    public Segment(SegmentId id, boolean trafficLightInfluence, int maxSpeed, LineString geometry,
-                   String trafficLight, AlgorithmParameters parameters) throws GeometryException {
+    public Segment(SegmentId id, int maxSpeed, LineString geometry, AlgorithmParameters parameters)
+            throws GeometryException {
         this.id = Objects.requireNonNull(id);
-        this.trafficLightInfluence = trafficLightInfluence;
         this.geometry = Objects.requireNonNull(geometry);
         this.maxSpeed = maxSpeed;
-        this.trafficLight = trafficLight;
         this.length = GeometryUtils.length(geometry);
         this.buffer = GeometryUtils.buffer(geometry, parameters.getSegments().getBufferSize());
         this.heading = GeometryUtils.heading(geometry);
     }
 
     public Optional<Segment> prev() {
-        return Optional.ofNullable(prev);
+        return Optional.ofNullable(this.prev);
     }
 
     public Optional<Segment> next() {
-        return Optional.ofNullable(next);
+        return Optional.ofNullable(this.next);
     }
 
     public void setPrev(Segment prev) {
@@ -52,39 +48,31 @@ public class Segment implements Comparable<Segment>, Enveloped {
     }
 
     public SegmentId getId() {
-        return id;
+        return this.id;
     }
 
     public String getName() {
         return this.id.toString();
     }
 
-    public String getTrafficLight() {
-        return trafficLight;
-    }
-
     public int getMaxSpeed() {
-        return maxSpeed;
+        return this.maxSpeed;
     }
 
     public AxisId getAxis() {
-        return id.getAxis();
+        return getId().getAxis();
     }
 
     public int getRank() {
-        return id.getRank();
-    }
-
-    public boolean isTrafficLightInfluence() {
-        return trafficLightInfluence;
+        return getId().getRank();
     }
 
     public LineString getGeometry() {
-        return geometry;
+        return this.geometry;
     }
 
     public double getHeading() {
-        return heading;
+        return this.heading;
     }
 
     @Override
@@ -93,15 +81,15 @@ public class Segment implements Comparable<Segment>, Enveloped {
     }
 
     public double getLength() {
-        return length;
+        return this.length;
     }
 
     public Geometry getBuffer() {
-        return buffer;
+        return this.buffer;
     }
 
     public boolean bufferIntersects(Geometry other) {
-        return buffer.intersects(other);
+        return this.buffer.intersects(other);
     }
 
     @Override

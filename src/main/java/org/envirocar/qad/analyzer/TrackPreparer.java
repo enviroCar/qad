@@ -29,15 +29,15 @@ public class TrackPreparer {
     }
 
     public Track prepare(FeatureCollection featureCollection) throws TrackParsingException {
-        return trackParser.createTrack(densifier.densify(mapMatch(featureCollection)));
+        return this.trackParser.createTrack(this.densifier.densify(mapMatch(featureCollection)));
     }
 
     private FeatureCollection mapMatch(FeatureCollection featureCollection) {
-        if (mapMatcher == null) {
+        if (this.mapMatcher == null) {
             return featureCollection;
         }
         try {
-            return mapMatcher.mapMatch(featureCollection);
+            return this.mapMatcher.mapMatch(featureCollection);
         } catch (MapMatchingException ex) {
             throw new AnalysisException("Could not map match track", ex);
         }

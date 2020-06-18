@@ -19,17 +19,17 @@ public class SegmentId implements Comparable<SegmentId> {
     }
 
     public int getRank() {
-        return rank;
+        return this.rank;
     }
 
     public AxisId getAxis() {
-        return axis;
+        return this.axis;
     }
 
     @JsonValue
     @Override
     public String toString() {
-        return String.format("%d_%d_%02d", axis.getId(), axis.getDirection(), rank);
+        return String.format("%d_%d_%02d", this.axis.getId(), this.axis.getDirection(), this.rank);
     }
 
     @Override

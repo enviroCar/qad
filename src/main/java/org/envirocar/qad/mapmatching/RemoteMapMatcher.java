@@ -28,7 +28,7 @@ public class RemoteMapMatcher implements MapMatcher {
     public FeatureCollection mapMatch(FeatureCollection featureCollection) throws MapMatchingException {
         try {
             LOG.debug("Map matching track {}", featureCollection.getProperties().path(JsonConstants.ID).textValue());
-            Response<MapMatchingResult> result = service.mapMatch(featureCollection).execute();
+            Response<MapMatchingResult> result = this.service.mapMatch(featureCollection).execute();
 
             if (!result.isSuccessful() || result.body() == null) {
                 Exception suppressed = null;

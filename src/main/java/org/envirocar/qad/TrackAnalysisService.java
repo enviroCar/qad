@@ -26,12 +26,12 @@ public class TrackAnalysisService {
     }
 
     public void analyzeTrack(FeatureCollection featureCollection) {
-        Analyzer analyzer = analyzerFactory.create(featureCollection);
+        Analyzer analyzer = this.analyzerFactory.create(featureCollection);
         if (!analyzer.isApplicable()) {
             LOG.info("Skipping track {}, does not intersect with model.",
                      featureCollection.getProperties().path(JsonConstants.ID).textValue());
             return;
         }
-        resultPersistence.persist(analyzer.analyze());
+        this.resultPersistence.persist(analyzer.analyze());
     }
 }

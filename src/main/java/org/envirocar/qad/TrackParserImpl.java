@@ -38,9 +38,9 @@ public class TrackParserImpl implements TrackParser {
     private static class ParseContext {
         private final FeatureCollection featureCollection;
         private final boolean hasNonZeroSpeedValues;
-        private boolean missingFuelConsumption = false;
-        private boolean missingEmission = false;
-        private boolean missingEnergyConsumption = false;
+        private boolean missingFuelConsumption;
+        private boolean missingEmission;
+        private boolean missingEnergyConsumption;
 
         ParseContext(FeatureCollection featureCollection) {
             this.featureCollection = featureCollection;
@@ -48,33 +48,33 @@ public class TrackParserImpl implements TrackParser {
         }
 
         private void missingFuelConsumption() {
-            missingFuelConsumption = true;
+            this.missingFuelConsumption = true;
         }
 
         private void missingEmission() {
-            missingEmission = true;
+            this.missingEmission = true;
         }
 
         private void missingEnergyConsumption() {
-            missingEnergyConsumption = true;
+            this.missingEnergyConsumption = true;
         }
 
         private boolean hasMissingConsumption() {
-            return missingFuelConsumption && missingEnergyConsumption;
+            return this.missingFuelConsumption && this.missingEnergyConsumption;
         }
 
         private boolean hasMissingEmission() {
-            return missingEmission;
+            return this.missingEmission;
         }
 
         private boolean hasNonZeroSpeedValues() {
-            return featureCollection.getFeatures().stream()
-                                    .map(this::getSpeed)
-                                    .filter(OptionalDouble::isPresent)
-                                    .mapToDouble(OptionalDouble::getAsDouble)
-                                    .filter(s -> s != 0.0d)
-                                    .findAny()
-                                    .isPresent();
+            return this.featureCollection.getFeatures().stream()
+                                         .map(this::getSpeed)
+                                         .filter(OptionalDouble::isPresent)
+                                         .mapToDouble(OptionalDouble::getAsDouble)
+                                         .filter(s -> s != 0.0d)
+                                         .findAny()
+                                         .isPresent();
         }
 
         private OptionalDouble getSpeed(Feature feature) {
@@ -91,18 +91,18 @@ public class TrackParserImpl implements TrackParser {
         }
 
         private String getFuelType() {
-            return featureCollection.getProperties()
-                                    .path(JsonConstants.SENSOR)
-                                    .path(JsonConstants.PROPERTIES)
-                                    .path(JsonConstants.FUEL_TYPE)
-                                    .textValue();
+            return this.featureCollection.getProperties()
+                                         .path(JsonConstants.SENSOR)
+                                         .path(JsonConstants.PROPERTIES)
+                                         .path(JsonConstants.FUEL_TYPE)
+                                         .textValue();
         }
 
         Track createTrack() {
             String id = getId();
-            List<Measurement> measurements = featureCollection.getFeatures().stream()
-                                                              .map(this::createMeasurement)
-                                                              .collect(Collectors.toList());
+            List<Measurement> measurements = this.featureCollection.getFeatures().stream()
+                                                                   .map(this::createMeasurement)
+                                                                   .collect(Collectors.toList());
 
             if (hasMissingConsumption()) {
                 LOG.warn("track {} is missing consumption values", id);
@@ -134,7 +134,7 @@ public class TrackParserImpl implements TrackParser {
                 missingEmission();
             }
             OptionalDouble speed;
-            if (hasNonZeroSpeedValues) {
+            if (this.hasNonZeroSpeedValues) {
                 speed = getPhenomenon(feature, PHENOMENON_SPEED);
             } else {
                 speed = getPhenomenon(feature, PHENOMENON_GPS_SPEED);
@@ -187,7 +187,7 @@ public class TrackParserImpl implements TrackParser {
         }
 
         private String getId() {
-            return featureCollection.getProperties().path(JsonConstants.ID).textValue();
+            return this.featureCollection.getProperties().path(JsonConstants.ID).textValue();
         }
 
         private String getId(Feature feature) {

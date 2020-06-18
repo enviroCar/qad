@@ -43,7 +43,7 @@ public class AxisModelParser {
         return new AxisId(id, direction);
     }
 
-    private Axis createAxis(ModelId modelId, AxisId axisId, List<Feature> features) {
+    private Axis createAxis(ModelId modelId, AxisId axisId, List<? extends Feature> features) {
         List<Segment> segments = features.stream()
                                          .map(feature -> createSegments(axisId, feature))
                                          .sorted()
@@ -53,10 +53,7 @@ public class AxisModelParser {
 
     private Segment createSegments(AxisId axisId, Feature feature) {
         int rank = feature.getProperties().path(JsonConstants.SEGMENT_RANK).asInt();
-        int type = feature.getProperties().path(JsonConstants.SEGMENT_TYPE).asInt();
         int maxSpeed = feature.getProperties().path(JsonConstants.MAX_SPEED).asInt();
-        String trafficLight = feature.getProperties().path(JsonConstants.TRAFFIC_LIGHT).textValue();
-
         Geometry geometry = feature.getGeometry();
 
         LineString lineString;
@@ -68,7 +65,7 @@ public class AxisModelParser {
             throw new IllegalArgumentException("unsupported geometry type: " + geometry);
         }
         try {
-            return new Segment(new SegmentId(axisId, rank), type == 1, maxSpeed, lineString, trafficLight, parameters);
+            return new Segment(new SegmentId(axisId, rank), maxSpeed, lineString, this.parameters);
         } catch (GeometryException e) {
             throw new RuntimeException(e);
         }

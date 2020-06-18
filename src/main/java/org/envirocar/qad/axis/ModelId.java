@@ -20,17 +20,17 @@ public class ModelId implements Comparable<ModelId> {
 
     @JsonProperty(JsonConstants.CITY)
     public String getValue() {
-        return value;
+        return this.value;
     }
 
     @JsonProperty(JsonConstants.VERSION)
     public String getVersion() {
-        return version;
+        return this.version;
     }
 
     @Override
     public String toString() {
-        return value;
+        return this.value;
     }
 
     @Override

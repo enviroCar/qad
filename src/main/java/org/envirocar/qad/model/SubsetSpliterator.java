@@ -11,7 +11,7 @@ public class SubsetSpliterator implements SpliteratorAdapter<Track> {
     private final Envelope envelope;
     private final Track track;
     private int begin = -1;
-    private int idx = 0;
+    private int idx;
 
     SubsetSpliterator(Track track, Envelope envelope) {
         this.track = Objects.requireNonNull(track);
@@ -20,30 +20,30 @@ public class SubsetSpliterator implements SpliteratorAdapter<Track> {
 
     @Override
     public boolean tryAdvance(Consumer<? super Track> action) {
-        List<Measurement> measurements = track.getMeasurements();
-        final int size = measurements.size();
-        while (idx < size) {
-            if (envelope.contains(measurements.get(idx).getGeometry().getCoordinate())) {
-                if (begin < 0) {
-                    begin = idx;
+        List<Measurement> measurements = this.track.getMeasurements();
+        int size = measurements.size();
+        while (this.idx < size) {
+            if (this.envelope.contains(measurements.get(this.idx).getGeometry().getCoordinate())) {
+                if (this.begin < 0) {
+                    this.begin = this.idx;
                 }
-            } else if (begin >= 0) {
+            } else if (this.begin >= 0) {
                 return subset(action);
             }
-            idx++;
+            this.idx++;
         }
-        if (begin >= 0) {
+        if (this.begin >= 0) {
             return subset(action);
         }
         return false;
     }
 
     private boolean subset(Consumer<? super Track> action) {
-        int start = begin > 0 ? begin - 1 : begin;
-        int end = idx < track.size() ? idx : idx - 1;
-        action.accept(track.subset(start, end));
-        begin = -1;
-        idx++;
+        int start = this.begin > 0 ? this.begin - 1 : this.begin;
+        int end = this.idx < this.track.size() ? this.idx : this.idx - 1;
+        action.accept(this.track.subset(start, end));
+        this.begin = -1;
+        this.idx++;
         return true;
     }
 }

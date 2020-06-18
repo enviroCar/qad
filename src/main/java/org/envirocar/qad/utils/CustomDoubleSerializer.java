@@ -20,7 +20,7 @@ public class CustomDoubleSerializer extends JsonSerializer<Double> {
         if (null == value) {
             gen.writeNull();
         } else {
-            gen.writeNumber(format.format(value));
+            gen.writeNumber(this.format.format(value));
         }
     }
 

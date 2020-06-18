@@ -6,6 +6,7 @@ import okhttp3.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.annotation.Nonnull;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.Instant;
@@ -22,6 +23,7 @@ public class LoggingInterceptor implements Interceptor {
         this(LoggerFactory.getLogger("okhttp3"));
     }
 
+    @Nonnull
     @Override
     public Response intercept(Chain chain) throws IOException {
         Instant before = Instant.now();
@@ -30,17 +32,17 @@ public class LoggingInterceptor implements Interceptor {
         Instant after = Instant.now();
 
         if (response.isSuccessful()) {
-            log.debug("{} {}: {} {}",
-                      request.method(),
-                      request.url(),
-                      response.code(),
-                      Duration.between(before, after));
+            this.log.debug("{} {}: {} {}",
+                           request.method(),
+                           request.url(),
+                           response.code(),
+                           Duration.between(before, after));
         } else {
-            log.warn("{} {}: {} {}",
-                     request.method(),
-                     request.url(),
-                     response.code(),
-                     Duration.between(before, after));
+            this.log.warn("{} {}: {} {}",
+                          request.method(),
+                          request.url(),
+                          response.code(),
+                          Duration.between(before, after));
         }
         return response;
     }

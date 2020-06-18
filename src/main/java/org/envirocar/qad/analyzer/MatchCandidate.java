@@ -30,12 +30,12 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     private final Track track;
     private final AlgorithmParameters parameters;
     private double length = -1.0d;
-    private LineString geometry = null;
-    private Duration duration = null;
+    private LineString geometry;
+    private Duration duration;
     private int stops = -1;
-    private Duration stopTime = null;
-    private int start;
-    private int end;
+    private Duration stopTime;
+    private final int start;
+    private final int end;
     private final double startThresholdSpeed;
     private final double endThresholdSpeed;
     private final boolean simplifiedLength;
@@ -56,19 +56,19 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     }
 
     public int getStart() {
-        return start;
+        return this.start;
     }
 
     public int getSize() {
-        return end - start + 1;
+        return this.end - this.start + 1;
     }
 
     public int getEnd() {
-        return end;
+        return this.end;
     }
 
     public Segment getSegment() {
-        return segment;
+        return this.segment;
     }
 
     public SegmentResult toSegmentResult() {
@@ -81,28 +81,31 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
         statistics.setStoppedTime(getStopTime());
         statistics.setTravelTime(getDuration());
         statistics.setStops(getStops());
-        return new SegmentResult(segment, statistics, track.getRealIndex(start), track.getRealIndex(end));
+        return new SegmentResult(this.segment,
+                                 statistics,
+                                 this.track.getRealIndex(this.start),
+                                 this.track.getRealIndex(this.end));
     }
 
     public boolean checkOrientation() {
         double trackHeading = getHeading();
-        double segmentHeading = segment.getHeading();
+        double segmentHeading = this.segment.getHeading();
         double deviation = Math.abs(AngleUtils.deviation(trackHeading, segmentHeading));
-        if (deviation <= parameters.getMaxAngleDeviation()) {
+        if (deviation <= this.parameters.getMaxAngleDeviation()) {
             return true;
         }
         LOG.debug("Orientation deviation to big ({}) for segment {}: segment: {}, track: {}",
-                  segment, deviation, segmentHeading, trackHeading);
+                  this.segment, deviation, segmentHeading, trackHeading);
         return false;
     }
 
     public boolean checkLength() {
-        if (Math.abs(getLength() - getSegmentLength()) <= parameters.getLengthDifferenceToTolerate() ||
-            Math.abs(1 - getLengthRatio()) <= parameters.getMaxLengthDeviation()) {
+        if (Math.abs(getLength() - getSegmentLength()) <= this.parameters.getLengthDifferenceToTolerate() ||
+            Math.abs(1 - getLengthRatio()) <= this.parameters.getMaxLengthDeviation()) {
             return true;
         }
         LOG.debug("Length deviation to big for segment {}: segment: {}, track: {}",
-                  segment, getSegmentLength(), getLength());
+                  this.segment, getSegmentLength(), getLength());
         return false;
     }
 
@@ -111,69 +114,70 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     }
 
     private double getSegmentLength() {
-        return simplifiedLength ? GeometryUtils.simplifiedLength(segment.getGeometry()) : segment.getLength();
+        return this.simplifiedLength ? GeometryUtils.simplifiedLength(this.segment.getGeometry())
+                                     : this.segment.getLength();
     }
 
     private LineString snapped;
 
     private LineString getSnappedGeometry() {
-        if (snapped == null) {
-            snapped = GeometryUtils.snapLineToLine(getGeometry(), segment.getGeometry());
+        if (this.snapped == null) {
+            this.snapped = GeometryUtils.snapLineToLine(getGeometry(), this.segment.getGeometry());
         }
-        return snapped;
+        return this.snapped;
     }
 
     private double getLength() {
         if (getSize() == 1) {
             return 0.0d;
         }
-        if (length < 0) {
-            if (simplifiedLength) {
-                length = GeometryUtils.distance(track.getGeometry(start),
-                                                track.getGeometry(end));
+        if (this.length < 0) {
+            if (this.simplifiedLength) {
+                this.length = GeometryUtils.distance(this.track.getGeometry(this.start),
+                                                     this.track.getGeometry(this.end));
             } else {
-                length = GeometryUtils.length(getSnappedGeometry());
+                this.length = GeometryUtils.length(getSnappedGeometry());
             }
-            if (start > 0) {
-                length += GeometryUtils.distance(track.getGeometry(start - 1),
-                                                 track.getGeometry(start)) / 2;
+            if (this.start > 0) {
+                this.length += GeometryUtils.distance(this.track.getGeometry(this.start - 1),
+                                                      this.track.getGeometry(this.start)) / 2;
             }
-            if (end < track.size() - 1) {
-                length += GeometryUtils.distance(track.getGeometry(end),
-                                                 track.getGeometry(end + 1)) / 2;
+            if (this.end < this.track.size() - 1) {
+                this.length += GeometryUtils.distance(this.track.getGeometry(this.end),
+                                                      this.track.getGeometry(this.end + 1)) / 2;
             }
         }
-        return length;
+        return this.length;
     }
 
     private int getStops() {
-        if (stops < 0) {
+        if (this.stops < 0) {
             calculateStops();
         }
-        return stops;
+        return this.stops;
     }
 
     private void calculateStops() {
-        if (start == end) {
+        if (this.start == this.end) {
             this.stops = 0;
             this.stopTime = Duration.ZERO;
             return;
         }
         List<Stop> stops = new LinkedList<>();
         int stopStart = -1;
-        for (int idx = start; idx <= end; ++idx) {
-            double speed = track.getSpeed(idx);
+        for (int idx = this.start; idx <= this.end; ++idx) {
+            double speed = this.track.getSpeed(idx);
             if (stopStart < 0) {
-                if (speed <= startThresholdSpeed) {
+                if (speed <= this.startThresholdSpeed) {
                     stopStart = idx;
                 }
-            } else if (speed > endThresholdSpeed) {
+            } else if (speed > this.endThresholdSpeed) {
                 stops.add(new Stop(stopStart, idx));
                 stopStart = -1;
             }
         }
         if (stopStart >= 0) {
-            stops.add(new Stop(stopStart, end));
+            stops.add(new Stop(stopStart, this.end));
         }
         this.stopTime = stops.stream()
                              .peek(this::logStop)
@@ -185,21 +189,21 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     private Values getMeanValues() {
         int count = getSize();
         if (count == 1) {
-            return track.getValues(start);
+            return this.track.getValues(this.start);
         }
         double length = 0.0d;
         double speed = 0.0d;
         double carbonDioxide = 0.0d;
         double fuelConsumption = 0.0d;
         double energyConsumption = 0.0d;
-        int maxIdx = track.size() - 1;
+        int maxIdx = this.track.size() - 1;
 
-        for (int idx = start; idx <= end; ++idx) {
-            Values values = track.getValues(idx);
-            if (meanType == MeanType.HARMONIC) {
+        for (int idx = this.start; idx <= this.end; ++idx) {
+            Values values = this.track.getValues(idx);
+            if (this.meanType == MeanType.HARMONIC) {
                 if (idx > 0) {
-                    double length0 = track.getLength(idx - 1, idx);
-                    double speed0 = (values.getSpeed() + track.getSpeed(idx - 1)) / 2;
+                    double length0 = this.track.getLength(idx - 1, idx);
+                    double speed0 = (values.getSpeed() + this.track.getSpeed(idx - 1)) / 2;
                     length += length0;
                     if (speed0 > 0.0d) {
                         speed += length0 / speed0;
@@ -207,8 +211,8 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
                 }
 
                 if (idx < maxIdx) {
-                    double length0 = track.getLength(idx, idx + 1);
-                    double speed0 = (values.getSpeed() + track.getSpeed(idx + 1)) / 2;
+                    double length0 = this.track.getLength(idx, idx + 1);
+                    double speed0 = (values.getSpeed() + this.track.getSpeed(idx + 1)) / 2;
                     length += length0;
                     if (speed0 > 0.0d) {
                         speed += length0 / speed0;
@@ -226,7 +230,7 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
         fuelConsumption /= count;
         carbonDioxide /= count;
         energyConsumption /= count;
-        switch (meanType) {
+        switch (this.meanType) {
             case HARMONIC:
                 speed = speed == 0.0d ? 0.0d : length / speed;
                 break;
@@ -241,48 +245,48 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     }
 
     private Duration getStopTime() {
-        if (stopTime == null) {
+        if (this.stopTime == null) {
             calculateStops();
         }
-        return stopTime;
+        return this.stopTime;
     }
 
     private Duration getDuration(Stop stop) {
-        return track.getExtendedDuration(stop.start, stop.end);
+        return this.track.getExtendedDuration(stop.start, stop.end);
     }
 
     private void logStop(Stop stop) {
         LOG.debug("Found stop in track {} on segment {}, from {} to {}",
-                  track, segment, track.getRealIndex(stop.start), track.getRealIndex(stop.end));
+                  this.track, this.segment, this.track.getRealIndex(stop.start), this.track.getRealIndex(stop.end));
     }
 
     private Duration getDuration() {
-        if (start == end) {
-            double speed = track.getValues(start).getSpeed();
+        if (this.start == this.end) {
+            double speed = this.track.getValues(this.start).getSpeed();
             if (speed == 0) {
                 return Duration.ZERO;
             }
-            return BigDecimals.toDuration(BigDecimal.valueOf((segment.getLength() / (speed / 3.6)) * 1000));
+            return BigDecimals.toDuration(BigDecimal.valueOf((this.segment.getLength() / (speed / 3.6)) * 1000));
         }
 
-        if (duration == null) {
-            duration = track.getDuration(start, end);
+        if (this.duration == null) {
+            this.duration = this.track.getDuration(this.start, this.end);
             BigDecimal scaleFactor = BigDecimal.valueOf(1 / getLengthRatio());
-            duration = BigDecimals.toDuration(BigDecimals.create(duration).multiply(scaleFactor));
+            this.duration = BigDecimals.toDuration(BigDecimals.create(this.duration).multiply(scaleFactor));
         }
-        return duration;
+        return this.duration;
     }
 
     private LineString getGeometry() {
-        if (geometry == null) {
-            geometry = track.getGeometry(start, end);
+        if (this.geometry == null) {
+            this.geometry = this.track.getGeometry(this.start, this.end);
         }
-        return geometry;
+        return this.geometry;
     }
 
     private double getHeading() {
-        return GeometryUtils.heading(track.getGeometry(start).getCoordinate(),
-                                     track.getGeometry(end).getCoordinate());
+        return GeometryUtils.heading(this.track.getGeometry(this.start).getCoordinate(),
+                                     this.track.getGeometry(this.end).getCoordinate());
     }
 
     @Override

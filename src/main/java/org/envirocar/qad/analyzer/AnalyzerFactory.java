@@ -22,9 +22,10 @@ public class AnalyzerFactory {
     private final TrackSplitter trackSplitter;
 
     @Autowired
-    private AnalyzerFactory(AlgorithmParameters parameters, AxisModelRepository repository,
-                            TrackPreparer trackPreparer,
-                            Optional<TrackSplitter> trackSplitter) {
+    public AnalyzerFactory(AlgorithmParameters parameters,
+                           AxisModelRepository repository,
+                           TrackPreparer trackPreparer,
+                           Optional<TrackSplitter> trackSplitter) {
         this.parameters = Objects.requireNonNull(parameters);
         this.repository = Objects.requireNonNull(repository);
         this.trackPreparer = Objects.requireNonNull(trackPreparer);
@@ -32,7 +33,7 @@ public class AnalyzerFactory {
     }
 
     public MatchCandidate create(Segment segment, Track track, int start, int end) {
-        return new MatchCandidate(parameters, segment, track, start, end);
+        return new MatchCandidate(this.parameters, segment, track, start, end);
     }
 
     public Analyzer create(AxisModel axisModel, Track track) {
@@ -44,7 +45,11 @@ public class AnalyzerFactory {
     }
 
     public Analyzer create(FeatureCollection featureCollection) {
-        return new AxisModelsAnalyzer(this, repository, trackPreparer, trackSplitter, featureCollection);
+        return new AxisModelsAnalyzer(this,
+                                      this.repository,
+                                      this.trackPreparer,
+                                      this.trackSplitter,
+                                      featureCollection);
     }
 
 }

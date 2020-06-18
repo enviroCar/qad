@@ -9,7 +9,7 @@ public class KafkaParameters {
     private Bootstrap bootstrap = new Bootstrap();
 
     public String getClientId() {
-        return clientId;
+        return this.clientId;
     }
 
     public void setClientId(String clientId) {
@@ -17,7 +17,7 @@ public class KafkaParameters {
     }
 
     public String getGroupId() {
-        return groupId;
+        return this.groupId;
     }
 
     public void setGroupId(String groupId) {
@@ -25,7 +25,7 @@ public class KafkaParameters {
     }
 
     public Bootstrap getBootstrap() {
-        return bootstrap;
+        return this.bootstrap;
     }
 
     public void setBootstrap(Bootstrap bootstrap) {
@@ -36,7 +36,7 @@ public class KafkaParameters {
         private String servers;
 
         public String getServers() {
-            return servers;
+            return this.servers;
         }
 
         public void setServers(String servers) {

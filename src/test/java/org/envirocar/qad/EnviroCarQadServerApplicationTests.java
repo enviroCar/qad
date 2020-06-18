@@ -82,14 +82,14 @@ public class EnviroCarQadServerApplicationTests {
 
     @Test
     public void test_5e5f7a8e77e02d42aa95b384() throws IOException, MapMatchingException {
-        AxisModel axis = axisModelRepository.getAxisModel("CHE").orElseThrow(IllegalStateException::new);
+        AxisModel axis = this.axisModelRepository.getAxisModel("CHE").orElseThrow(IllegalStateException::new);
         Stream<Track> track = writeAndPrepare("5e5f7a8e77e02d42aa95b384");
 
-        List<AnalysisResult> collect = track.flatMap(t -> analyzerFactory.create(axis, t).analyze())
+        List<AnalysisResult> collect = track.flatMap(t -> this.analyzerFactory.create(axis, t).analyze())
                                             .collect(toList());
 
         for (AnalysisResult result : collect) {
-            directoryResultPersistence.persist(result);
+            this.directoryResultPersistence.persist(result);
         }
         assertThat(collect.size(), is(4));
 
@@ -97,27 +97,27 @@ public class EnviroCarQadServerApplicationTests {
 
     @Test
     public void test_5e5d226377e02d42aa9350a0() throws IOException, MapMatchingException {
-        Axis axis = axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("01_2")).get();
+        Axis axis = this.axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("01_2")).get();
         Stream<Track> track = writeAndPrepare("5e5d226377e02d42aa934f4f");
-        List<AnalysisResult> collect = track.flatMap(t -> analyzerFactory.create(axis, t).analyze())
+        List<AnalysisResult> collect = track.flatMap(t -> this.analyzerFactory.create(axis, t).analyze())
                                             .collect(toList());
         assertThat(collect.size(), is(1));
     }
 
     @Test
     public void test_5e5620e777e02d42aa8e1153() throws IOException, MapMatchingException {
-        Axis axis = axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("01_1")).get();
+        Axis axis = this.axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("01_1")).get();
         Stream<Track> track = writeAndPrepare("5e5620e777e02d42aa8e1153");
-        track.flatMap(t -> analyzerFactory.create(axis, t).analyze())
+        track.flatMap(t -> this.analyzerFactory.create(axis, t).analyze())
              .map(this::toJSON)
              .forEach(System.err::println);
     }
 
     @Test
     public void test_5e4132753965f36894e62148() throws IOException, MapMatchingException {
-        Axis axis = axisModelRepository.getAxisModel("CHE").flatMap(x -> x.getAxis("22_2")).get();
+        Axis axis = this.axisModelRepository.getAxisModel("CHE").flatMap(x -> x.getAxis("22_2")).get();
         Stream<Track> track = writeAndPrepare("5e4132753965f36894e62148");
-        track.flatMap(t -> analyzerFactory.create(axis, t).analyze())
+        track.flatMap(t -> this.analyzerFactory.create(axis, t).analyze())
              .map(this::toJSON)
              .forEach(System.err::println);
     }
@@ -131,30 +131,30 @@ public class EnviroCarQadServerApplicationTests {
                 Measurement x = track.getMeasurement(idx);
                 feature.setGeometry(x.getGeometry());
                 feature.setId(x.getId());
-                feature.setProperties(objectMapper.createObjectNode()
-                                                  .putPOJO("time", x.getTime())
-                                                  .put("idx", idx));
+                feature.setProperties(this.objectMapper.createObjectNode()
+                                                       .putPOJO("time", x.getTime())
+                                                       .put("idx", idx));
                 features.add(feature);
             }
 
             featureCollection.setFeatures(features);
 
-            objectMapper.writeValue(writer, featureCollection);
+            this.objectMapper.writeValue(writer, featureCollection);
         }
     }
 
     private Stream<Track> writeAndPrepare(String id) throws MapMatchingException, IOException {
         FeatureCollection featureCollection = readFeatureCollection(id);
 
-        if (mapMatcher.isPresent()) {
+        if (this.mapMatcher.isPresent()) {
             featureCollection = this.mapMatcher.get().mapMatch(featureCollection);
-            writeTrack(trackParser.createTrack(featureCollection), "matched");
+            writeTrack(this.trackParser.createTrack(featureCollection), "matched");
         }
-        featureCollection = densifier.densify(featureCollection);
-        Track track = trackParser.createTrack(featureCollection);
+        featureCollection = this.densifier.densify(featureCollection);
+        Track track = this.trackParser.createTrack(featureCollection);
         writeTrack(track, "processed");
-        if (trackSplitter.isPresent()) {
-            return trackSplitter.get().split(track);
+        if (this.trackSplitter.isPresent()) {
+            return this.trackSplitter.get().split(track);
         }
         return Stream.of(track);
     }
@@ -173,7 +173,7 @@ public class EnviroCarQadServerApplicationTests {
         Stream.of("5d138cb844ea855023b210ab")
               .map(x -> PATH.resolve(String.format("%s.json", x)))
               .map(this::readFeatureCollection)
-              .map(analyzerFactory::create)
+              .map(this.analyzerFactory::create)
               .filter(Analyzer::isApplicable)
               .flatMap(Analyzer::analyze)
               .map(this::toJSON)
@@ -182,7 +182,7 @@ public class EnviroCarQadServerApplicationTests {
 
     private String toJSON(AnalysisResult result) {
         try {
-            return objectMapper.writeValueAsString(result);
+            return this.objectMapper.writeValueAsString(result);
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
@@ -190,7 +190,7 @@ public class EnviroCarQadServerApplicationTests {
 
     private FeatureCollection readFeatureCollection(Path path) {
         try (InputStream in = Files.newInputStream(path)) {
-            return objectMapper.readValue(in, FeatureCollection.class);
+            return this.objectMapper.readValue(in, FeatureCollection.class);
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }

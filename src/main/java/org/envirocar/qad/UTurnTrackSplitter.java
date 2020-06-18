@@ -25,16 +25,16 @@ public class UTurnTrackSplitter extends AbstractTrackSplitter {
     @Override
     protected int findSplitIndex(Track track) {
         int size = track.size();
-        for (int idx = 1; idx < size - 1; ++idx) {
+        for (int i = 1; i < size - 1; ++i) {
             try {
-                double heading1 = track.getHeading(idx);
-                Geometry buffer = GeometryUtils.buffer(track.getGeometry(idx), bufferSize);
-                int windowEnd = Math.min(size - 1, 1 + idx + windowSize);
-                for (int succ = idx + 1; succ < windowEnd; ++succ) {
-                    if (buffer.contains(track.getGeometry(succ))) {
-                        double heading2 = track.getHeading(succ);
+                double heading1 = track.getHeading(i);
+                Geometry buffer = GeometryUtils.buffer(track.getGeometry(i), this.bufferSize);
+                int windowEnd = Math.min(size - 1, 1 + i + this.windowSize);
+                for (int j = i + 1; j < windowEnd; ++j) {
+                    if (buffer.contains(track.getGeometry(j))) {
+                        double heading2 = track.getHeading(j);
                         if (isOppositeDirection(heading1, heading2)) {
-                            return findMaxHeadingDeviation(track, idx, succ);
+                            return findMaxHeadingDeviation(track, i, j);
                         }
                     }
                 }
@@ -62,6 +62,6 @@ public class UTurnTrackSplitter extends AbstractTrackSplitter {
     }
 
     private boolean isOppositeDirection(double heading, double heading2) {
-        return Math.abs(AngleUtils.deviation(heading, heading2)) >= minAngleDeviation;
+        return Math.abs(AngleUtils.deviation(heading, heading2)) >= this.minAngleDeviation;
     }
 }

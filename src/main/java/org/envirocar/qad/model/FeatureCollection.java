@@ -21,7 +21,7 @@ public class FeatureCollection implements Enveloped {
     private List<Feature> features;
 
     public List<Feature> getFeatures() {
-        return features;
+        return this.features;
     }
 
     public void setFeatures(List<Feature> features) {
@@ -38,7 +38,7 @@ public class FeatureCollection implements Enveloped {
     }
 
     public ObjectNode getProperties() {
-        return properties;
+        return this.properties;
     }
 
     public void setProperties(ObjectNode properties) {
@@ -54,14 +54,14 @@ public class FeatureCollection implements Enveloped {
     }
 
     public Feature getFeature(int i) {
-        if (features == null) {
+        if (this.features == null) {
             throw new IndexOutOfBoundsException();
         }
-        return features.get(i);
+        return this.features.get(i);
     }
 
     public int size() {
-        return features == null ? 0 : features.size();
+        return this.features == null ? 0 : this.features.size();
     }
 
     public boolean isEmpty() {

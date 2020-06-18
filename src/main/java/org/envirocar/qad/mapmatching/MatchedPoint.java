@@ -16,7 +16,7 @@ public class MatchedPoint {
 
     @JsonGetter(JsonConstants.OSM_ID)
     public Long getOsmId() {
-        return osmId;
+        return this.osmId;
     }
 
     @JsonSetter(JsonConstants.OSM_ID)
@@ -26,7 +26,7 @@ public class MatchedPoint {
 
     @JsonGetter(JsonConstants.MEASUREMENT_ID)
     public String getMeasurementId() {
-        return measurementId;
+        return this.measurementId;
     }
 
     @JsonSetter(JsonConstants.MEASUREMENT_ID)
@@ -36,7 +36,7 @@ public class MatchedPoint {
 
     @JsonGetter(JsonConstants.STREET_NAME)
     public String getStreetName() {
-        return streetName;
+        return this.streetName;
     }
 
     @JsonSetter(JsonConstants.STREET_NAME)
@@ -46,7 +46,7 @@ public class MatchedPoint {
 
     @JsonGetter(JsonConstants.UNMATCHED_POINT)
     public Feature getUnmatchedPoint() {
-        return unmatchedPoint;
+        return this.unmatchedPoint;
     }
 
     @JsonSetter(JsonConstants.UNMATCHED_POINT)
@@ -56,7 +56,7 @@ public class MatchedPoint {
 
     @JsonGetter(JsonConstants.POINT_ON_ROAD)
     public Feature getPointOnRoad() {
-        return pointOnRoad;
+        return this.pointOnRoad;
     }
 
     @JsonSetter(JsonConstants.POINT_ON_ROAD)

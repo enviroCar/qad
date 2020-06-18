@@ -19,10 +19,10 @@ public class AlgorithmParameters {
     private MapMatching mapMatching = new MapMatching();
     private UTurn uturn = new UTurn();
     private Path outputPath;
-    private boolean simplifyLengthCalculation = false;
+    private boolean simplifyLengthCalculation;
 
     public double getLengthDifferenceToTolerate() {
-        return lengthDifferenceToTolerate;
+        return this.lengthDifferenceToTolerate;
     }
 
     public void setLengthDifferenceToTolerate(double lengthDifferenceToTolerate) {
@@ -30,7 +30,7 @@ public class AlgorithmParameters {
     }
 
     public double getSnappingTolerance() {
-        return snappingTolerance;
+        return this.snappingTolerance;
     }
 
     public void setSnappingTolerance(double snappingTolerance) {
@@ -38,7 +38,7 @@ public class AlgorithmParameters {
     }
 
     public boolean isSimplifyLengthCalculation() {
-        return simplifyLengthCalculation;
+        return this.simplifyLengthCalculation;
     }
 
     public void setSimplifyLengthCalculation(boolean simplifyLengthCalculation) {
@@ -46,7 +46,7 @@ public class AlgorithmParameters {
     }
 
     public Path getOutputPath() {
-        return outputPath;
+        return this.outputPath;
     }
 
     public void setOutputPath(Path outputPath) {
@@ -54,7 +54,7 @@ public class AlgorithmParameters {
     }
 
     public MapMatching getMapMatching() {
-        return mapMatching;
+        return this.mapMatching;
     }
 
     public void setMapMatching(MapMatching mapMatching) {
@@ -62,7 +62,7 @@ public class AlgorithmParameters {
     }
 
     public double getMaxAngleDeviation() {
-        return maxAngleDeviation;
+        return this.maxAngleDeviation;
     }
 
     public void setMaxAngleDeviation(double maxAngleDeviation) {
@@ -70,7 +70,7 @@ public class AlgorithmParameters {
     }
 
     public double getMaxLengthDeviation() {
-        return maxLengthDeviation;
+        return this.maxLengthDeviation;
     }
 
     public void setMaxLengthDeviation(double maxLengthDeviation) {
@@ -78,7 +78,7 @@ public class AlgorithmParameters {
     }
 
     public Densify getDensify() {
-        return densify;
+        return this.densify;
     }
 
     public void setDensify(Densify densify) {
@@ -86,7 +86,7 @@ public class AlgorithmParameters {
     }
 
     public Stops getStops() {
-        return stops;
+        return this.stops;
     }
 
     public void setStops(Stops stops) {
@@ -94,11 +94,11 @@ public class AlgorithmParameters {
     }
 
     public Segments getSegments() {
-        return segments;
+        return this.segments;
     }
 
     public UTurn getUTurn() {
-        return uturn;
+        return this.uturn;
     }
 
     public void setUTurn(UTurn uturn) {
@@ -114,7 +114,7 @@ public class AlgorithmParameters {
         private URL url;
 
         public URL getUrl() {
-            return url;
+            return this.url;
         }
 
         public void setUrl(URL url) {
@@ -127,7 +127,7 @@ public class AlgorithmParameters {
         private double endThresholdSpeed = 10.0d;
 
         public double getStartThresholdSpeed() {
-            return startThresholdSpeed;
+            return this.startThresholdSpeed;
         }
 
         public void setStartThresholdSpeed(double startThresholdSpeed) {
@@ -135,7 +135,7 @@ public class AlgorithmParameters {
         }
 
         public double getEndThresholdSpeed() {
-            return endThresholdSpeed;
+            return this.endThresholdSpeed;
         }
 
         public void setEndThresholdSpeed(double endThresholdSpeed) {
@@ -147,7 +147,7 @@ public class AlgorithmParameters {
         private double bufferSize = 10;
 
         public double getBufferSize() {
-            return bufferSize;
+            return this.bufferSize;
         }
 
         public void setBufferSize(double bufferSize) {
@@ -159,7 +159,7 @@ public class AlgorithmParameters {
         private int numPoints = 4;
 
         public int getNumPoints() {
-            return numPoints;
+            return this.numPoints;
         }
 
         public void setNumPoints(int numPoints) {
@@ -173,7 +173,7 @@ public class AlgorithmParameters {
         private double minAngleDeviation = 170.0d;
 
         public int getWindowSize() {
-            return windowSize;
+            return this.windowSize;
         }
 
         public void setWindowSize(int windowSize) {
@@ -181,7 +181,7 @@ public class AlgorithmParameters {
         }
 
         public double getBufferSize() {
-            return bufferSize;
+            return this.bufferSize;
         }
 
         public void setBufferSize(double bufferSize) {
@@ -189,7 +189,7 @@ public class AlgorithmParameters {
         }
 
         public double getMinAngleDeviation() {
-            return minAngleDeviation;
+            return this.minAngleDeviation;
         }
 
         public void setMinAngleDeviation(double minAngleDeviation) {

@@ -27,6 +27,6 @@ public class KafkaTrackListener {
     public void onNewTrack(FeatureCollection track) {
         String id = track.getProperties().path(JsonConstants.ID).textValue();
         LOG.info("Received track {}", id);
-        service.analyzeTrack(track);
+        this.service.analyzeTrack(track);
     }
 }
