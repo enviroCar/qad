@@ -1,0 +1,20 @@
+{
+  "city" : "HAM",
+  "version" : "2019-10-23",
+  "axis" : "404_3",
+  "start" : "2020-07-03T10:07:33.000+0200",
+  "end" : "2020-07-03T10:07:58.800+0200",
+  "fuelType" : "electric",
+  "segments" : [ {
+    "travelTime" : 25.624,
+    "stops" : 0,
+    "stoppedTime" : 0.000,
+    "fuelConsumption" : 0,
+    "energyConsumption" : 4.52,
+    "emission" : 0,
+    "speed" : 5.22,
+    "segmentLength" : 32.76,
+    "segmentId" : 0
+  } ],
+  "track" : "5efef1ed604fbd6206b36d67"
+}

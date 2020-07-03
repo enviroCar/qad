@@ -1,29 +1,35 @@
 package org.envirocar.qad.model.result;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.databind.JsonSerializer;
-import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.envirocar.qad.JsonConstants;
-import org.envirocar.qad.utils.BigDecimals;
 import org.envirocar.qad.utils.DecimalPlaces;
+import org.envirocar.qad.utils.DurationSerializer;
 
-import java.io.IOException;
-import java.math.RoundingMode;
 import java.time.Duration;
 
 public class SegmentStatistics {
-    private Duration travelTime;
-    private int stops;
-    private Duration stoppedTime;
-    private double fuelConsumption;
-    private double energyConsumption;
-    private double emission;
-    private double speed;
-
     @JsonSerialize(using = DurationSerializer.class)
     @JsonProperty(JsonConstants.TRAVEL_TIME)
+    private Duration travelTime;
+    @JsonProperty(JsonConstants.STOPS)
+    private int stops;
+    @JsonSerialize(using = DurationSerializer.class)
+    @JsonProperty(JsonConstants.STOPPED_TIME)
+    private Duration stoppedTime;
+    @JsonSerialize(using = DecimalPlaces.Two.class)
+    @JsonProperty(JsonConstants.FUEL_CONSUMPTION)
+    private double fuelConsumption;
+    @JsonSerialize(using = DecimalPlaces.Two.class)
+    @JsonProperty(JsonConstants.ENERGY_CONSUMPTION)
+    private double energyConsumption;
+    @JsonSerialize(using = DecimalPlaces.Two.class)
+    @JsonProperty(JsonConstants.EMISSION)
+    private double emission;
+    @JsonSerialize(using = DecimalPlaces.Two.class)
+    @JsonProperty(JsonConstants.SPEED)
+    private double speed;
+
     public Duration getTravelTime() {
         return this.travelTime;
     }
@@ -32,7 +38,6 @@ public class SegmentStatistics {
         this.travelTime = travelTime;
     }
 
-    @JsonProperty(JsonConstants.STOPS)
     public int getStops() {
         return this.stops;
     }
@@ -41,8 +46,6 @@ public class SegmentStatistics {
         this.stops = stops;
     }
 
-    @JsonSerialize(using = DurationSerializer.class)
-    @JsonProperty(JsonConstants.STOPPED_TIME)
     public Duration getStoppedTime() {
         return this.stoppedTime;
     }
@@ -51,8 +54,6 @@ public class SegmentStatistics {
         this.stoppedTime = stoppedTime;
     }
 
-    @JsonSerialize(using = DecimalPlaces.Two.class)
-    @JsonProperty(JsonConstants.FUEL_CONSUMPTION)
     public double getFuelConsumption() {
         return this.fuelConsumption;
     }
@@ -61,8 +62,6 @@ public class SegmentStatistics {
         this.fuelConsumption = fuelConsumption;
     }
 
-    @JsonSerialize(using = DecimalPlaces.Two.class)
-    @JsonProperty(JsonConstants.ENERGY_CONSUMPTION)
     public double getEnergyConsumption() {
         return this.energyConsumption;
     }
@@ -71,8 +70,6 @@ public class SegmentStatistics {
         this.energyConsumption = energyConsumption;
     }
 
-    @JsonSerialize(using = DecimalPlaces.Two.class)
-    @JsonProperty(JsonConstants.EMISSION)
     public double getEmission() {
         return this.emission;
     }
@@ -81,8 +78,6 @@ public class SegmentStatistics {
         this.emission = emission;
     }
 
-    @JsonSerialize(using = DecimalPlaces.Two.class)
-    @JsonProperty(JsonConstants.SPEED)
     public double getSpeed() {
         return this.speed;
     }
@@ -91,14 +86,4 @@ public class SegmentStatistics {
         this.speed = speed;
     }
 
-    private static class DurationSerializer extends JsonSerializer<Duration> {
-        @Override
-        public void serialize(Duration value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
-            if (value == null) {
-                gen.writeNull();
-            } else {
-                gen.writeNumber(BigDecimals.create(value).setScale(3, RoundingMode.HALF_UP));
-            }
-        }
-    }
 }
