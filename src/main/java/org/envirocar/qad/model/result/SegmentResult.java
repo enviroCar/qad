@@ -61,6 +61,9 @@ public class SegmentResult {
     @JsonSerialize(using = DecimalPlaces.Two.class)
     @JsonGetter(JsonConstants.SEGMENT_LENGTH)
     public double getSegmentLength() {
+        if (this.segment == null) {
+            return -1;
+        }
         return GeometryUtils.length(this.segment.getGeometry());
     }
 }
