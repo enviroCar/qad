@@ -39,7 +39,6 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     private final double startThresholdSpeed;
     private final double endThresholdSpeed;
     private final boolean simplifiedLength;
-    private final MeanType meanType = MeanType.ARITHMETIC;
 
     public MatchCandidate(AlgorithmParameters parameters, Segment segment, Track track, int start, int end) {
         this.segment = Objects.requireNonNull(segment);
@@ -77,7 +76,7 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
         statistics.setFuelConsumption(meanValues.getFuelConsumption().orElse(0.0d));
         statistics.setEnergyConsumption(meanValues.getEnergyConsumption().orElse(0.0d));
         statistics.setEmission(meanValues.getCarbonDioxide().orElse(0.0d));
-        statistics.setSpeed(meanValues.getSpeed() / 3.6);
+        statistics.setSpeed(meanValues.getSpeed());
         statistics.setStoppedTime(getStopTime());
         statistics.setTravelTime(getDuration());
         statistics.setStops(getStops());
@@ -191,57 +190,23 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
         if (count == 1) {
             return this.track.getValues(this.start);
         }
-        double length = 0.0d;
         double speed = 0.0d;
         double carbonDioxide = 0.0d;
         double fuelConsumption = 0.0d;
         double energyConsumption = 0.0d;
-        int maxIdx = this.track.size() - 1;
 
         for (int idx = this.start; idx <= this.end; ++idx) {
             Values values = this.track.getValues(idx);
-            if (this.meanType == MeanType.HARMONIC) {
-                if (idx > 0) {
-                    double length0 = this.track.getLength(idx - 1, idx);
-                    double speed0 = (values.getSpeed() + this.track.getSpeed(idx - 1)) / 2;
-                    length += length0;
-                    if (speed0 > 0.0d) {
-                        speed += length0 / speed0;
-                    }
-                }
-
-                if (idx < maxIdx) {
-                    double length0 = this.track.getLength(idx, idx + 1);
-                    double speed0 = (values.getSpeed() + this.track.getSpeed(idx + 1)) / 2;
-                    length += length0;
-                    if (speed0 > 0.0d) {
-                        speed += length0 / speed0;
-                    }
-                }
-            } else {
-                speed += values.getSpeed();
-            }
-
+            speed += values.getSpeed();
             carbonDioxide += values.getCarbonDioxide().orElse(0.0d);
             fuelConsumption += values.getFuelConsumption().orElse(0.0d);
             energyConsumption += values.getEnergyConsumption().orElse(0.0d);
         }
 
-        fuelConsumption /= count;
-        carbonDioxide /= count;
-        energyConsumption /= count;
-        switch (this.meanType) {
-            case HARMONIC:
-                speed = speed == 0.0d ? 0.0d : length / speed;
-                break;
-            case ARITHMETIC:
-                speed /= count;
-                break;
-            default:
-                throw new AssertionError("unsupported MeanType");
-        }
-
-        return new Values(speed, fuelConsumption, energyConsumption, carbonDioxide);
+        return new Values(speed / count,
+                          fuelConsumption / count,
+                          energyConsumption / count,
+                          carbonDioxide / count);
     }
 
     private Duration getStopTime() {
@@ -256,7 +221,7 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     }
 
     private void logStop(Stop stop) {
-        LOG.debug("Found stop in track {} on segment {}, from {} to {}",
+        LOG.debug("Found stop in track {} on .gesegment {}, from {} to {}",
                   this.track, this.segment, this.track.getRealIndex(stop.start), this.track.getRealIndex(stop.end));
     }
 
@@ -266,7 +231,7 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
             if (speed == 0) {
                 return Duration.ZERO;
             }
-            return BigDecimals.toDuration(BigDecimal.valueOf((this.segment.getLength() / (speed / 3.6)) * 1000));
+            return BigDecimals.toDuration(BigDecimal.valueOf(this.segment.getLength() / (speed / 3.6)));
         }
 
         if (this.duration == null) {
@@ -303,11 +268,6 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
             this.start = start;
             this.end = end;
         }
-    }
-
-    private enum MeanType {
-        ARITHMETIC,
-        HARMONIC
     }
 
 }

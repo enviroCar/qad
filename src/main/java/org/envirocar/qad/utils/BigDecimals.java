@@ -14,7 +14,6 @@ public class BigDecimals {
     }
 
     public static BigDecimal create(Duration duration) {
-
         return create(duration.getSeconds(), duration.getNano());
     }
 
