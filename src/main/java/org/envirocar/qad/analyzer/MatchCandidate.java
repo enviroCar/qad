@@ -112,6 +112,10 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
         return getLength() / getSegmentLength();
     }
 
+    private double getUnadjustedLengthRatio() {
+        return getUnadjustedLength() / getSegmentLength();
+    }
+
     private double getSegmentLength() {
         return this.simplifiedLength ? GeometryUtils.simplifiedLength(this.segment.getGeometry())
                                      : this.segment.getLength();
@@ -131,12 +135,7 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
             return 0.0d;
         }
         if (this.length < 0) {
-            if (this.simplifiedLength) {
-                this.length = GeometryUtils.distance(this.track.getGeometry(this.start),
-                                                     this.track.getGeometry(this.end));
-            } else {
-                this.length = GeometryUtils.length(getSnappedGeometry());
-            }
+            this.length = getUnadjustedLength();
             if (this.start > 0) {
                 this.length += GeometryUtils.distance(this.track.getGeometry(this.start - 1),
                                                       this.track.getGeometry(this.start)) / 2;
@@ -147,6 +146,15 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
             }
         }
         return this.length;
+    }
+
+    private double getUnadjustedLength() {
+        if (this.simplifiedLength) {
+            return GeometryUtils.distance(this.track.getGeometry(this.start),
+                                          this.track.getGeometry(this.end));
+        } else {
+            return GeometryUtils.length(getSnappedGeometry());
+        }
     }
 
     private int getStops() {
@@ -221,7 +229,7 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     }
 
     private void logStop(Stop stop) {
-        LOG.debug("Found stop in track {} on .gesegment {}, from {} to {}",
+        LOG.debug("Found stop in track {} on segment {}, from {} to {}",
                   this.track, this.segment, this.track.getRealIndex(stop.start), this.track.getRealIndex(stop.end));
     }
 
@@ -236,7 +244,7 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
 
         if (this.duration == null) {
             this.duration = this.track.getDuration(this.start, this.end);
-            BigDecimal scaleFactor = BigDecimal.valueOf(1 / getLengthRatio());
+            BigDecimal scaleFactor = BigDecimal.valueOf(1 / getUnadjustedLengthRatio());
             this.duration = BigDecimals.toDuration(BigDecimals.create(this.duration).multiply(scaleFactor));
         }
         return this.duration;
