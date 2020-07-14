@@ -238,18 +238,20 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     }
 
     private Duration getDuration() {
-        if (this.start == this.end) {
-            double speed = this.track.getValues(this.start).getSpeed();
-            if (speed == 0) {
-                return Duration.ZERO;
-            }
-            return BigDecimals.toDuration(BigDecimal.valueOf(this.segment.getLength() / (speed / 3.6)));
-        }
-
         if (this.duration == null) {
-            this.duration = this.track.getDuration(this.start, this.end);
-            BigDecimal scaleFactor = BigDecimal.valueOf(1 / getUnadjustedLengthRatio());
-            this.duration = BigDecimals.toDuration(BigDecimals.create(this.duration).multiply(scaleFactor));
+            if (this.start == this.end || getUnadjustedLength() == 0.0d) {
+                double speed = getMeanValues().getSpeed();
+                if (speed == 0.0d) {
+                    this.duration = Duration.ZERO;
+                } else {
+                    this.duration = BigDecimals
+                                            .toDuration(BigDecimal.valueOf(this.segment.getLength() / (speed / 3.6)));
+                }
+            } else {
+                this.duration = this.track.getDuration(this.start, this.end);
+                BigDecimal scaleFactor = BigDecimal.valueOf(1 / getUnadjustedLengthRatio());
+                this.duration = BigDecimals.toDuration(BigDecimals.create(this.duration).multiply(scaleFactor));
+            }
         }
         return this.duration;
     }
