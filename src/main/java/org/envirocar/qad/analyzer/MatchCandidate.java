@@ -39,6 +39,8 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     private final double startThresholdSpeed;
     private final double endThresholdSpeed;
     private final boolean simplifiedLength;
+    private LineString snapped;
+    private Values values;
 
     public MatchCandidate(AlgorithmParameters parameters, Segment segment, Track track, int start, int end) {
         this.segment = Objects.requireNonNull(segment);
@@ -121,8 +123,6 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
                                      : this.segment.getLength();
     }
 
-    private LineString snapped;
-
     private LineString getSnappedGeometry() {
         if (this.snapped == null) {
             this.snapped = GeometryUtils.snapLineToLine(getGeometry(), this.segment.getGeometry());
@@ -194,27 +194,31 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     }
 
     private Values getMeanValues() {
-        int count = getSize();
-        if (count == 1) {
-            return this.track.getValues(this.start);
-        }
-        double speed = 0.0d;
-        double carbonDioxide = 0.0d;
-        double fuelConsumption = 0.0d;
-        double energyConsumption = 0.0d;
+        if (this.values == null) {
+            int count = getSize();
+            if (count == 1) {
+                return this.track.getValues(this.start);
+            } else {
+                double speed = 0.0d;
+                double carbonDioxide = 0.0d;
+                double fuelConsumption = 0.0d;
+                double energyConsumption = 0.0d;
 
-        for (int idx = this.start; idx <= this.end; ++idx) {
-            Values values = this.track.getValues(idx);
-            speed += values.getSpeed();
-            carbonDioxide += values.getCarbonDioxide().orElse(0.0d);
-            fuelConsumption += values.getFuelConsumption().orElse(0.0d);
-            energyConsumption += values.getEnergyConsumption().orElse(0.0d);
-        }
+                for (int idx = this.start; idx <= this.end; ++idx) {
+                    Values values = this.track.getValues(idx);
+                    speed += values.getSpeed();
+                    carbonDioxide += values.getCarbonDioxide().orElse(0.0d);
+                    fuelConsumption += values.getFuelConsumption().orElse(0.0d);
+                    energyConsumption += values.getEnergyConsumption().orElse(0.0d);
+                }
 
-        return new Values(speed / count,
-                          fuelConsumption / count,
-                          energyConsumption / count,
-                          carbonDioxide / count);
+                this.values = new Values(speed / count,
+                                         fuelConsumption / count,
+                                         energyConsumption / count,
+                                         carbonDioxide / count);
+            }
+        }
+        return this.values;
     }
 
     private Duration getStopTime() {
