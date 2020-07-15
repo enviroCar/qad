@@ -136,6 +136,9 @@ public class TrackParserImpl implements TrackParser {
             OptionalDouble speed;
             if (this.hasNonZeroSpeedValues) {
                 speed = getPhenomenon(feature, PHENOMENON_SPEED);
+                if (!speed.isPresent()) {
+                    speed = getPhenomenon(feature, PHENOMENON_GPS_SPEED);
+                }
             } else {
                 speed = getPhenomenon(feature, PHENOMENON_GPS_SPEED);
                 if (!speed.isPresent()) {
