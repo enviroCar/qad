@@ -150,7 +150,8 @@ public class TrackParserImpl implements TrackParser {
         }
 
         private TrackParsingException missingSpeedValue(Feature feature) {
-            return new TrackParsingException(String.format("track %s is missing speed measurements", getId(feature)));
+            return new TrackParsingException(String.format("measurement %s is missing speed measurements",
+                                                           getId(feature)));
         }
 
         private Point getGeometry(Feature feature) {
