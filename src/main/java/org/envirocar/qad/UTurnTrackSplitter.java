@@ -25,6 +25,7 @@ public class UTurnTrackSplitter extends AbstractTrackSplitter {
     @Override
     protected int findSplitIndex(Track track) {
         int size = track.size();
+
         for (int i = 1; i < size - 1; ++i) {
             try {
                 double heading1 = track.getHeading(i);
@@ -42,6 +43,7 @@ public class UTurnTrackSplitter extends AbstractTrackSplitter {
                 LOG.error("Could not buffer geometry", e);
             }
         }
+
         return -1;
     }
 
@@ -49,7 +51,7 @@ public class UTurnTrackSplitter extends AbstractTrackSplitter {
         double maxDeviation = 0;
         int maxIndex = 0;
         double heading = track.getHeading(begin);
-        for (int i = begin; i <= end; ++i) {
+        for (int i = begin; i < end; ++i) {
             double thisHeading = heading;
             heading = track.getHeading(i + 1);
             double deviation = Math.abs(AngleUtils.deviation(thisHeading, heading));
