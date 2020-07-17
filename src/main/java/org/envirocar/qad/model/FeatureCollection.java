@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.envirocar.qad.JsonConstants;
 import org.locationtech.jts.geom.Envelope;
@@ -16,7 +17,7 @@ import java.util.RandomAccess;
 @JsonSubTypes({@JsonSubTypes.Type(name = "FeatureCollection", value = FeatureCollection.class)})
 public class FeatureCollection implements Enveloped {
     @JsonProperty(JsonConstants.PROPERTIES)
-    private ObjectNode properties;
+    private ObjectNode properties = new ObjectMapper().createObjectNode();
     @JsonProperty(JsonConstants.FEATURES)
     private List<Feature> features;
 
@@ -64,6 +65,7 @@ public class FeatureCollection implements Enveloped {
         return this.features == null ? 0 : this.features.size();
     }
 
+    @JsonIgnore
     public boolean isEmpty() {
         return size() == 0;
     }

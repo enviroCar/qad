@@ -3,3 +3,5 @@ kafka:
 qad:
   mapMatching:
     url: https://processing.envirocar.org/
+  tests:
+    write: true

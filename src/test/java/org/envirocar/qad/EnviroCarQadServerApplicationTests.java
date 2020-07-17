@@ -2,7 +2,6 @@ package org.envirocar.qad;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.envirocar.qad.analyzer.Analyzer;
 import org.envirocar.qad.analyzer.AnalyzerFactory;
 import org.envirocar.qad.axis.Axis;
 import org.envirocar.qad.axis.AxisModel;
@@ -20,21 +19,20 @@ import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.UncheckedIOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
@@ -63,25 +61,15 @@ public class EnviroCarQadServerApplicationTests {
     private Optional<MapMatcher> mapMatcher;
     @Autowired
     private Optional<TrackSplitter> trackSplitter;
-
+    @Autowired
+    private EnviroCarApi api;
+    @Value("${qad.tests.write:false}")
+    private boolean write;
     @Autowired
     private DirectoryResultPersistence directoryResultPersistence;
 
-    private Stream<String> getResourceFiles(String path) throws IOException {
-
-        List<String> filenames = new ArrayList<>();
-        try (InputStream in = getClass().getResourceAsStream(path);
-             BufferedReader br = new BufferedReader(new InputStreamReader(in))) {
-            String resource;
-            while ((resource = br.readLine()) != null) {
-                filenames.add(path + "/" + resource);
-            }
-        }
-        return filenames.stream();
-    }
-
     @Test
-    public void test_5e5f7a8e77e02d42aa95b384() throws IOException, MapMatchingException {
+    public void test_5e5f7a8e77e02d42aa95b384() {
         AxisModel axis = this.axisModelRepository.getAxisModel("CHE").orElseThrow(IllegalStateException::new);
         Stream<Track> track = writeAndPrepare("5e5f7a8e77e02d42aa95b384");
 
@@ -96,7 +84,7 @@ public class EnviroCarQadServerApplicationTests {
     }
 
     @Test
-    public void test_5e5d226377e02d42aa9350a0() throws IOException, MapMatchingException {
+    public void test_5e5d226377e02d42aa9350a0() {
         Axis axis = this.axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("01_2")).get();
         Stream<Track> track = writeAndPrepare("5e5d226377e02d42aa934f4f");
         List<AnalysisResult> collect = track.flatMap(t -> this.analyzerFactory.create(axis, t).analyze())
@@ -105,7 +93,7 @@ public class EnviroCarQadServerApplicationTests {
     }
 
     @Test
-    public void test_5e5620e777e02d42aa8e1153() throws IOException, MapMatchingException {
+    public void test_5e5620e777e02d42aa8e1153() {
         Axis axis = this.axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("01_1")).get();
         Stream<Track> track = writeAndPrepare("5e5620e777e02d42aa8e1153");
         track.flatMap(t -> this.analyzerFactory.create(axis, t).analyze())
@@ -114,7 +102,53 @@ public class EnviroCarQadServerApplicationTests {
     }
 
     @Test
-    public void test_5e4132753965f36894e62148() throws IOException, MapMatchingException {
+    public void test_5f03231cd2ad47000190f29e() {
+        Axis axis = this.axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("04_02")).get();
+        Stream<Track> track = writeAndPrepare("5f03231cd2ad47000190f29e");
+        track.flatMap(t -> this.analyzerFactory.create(axis, t).analyze())
+             .forEach(this.directoryResultPersistence::persist);
+    }
+
+    @Test
+    public void test_5f0c67d0d2ad4700019729cd() {
+        String[] tracks = {"5f0c0193d2ad47000194940c",
+                           "5f0c2bdcd2ad470001959d90",
+                           "5f0c3c2cd2ad470001960e9a",
+                           "5f0c4211d2ad470001963522",
+                           "5f0c53afd2ad47000196a402",
+                           "5f0c67d0d2ad4700019729cd",
+                           "5f0c6fcdd2ad470001976b7d"};
+
+        AxisModel model = this.axisModelRepository.getAxisModel("KRE").get();
+        Arrays.stream(tracks).flatMap(this::writeAndPrepare)
+              .flatMap(t -> this.analyzerFactory.create(model, t).analyze())
+              .forEach(this.directoryResultPersistence::persist);
+    }
+
+    @Test
+    public void test_5f0efcf900375c5a264231c2() throws IOException {
+        FeatureCollection featureCollection = this.api.fetchTrack("5f0efcf900375c5a264231c2");
+        Stream<Track> track = writeAndPrepare(featureCollection);
+        track.flatMap(t ->
+                              this.axisModelRepository.getAxisModels().stream()
+                                                      .flatMap(model -> this.analyzerFactory.create(model, t)
+                                                                                            .analyze()))
+             .map(this::toJSON)
+             .forEach(System.err::println);
+
+    }
+
+    @Test
+    public void test_5f057fc3d2ad470001a0a7e5() {
+        Axis axis = this.axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("04_02")).get();
+        Stream<Track> track = writeAndPrepare("5f057fc3d2ad470001a0a7e5");
+        track.flatMap(t -> this.analyzerFactory.create(axis, t).analyze())
+             .map(this::toJSON)
+             .forEach(System.err::println);
+    }
+
+    @Test
+    public void test_5e4132753965f36894e62148() {
         Axis axis = this.axisModelRepository.getAxisModel("CHE").flatMap(x -> x.getAxis("22_2")).get();
         Stream<Track> track = writeAndPrepare("5e4132753965f36894e62148");
         track.flatMap(t -> this.analyzerFactory.create(axis, t).analyze())
@@ -133,6 +167,7 @@ public class EnviroCarQadServerApplicationTests {
                 feature.setId(x.getId());
                 feature.setProperties(this.objectMapper.createObjectNode()
                                                        .putPOJO("time", x.getTime())
+                                                       .put("speed", x.getValues().getSpeed())
                                                        .put("idx", idx));
                 features.add(feature);
             }
@@ -143,55 +178,54 @@ public class EnviroCarQadServerApplicationTests {
         }
     }
 
-    private Stream<Track> writeAndPrepare(String id) throws MapMatchingException, IOException {
-        FeatureCollection featureCollection = readFeatureCollection(id);
+    private Stream<Track> writeAndPrepare(String id) {
+        try {
+            return writeAndPrepare(this.api.fetchTrack(id));
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
+    }
 
-        if (this.mapMatcher.isPresent()) {
-            featureCollection = this.mapMatcher.get().mapMatch(featureCollection);
-            writeTrack(this.trackParser.createTrack(featureCollection), "matched");
+    private Stream<Track> writeAndPrepare(FeatureCollection featureCollection) {
+        try {
+            if (this.write) {
+                writeTrack(this.trackParser.createTrack(featureCollection));
+            }
+
+            if (this.mapMatcher.isPresent()) {
+                featureCollection = this.mapMatcher.get().mapMatch(featureCollection);
+                if (this.write) {
+                    writeTrack(this.trackParser.createTrack(featureCollection), "matched");
+                }
+            }
+            featureCollection = this.densifier.densify(featureCollection);
+            Track track = this.trackParser.createTrack(featureCollection);
+            if (this.write) {
+                writeTrack(track, "processed");
+            }
+            if (this.trackSplitter.isPresent()) {
+                return this.trackSplitter.get().split(track);
+            }
+            return Stream.of(track);
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        } catch (MapMatchingException e) {
+            throw new RuntimeException(e);
         }
-        featureCollection = this.densifier.densify(featureCollection);
-        Track track = this.trackParser.createTrack(featureCollection);
-        writeTrack(track, "processed");
-        if (this.trackSplitter.isPresent()) {
-            return this.trackSplitter.get().split(track);
-        }
-        return Stream.of(track);
+    }
+
+    private void writeTrack(Track track) throws IOException {
+        writeTrack(track, PATH.resolve(String.format("%s.json", track.getId())));
     }
 
     private void writeTrack(Track track, String classifier) throws IOException {
         writeTrack(track, PATH.resolve(String.format("%s.%s.json", track.getId(), classifier)));
     }
 
-    private FeatureCollection readFeatureCollection(String id) {
-        return readFeatureCollection(PATH.resolve(String.format("%s.json", id)));
-    }
-
-    @Test
-    public void contextLoads() throws IOException {
-        //getResourceFiles("/tracks")
-        Stream.of("5d138cb844ea855023b210ab")
-              .map(x -> PATH.resolve(String.format("%s.json", x)))
-              .map(this::readFeatureCollection)
-              .map(this.analyzerFactory::create)
-              .filter(Analyzer::isApplicable)
-              .flatMap(Analyzer::analyze)
-              .map(this::toJSON)
-              .forEach(x -> {});
-    }
-
     private String toJSON(AnalysisResult result) {
         try {
             return this.objectMapper.writeValueAsString(result);
         } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    private FeatureCollection readFeatureCollection(Path path) {
-        try (InputStream in = Files.newInputStream(path)) {
-            return this.objectMapper.readValue(in, FeatureCollection.class);
-        } catch (IOException e) {
             throw new UncheckedIOException(e);
         }
     }
