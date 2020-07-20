@@ -30,6 +30,9 @@ public class KafkaConfiguration {
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaParameters.getBootstrap().getServers());
         props.put(ConsumerConfig.GROUP_ID_CONFIG, kafkaParameters.getGroupId());
         props.put(ConsumerConfig.CLIENT_ID_CONFIG, kafkaParameters.getClientId());
+        props.put(ConsumerConfig.FETCH_MAX_BYTES_CONFIG, 157286400); // 150MB
+        props.put(ConsumerConfig.MAX_PARTITION_FETCH_BYTES_CONFIG, 157286400); // 150MB
+
         return new DefaultKafkaConsumerFactory<>(props, keyDeserializer, valueDeserializer);
     }
 
