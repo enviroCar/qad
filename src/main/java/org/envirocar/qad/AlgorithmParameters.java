@@ -19,7 +19,16 @@ public class AlgorithmParameters {
     private MapMatching mapMatching = new MapMatching();
     private UTurn uturn = new UTurn();
     private Path outputPath;
+    private boolean archive = true;
     private boolean simplifyLengthCalculation;
+
+    public boolean isArchive() {
+        return this.archive;
+    }
+
+    public void setArchive(boolean archive) {
+        this.archive = archive;
+    }
 
     public double getLengthDifferenceToTolerate() {
         return this.lengthDifferenceToTolerate;

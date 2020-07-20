@@ -43,4 +43,7 @@ public interface JsonConstants {
     String GEOMETRY = "geometry";
     String UNIT = "unit";
     String TRACK = "track";
+    String BEGIN = "begin";
+    String LENGTH = "length";
+    String TRACKS = "tracks";
 }

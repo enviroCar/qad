@@ -179,11 +179,7 @@ public class EnviroCarQadServerApplicationTests {
     }
 
     private Stream<Track> writeAndPrepare(String id) {
-        try {
-            return writeAndPrepare(this.api.fetchTrack(id));
-        } catch (IOException e) {
-            throw new UncheckedIOException(e);
-        }
+        return writeAndPrepare(this.api.fetchTrack(id));
     }
 
     private Stream<Track> writeAndPrepare(FeatureCollection featureCollection) {

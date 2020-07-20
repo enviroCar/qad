@@ -37,9 +37,9 @@ import java.util.Set;
 @Service
 public class DirectoryResultPersistence implements ResultPersistence {
     private static final Logger LOG = LoggerFactory.getLogger(DirectoryResultPersistence.class);
-    private static final String TIME_ZONE = "Europe/Berlin";
-    private static final ZoneId ZONE_ID = ZoneId.of(TIME_ZONE);
-    private static final Locale LOCALE = Locale.ROOT;
+    protected static final String TIME_ZONE = "Europe/Berlin";
+    protected static final ZoneId ZONE_ID = ZoneId.of(TIME_ZONE);
+    protected static final Locale LOCALE = Locale.ROOT;
     private static final FileAttribute<?> directoryPermissions = getPermissions("rwxr-xr-x");
     private static final FileAttribute<?> filePermissions = getPermissions("rw-r--r--");
     private static final DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("HHmmss", LOCALE).withZone(ZONE_ID);
@@ -57,13 +57,21 @@ public class DirectoryResultPersistence implements ResultPersistence {
         this.reader = Objects.requireNonNull(reader);
     }
 
+    protected AlgorithmParameters getParameters() {
+        return this.parameters;
+    }
+
     @PostConstruct
     @Scheduled(cron = "0 0 0 * * *", zone = TIME_ZONE)
     public void archive() {
+        if (!this.parameters.isArchive()) {
+            return;
+        }
         LOG.debug("Archiving result entries older than {}", today());
+
         try {
             Files.createDirectories(getArchive(), directoryPermissions);
-            Files.list(this.parameters.getOutputPath())
+            Files.list(getDirectory(null))
                  .filter(f -> f.getFileName().toString().endsWith(".json"))
                  .filter(Files::isRegularFile)
                  .filter(this::isBeforeToday)
@@ -74,7 +82,7 @@ public class DirectoryResultPersistence implements ResultPersistence {
     }
 
     private Path getArchive() {
-        return this.parameters.getOutputPath().resolve("archive");
+        return getDirectory(null).resolve("archive");
     }
 
     private void archiveFile(Path file) {
@@ -116,17 +124,19 @@ public class DirectoryResultPersistence implements ResultPersistence {
         try {
             persist1(result);
         } catch (IOException ex) {
-            LOG.error("Error creating output file", ex);
+            LOG.error("Error creating output file: " + ex.getMessage(), ex);
         }
     }
 
     void persist1(AnalysisResult result) throws IOException {
         Path path = createFile(result);
-        LOG.info("Writing output {}", path.toAbsolutePath());
-        try (BufferedWriter w = Files.newBufferedWriter(path, StandardCharsets.UTF_8)) {
-            this.writer.writeValue(w, result);
-        } catch (IOException e) {
-            LOG.error(String.format("Error writing %s", path), e);
+        if (path != null) {
+            LOG.info("Writing output {}", path.toAbsolutePath());
+            try (BufferedWriter w = Files.newBufferedWriter(path, StandardCharsets.UTF_8)) {
+                this.writer.writeValue(w, result);
+            } catch (IOException e) {
+                LOG.error(String.format("Error writing %s", path), e);
+            }
         }
     }
 
@@ -167,25 +177,37 @@ public class DirectoryResultPersistence implements ResultPersistence {
                                       dateFormat.format(result.getStart()));
         Optional<Path> duplicates = findDuplicates(result, prefix);
         if (duplicates.isPresent()) {
-            throw new IOException(String.format("Ignoring result as it seems to be a duplicate of %s",
-                                                duplicates.get()));
+            LOG.warn("Ignoring result as it seems to be a duplicate of {}", duplicates.get());
+            return null;
         }
         prefix += result.getTrack();
-        Path path = this.parameters.getOutputPath().resolve(String.format("%s.json", prefix));
+        Path directory = getDirectory(result);
+
+        Files.createDirectories(directory, directoryPermissions);
+
+        Path path = directory.resolve(String.format("%s.json", prefix));
 
         for (int i = 0; true; i++) {
             try {
                 Files.createFile(path, filePermissions);
                 return path;
             } catch (FileAlreadyExistsException ignored) {
-                path = this.parameters.getOutputPath().resolve(String.format("%s_%d.json", prefix, i));
+                path = getDirectory(result).resolve(String.format("%s_%d.json", prefix, i));
             }
         }
     }
 
+    protected Path getDirectory(AnalysisResult result) {
+        return this.parameters.getOutputPath();
+    }
+
     @Nonnull
     private Optional<Path> findDuplicates(AnalysisResult result, String prefix) throws IOException {
-        return Files.list(this.parameters.getOutputPath())
+        Path directory = getDirectory(result);
+        if (!Files.exists(directory)) {
+            return Optional.empty();
+        }
+        return Files.list(directory)
                     .filter(x -> x.getFileName().toString().startsWith(prefix) &&
                                  x.getFileName().toString().endsWith(".json"))
                     .filter(Files::isRegularFile)
