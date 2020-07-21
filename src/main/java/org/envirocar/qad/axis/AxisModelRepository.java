@@ -2,6 +2,8 @@ package org.envirocar.qad.axis;
 
 import org.envirocar.qad.model.Enveloped;
 import org.locationtech.jts.geom.Envelope;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -12,11 +14,13 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+@Repository
 public class AxisModelRepository implements Enveloped {
 
     private final Map<ModelId, AxisModel> axisModels;
     private final Envelope envelope;
 
+    @Autowired
     public AxisModelRepository(List<AxisModel> axisModels) {
         this.axisModels = axisModels.stream().collect(Collectors.toMap(AxisModel::getId, Function.identity()));
         this.envelope = calculateEnvelope();
