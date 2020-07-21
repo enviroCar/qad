@@ -28,8 +28,9 @@ function modifyTrack(track) {
 async function processFile(path, fileName) {
   const content = await fs.readFile(resolve(path, fileName));
   const track = JSON.parse(content);
+  const id = track.properties.id;
   const data = modifyTrack(track);
-  const newFileName = resolve(path, `${track.properties.id}.insert.json`);
+  const newFileName = resolve(path, `${id}.insert.json`);
   await fs.writeFile(newFileName, JSON.stringify(data, null, 2));
 }
 
@@ -41,12 +42,7 @@ async function main(path) {
 (async () => {
   try {
     const directory = resolve(
-      dirname(fileURLToPath(import.meta.url)),
-      "..",
-      "src",
-      "main",
-      "resources",
-      "tracks"
+      dirname(fileURLToPath(import.meta.url)), "tracks"
     );
     console.log(await main(directory));
   } catch (e) {
