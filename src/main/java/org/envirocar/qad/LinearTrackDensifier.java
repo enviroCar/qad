@@ -32,7 +32,7 @@ public class LinearTrackDensifier implements TrackDensifier {
     private final JsonNodeCreator nodeFactory;
 
     @Autowired
-    public LinearTrackDensifier(AlgorithmParameters parameters, JsonNodeCreator nodeFactory) {
+    public LinearTrackDensifier(QADParameters parameters, JsonNodeCreator nodeFactory) {
         this.numPoints = parameters.getDensify().getNumPoints();
         this.nodeFactory = Objects.requireNonNull(nodeFactory);
     }

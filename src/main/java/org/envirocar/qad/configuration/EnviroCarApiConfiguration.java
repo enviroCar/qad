@@ -1,22 +1,32 @@
 package org.envirocar.qad.configuration;
 
-import okhttp3.OkHttpClient;
 import org.envirocar.qad.EnviroCarApi;
+import org.envirocar.qad.QADParameters;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import retrofit2.Retrofit;
-import retrofit2.converter.jackson.JacksonConverterFactory;
+
+import java.util.Objects;
 
 @Configuration
 public class EnviroCarApiConfiguration {
-    private Retrofit.Builder retrofit(JacksonConverterFactory factory, OkHttpClient client) {
-        return new Retrofit.Builder().addConverterFactory(factory).client(client);
+
+    private final RetrofitConfiguration retrofit;
+    private final QADParameters qadParameters;
+
+    @Autowired
+    public EnviroCarApiConfiguration(RetrofitConfiguration retrofit,
+                                     QADParameters qadParameters) {
+        this.retrofit = Objects.requireNonNull(retrofit);
+        this.qadParameters = Objects.requireNonNull(qadParameters);
     }
 
     @Bean
-    public EnviroCarApi enviroCarApi(JacksonConverterFactory factory, OkHttpClient client) {
-        return retrofit(factory, client).baseUrl("https://envirocar.org/api/stable/")
-                                        .build().create(EnviroCarApi.class);
+    public EnviroCarApi enviroCarApi() {
+        return this.retrofit.builder()
+                            .baseUrl(this.qadParameters.getEnviroCarApiURL())
+                            .build()
+                            .create(EnviroCarApi.class);
     }
 
 }

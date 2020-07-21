@@ -139,6 +139,58 @@ public class EnviroCarQadServerApplicationTests {
     }
 
     @Test
+    public void test_this_week() {
+        String[] tracks = {"5f118496d2ad470001b7f734",
+                           "5f11584900375c5a26498817",
+                           "5f11501b00375c5a264952cc",
+                           "5f11501b00375c5a26495236",
+                           "5f114c5f00375c5a26493f05",
+                           "5f1134be00375c5a26491d82",
+                           "5f10a2de00375c5a2648d6ca",
+                           "5f10a2dd00375c5a2648d318",
+                           "5f0f222900375c5a26426383",
+                           "5f0efcf900375c5a264231c2",
+                           "5f0ed9b7d2ad470001a6cf1e",
+                           "5f0ed5f000375c5a2641736b",
+                           "5f0ed5f000375c5a26417472",
+                           "5f0ed5f000375c5a2641758e",
+                           "5f0ed5f000375c5a264170b2",
+                           "5f0ed5ef00375c5a26416a69",
+                           "5f0ed5ef00375c5a2641697d",
+                           "5f0ec00800375c5a263f14d6",
+                           "5f0ebbe700375c5a263f0a91",
+                           "5f0ebbe600375c5a263f0a3d",
+                           "5f0eb97a00375c5a263f0539",
+                           "5f0eb39030d93d341d58058d",
+                           "5f0eae8630d93d341d54b31c",
+                           "5f0ead9d30d93d341d54b132",
+                           "5f0eac0a30d93d341d54b044",
+                           "5f0eabc330d93d341d54203e",
+                           "5f0ea3da30d93d341d540f4b",
+                           "5f0dc94d30d93d341d472c53",
+                           "5f0dc94d30d93d341d47283f",
+                           "5f0dbba230d93d341d472236",
+                           "5f0d9caa30d93d341d4445b2",
+                           "5f0d9caa30d93d341d444545",
+                           "5f0d874230d93d341d416693",
+                           "5f0d874230d93d341d4165af"};
+        for (String id : tracks) {
+            try {
+                FeatureCollection featureCollection = this.api.fetchTrack(id);
+                Stream<Track> track = writeAndPrepare(featureCollection);
+                track.flatMap(t ->
+                                      this.axisModelRepository.getAxisModels().stream()
+                                                              .flatMap(model -> this.analyzerFactory.create(model, t)
+                                                                                                    .analyze()))
+                     .map(this::toJSON)
+                     .forEach(System.err::println);
+            } catch (Exception e) {
+                LOG.error("error analyzing track {}: {}", id, e.getMessage());
+            }
+        }
+    }
+
+    @Test
     public void test_5f057fc3d2ad470001a0a7e5() {
         Axis axis = this.axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("04_02")).get();
         Stream<Track> track = writeAndPrepare("5f057fc3d2ad470001a0a7e5");

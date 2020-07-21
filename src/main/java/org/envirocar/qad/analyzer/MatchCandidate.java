@@ -1,6 +1,6 @@
 package org.envirocar.qad.analyzer;
 
-import org.envirocar.qad.AlgorithmParameters;
+import org.envirocar.qad.QADParameters;
 import org.envirocar.qad.axis.Segment;
 import org.envirocar.qad.model.Track;
 import org.envirocar.qad.model.Values;
@@ -28,7 +28,7 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
 
     private final Segment segment;
     private final Track track;
-    private final AlgorithmParameters parameters;
+    private final QADParameters parameters;
     private double length = -1.0d;
     private LineString geometry;
     private Duration duration;
@@ -42,7 +42,7 @@ public class MatchCandidate implements Comparable<MatchCandidate> {
     private LineString snapped;
     private Values values;
 
-    public MatchCandidate(AlgorithmParameters parameters, Segment segment, Track track, int start, int end) {
+    public MatchCandidate(QADParameters parameters, Segment segment, Track track, int start, int end) {
         this.segment = Objects.requireNonNull(segment);
         this.parameters = Objects.requireNonNull(parameters);
         this.track = Objects.requireNonNull(track);

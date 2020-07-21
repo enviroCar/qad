@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-@EnableConfigurationProperties({AlgorithmParameters.class, KafkaParameters.class})
+@EnableConfigurationProperties({QADParameters.class, KafkaParameters.class})
 public class Application {
 
     public static void main(String[] args) {

@@ -11,22 +11,30 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.locationtech.jts.geom.GeometryFactory;
 import org.n52.jackson.datatype.jts.IncludeBoundingBox;
 import org.n52.jackson.datatype.jts.JtsModule;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.Locale;
+import java.util.Objects;
 
 @Configuration
 public class JacksonConfiguration {
+    private final GeometryFactory geometryFactory;
 
-    @Bean
-    public ObjectWriter objectWriter(ObjectMapper mapper) {
-        return mapper.writer();
+    @Autowired
+    public JacksonConfiguration(GeometryFactory geometryFactory) {
+        this.geometryFactory = Objects.requireNonNull(geometryFactory);
     }
 
     @Bean
-    public ObjectReader objectReader(ObjectMapper mapper) {
-        return mapper.reader();
+    public ObjectWriter objectWriter() {
+        return objectMapper().writer();
+    }
+
+    @Bean
+    public ObjectReader objectReader() {
+        return objectMapper().reader();
     }
 
     @Bean
@@ -35,12 +43,12 @@ public class JacksonConfiguration {
     }
 
     @Bean
-    public ObjectMapper objectMapper(Jdk8Module jdk8Module, JavaTimeModule javaTimeModule, JtsModule jtsModule) {
+    public ObjectMapper objectMapper() {
         return new ObjectMapper().setLocale(Locale.ROOT)
                                  .findAndRegisterModules()
-                                 .registerModule(jdk8Module)
-                                 .registerModule(javaTimeModule)
-                                 .registerModule(jtsModule)
+                                 .registerModule(jdk8Module())
+                                 .registerModule(javaTimeModule())
+                                 .registerModule(jtsModule())
                                  .configure(SerializationFeature.INDENT_OUTPUT, true)
                                  .configure(SerializationFeature.WRITE_DATE_KEYS_AS_TIMESTAMPS, false)
                                  .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
@@ -65,7 +73,7 @@ public class JacksonConfiguration {
     }
 
     @Bean
-    public JtsModule jtsModule(GeometryFactory geometryFactory) {
-        return new JtsModule(geometryFactory, IncludeBoundingBox.never(), 8);
+    public JtsModule jtsModule() {
+        return new JtsModule(this.geometryFactory, IncludeBoundingBox.never(), 8);
     }
 }

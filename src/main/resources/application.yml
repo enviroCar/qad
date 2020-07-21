@@ -6,6 +6,7 @@ kafka:
     servers: ${KAFKA_ENDPOINT:processing.envirocar.org:9092}
 
 qad:
+  enviroCarApiURL: ${QAD_ENVIROCAR_API_URL:https://envirocar.org/api/stable/}
   simplifyLengthCalculation: ${QAD_SIMPLIFY_LENGTH_CALCULATION:false}
   maxAngleDeviation: ${QAD_MAX_ANGLE_DEVIATION:45}
   maxLengthDeviation: ${QAD_MAX_LENGTH_DEVIATION:0.30}
@@ -26,13 +27,10 @@ qad:
     bufferSize: ${QAD_UTURN_BUFFER_SIZE:20}
     minAngleDeviation: ${QAD_UTURN_MIN_ANGLE_DEVIATION:170}
   outputPath: ${QAD_OUTPUT_PATH:/tmp}
-  spring:
-    output:
-      ansi:
-        enabled: true
-
-
-
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
 logging:
   level:
     root: info

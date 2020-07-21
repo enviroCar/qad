@@ -16,7 +16,7 @@ public class UTurnTrackSplitter extends AbstractTrackSplitter {
     private final double bufferSize;
     private final double minAngleDeviation;
 
-    public UTurnTrackSplitter(AlgorithmParameters parameters) {
+    public UTurnTrackSplitter(QADParameters parameters) {
         this.windowSize = parameters.getUTurn().getWindowSize();
         this.bufferSize = parameters.getUTurn().getBufferSize();
         this.minAngleDeviation = parameters.getUTurn().getMinAngleDeviation();

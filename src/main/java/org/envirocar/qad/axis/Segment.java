@@ -1,6 +1,6 @@
 package org.envirocar.qad.axis;
 
-import org.envirocar.qad.AlgorithmParameters;
+import org.envirocar.qad.QADParameters;
 import org.envirocar.qad.model.Enveloped;
 import org.envirocar.qad.utils.GeometryException;
 import org.envirocar.qad.utils.GeometryUtils;
@@ -21,7 +21,7 @@ public class Segment implements Comparable<Segment>, Enveloped {
     private Segment prev;
     private Segment next;
 
-    public Segment(SegmentId id, int maxSpeed, LineString geometry, AlgorithmParameters parameters)
+    public Segment(SegmentId id, int maxSpeed, LineString geometry, QADParameters parameters)
             throws GeometryException {
         this.id = Objects.requireNonNull(id);
         this.geometry = Objects.requireNonNull(geometry);

@@ -1,12 +1,12 @@
 package org.envirocar.qad.reanalyze;
 
-import org.envirocar.qad.AlgorithmParameters;
+import org.envirocar.qad.QADParameters;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication(scanBasePackages = "org.envirocar.qad")
-@EnableConfigurationProperties({AlgorithmParameters.class})
+@EnableConfigurationProperties({QADParameters.class})
 public class ReanalyzeApplication {
 
     public static final String REANALYZE_PROFILE = "reanalyze";

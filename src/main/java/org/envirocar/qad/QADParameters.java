@@ -7,7 +7,7 @@ import java.net.URL;
 import java.nio.file.Path;
 
 @ConfigurationProperties(prefix = "qad")
-public class AlgorithmParameters {
+public class QADParameters {
 
     private double maxAngleDeviation = 180.0d;
     private double maxLengthDeviation = 0.20d;
@@ -21,6 +21,15 @@ public class AlgorithmParameters {
     private Path outputPath;
     private boolean archive = true;
     private boolean simplifyLengthCalculation;
+    private URL enviroCarApiURL;
+
+    public URL getEnviroCarApiURL() {
+        return this.enviroCarApiURL;
+    }
+
+    public void setEnviroCarApiURL(URL enviroCarApiURL) {
+        this.enviroCarApiURL = enviroCarApiURL;
+    }
 
     public boolean isArchive() {
         return this.archive;

@@ -1,6 +1,6 @@
 package org.envirocar.qad.analyzer;
 
-import org.envirocar.qad.AlgorithmParameters;
+import org.envirocar.qad.QADParameters;
 import org.envirocar.qad.TrackSplitter;
 import org.envirocar.qad.axis.Axis;
 import org.envirocar.qad.axis.AxisModel;
@@ -16,13 +16,13 @@ import java.util.Optional;
 
 @Component
 public class AnalyzerFactory {
-    private final AlgorithmParameters parameters;
+    private final QADParameters parameters;
     private final AxisModelRepository repository;
     private final TrackPreparer trackPreparer;
     private final TrackSplitter trackSplitter;
 
     @Autowired
-    public AnalyzerFactory(AlgorithmParameters parameters,
+    public AnalyzerFactory(QADParameters parameters,
                            AxisModelRepository repository,
                            TrackPreparer trackPreparer,
                            Optional<TrackSplitter> trackSplitter) {

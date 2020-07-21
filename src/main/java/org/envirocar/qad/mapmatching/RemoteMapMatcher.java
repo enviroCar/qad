@@ -7,6 +7,8 @@ import org.envirocar.qad.model.FeatureCollection;
 import org.locationtech.jts.geom.Geometry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import retrofit2.Response;
 
 import java.io.IOException;
@@ -16,10 +18,12 @@ import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.toList;
 
+@Service
 public class RemoteMapMatcher implements MapMatcher {
     private static final Logger LOG = LoggerFactory.getLogger(RemoteMapMatcher.class);
     private final MapMatchingService service;
 
+    @Autowired
     public RemoteMapMatcher(MapMatchingService service) {
         this.service = Objects.requireNonNull(service);
     }

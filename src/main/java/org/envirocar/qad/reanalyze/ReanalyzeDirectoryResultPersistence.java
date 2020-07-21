@@ -2,7 +2,7 @@ package org.envirocar.qad.reanalyze;
 
 import com.fasterxml.jackson.databind.ObjectReader;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import org.envirocar.qad.AlgorithmParameters;
+import org.envirocar.qad.QADParameters;
 import org.envirocar.qad.model.result.AnalysisResult;
 import org.envirocar.qad.persistence.DirectoryResultPersistence;
 import org.springframework.context.annotation.Primary;
@@ -19,7 +19,7 @@ class ReanalyzeDirectoryResultPersistence extends DirectoryResultPersistence {
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd", LOCALE)
                                                                         .withZone(ZONE_ID);
 
-    ReanalyzeDirectoryResultPersistence(ObjectReader reader, ObjectWriter writer, AlgorithmParameters parameters) {
+    ReanalyzeDirectoryResultPersistence(ObjectReader reader, ObjectWriter writer, QADParameters parameters) {
         super(reader, writer, parameters);
     }
 

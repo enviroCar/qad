@@ -1,6 +1,6 @@
 package org.envirocar.qad.axis;
 
-import org.envirocar.qad.AlgorithmParameters;
+import org.envirocar.qad.QADParameters;
 import org.envirocar.qad.JsonConstants;
 import org.envirocar.qad.model.Feature;
 import org.envirocar.qad.model.FeatureCollection;
@@ -19,9 +19,9 @@ import static java.util.stream.Collectors.toList;
 
 @Component
 public class AxisModelParser {
-    private final AlgorithmParameters parameters;
+    private final QADParameters parameters;
 
-    public AxisModelParser(AlgorithmParameters parameters) {
+    public AxisModelParser(QADParameters parameters) {
         this.parameters = Objects.requireNonNull(parameters);
     }
 

@@ -4,8 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectReader;
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import org.envirocar.qad.AlgorithmParameters;
 import org.envirocar.qad.ObjectReaderTest;
+import org.envirocar.qad.QADParameters;
 import org.envirocar.qad.axis.AxisId;
 import org.envirocar.qad.axis.ModelId;
 import org.envirocar.qad.model.result.AnalysisResult;
@@ -23,7 +23,8 @@ import java.util.Locale;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DirectoryResultPersistenceTest {
     @TempDir
@@ -33,8 +34,8 @@ public class DirectoryResultPersistenceTest {
 
     @BeforeEach
     public void setup() {
-        AlgorithmParameters algorithmParameters = new AlgorithmParameters();
-        algorithmParameters.setOutputPath(this.temp);
+        QADParameters QADParameters = new QADParameters();
+        QADParameters.setOutputPath(this.temp);
 
         ObjectMapper objectMapper = new ObjectMapper()
                                             .setLocale(Locale.ROOT)
@@ -42,7 +43,7 @@ public class DirectoryResultPersistenceTest {
                                             .registerModule(new Jdk8Module())
                                             .registerModule(new JavaTimeModule());
         this.reader = objectMapper.reader();
-        this.persistence = new DirectoryResultPersistence(this.reader, objectMapper.writer(), algorithmParameters);
+        this.persistence = new DirectoryResultPersistence(this.reader, objectMapper.writer(), QADParameters);
     }
 
     @Test
@@ -51,55 +52,55 @@ public class DirectoryResultPersistenceTest {
         this.persistence.persist1(result);
 
         assertThat(Files.list(this.temp).count(), is(1L));
-        assertThrows(IOException.class, () -> this.persistence.persist1(result));
+        assertFalse(this.persistence.persist1(result));
         assertThat(Files.list(this.temp).count(), is(1L));
 
         // change of track id
         String track = result.getTrack();
         result.setTrack("5efef1ed604fbd6206b36d68");
-        assertThrows(IOException.class, () -> this.persistence.persist1(result));
+        assertFalse(this.persistence.persist1(result));
         result.setTrack(track);
         assertThat(Files.list(this.temp).count(), is(1L));
 
         // change of start time
         Instant start = result.getStart();
         result.setStart(Instant.now());
-        this.persistence.persist1(result);
+        assertTrue(this.persistence.persist1(result));
         result.setStart(start);
         assertThat(Files.list(this.temp).count(), is(2L));
 
         // change of end time
         Instant end = result.getEnd();
         result.setEnd(Instant.now());
-        this.persistence.persist1(result);
+        assertTrue(this.persistence.persist1(result));
         result.setEnd(end);
         assertThat(Files.list(this.temp).count(), is(3L));
 
         // change of axis
         AxisId axis = result.getAxis();
         result.setAxis(new AxisId(1, 1));
-        this.persistence.persist1(result);
+        assertTrue(this.persistence.persist1(result));
         result.setAxis(axis);
         assertThat(Files.list(this.temp).count(), is(4L));
 
         // change of model
         ModelId model = result.getModel();
         result.setModel(new ModelId("HAM", "2020-02-02"));
-        this.persistence.persist1(result);
+        assertTrue(this.persistence.persist1(result));
         result.setModel(model);
         assertThat(Files.list(this.temp).count(), is(5L));
 
         // change of fuel type
         String fuelType = result.getFuelType();
         result.setFuelType("diesel");
-        this.persistence.persist1(result);
+        assertTrue(this.persistence.persist1(result));
         result.setFuelType(fuelType);
         assertThat(Files.list(this.temp).count(), is(6L));
 
         // different segment
         int segmentId = result.getSegments().get(0).getSegmentId();
         result.getSegments().get(0).setSegmentId(10);
-        this.persistence.persist1(result);
+        assertTrue(this.persistence.persist1(result));
         result.getSegments().get(0).setSegmentId(segmentId);
         assertThat(Files.list(this.temp).count(), is(7L));
 
@@ -107,7 +108,7 @@ public class DirectoryResultPersistenceTest {
         SegmentResult sr = new SegmentResult();
         sr.setSegmentId(20);
         result.getSegments().add(sr);
-        this.persistence.persist1(result);
+        assertTrue(this.persistence.persist1(result));
         result.setFuelType(fuelType);
         assertThat(Files.list(this.temp).count(), is(8L));
 

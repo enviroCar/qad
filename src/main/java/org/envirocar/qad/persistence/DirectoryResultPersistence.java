@@ -2,7 +2,7 @@ package org.envirocar.qad.persistence;
 
 import com.fasterxml.jackson.databind.ObjectReader;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import org.envirocar.qad.AlgorithmParameters;
+import org.envirocar.qad.QADParameters;
 import org.envirocar.qad.model.result.AnalysisResult;
 import org.envirocar.qad.model.result.SegmentResult;
 import org.slf4j.Logger;
@@ -45,19 +45,19 @@ public class DirectoryResultPersistence implements ResultPersistence {
     private static final DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("HHmmss", LOCALE).withZone(ZONE_ID);
     private static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyyMMdd", LOCALE)
                                                                          .withZone(ZONE_ID);
-    private final AlgorithmParameters parameters;
+    private final QADParameters parameters;
     private final ObjectWriter writer;
     private final ObjectReader reader;
 
     @Autowired
     public DirectoryResultPersistence(ObjectReader reader, ObjectWriter writer,
-                                      AlgorithmParameters parameters) {
+                                      QADParameters parameters) {
         this.parameters = Objects.requireNonNull(parameters);
         this.writer = Objects.requireNonNull(writer);
         this.reader = Objects.requireNonNull(reader);
     }
 
-    protected AlgorithmParameters getParameters() {
+    protected QADParameters getParameters() {
         return this.parameters;
     }
 
@@ -128,16 +128,18 @@ public class DirectoryResultPersistence implements ResultPersistence {
         }
     }
 
-    void persist1(AnalysisResult result) throws IOException {
+    boolean persist1(AnalysisResult result) throws IOException {
         Path path = createFile(result);
         if (path != null) {
             LOG.info("Writing output {}", path.toAbsolutePath());
             try (BufferedWriter w = Files.newBufferedWriter(path, StandardCharsets.UTF_8)) {
                 this.writer.writeValue(w, result);
+                return true;
             } catch (IOException e) {
-                LOG.error(String.format("Error writing %s", path), e);
+                throw new IOException(String.format("Error writing %s", path), e);
             }
         }
+        return false;
     }
 
     private boolean isDuplicate(AnalysisResult result, Path x) {
