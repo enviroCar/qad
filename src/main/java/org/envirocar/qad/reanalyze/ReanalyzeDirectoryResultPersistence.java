@@ -25,7 +25,11 @@ class ReanalyzeDirectoryResultPersistence extends DirectoryResultPersistence {
 
     @Override
     protected Path getDirectory(AnalysisResult result) {
-        return result == null ? getParameters().getOutputPath()
-                              : getParameters().getOutputPath().resolve(FORMATTER.format(result.getStart()));
+        if (result == null) {
+            return getParameters().getOutputPath();
+        }
+        String model = result.getModel().getValue();
+        String date = FORMATTER.format(result.getStart());
+        return getParameters().getOutputPath().resolve(model).resolve(date);
     }
 }

@@ -1,12 +1,8 @@
 kafka:
   enabled: false
 qad:
-  mapMatching:
-    url: https://processing.envirocar.org/
-  tests:
-    write: true
   outputPath: /home/autermann/qad
   archive: false
   reanalyze:
     begin: 2020-06-15T00:00:00Z
-    end: 2020-06-18T00:00:00Z
+    end: 2020-07-22T00:00:00Z
