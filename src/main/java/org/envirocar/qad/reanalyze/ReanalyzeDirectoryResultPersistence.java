@@ -15,11 +15,11 @@ import java.time.format.DateTimeFormatter;
 @Primary
 @Service
 @Profile(ReanalyzeApplication.REANALYZE_PROFILE)
-class ReanalyzeDirectoryResultPersistence extends DirectoryResultPersistence {
+public class ReanalyzeDirectoryResultPersistence extends DirectoryResultPersistence {
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd", LOCALE)
                                                                         .withZone(ZONE_ID);
 
-    ReanalyzeDirectoryResultPersistence(ObjectReader reader, ObjectWriter writer, QADParameters parameters) {
+    public ReanalyzeDirectoryResultPersistence(ObjectReader reader, ObjectWriter writer, QADParameters parameters) {
         super(reader, writer, parameters);
     }
 
