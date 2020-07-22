@@ -11,6 +11,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 @Configuration
 public class RetrofitConfiguration {
@@ -37,6 +38,9 @@ public class RetrofitConfiguration {
         return new OkHttpClient.Builder()
                        .followRedirects(true)
                        .followSslRedirects(true)
+                       .connectTimeout(10, TimeUnit.SECONDS)
+                       .writeTimeout(10, TimeUnit.SECONDS)
+                       .readTimeout(5, TimeUnit.MINUTES)
                        .addInterceptor(new LoggingInterceptor())
                        .build();
     }
