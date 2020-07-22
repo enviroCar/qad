@@ -5,4 +5,8 @@ qad:
   archive: false
   reanalyze:
     begin: 2020-06-15T00:00:00Z
-    end: 2020-07-22T00:00:00Z
+    end: 2020-07-19T22:00:00Z
+
+logging:
+  file:
+    name: /home/autermann/qad.log
