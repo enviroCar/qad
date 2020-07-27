@@ -102,30 +102,6 @@ public class EnviroCarQadServerApplicationTests {
     }
 
     @Test
-    public void test_5f03231cd2ad47000190f29e() {
-        Axis axis = this.axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("04_02")).get();
-        Stream<Track> track = writeAndPrepare("5f03231cd2ad47000190f29e");
-        track.flatMap(t -> this.analyzerFactory.create(axis, t).analyze())
-             .forEach(this.directoryResultPersistence::persist);
-    }
-
-    @Test
-    public void test_5f0c67d0d2ad4700019729cd() {
-        String[] tracks = {"5f0c0193d2ad47000194940c",
-                           "5f0c2bdcd2ad470001959d90",
-                           "5f0c3c2cd2ad470001960e9a",
-                           "5f0c4211d2ad470001963522",
-                           "5f0c53afd2ad47000196a402",
-                           "5f0c67d0d2ad4700019729cd",
-                           "5f0c6fcdd2ad470001976b7d"};
-
-        AxisModel model = this.axisModelRepository.getAxisModel("KRE").get();
-        Arrays.stream(tracks).flatMap(this::writeAndPrepare)
-              .flatMap(t -> this.analyzerFactory.create(model, t).analyze())
-              .forEach(this.directoryResultPersistence::persist);
-    }
-
-    @Test
     public void test_5f0efcf900375c5a264231c2() throws IOException {
         FeatureCollection featureCollection = this.api.fetchTrack("5f0efcf900375c5a264231c2");
         Stream<Track> track = writeAndPrepare(featureCollection);
@@ -188,15 +164,6 @@ public class EnviroCarQadServerApplicationTests {
                 LOG.error("error analyzing track {}: {}", id, e.getMessage());
             }
         }
-    }
-
-    @Test
-    public void test_5f057fc3d2ad470001a0a7e5() {
-        Axis axis = this.axisModelRepository.getAxisModel("HAM").flatMap(x -> x.getAxis("04_02")).get();
-        Stream<Track> track = writeAndPrepare("5f057fc3d2ad470001a0a7e5");
-        track.flatMap(t -> this.analyzerFactory.create(axis, t).analyze())
-             .map(this::toJSON)
-             .forEach(System.err::println);
     }
 
     @Test
